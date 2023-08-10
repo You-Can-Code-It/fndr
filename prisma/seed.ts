@@ -31,10 +31,6 @@ async function main() {
           houseNumber,
           postCode,
         };
-        // ...company,
-        // indReferentNumber: company.referentNumber,
-        // website: company.webpageUrl,
-        // id: company.id,
       }),
       skipDuplicates: true, // skip duplicates
     });

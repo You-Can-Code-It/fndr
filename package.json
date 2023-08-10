@@ -2,20 +2,22 @@
   "name": "fndr",
   "version": "0.1.0",
   "prisma": {
-    "seed": "ts-node/register prisma/seed.ts"
+    "seed": "ts-node prisma/seed.ts"
   },
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seed": "ts-node prisma/seed.ts"
   },
   "dependencies": {
     "@prisma/client": "^5.1.1",
     "@types/node": "20.4.8",
     "@types/react": "18.2.19",
     "@types/react-dom": "18.2.7",
+    "axios": "^1.4.0",
     "csv-parser": "^3.0.0",
     "cuid": "^3.0.0",
     "eslint": "8.46.0",
