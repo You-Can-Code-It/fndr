@@ -8,14 +8,20 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <>
+    <div className={styles.container}>
       <header className={styles.headerContainer}>
         <Logo />
       </header>
-      <main>
+      <main className={styles.mainContainer}>
         <Dropdown />
-        <Card />
+        
+        <Card 
+          title="Booking"
+          location="Amsterdam"
+          website="website"
+          lastVisit="seen 2 days ago by"
+        />
       </main>
-    </>
+    </div>
   );
 }
