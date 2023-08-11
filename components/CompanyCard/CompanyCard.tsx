@@ -16,12 +16,14 @@ type CompanyCardProps = {
 
 const CompanyCard: React.FC<CompanyCardProps> = ({
   name,
+  city,
   category,
   website,
 }) => {
   return (
     <div className={styles.cardContainer}>
       <h2>{name}</h2>
+      <h3>{city}</h3>
       <h3>{category}</h3>
       <h4>{website}</h4>
     </div>
