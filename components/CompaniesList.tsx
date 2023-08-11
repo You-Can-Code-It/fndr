@@ -1,12 +1,17 @@
-// components/CompaniesList.tsx
 import React from "react";
 import CompanyCard from "./CompanyCard/CompanyCard";
 
 type Company = {
-  id: number;
+  id: String;
   name: string;
   activity: string;
-  // Add other properties from your data model
+  indReferentNumber: String;
+  website: String;
+  category: String;
+  city: String;
+  street: String;
+  houseNumber: String;
+  postCode: String;
 };
 
 type CompaniesListProps = {
@@ -14,10 +19,11 @@ type CompaniesListProps = {
 };
 
 const CompaniesList: React.FC<CompaniesListProps> = ({ companies }) => {
+  //console.log("CompaniesList, companies", companies);
   return (
     <div className="cards-list">
-      {companies.map((company) => (
-        <CompanyCard key={company.id} {...company} />
+      {companies.map((company, index) => (
+        <CompanyCard key={index} {...company} />
       ))}
     </div>
   );
