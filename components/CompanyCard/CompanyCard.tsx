@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./CompanyCard.module.css";
 
 type CompanyCardProps = {
   id: String;
@@ -13,11 +14,16 @@ type CompanyCardProps = {
   postCode: String;
 };
 
-const CompanyCard: React.FC<CompanyCardProps> = ({ name, category }) => {
+const CompanyCard: React.FC<CompanyCardProps> = ({
+  name,
+  category,
+  website,
+}) => {
   return (
-    <div className="card">
+    <div className={styles.cardContainer}>
       <h2>{name}</h2>
-      <p>{category}</p>
+      <h3>{category}</h3>
+      <h4>{website}</h4>
     </div>
   );
 };

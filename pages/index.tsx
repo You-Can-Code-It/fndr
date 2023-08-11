@@ -1,6 +1,5 @@
 import { GetServerSideProps } from "next";
-//const prisma = require("@prisma/client");
-import CompaniesList from "../components/CompaniesList";
+import CompaniesList from "../components/CompaniesList/CompaniesList";
 import { prisma } from "./db";
 type Company = {
   id: String;

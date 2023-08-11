@@ -1,5 +1,6 @@
 import React from "react";
-import CompanyCard from "./CompanyCard/CompanyCard";
+import CompanyCard from "../CompanyCard/CompanyCard";
+import styles from "./CompaniesList.module.css";
 
 type Company = {
   id: String;
@@ -21,7 +22,7 @@ type CompaniesListProps = {
 const CompaniesList: React.FC<CompaniesListProps> = ({ companies }) => {
   //console.log("CompaniesList, companies", companies);
   return (
-    <div className="cards-list">
+    <div className={styles.listContainer}>
       {companies.map((company, index) => (
         <CompanyCard key={index} {...company} />
       ))}
