@@ -1,14 +1,14 @@
 .heading2 {
-    color: #333333;
-    font-family: "Inter";
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
+  color: #333333;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
 }
 
 @media (min-width: 768px) {
-    .heading2 {
-        font-size: 14px;
-        line-height: 17px;
-    }
+  .heading2 {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }

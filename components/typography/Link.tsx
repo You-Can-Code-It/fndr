@@ -1,13 +1,16 @@
 import styles from "./Link.module.css";
 import { ReactNode } from "react";
 
-type LinkProps = { 
-    children: ReactNode,
-    className?: string, 
+interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  // no additional types are needed
+}
+
+const Link = ({ children, className, ...props }: LinkProps) => {
+  return (
+    <a {...props} className={`${styles.link} ${className}`}>
+      {children}
+    </a>
+  );
 };
-  
-  const Link: React.FC<LinkProps> = ({ children, className }) => {
-    return <a className={`${styles.link} ${className}`}>{children}</a>   
-  };
-  
-  export default Link;
+
+export default Link;

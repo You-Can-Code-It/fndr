@@ -1,16 +1,10 @@
-import React from 'react';
+import React from "react";
 import styles from "./Dropdown.module.css";
 
-type DropdownProps = {
-
-};
+type DropdownProps = {};
 
 const Dropdown: React.FC<DropdownProps> = () => {
-  return (
-    <div className="dropdownContainer">
-        
-    </div>
-  )
+  return <div className="dropdownContainer"></div>;
 };
 
-export default Dropdown
+export default Dropdown;
