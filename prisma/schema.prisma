@@ -23,7 +23,19 @@ model Company {
   houseNumber       String
   postCode          String
 
+  userEvent         UserEvent[]             
+
   @@unique([name, postCode])
+}
+
+model UserEvent {
+  id                String  @id @default(cuid())
+  createdAt         DateTime
+  userId            String
+  companyId         String
+
+  user              User     @relation(fields: [userId], references: [id])
+  company           Company  @relation(fields: [companyId], references: [id])
 }
 
 model Account {
@@ -61,6 +73,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  userEvent     UserEvent[]
 }
 
 model VerificationToken {
