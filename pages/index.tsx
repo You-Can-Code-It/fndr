@@ -23,7 +23,7 @@ function serialize(data: any) {
 }
 
 const Home: React.FC<HomeProps> = ({ companies }) => {
-  console.log("pages index.tsx, companies", companies);
+  //console.log("pages index.tsx, companies", companies);
   return (
     <div>
       <h1>Company Cards</h1>
