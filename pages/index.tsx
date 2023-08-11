@@ -1,7 +1,7 @@
 import { GetServerSideProps } from "next";
-const prisma = require("@prisma/client");
+//const prisma = require("@prisma/client");
 import CompaniesList from "../components/CompaniesList";
-
+import { prisma } from "./db";
 type Company = {
   id: String;
   name: string;
@@ -19,6 +19,10 @@ type HomeProps = {
   companies: Company[];
 };
 
+function serialize(data: any) {
+  return JSON.parse(JSON.stringify(data));
+}
+
 const Home: React.FC<HomeProps> = ({ companies }) => {
   console.log("pages index.tsx, companies", companies);
   return (
@@ -33,16 +37,16 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
   try {
     // Fetch companies whose activities field contains the word "software"
     const companies = await prisma.company.findMany({
-      where: {
-        category: {
-          contains: "software",
-        },
-      },
+      // where: {
+      //   category: {
+      //     contains: "software",
+      //   },
+      // },
     });
 
     return {
       props: {
-        companies,
+        companies: serialize(companies),
       },
     };
   } catch (error) {
