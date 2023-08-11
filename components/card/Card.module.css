@@ -18,7 +18,7 @@
 .categoriesContainer {
   grid-area: 1 / 2 / 2 / 3;
   display: flex;
-  justify-content: center;
+  justify-content: end;
 }
 
 .lastVisitContainer {
@@ -48,6 +48,17 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 130px;
+}
+
+@media (max-width: 375px) {
+    .cardContainer {
+        display: flex;
+        flex-direction: column; 
+    }
+    .lastVisitContainer {
+        justify-content: center;
+    }
+   
 }
 
 @media (min-width: 768px) {

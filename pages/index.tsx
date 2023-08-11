@@ -5,7 +5,6 @@ import Dropdown from "@/components/dropdown/Dropdown";
 import Card from "@/components/card/Card";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { prisma } from "./db";
-import CompaniesList from "@/components/CompaniesList/CompaniesList";
 
 function serialize(data: any) {
   return JSON.parse(JSON.stringify(data));
@@ -79,38 +78,11 @@ function Home({
                   name={company.name}
                   city={company.city}
                   website={company.website}
+                  category={company.category}
                   lastVisit="seen 2 days ago by"
                 />
               );
             })}
-            {/* <Card
-              key="Company"
-              name="smothing"
-              city="City"
-              website="website"
-              lastVisit="seen 2 days ago by"
-            />
-            <Card
-              key="Company"
-              name="smothing"
-              city="City"
-              website="website"
-              lastVisit="seen 2 days ago by"
-            />
-            <Card
-              key="Company"
-              name="smothing"
-              city="City"
-              website="website"
-              lastVisit="seen 2 days ago by"
-            />
-            <Card
-              key="Company"
-              name="smothing"
-              city="City"
-              website="website"
-              lastVisit="seen 2 days ago by"
-            /> */}
           </div>
         </main>
       </div>
