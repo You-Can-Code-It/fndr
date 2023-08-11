@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./CompanyCard.module.css";
+import Link from "next/link";
 
 type CompanyCardProps = {
   id: String;
@@ -25,7 +26,8 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
       <h2>{name}</h2>
       <h3>{city}</h3>
       <h3>{category}</h3>
-      <h4>{website}</h4>
+      {/* <h4>{website}</h4> */}
+      <Link href={website}>{website}</Link>
     </div>
   );
 };
