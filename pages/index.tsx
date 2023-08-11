@@ -1,3 +1,8 @@
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
+import Logo from "@/components/logo/Logo";
+import Dropdown from "@/components/dropdown/Dropdown";
+import Card from "@/components/card/Card";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { prisma } from "./db";
 import CompaniesList from "@/components/CompaniesList/CompaniesList";
@@ -7,17 +12,22 @@ function serialize(data: any) {
 }
 
 type Company = {
-  id: String;
+  id: string;
   name: string;
   activity: string;
-  indReferentNumber: String;
-  website: String;
-  category: String;
-  city: String;
-  street: String;
-  houseNumber: String;
-  postCode: String;
+  indReferentNumber: string;
+  website: string;
+  category: string;
+  city: string;
+  street: string;
+  houseNumber: string;
+  postCode: string;
 };
+
+const inter = Inter({
+  weight: ["400", "500"],
+  subsets: ["latin"],
+});
 
 export const getServerSideProps: GetServerSideProps<{
   companies: Company[];
@@ -32,7 +42,6 @@ export const getServerSideProps: GetServerSideProps<{
         },
       },
     });
-
     return {
       props: {
         companies: serialize(companies),
@@ -52,188 +61,61 @@ function Home({
   companies,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
-    <div>
-      <CompaniesList companies={companies} />
+    <div className={inter.className}>
+      <div className={styles.container}>
+        <header className={styles.headerContainer}>
+          <Logo />
+        </header>
+        <main className={styles.mainContainer}>
+          <div className={styles.mainDropdownContainer}>
+            <Dropdown />
+          </div>
+
+          <div className={styles.mainCardContainer}>
+            {companies.slice(0, 84).map((company: Company, index) => {
+              return (
+                <Card
+                  key={company.id}
+                  name={company.name}
+                  city={company.city}
+                  website={company.website}
+                  lastVisit="seen 2 days ago by"
+                />
+              );
+            })}
+            {/* <Card
+              key="Company"
+              name="smothing"
+              city="City"
+              website="website"
+              lastVisit="seen 2 days ago by"
+            />
+            <Card
+              key="Company"
+              name="smothing"
+              city="City"
+              website="website"
+              lastVisit="seen 2 days ago by"
+            />
+            <Card
+              key="Company"
+              name="smothing"
+              city="City"
+              website="website"
+              lastVisit="seen 2 days ago by"
+            />
+            <Card
+              key="Company"
+              name="smothing"
+              city="City"
+              website="website"
+              lastVisit="seen 2 days ago by"
+            /> */}
+          </div>
+        </main>
+      </div>
     </div>
   );
 }
 
 export default Home;
-
-// import { InferGetServerSidePropsType, GetServerSideProps } from "next";
-// import CompaniesList from "../components/CompaniesList/CompaniesList";
-// import { prisma } from "./db";
-// type Company = {
-//   id: String;
-//   name: string;
-//   activity: string;
-//   indReferentNumber: String;
-//   website: String;
-//   category: String;
-//   city: String;
-//   street: String;
-//   houseNumber: String;
-//   postCode: String;
-// };
-
-// type HomeProps = {
-//   companies: Company[];
-// };
-
-// function serialize(data: any) {
-//   return JSON.parse(JSON.stringify(data));
-// }
-
-// const Home: React.FC<HomeProps> = ({ companies }) => {
-//   //console.log("pages index.tsx, companies", companies);
-//   return (
-//     <div>
-//       <h1>Company Cards</h1>
-//       <CompaniesList companies={companies} />
-//     </div>
-//   );
-// };
-
-// export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
-//   try {
-//     // Fetch companies whose activities field contains the word "software"
-//     const companies = await prisma.company.findMany({
-//       where: {
-//         category: {
-//           contains: "software",
-//           mode: "insensitive",
-//         },
-//       },
-//     });
-
-//     return {
-//       props: {
-//         companies: serialize(companies),
-//       },
-//     };
-//   } catch (error) {
-//     console.error("Error fetching companies:", error);
-//     return {
-//       props: {
-//         companies: [],
-//       },
-//     };
-//   }
-// };
-
-// export default Home;
-
-// // import Head from 'next/head'
-// // import Image from 'next/image'
-// // import { Inter } from 'next/font/google'
-// // import styles from '@/styles/Home.module.css'
-
-// // const inter = Inter({ subsets: ['latin'] })
-
-// // export default function Home() {
-// //   return (
-// //     <>
-// //       <Head>
-// //         <title>Create Next App</title>
-// //         <meta name="description" content="Generated by create next app" />
-// //         <meta name="viewport" content="width=device-width, initial-scale=1" />
-// //         <link rel="icon" href="/favicon.ico" />
-// //       </Head>
-// //       <main className={`${styles.main} ${inter.className}`}>
-// //         <div className={styles.description}>
-// //           <p>
-// //             Get started by editing&nbsp;
-// //             <code className={styles.code}>pages/index.tsx</code>
-// //           </p>
-// //           <div>
-// //             <a
-// //               href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-// //               target="_blank"
-// //               rel="noopener noreferrer"
-// //             >
-// //               By{' '}
-// //               <Image
-// //                 src="/vercel.svg"
-// //                 alt="Vercel Logo"
-// //                 className={styles.vercelLogo}
-// //                 width={100}
-// //                 height={24}
-// //                 priority
-// //               />
-// //             </a>
-// //           </div>
-// //         </div>
-
-// //         <div className={styles.center}>
-// //           <Image
-// //             className={styles.logo}
-// //             src="/next.svg"
-// //             alt="Next.js Logo"
-// //             width={180}
-// //             height={37}
-// //             priority
-// //           />
-// //         </div>
-
-// //         <div className={styles.grid}>
-// //           <a
-// //             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-// //             className={styles.card}
-// //             target="_blank"
-// //             rel="noopener noreferrer"
-// //           >
-// //             <h2>
-// //               Docs <span>-&gt;</span>
-// //             </h2>
-// //             <p>
-// //               Find in-depth information about Next.js features and&nbsp;API.
-// //             </p>
-// //           </a>
-
-// //           <a
-// //             href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-// //             className={styles.card}
-// //             target="_blank"
-// //             rel="noopener noreferrer"
-// //           >
-// //             <h2>
-// //               Learn <span>-&gt;</span>
-// //             </h2>
-// //             <p>
-// //               Learn about Next.js in an interactive course with&nbsp;quizzes!
-// //             </p>
-// //           </a>
-
-// //           <a
-// //             href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-// //             className={styles.card}
-// //             target="_blank"
-// //             rel="noopener noreferrer"
-// //           >
-// //             <h2>
-// //               Templates <span>-&gt;</span>
-// //             </h2>
-// //             <p>
-// //               Discover and deploy boilerplate example Next.js&nbsp;projects.
-// //             </p>
-// //           </a>
-
-// //           <a
-// //             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-// //             className={styles.card}
-// //             target="_blank"
-// //             rel="noopener noreferrer"
-// //           >
-// //             <h2>
-// //               Deploy <span>-&gt;</span>
-// //             </h2>
-// //             <p>
-// //               Instantly deploy your Next.js site to a shareable URL
-// //               with&nbsp;Vercel.
-// //             </p>
-// //           </a>
-// //         </div>
-// //       </main>
-// //     </>
-// //   )
-// // }
