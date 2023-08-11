@@ -37,11 +37,12 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
   try {
     // Fetch companies whose activities field contains the word "software"
     const companies = await prisma.company.findMany({
-      // where: {
-      //   category: {
-      //     contains: "software",
-      //   },
-      // },
+      where: {
+        category: {
+          contains: "software",
+          mode: "insensitive",
+        },
+      },
     });
 
     return {
