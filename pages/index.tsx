@@ -5,6 +5,8 @@ import Dropdown from "@/components/dropdown/Dropdown";
 import Card from "@/components/card/Card";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { prisma } from "./db";
+import LoginControls from "@/components/LoginControls/LoginControls";
+import Link from "next/link";
 
 function serialize(data: any) {
   return JSON.parse(JSON.stringify(data));
@@ -66,6 +68,8 @@ function Home({
           <Logo />
         </header>
         <main className={styles.mainContainer}>
+          <LoginControls />
+          <Link href="/account">To your account</Link>
           <div className={styles.mainDropdownContainer}>
             <Dropdown />
           </div>
