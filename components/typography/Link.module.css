@@ -1,0 +1,14 @@
+.link {
+  color: #a54fa8;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .heading2 {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

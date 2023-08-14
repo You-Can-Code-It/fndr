@@ -1,0 +1,2352 @@
+[
+  {
+    "name": "ZIEMANN Cashservice Holding NL B.V.",
+    "referentNumber": "85804703",
+    "nameSection": "RCCS Valuables BV 4.3  (27) \r\nSecurity service in Waddinxveen, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Coenecoop 530, 2741 PS Waddinxveen, NetherlandsPhone: +31 182 748 900",
+    "type": "Security service",
+    "address": "Coenecoop 530, 2741 PS Waddinxveen",
+    "city": "Waddinxveen"
+  },
+  {
+    "name": "Zazare Diamonds B.V.",
+    "referentNumber": "33297641",
+    "nameSection": "Zazare Diamonds B.V. 4.3  (27) \r\nJeweler in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Weteringschans 89, 1017 RZ Amsterdam, Netherlands",
+    "type": "Jeweler",
+    "address": "Weteringschans 89, 1017 RZ Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Yolt Group B.V.",
+    "referentNumber": "76885925",
+    "nameSection": "Yolt 4.1  (7) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: Hoogoorddreef 60, 1101 BE Amsterdam, Netherlands",
+    "type": "Corporate office",
+    "address": "Hoogoorddreef 60, 1101 BE Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Xsens Technologies B.V.",
+    "referentNumber": "50142224",
+    "nameSection": "Xsens 4.0  (3) \r\nManufacturer in Enschede, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Pantheon 6-A + 8A, 7521 PR Enschede, NetherlandsPhone: +31 88 973 6700",
+    "type": "Manufacturer",
+    "address": "Pantheon 6-A + 8A, 7521 PR Enschede",
+    "city": "Enschede"
+  },
+  {
+    "name": "XDES",
+    "referentNumber": "34189014",
+    "nameSection": "XDES 4.3  (22) \r\nRecruiter in Hoofddorp, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Wegalaan 28, 2132 JC Hoofddorp, Netherlands",
+    "type": "Recruiter",
+    "address": "Wegalaan 28, 2132 JC Hoofddorp",
+    "city": "Hoofddorp"
+  },
+  {
+    "name": "WorldPay Limited",
+    "referentNumber": "51838133",
+    "nameSection": "Worldpay 2.0  (18) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: De Entree 248, 1101 EE Amsterdam, NetherlandsPhone: +31 20 799 4775",
+    "type": "Corporate office",
+    "address": "De Entree 248, 1101 EE Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Worldpay B.V.",
+    "referentNumber": "60494344",
+    "nameSection": "Worldpay 2.0  (18) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: De Entree 248, 1101 EE Amsterdam, NetherlandsPhone: +31 20 799 4775",
+    "type": "Corporate office",
+    "address": "De Entree 248, 1101 EE Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Westcon Group European Operations Netherlands Branch",
+    "referentNumber": "30221053",
+    "nameSection": "Westcon Group European Operations 4.5  (2) \r\nWholesaler in Houten, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Loodsboot 19, 3991 CJ Houten, NetherlandsHours: Closed ⋅ Opens 7 AM MonPhone: +31 30 248 9411",
+    "type": "Wholesaler",
+    "address": "Loodsboot 19, 3991 CJ Houten",
+    "city": "Houten"
+  },
+  {
+    "name": "Waypoint Port Services B.V.",
+    "referentNumber": "61208760",
+    "nameSection": "Waypoint Port Services B.v. 5.0  (2) \r\nShipping service in Rotterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Maaskade 119, 3071 NK Rotterdam, Netherlands",
+    "type": "Shipp",
+    "address": "Maaskade 119, 3071 NK Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "Wabco Automotive B.V.",
+    "referentNumber": "24126110",
+    "nameSection": "WABCO Automotive NL 5.0  (2) \r\nIndustrial equipment supplier in Capelle aan den IJssel, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Rhijnspoor 263, 2901 LB Capelle aan den IJssel, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 10 288 8600",
+    "type": "Industrial equipment supplier",
+    "address": "Rhijnspoor 263, 2901 LB Capelle aan den IJssel",
+    "city": "IJssel"
+  },
+  {
+    "name": "W.B. Stables",
+    "referentNumber": "1058396",
+    "nameSection": "WB Stables sport horses 4.7  (42) \r\nHorse trainer in Wergea, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Wergeasterdyk 4, 9005 XK Wergea, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 6 46337188",
+    "type": "Horse tra",
+    "address": "Wergeasterdyk 4, 9005 XK Wergea",
+    "city": "Wergea"
+  },
+  {
+    "name": "Vye Consulting B.V.",
+    "referentNumber": "52451038",
+    "nameSection": "Vye B.V. 5.0  (2) \r\nConsultant in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Molenpad 5, 1016 GL Amsterdam, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 20 514 1409",
+    "type": "Consultant",
+    "address": "Molenpad 5, 1016 GL Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Voltea B.V.",
+    "referentNumber": "24332338",
+    "nameSection": "Voltea B.V. 3.7  (3) \r\nHardware store in Sassenheim, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Jagtlust, Wasbeekerlaan 24, 2171 AE Sassenheim, NetherlandsPhone: +31 252 200 100",
+    "type": "Hardware store",
+    "address": "Jagtlust, Wasbeekerlaan 24, 2171 AE Sassenheim",
+    "city": "Sassenheim"
+  },
+  {
+    "name": "Vermeer Manufacturing International Goes B.V.",
+    "referentNumber": "71935347",
+    "nameSection": "Vermeer International B.V. 5.0  (3) \r\nMachining manufacturer in 's-Heer Arendskerke, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Nijverheidsstraat 20, 4458 AV 's-Heer Arendskerke, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 113 272 700",
+    "type": "Mach",
+    "address": "Nijverheidsstraat 20, 4458 AV 's-Heer Arendskerke",
+    "city": "Arendskerke"
+  },
+  {
+    "name": "Vermeer International B.V.",
+    "referentNumber": "22022618",
+    "nameSection": "Vermeer International B.V. 5.0  (3) \r\nMachining manufacturer in 's-Heer Arendskerke, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Nijverheidsstraat 20, 4458 AV 's-Heer Arendskerke, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 113 272 700",
+    "type": "Mach",
+    "address": "Nijverheidsstraat 20, 4458 AV 's-Heer Arendskerke",
+    "city": "Arendskerke"
+  },
+  {
+    "name": "UPS SCS (Nederland) B.V.",
+    "referentNumber": "34092797",
+    "nameSection": "UPS SCS (Nederland) B.V. 4.4  (29) \r\nLogistics service in Venlo, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Marco Poloweg 26-28, 5928 LE Venlo, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 40 262 9300",
+    "type": "Logistics service",
+    "address": "Marco Poloweg 26-28, 5928 LE Venlo",
+    "city": "Venlo"
+  },
+  {
+    "name": "Upfield Sourcing Nederland B.V.",
+    "referentNumber": "63648083",
+    "nameSection": "Upfield Europe Bv 4.3  (26) \r\nFood producer",
+    "webpageUrl": "",
+    "adressSection": "Address: Nassaukade 3, 3071 JL Rotterdam, NetherlandsPhone: +31 10 712 0601",
+    "type": "Food producer",
+    "address": "Nassaukade 3, 3071 JL Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "Universal Africa Lines B.V.",
+    "referentNumber": "24161749",
+    "nameSection": "Universal Africa Lines Netherlands B.V. 4.8  (6) \r\nFreight forwarding service in Capelle aan den IJssel, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Rivium Boulevard 1, 2909 LK Capelle aan den IJssel, NetherlandsPhone: +31 10 202 0111",
+    "type": "Freight forward",
+    "address": "Rivium Boulevard 1, 2909 LK Capelle aan den IJssel",
+    "city": "IJssel"
+  },
+  {
+    "name": "Unimpack B.V.",
+    "referentNumber": "53014715",
+    "nameSection": "Unimpack B.V. 4.6  (15) \r\nWholesaler in Rucphen, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Industriestraat 4, 4715 RL Rucphen, NetherlandsPhone: +31 165 348 741",
+    "type": "Wholesaler",
+    "address": "Industriestraat 4, 4715 RL Rucphen",
+    "city": "Rucphen"
+  },
+  {
+    "name": "Undeveloped B.V.",
+    "referentNumber": "61079049",
+    "nameSection": "Undeveloped BV 3.0  (2) \r\nMarketing agency in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Wibautstraat 137 D, 1097 DN Amsterdam, NetherlandsPhone: (737) 218-6046",
+    "type": "Market",
+    "address": "Wibautstraat 137 D, 1097 DN Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Tulip Oil Holding B.V.",
+    "referentNumber": "50297023",
+    "nameSection": "Tulip Oil 5.0  (2) \r\nOil & natural gas company in the Hague, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Alexanderstraat 18, 2514 JM Den Haag, NetherlandsPhone: +31 70 747 0300",
+    "type": "Oil & natural gas company",
+    "address": "Alexanderstraat 18, 2514 JM Den Haag",
+    "city": "Haag"
+  },
+  {
+    "name": "Tritium Technologies B.V.",
+    "referentNumber": "68870795",
+    "nameSection": "Tritium Technologies B.V. 5.0  (1) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: Luchtvaartstraat 3B, 1059 CA Amsterdam, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 20 225 0100",
+    "type": "Corporate office",
+    "address": "Luchtvaartstraat 3B, 1059 CA Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Triodos Bank N.V.",
+    "referentNumber": "30062415",
+    "nameSection": "Triodos Bank N.V. 3.2  (20) \r\nBank in Zeist, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Nieuweroordweg 1, 3704 EC Zeist, NetherlandsPhone: +31 30 693 6500",
+    "type": "Bank",
+    "address": "Nieuweroordweg 1, 3704 EC Zeist",
+    "city": "Zeist"
+  },
+  {
+    "name": "Tri-ennium B.V.",
+    "referentNumber": "24388667",
+    "nameSection": "Tri-ennium Rivium 5.0  (2) \r\nWebsite designer in Capelle aan den IJssel, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Rivium Quadrant 161, 2909 LC Capelle aan den IJssel, NetherlandsPhone: +31 10 288 4800",
+    "type": "Website designer",
+    "address": "Rivium Quadrant 161, 2909 LC Capelle aan den IJssel",
+    "city": "IJssel"
+  },
+  {
+    "name": "Toyota Motor Finance (Netherlands) B.V.",
+    "referentNumber": "33194984",
+    "nameSection": "Toyota Motor Finance (Netherlands) BV 5.0  (2) \r\nDepartment of finance in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: WTC Amsterdam, Tower H, Level 10, Zuidplein 90, 1077 XV Amsterdam, Netherlands",
+    "type": "Department of f",
+    "address": "WTC Amsterdam, Tower H, Level 10, Zuidplein 90, 1077 XV Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Topcon Europe Positioning B.V.",
+    "referentNumber": "24379990",
+    "nameSection": "Topcon Europe Positioning B.V. 5.0  (4) \r\nWholesaler in Capelle aan den IJssel, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Essebaan 11, 2908 LJ Capelle aan den IJssel, NetherlandsPhone: +31 79 799 5200",
+    "type": "Wholesaler",
+    "address": "Essebaan 11, 2908 LJ Capelle aan den IJssel",
+    "city": "IJssel"
+  },
+  {
+    "name": "Topcon Europe Medical B.V.",
+    "referentNumber": "24380056",
+    "nameSection": "Topcon Europe Positioning B.V. 5.0  (4) \r\nWholesaler in Capelle aan den IJssel, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Essebaan 11, 2908 LJ Capelle aan den IJssel, NetherlandsPhone: +31 79 799 5200",
+    "type": "Wholesaler",
+    "address": "Essebaan 11, 2908 LJ Capelle aan den IJssel",
+    "city": "IJssel"
+  },
+  {
+    "name": "Top Group International B.V.",
+    "referentNumber": "24319943",
+    "nameSection": "Top Group Int. Holding B.V. 4.2  (42) \r\nLogistics service in Zevenbergen, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Tradeboulevard 3, 4761 RL Zevenbergen, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 418 666 688",
+    "type": "Logistics service",
+    "address": "Tradeboulevard 3, 4761 RL Zevenbergen",
+    "city": "Zevenbergen"
+  },
+  {
+    "name": "Titan Wood B.V.",
+    "referentNumber": "9136412",
+    "nameSection": "Titan Wood B.V. 4.8  (14) \r\nWood in Arnhem, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Westervoortsedijk 73, 6827 AV Arnhem, NetherlandsPhone: +31 26 320 1400",
+    "type": "Wood",
+    "address": "Westervoortsedijk 73, 6827 AV Arnhem",
+    "city": "Arnhem"
+  },
+  {
+    "name": "Timko B.V.",
+    "referentNumber": "17283165",
+    "nameSection": "Dental and Oral clinic Timko Eindhoven 2.9  (50) \r\nDentist in Eindhoven, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Ten Hagestraat 10, 5611 EG Eindhoven, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 40 236 4711",
+    "type": "Dentist",
+    "address": "Ten Hagestraat 10, 5611 EG Eindhoven",
+    "city": "Eindhoven"
+  },
+  {
+    "name": "Timex Nederland B.V.",
+    "referentNumber": "33128681",
+    "nameSection": "Timex Group B.V. 1.0  (2) \r\nJeweler in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Herengracht 466, 1017 CA Amsterdam, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 23 556 3660",
+    "type": "Jeweler",
+    "address": "Herengracht 466, 1017 CA Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Theobroma B.V.",
+    "referentNumber": "34170033",
+    "nameSection": "Theobroma International B.V. 2.0  (3) \r\nFoundation in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Oceanenweg 1, 1047 BA Amsterdam, NetherlandsPhone: +31 20 567 5911",
+    "type": "Foundation",
+    "address": "Oceanenweg 1, 1047 BA Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Tenergy Portfolio Services B.V.",
+    "referentNumber": "1104644",
+    "nameSection": "Tenergy Consultancy B.V. 5.0  (4) \r\nEngineering consultant in Drogeham, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Hamsterpein 4, 9289 KC Drogeham, NetherlandsPhone: +31 511 331 211",
+    "type": "Eng",
+    "address": "Hamsterpein 4, 9289 KC Drogeham",
+    "city": "Drogeham"
+  },
+  {
+    "name": "Synvina C.V.",
+    "referentNumber": "67120199",
+    "nameSection": "Synvina C.V. 5.0  (1) \r\nBiochemistry lab in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Zekeringstraat 29, 1014 BV Amsterdam, Netherlands",
+    "type": "Biochemistry lab",
+    "address": "Zekeringstraat 29, 1014 BV Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Synechron Business Consulting B.V.",
+    "referentNumber": "27257333",
+    "nameSection": "Synechron Business Consulting 4.8  (5) \r\nBusiness management consultant in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Zuidoost Toren A, De Entree 15, 1101 BH Amsterdam, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 20 697 1959",
+    "type": "Bus",
+    "address": "Zuidoost Toren A, De Entree 15, 1101 BH Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Sun Pharmaceutical Industries (Europe) B.V.",
+    "referentNumber": "34277465",
+    "nameSection": "Sun Pharmaceutical Industries (Europe) B.V. 2.4  (5) \r\nPharmaceutical company in Hoofddorp, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Polarisavenue 87, 2132 JH Hoofddorp, NetherlandsPhone: +31 23 568 5501",
+    "type": "Pharmaceutical company",
+    "address": "Polarisavenue 87, 2132 JH Hoofddorp",
+    "city": "Hoofddorp"
+  },
+  {
+    "name": "Stichting Sint Franciscus/Vlietland Groep",
+    "referentNumber": "56474113",
+    "nameSection": "Stichting Sint Franciscus/Vlietland Groep 4.0  (3) \r\nHospital in Maassluis, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: De Vloot 206, 3144 PK Maassluis, NetherlandsPhone: +31 10 592 1822",
+    "type": "Hospital",
+    "address": "De Vloot 206, 3144 PK Maassluis",
+    "city": "Maassluis"
+  },
+  {
+    "name": "Stichting Redeemed Christian Church of God",
+    "referentNumber": "27177454",
+    "nameSection": "Stichting Redeemed Christian Church of God 5.0  (5) \r\nFoundation in the Hague, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Onyxhorst 5, 2592 HB Den Haag, NetherlandsPhone: +31 70 444 2922",
+    "type": "Foundation",
+    "address": "Onyxhorst 5, 2592 HB Den Haag",
+    "city": "Haag"
+  },
+  {
+    "name": "Stichting Katholiek Voortgezet Onderwijs Breda en omgeving / Skvob",
+    "referentNumber": "41102332",
+    "nameSection": "SKVOB e.o. / Stichting Katholiek Voortgezet Onderwijs Breda e.o. 3.0  (2) \r\nHigh school in Breda, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Van Riebeecklaan 2, 4818 EB Breda, NetherlandsPhone: +31 76 514 1405",
+    "type": "High school",
+    "address": "Van Riebeecklaan 2, 4818 EB Breda",
+    "city": "Breda"
+  },
+  {
+    "name": "Stichting European Urological Foundation",
+    "referentNumber": "41058571",
+    "nameSection": "Stichting EAU Foundation for Urological Research 5.0  (1) \r\nOrganization in Arnhem, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Meester E.N. van Kleffensstraat 5, 6842 CV Arnhem, NetherlandsPhone: +31 26 389 0680",
+    "type": "Organization",
+    "address": "Meester E.N. van Kleffensstraat 5, 6842 CV Arnhem",
+    "city": "Arnhem"
+  },
+  {
+    "name": "Stichting AIESEC International",
+    "referentNumber": "24280781",
+    "nameSection": "Stichting AIESEC International 5.0  (2) \r\nAssociation or organization",
+    "webpageUrl": "",
+    "adressSection": "Address: D2.130, Stationsplein 45, 3013 AK Rotterdam, NetherlandsPhone: +31 10 443 4383",
+    "type": "Association or organization",
+    "address": "D2.130, Stationsplein 45, 3013 AK Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "Star Container Services B.V.",
+    "referentNumber": "24117944",
+    "nameSection": "Star Container Services BV 4.1  (159) \r\nContainer service in the Maasvlakte, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Amoerweg 9, 3199KD Maasvlakte Rotterdam, NetherlandsHours: Closed ⋅ Opens 6 AM MonPhone: +31 10 754 9780",
+    "type": "Conta",
+    "address": "Amoerweg 9, 3199KD Maasvlakte Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "Stanley Engineered Fastening Benelux B.V.",
+    "referentNumber": "14627337",
+    "nameSection": "Stanley Engineered Fastening Benelux B.V. 5.0  (1) \r\nManufacturer in Born, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Holtum-Noordweg 35, 6121 RE Born, NetherlandsPhone: +31 43 350 8492",
+    "type": "Manufacturer",
+    "address": "Holtum-Noordweg 35, 6121 RE Born",
+    "city": "Born"
+  },
+  {
+    "name": "St. Anny Food B.V.",
+    "referentNumber": "11031788",
+    "nameSection": "St. Anny Food HQ 3.5  (6) \r\nFood producer",
+    "webpageUrl": "",
+    "adressSection": "Address: Burgemeester Schalijlaan 56, 2908 LS Capelle aan den IJssel, Netherlands",
+    "type": "Food producer",
+    "address": "Burgemeester Schalijlaan 56, 2908 LS Capelle aan den IJssel",
+    "city": "IJssel"
+  },
+  {
+    "name": "Ssangyong European Parts Center B.V.",
+    "referentNumber": "20128617",
+    "nameSection": "Ssangyong European Parts Center B.V. 4.9  (9) \r\nCar dealer in Breda, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Iabc 5253, 5254, 4814 RD Breda, NetherlandsHours: Closed ⋅ Opens 8:30 AM Mon",
+    "type": "Car dealer",
+    "address": "Iabc 5253, 5254, 4814 RD Breda",
+    "city": "Breda"
+  },
+  {
+    "name": "Sonum B.V.",
+    "referentNumber": "50740067",
+    "nameSection": "Keyrus 5.0  (8) \r\nBusiness management consultant in the Hague, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Binckhorstlaan 36, 2516 BE Den Haag, NetherlandsHours: Closed ⋅ Opens 8:30 AM Mon",
+    "type": "Bus",
+    "address": "Binckhorstlaan 36, 2516 BE Den Haag",
+    "city": "Haag"
+  },
+  {
+    "name": "Sonova Retail Support Centre B.V.",
+    "referentNumber": "69114544",
+    "nameSection": "Sonova Retail Support Centre B.V. 3.7  (3) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: Bahialaan 500, 3065 WC Rotterdam, NetherlandsHours: Closed ⋅ Opens 9 AM Mon",
+    "type": "Corporate office",
+    "address": "Bahialaan 500, 3065 WC Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "Software AG Nederland B.V.",
+    "referentNumber": "11032512",
+    "nameSection": "Software AG Nederland B.V. 3.3  (3) \r\nSoftware company in the Hague, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Loire 162, 2491 AL Den Haag, NetherlandsPhone: +31 70 301 2043",
+    "type": "Software company",
+    "address": "Loire 162, 2491 AL Den Haag",
+    "city": "Haag"
+  },
+  {
+    "name": "Sleepy P Ranch B.V.",
+    "referentNumber": "66408520",
+    "nameSection": "Sleepy P Ranch BV 4.0  (1) \r\nHorse boarding stable in Weerselo, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Lemselosestraat 19, 7595 ML Weerselo, NetherlandsPhone: (214) 886-3840",
+    "type": "Horse board",
+    "address": "Lemselosestraat 19, 7595 ML Weerselo",
+    "city": "Weerselo"
+  },
+  {
+    "name": "Shouguang Vegetable Industry Holding Group Netherlands B.V.",
+    "referentNumber": "55658431",
+    "nameSection": "Shouguang Vegetable Industry Holding Group Netherlands B.V. 4.3  (6) \r\nHolding company in Berkel en Rodenrijs, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: A.H. Verweijweg 9, 2651 LX Berkel en Rodenrijs, NetherlandsPhone: +31 10 511 9930",
+    "type": "Hold",
+    "address": "A.H. Verweijweg 9, 2651 LX Berkel en Rodenrijs",
+    "city": "Rodenrijs"
+  },
+  {
+    "name": "SHELL Nederland Chemie B.V.",
+    "referentNumber": "24082750",
+    "nameSection": "Shell Nederland Chemie B.v. 3.3  (3) \r\nGas station in Moerdijk, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Chemieweg 25, 4782 SJ Moerdijk, Netherlands",
+    "type": "Gas station",
+    "address": "Chemieweg 25, 4782 SJ Moerdijk",
+    "city": "Moerdijk"
+  },
+  {
+    "name": "SHELL International B.V.",
+    "referentNumber": "27155369",
+    "nameSection": "Shell International Bv 4.2  (5) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: Oostduinlaan 2, 2596 JM Den Haag, Netherlands",
+    "type": "Corporate office",
+    "address": "Oostduinlaan 2, 2596 JM Den Haag",
+    "city": "Haag"
+  },
+  {
+    "name": "Shell Chemicals Europe B.V.",
+    "referentNumber": "24332907",
+    "nameSection": "Shell Chemicals Europe B.v. 5.0  (1) \r\nManufacturer in Rotterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Hoofdweg 256, 3067 GJ Rotterdam, Netherlands",
+    "type": "Manufacturer",
+    "address": "Hoofdweg 256, 3067 GJ Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "Seven Homes Ambassador",
+    "referentNumber": "27171525",
+    "nameSection": "Seven Homes Ambassador 3.0  (1) \r\nRecreation in the Hague, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Badhuisweg 54, 2587 CJ Den Haag, NetherlandsPhone: +31 70 306 2025",
+    "type": "Recreation",
+    "address": "Badhuisweg 54, 2587 CJ Den Haag",
+    "city": "Haag"
+  },
+  {
+    "name": "Seine (Holland) B.V.",
+    "referentNumber": "51537435",
+    "nameSection": "Seine (Holland) B.V. - European Branch of Ninestar/Apex Group 5.0  (3) \r\nWholesaler in Mijdrecht, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Energieweg 113, 3641 RT Mijdrecht, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 297 257 807",
+    "type": "Wholesaler",
+    "address": "Energieweg 113, 3641 RT Mijdrecht",
+    "city": "Mijdrecht"
+  },
+  {
+    "name": "Scania Logistics Netherlands B.V.",
+    "referentNumber": "56552793",
+    "nameSection": "Scania Logistics Netherlands 4.4  (66) \r\nLogistics service in Zwolle, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Blaloweg 22, 8041 AL Zwolle, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 38 497 8023",
+    "type": "Logistics service",
+    "address": "Blaloweg 22, 8041 AL Zwolle",
+    "city": "Zwolle"
+  },
+  {
+    "name": "Sarten Packaging Netherlands B.V.",
+    "referentNumber": "66585066",
+    "nameSection": "Sarten Packaging Netherlands B.v. 4.2  (13) \r\nRestaurant",
+    "webpageUrl": "",
+    "adressSection": "Address: Borchwerf 10c, 4704 RG Roosendaal, Netherlands",
+    "type": "Restaurant",
+    "address": "Borchwerf 10c, 4704 RG Roosendaal",
+    "city": "Roosendaal"
+  },
+  {
+    "name": "Santon Group B.V.",
+    "referentNumber": "18076438",
+    "nameSection": "Santon Holland BV 4.3  (28) \r\nElectronics in Rotterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Hordijk-Oost, Hekendorpstraat 69, 3079 DX Rotterdam, NetherlandsHours: Closed ⋅ Opens 7:45 AM MonPhone: +31 10 283 2600",
+    "type": "Electronics",
+    "address": "Hordijk-Oost, Hekendorpstraat 69, 3079 DX Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "Samsung SDS Global SCL Netherlands Coöperatief U.A.",
+    "referentNumber": "53842316",
+    "nameSection": "Samsung 3.3  (33) \r\nElectronics store in Delft, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Olof Palmestraat 10, 2616 LR Delft, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 15 219 6200",
+    "type": "Electronics store",
+    "address": "Olof Palmestraat 10, 2616 LR Delft",
+    "city": "Delft"
+  },
+  {
+    "name": "SABIC Europe B.V.",
+    "referentNumber": "14073237",
+    "nameSection": "SABIC European Head Office 4.6  (28) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: Europaboulevard 1, 6135 LD Sittard, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 46 722 2222",
+    "type": "Corporate office",
+    "address": "Europaboulevard 1, 6135 LD Sittard",
+    "city": "Sittard"
+  },
+  {
+    "name": "S.C. Johnson Europlant B.V.",
+    "referentNumber": "30037575",
+    "nameSection": "Johnson Europlant BV SC 4.2  (12) \r\nChemical plant in Mijdrecht, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Groot Mijdrechtstraat 81, 3641 RV Mijdrecht, NetherlandsHours: Closed ⋅ Opens 6 AM MonPhone: +31 297 292 200",
+    "type": "Chemical plant",
+    "address": "Groot Mijdrechtstraat 81, 3641 RV Mijdrecht",
+    "city": "Mijdrecht"
+  },
+  {
+    "name": "S.C. Johnson Europe B.V.",
+    "referentNumber": "30097965",
+    "nameSection": "Johnson Europlant BV SC 4.2  (12) \r\nChemical plant in Mijdrecht, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Groot Mijdrechtstraat 81, 3641 RV Mijdrecht, NetherlandsHours: Closed ⋅ Opens 6 AM MonPhone: +31 297 292 200",
+    "type": "Chemical plant",
+    "address": "Groot Mijdrechtstraat 81, 3641 RV Mijdrecht",
+    "city": "Mijdrecht"
+  },
+  {
+    "name": "Russell Reynolds Associates B.V.",
+    "referentNumber": "33296630",
+    "nameSection": "Russell Reynolds Associates 5.0  (1) \r\nExecutive search firm in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Zuidplein 148, 17e verdieping, 1077 XV Amsterdam, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 20 305 7630",
+    "type": "Executive search firm",
+    "address": "Zuidplein 148, 17e verdieping, 1077 XV Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Rohill Engineering B.V.",
+    "referentNumber": "9084362",
+    "nameSection": "Rohill Engineering B.V. 4.7  (7) \r\nSoftware company in Hoogeveen, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Edisonstraat 12, 7903 AN Hoogeveen, NetherlandsPhone: +31 528 263 355",
+    "type": "Software company",
+    "address": "Edisonstraat 12, 7903 AN Hoogeveen",
+    "city": "Hoogeveen"
+  },
+  {
+    "name": "Rescop B.V.",
+    "referentNumber": "17180604",
+    "nameSection": "Rescop 5.0  (13) \r\nComputer consultant in Utrecht, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Newtonlaan 115, 3584 BH Utrecht, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 85 201 7277",
+    "type": "Computer consultant",
+    "address": "Newtonlaan 115, 3584 BH Utrecht",
+    "city": "Utrecht"
+  },
+  {
+    "name": "Rain Amsterdam B.V.",
+    "referentNumber": "34319547",
+    "nameSection": "Rain 3.6  (44) \r\nSteak house",
+    "webpageUrl": "",
+    "adressSection": "Address: Rembrandtplein 44, 1017 CV Amsterdam, NetherlandsHours: Open ⋅ Closes 10 PM",
+    "type": "Steak house",
+    "address": "Rembrandtplein 44, 1017 CV Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Qualitair Aviation Holland B.V.",
+    "referentNumber": "33291882",
+    "nameSection": "Qualitair Aviation Holland BV 4.7  (7) \r\nTemp agency in Rozenburg, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Aalsmeerderweg 604, 1437 EJ Rozenburg, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 20 653 6119",
+    "type": "Temp agency",
+    "address": "Aalsmeerderweg 604, 1437 EJ Rozenburg",
+    "city": "Rozenburg"
+  },
+  {
+    "name": "Promodomo B.V.",
+    "referentNumber": "71992375",
+    "nameSection": "Promodomo BV 3.1  (17) \r\nHousing society in Zoetermeer, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Buitenom 259, 2711 KB Zoetermeer, Netherlands",
+    "type": "Hous",
+    "address": "Buitenom 259, 2711 KB Zoetermeer",
+    "city": "Zoetermeer"
+  },
+  {
+    "name": "Power-Packer Europa B.V.",
+    "referentNumber": "6060890",
+    "nameSection": "Power Packer Europa BV 4.0  (6) \r\nIndustrial equipment supplier in Oldenzaal, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Edisonstraat 2, 7575 AT Oldenzaal, NetherlandsPhone: +31 541 584 500",
+    "type": "Industrial equipment supplier",
+    "address": "Edisonstraat 2, 7575 AT Oldenzaal",
+    "city": "Oldenzaal"
+  },
+  {
+    "name": "Polpharma Biologics Utrecht B.V.",
+    "referentNumber": "58858466",
+    "nameSection": "Polpharma Biologics Utrecht 5.0  (1) \r\nBiotechnology company in Utrecht, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Yalelaan 46, 3584 CM Utrecht, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 88 995 6320",
+    "type": "Biotechnology company",
+    "address": "Yalelaan 46, 3584 CM Utrecht",
+    "city": "Utrecht"
+  },
+  {
+    "name": "Plixxent B.V.",
+    "referentNumber": "2318097",
+    "nameSection": "PLIXXENT B.V. 3.5  (6) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: Korte Groningerweg 1a, 9607 PS Foxhol, NetherlandsPhone: +31 598 317 911",
+    "type": "Corporate office",
+    "address": "Korte Groningerweg 1a, 9607 PS Foxhol",
+    "city": "Foxhol"
+  },
+  {
+    "name": "Pepe Jeans Europe B.V.",
+    "referentNumber": "33272219",
+    "nameSection": "Pepe Jeans Europe B.v. 1.0  (1) \r\nClothing store in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Hannie Dankbaarpassage 18, 1053 RT Amsterdam, Netherlands",
+    "type": "Cloth",
+    "address": "Hannie Dankbaarpassage 18, 1053 RT Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "PAZ Open Fire Cooking",
+    "referentNumber": "68321155",
+    "nameSection": "PAZ Open Fire Cooking 4.6  (153) \r\nRestaurant",
+    "webpageUrl": "",
+    "adressSection": "Address: Utrechtsestraat 128H, 1017 VT Amsterdam, NetherlandsPhone: +31 20 770 0700",
+    "type": "Restaurant",
+    "address": "Utrechtsestraat 128H, 1017 VT Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Panasonic Holding (Netherlands) B.V.",
+    "referentNumber": "33188358",
+    "nameSection": "Panasonic Holding (Netherlands) B.V. 5.0  (1) \r\nHolding company in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Zuidplein 136, 1077 XV Amsterdam, NetherlandsPhone: +31 20 570 8520",
+    "type": "Hold",
+    "address": "Zuidplein 136, 1077 XV Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Panasonic Global Treasury Center B.V.",
+    "referentNumber": "34247389",
+    "nameSection": "Panasonic Holding (Netherlands) B.V. 5.0  (1) \r\nHolding company in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Zuidplein 136, 1077 XV Amsterdam, NetherlandsPhone: +31 20 570 8520",
+    "type": "Hold",
+    "address": "Zuidplein 136, 1077 XV Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Organik Kimya Netherlands B.V.",
+    "referentNumber": "34194723",
+    "nameSection": "Organik Kimya Netherlands BV 3.8  (5) \r\nChemical plant in Botlek Rotterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Chemieweg 7, 3197 KC Botlek Rotterdam, NetherlandsHours: Open 24 hoursPhone: +31 10 295 4820",
+    "type": "Chemical plant",
+    "address": "Chemieweg 7, 3197 KC Botlek Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "OPHTECS Europe B.V.",
+    "referentNumber": "9046451",
+    "nameSection": "OPHTECS Europe B.V. 5.0  (1) \r\nWholesaler in Elst, Gelderland, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Marithaime 20, 6662 WD Elst, NetherlandsPhone: +31 26 354 4444",
+    "type": "Wholesaler",
+    "address": "Marithaime 20, 6662 WD Elst",
+    "city": "Elst"
+  },
+  {
+    "name": "Onior Group B.V.",
+    "referentNumber": "57725292",
+    "nameSection": "Onior Group B.V. 5.0  (7) \r\nSoftware company in the Hague, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Pr. Catharina-Amaliastraat 5, 2496 XD Den Haag, NetherlandsPhone: +31 85 303 7647",
+    "type": "Software company",
+    "address": "Pr. Catharina-Amaliastraat 5, 2496 XD Den Haag",
+    "city": "Haag"
+  },
+  {
+    "name": "Olam Services",
+    "referentNumber": "35008749",
+    "nameSection": "Olam Europe BV 4.2  (5) \r\nMarketing agency in Rotterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Conradstraat 38 D, 3013 AP Rotterdam, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 10 404 4011",
+    "type": "Market",
+    "address": "Conradstraat 38 D, 3013 AP Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "Olam Europe B.V.",
+    "referentNumber": "24278173",
+    "nameSection": "Olam Europe BV 4.2  (5) \r\nMarketing agency in Rotterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Conradstraat 38 D, 3013 AP Rotterdam, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 10 404 4011",
+    "type": "Market",
+    "address": "Conradstraat 38 D, 3013 AP Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "OGS Europe B.V.",
+    "referentNumber": "59024887",
+    "nameSection": "OGS Europe B.V. 4.0  (1) \r\nComputer service in Eindhoven, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Hooge Zijde 7, 5626 DC Eindhoven, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 40 202 8659",
+    "type": "Computer service",
+    "address": "Hooge Zijde 7, 5626 DC Eindhoven",
+    "city": "Eindhoven"
+  },
+  {
+    "name": "Nutricia Cuijk B.V.",
+    "referentNumber": "16013641",
+    "nameSection": "Nutricia B.V. 4.1  (22) \r\nCannery",
+    "webpageUrl": "",
+    "adressSection": "Address: Grotestraat 91, 5431 DJ Cuijk, NetherlandsPhone: +31 485 394 911",
+    "type": "Cannery",
+    "address": "Grotestraat 91, 5431 DJ Cuijk",
+    "city": "Cuijk"
+  },
+  {
+    "name": "Nunner Logistics B.V.",
+    "referentNumber": "17064969",
+    "nameSection": "NUNNER Logistics BV 3.7  (336) \r\nTrucking company in Helmond, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Gerstdijk 24, 5704 RG Helmond, NetherlandsHours: Closed ⋅ Opens 6 AM MonPhone: +31 40 204 5550",
+    "type": "Truck",
+    "address": "Gerstdijk 24, 5704 RG Helmond",
+    "city": "Helmond"
+  },
+  {
+    "name": "Nucletron Operations B.V.",
+    "referentNumber": "30129540",
+    "nameSection": "Nucletron Operations BV 5.0  (3) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: Waardgelder 1, 3905 TH Veenendaal, Netherlands",
+    "type": "Corporate office",
+    "address": "Waardgelder 1, 3905 TH Veenendaal",
+    "city": "Veenendaal"
+  },
+  {
+    "name": "Norinchukin Bank Europe N.V.",
+    "referentNumber": "72676094",
+    "nameSection": "Norinchukin Europe Nv 5.0  (4) \r\nBank in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Gustav Mahlerlaan 1216, 1081 LA Amsterdam, NetherlandsHours: Closed ⋅ Opens 9 AM Mon",
+    "type": "Bank",
+    "address": "Gustav Mahlerlaan 1216, 1081 LA Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "NN Personeel B.V.",
+    "referentNumber": "27193814",
+    "nameSection": "NN Insurance Personeel B.V. 5.0  (2) \r\nInsurance company in the Hague, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Pr. Beatrixlaan 35, 2595 AK Den Haag, NetherlandsPhone: +31 70 513 0303",
+    "type": "Insurance company",
+    "address": "Pr. Beatrixlaan 35, 2595 AK Den Haag",
+    "city": "Haag"
+  },
+  {
+    "name": "Nissan Motor Parts Center B.V.",
+    "referentNumber": "33294300",
+    "nameSection": "Nissan Motor Parts Center 4.2  (149) \r\nLogistics in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Hornweg 32, 1044 AN Amsterdam, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 20 516 2222",
+    "type": "Logistics",
+    "address": "Hornweg 32, 1044 AN Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "NIDEC EUROPE B.V.",
+    "referentNumber": "8172600",
+    "nameSection": "Nidec Servo Europe B.V. 2.0  (2) \r\nManufacturer in Almere, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: P.J. Oudweg 4, 1314 CH Almere, NetherlandsPhone: +31 36 548 1100",
+    "type": "Manufacturer",
+    "address": "P.J. Oudweg 4, 1314 CH Almere",
+    "city": "Almere"
+  },
+  {
+    "name": "Nichirei Holding Holland B.V.",
+    "referentNumber": "24174746",
+    "nameSection": "Nichirei Holding Holland B.V. 4.0  (1) \r\nLogistics service in the Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Willem Barentszstraat 1, 3165 AA Rotterdam-Albrandswaard, NetherlandsPhone: +31 10 429 2699",
+    "type": "Logistics service",
+    "address": "Willem Barentszstraat 1, 3165 AA Rotterdam-Albrandswaard",
+    "city": "Rotterdam-Albrandswaard"
+  },
+  {
+    "name": "Nexfil Europe B.V.",
+    "referentNumber": "60647574",
+    "nameSection": "Nexfil Europe B.V. 4.4  (9) \r\nWarehouse in Nieuw-Vennep, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Nederland, Boekweitstraat 9, 2153 GK Nieuw-Vennep, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 252 349 216",
+    "type": "Warehouse",
+    "address": "Nederland, Boekweitstraat 9, 2153 GK Nieuw-Vennep",
+    "city": "Nieuw-Vennep"
+  },
+  {
+    "name": "Neste Engineering Solutions B.V.",
+    "referentNumber": "66599423",
+    "nameSection": "Neste Engineering Solutions B.V. 4.3  (24) \r\nEngineer in the Maasvlakte, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Antarcticaweg 185, 3199 LD Maasvlakte Rotterdam, NetherlandsPhone: +31 6 38680455",
+    "type": "Eng",
+    "address": "Antarcticaweg 185, 3199 LD Maasvlakte Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "Nederlandse Aardolie Maatschappij B.V.",
+    "referentNumber": "4008869",
+    "nameSection": "Dutch Petroleum Company B.V. 4.4  (40) \r\nGas company in Den Helder, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Oostoever, Oostoeverweg 10, 1786 PT Den Helder, NetherlandsPhone: +31 223 638 383",
+    "type": "Gas company",
+    "address": "Oostoever, Oostoeverweg 10, 1786 PT Den Helder",
+    "city": "Helder"
+  },
+  {
+    "name": "MURATA ELECTRONICS EUROPE B.V.",
+    "referentNumber": "34208762",
+    "nameSection": "Murata Electronics Europe B.V. 4.7  (3) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: Wegalaan 2, 2132 JC Hoofddorp, Netherlands",
+    "type": "Corporate office",
+    "address": "Wegalaan 2, 2132 JC Hoofddorp",
+    "city": "Hoofddorp"
+  },
+  {
+    "name": "Muehlhan B.V.",
+    "referentNumber": "24218090",
+    "nameSection": "Muehlhan B.V. Straal -, Schilders- en Steigerbouwbedrijf 4.2  (5) \r\nPainter in Vlaardingen, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: James Wattweg 26, 3133 KK Vlaardingen, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 10 426 4960",
+    "type": "Pa",
+    "address": "James Wattweg 26, 3133 KK Vlaardingen",
+    "city": "Vlaardingen"
+  },
+  {
+    "name": "MS Amlin Marine N.V.",
+    "referentNumber": "24448058",
+    "nameSection": "MS Amlin 5.0  (2) \r\nInsurance company in Rotterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Beursplein 37, 3011 AA Rotterdam, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 10 799 5800",
+    "type": "Insurance company",
+    "address": "Beursplein 37, 3011 AA Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "MPC Nederland B.V.",
+    "referentNumber": "57618720",
+    "nameSection": "MPC Nederland B.V. 5.0  (1) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: Venrayseweg 134B, 5928 RH Venlo, NetherlandsHours: Open 24 hoursPhone: +31 77 323 5252",
+    "type": "Corporate office",
+    "address": "Venrayseweg 134B, 5928 RH Venlo",
+    "city": "Venlo"
+  },
+  {
+    "name": "Mitsubishi Motors Europe B.V.",
+    "referentNumber": "34081607",
+    "nameSection": "Mitsubishi Motors Europe B.V. 4.3  (98) \r\nWarehouse in Born, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Mitsubishi Avenue 1, 6121 RD Born, NetherlandsHours: Closed ⋅ Opens 7:30 AM Mon",
+    "type": "Warehouse",
+    "address": "Mitsubishi Avenue 1, 6121 RD Born",
+    "city": "Born"
+  },
+  {
+    "name": "MindShare B.V.",
+    "referentNumber": "34176517",
+    "nameSection": "MINDSHARE Nederland 4.5  (17) \r\nMedia company in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Amsteldijk 166, 1079 LH Amsterdam, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 20 517 1611",
+    "type": "Media company",
+    "address": "Amsteldijk 166, 1079 LH Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Milk Design B.V.",
+    "referentNumber": "34207265",
+    "nameSection": "Milk Design BV 5.0  (1) \r\nDrafting service in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Distelweg 89, 1031 HD Amsterdam, NetherlandsPhone: +31 20 630 4887",
+    "type": "Draft",
+    "address": "Distelweg 89, 1031 HD Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Mijn InternetOplossing B.V.",
+    "referentNumber": "52643573",
+    "nameSection": "Mijn InternetOplossing B.V. 1.0  (4) \r\nSoftware company in Almere, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Markerkant 13, 1314 AN Almere, NetherlandsPhone: +31 36 711 2112",
+    "type": "Software company",
+    "address": "Markerkant 13, 1314 AN Almere",
+    "city": "Almere"
+  },
+  {
+    "name": "Microtek Medical B.V.",
+    "referentNumber": "8124924",
+    "nameSection": "Microtek Medical B.V. 5.0  (2) \r\nWholesaler in Zutphen, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Hekkehorst 24, 7207 BN Zutphen, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 575 599 200",
+    "type": "Wholesaler",
+    "address": "Hekkehorst 24, 7207 BN Zutphen",
+    "city": "Zutphen"
+  },
+  {
+    "name": "Mega International Commercial Bank CO., Limited",
+    "referentNumber": "33223354",
+    "nameSection": "Mega International Commercial Bank Co Ltd 5.0  (1) \r\nBank in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Strawinskylaan 1203, 1077 XX Amsterdam, NetherlandsPhone: +31 20 662 1566",
+    "type": "Bank",
+    "address": "Strawinskylaan 1203, 1077 XX Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Meds and Care Pharmacies",
+    "referentNumber": "27178517",
+    "nameSection": "Meds&Care Pharmacies 3.0  (2) \r\nPharmacy in Nootdorp, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Hagelaan 1, 2631 BV Nootdorp, NetherlandsPhone: +31 15 310 0082",
+    "type": "Pharmacy",
+    "address": "Hagelaan 1, 2631 BV Nootdorp",
+    "city": "Nootdorp"
+  },
+  {
+    "name": "Medis Medical Imaging Systems B.V.",
+    "referentNumber": "28075744",
+    "nameSection": "Medis Medical Imaging 4.3  (6) \r\nSoftware company in Leiden, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Schuttersveld 9, 2316 XG Leiden, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 71 522 3244",
+    "type": "Software company",
+    "address": "Schuttersveld 9, 2316 XG Leiden",
+    "city": "Leiden"
+  },
+  {
+    "name": "Mediant, locatie Helmerzijde",
+    "referentNumber": "6089356",
+    "nameSection": "Mediant locatie Scherpenzeelhoek 2.5  (4) \r\nHospital in Enschede, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Scherpenzeelhoek 2-12, 7546 HR Enschede, NetherlandsPhone: +31 53 475 5755",
+    "type": "Hospital",
+    "address": "Scherpenzeelhoek 2-12, 7546 HR Enschede",
+    "city": "Enschede"
+  },
+  {
+    "name": "MBA Michael Bailey Associates Recruitment B.V.",
+    "referentNumber": "86235559",
+    "nameSection": "Michael Bailey Associates BV 4.2  (5) \r\nBusiness management consultant in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Strawinskylaan 1231, 1077 XX Amsterdam, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 20 797 5000",
+    "type": "Bus",
+    "address": "Strawinskylaan 1231, 1077 XX Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "MBA Michael Bailey Associates Project Services B.V.",
+    "referentNumber": "86235818",
+    "nameSection": "Michael Bailey Associates BV 4.2  (5) \r\nBusiness management consultant in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Strawinskylaan 1231, 1077 XX Amsterdam, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 20 797 5000",
+    "type": "Bus",
+    "address": "Strawinskylaan 1231, 1077 XX Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "MAUSER Holding Netherlands B.V.",
+    "referentNumber": "24329947",
+    "nameSection": "Mauser Benelux B.V. 4.1  (79) \r\nPlastic fabrication company in Oosterhout, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Souvereinstraat 1, 4903 RH Oosterhout, NetherlandsHours: Open ⋅ Closes 12 AMPhone: +31 162 483 700",
+    "type": "Plastic fabrication company",
+    "address": "Souvereinstraat 1, 4903 RH Oosterhout",
+    "city": "Oosterhout"
+  },
+  {
+    "name": "Mattel Europa B.V.",
+    "referentNumber": "33237928",
+    "nameSection": "Mattel Europa BV 5.0  (1) \r\nManufacturer in Amstelveen, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Gondel 1, 1186 MJ Amstelveen, Netherlands",
+    "type": "Manufacturer",
+    "address": "Gondel 1, 1186 MJ Amstelveen",
+    "city": "Amstelveen"
+  },
+  {
+    "name": "MagnaView B.V.",
+    "referentNumber": "9145879",
+    "nameSection": "MagnaView B.V. 5.0  (5) \r\nBusiness to business service in Eindhoven, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Kennedyplein 244, 5611 ZT Eindhoven, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 40 751 6321",
+    "type": "Bus",
+    "address": "Kennedyplein 244, 5611 ZT Eindhoven",
+    "city": "Eindhoven"
+  },
+  {
+    "name": "Macrogen Europe B.V.",
+    "referentNumber": "69716099",
+    "nameSection": "Macrogen Europe BV 5.0  (2) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: Meibergdreef 57, 1105 BA Amsterdam, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 20 333 7563",
+    "type": "Corporate office",
+    "address": "Meibergdreef 57, 1105 BA Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Lyneth B.V.",
+    "referentNumber": "27094809",
+    "nameSection": "Lyneth B.V. 2.3  (3) \r\nContractor in the Hague, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Paviljoensgracht 7, 2512 BL Den Haag, NetherlandsPhone: +31 70 345 9077",
+    "type": "Contractor",
+    "address": "Paviljoensgracht 7, 2512 BL Den Haag",
+    "city": "Haag"
+  },
+  {
+    "name": "Lux-mate Europe B.V.",
+    "referentNumber": "69619174",
+    "nameSection": "Lux-Mate Europe B.V. 3.7  (3) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: Koolhovenlaan 80, 1119 NH Schiphol-Rijk, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 20 215 9002",
+    "type": "Corporate office",
+    "address": "Koolhovenlaan 80, 1119 NH Schiphol-Rijk",
+    "city": "Schiphol-Rijk"
+  },
+  {
+    "name": "Lonza Netherlands B.V.",
+    "referentNumber": "14083599",
+    "nameSection": "Lonza Netherlands B.V., Geleen 4.5  (15) \r\nPharmaceutical company in Geleen, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Urmonderbaan 20-B, 6167 RD Geleen, NetherlandsPhone: +31 43 350 9910",
+    "type": "Pharmaceutical company",
+    "address": "Urmonderbaan 20-B, 6167 RD Geleen",
+    "city": "Geleen"
+  },
+  {
+    "name": "Lone Rooftop B.V.",
+    "referentNumber": "61310441",
+    "nameSection": "Lone Rooftop 4.7  (3) \r\nSoftware company in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Jozef Isra�lskade 46B, 1072 SB Amsterdam, Netherlands",
+    "type": "Software company",
+    "address": "Jozef Isra�lskade 46B, 1072 SB Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Linxens (the Netherlands) B.V.",
+    "referentNumber": "10041575",
+    "nameSection": "NedCard B.V. 4.8  (9) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: Bijsterhuizen 2529, 6604 LM Wijchen, Netherlands",
+    "type": "Corporate office",
+    "address": "Bijsterhuizen 2529, 6604 LM Wijchen",
+    "city": "Wijchen"
+  },
+  {
+    "name": "Levitech B.V.",
+    "referentNumber": "32156484",
+    "nameSection": "Levitech B.V. 4.7  (3) \r\nSemi conductor supplier in Almere, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Versterkerstraat 10, 1322 AP Almere, NetherlandsPhone: +31 36 538 7679",
+    "type": "Semi conductor supplier",
+    "address": "Versterkerstraat 10, 1322 AP Almere",
+    "city": "Almere"
+  },
+  {
+    "name": "Lelystad Platform B.V.",
+    "referentNumber": "67915833",
+    "nameSection": "Inditex Platform B.V. 4.2  (63) \r\nWarehouse in Lelystad, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Pascallaan 65, 8218 NJ Lelystad, NetherlandsHours: Open 24 hours",
+    "type": "Warehouse",
+    "address": "Pascallaan 65, 8218 NJ Lelystad",
+    "city": "Lelystad"
+  },
+  {
+    "name": "Leisure International Nederland B.V.",
+    "referentNumber": "33129766",
+    "nameSection": "Leisure Internat. Nederl. B.V. 5.0  (1) \r\nHotel",
+    "webpageUrl": "",
+    "adressSection": "Address: Stadhouderskade 12, 1054 ES Amsterdam, NetherlandsPhone: +31 20 607 5555",
+    "type": "Hotel",
+    "address": "Stadhouderskade 12, 1054 ES Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "LeasePlan Digital B.V.",
+    "referentNumber": "69780625",
+    "nameSection": "LeasePlan Digital 4.3  (32) \r\nCar leasing service in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Johan Huizingalaan 400, 1066 JS Amsterdam, NetherlandsHours: Closed ⋅ Opens 9 AM Mon",
+    "type": "Car leas",
+    "address": "Johan Huizingalaan 400, 1066 JS Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Leader Biomedical Europe B.V.",
+    "referentNumber": "61710245",
+    "nameSection": "Leader Biomedical 5.0  (3) \r\nMedical equipment manufacturer in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Hessenbergweg 79, 1101 CX Amsterdam, NetherlandsPhone: +31 20 800 6760",
+    "type": "Medical equipment manufacturer",
+    "address": "Hessenbergweg 79, 1101 CX Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "LAB15 B.V.",
+    "referentNumber": "67094570",
+    "nameSection": "LAB15 BV 4.3  (6) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: John M. Keynesplein 12-46, 1066 EP Amsterdam, NetherlandsPhone: +31 20 261 1347",
+    "type": "Corporate office",
+    "address": "John M. Keynesplein 12-46, 1066 EP Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Koopmans Meel B.V.",
+    "referentNumber": "1057569",
+    "nameSection": "Koopmans Meel B.V. 4.5  (35) \r\nFood products supplier",
+    "webpageUrl": "",
+    "adressSection": "Address: De Merodestraat 3, 8937 AA Leeuwarden, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 58 294 8494",
+    "type": "Food products supplier",
+    "address": "De Merodestraat 3, 8937 AA Leeuwarden",
+    "city": "Leeuwarden"
+  },
+  {
+    "name": "Koni B.V.",
+    "referentNumber": "23012798",
+    "nameSection": "KONI BV 4.4  (47) \r\nAuto parts manufacturer in Oud-Beijerland, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Korteweg 2, 3261 NH Oud-Beijerland, NetherlandsPhone: +31 186 635 500",
+    "type": "Auto parts manufacturer",
+    "address": "Korteweg 2, 3261 NH Oud-Beijerland",
+    "city": "Oud-Beijerland"
+  },
+  {
+    "name": "Kia Nederland B.V.",
+    "referentNumber": "34333868",
+    "nameSection": "Kia Netherlands 4.1  (75) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: De Corridor 25, 3621 ZA Breukelen, NetherlandsPhone: +31 88 854 2542",
+    "type": "Corporate office",
+    "address": "De Corridor 25, 3621 ZA Breukelen",
+    "city": "Breukelen"
+  },
+  {
+    "name": "Keter Benelux B.V.",
+    "referentNumber": "18077759",
+    "nameSection": "Keter Benelux B.V. 3.0  (24) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: Ericssonstraat 17, 5121 MK Rijen, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 161 228 300",
+    "type": "Corporate office",
+    "address": "Ericssonstraat 17, 5121 MK Rijen",
+    "city": "Rijen"
+  },
+  {
+    "name": "KEB Hana Bank",
+    "referentNumber": "33157495",
+    "nameSection": "Hana Bank 5.0  (5) \r\nBank in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: 3rd Floor, Diana Noord (Diana and Vesta) Herikerbergweg 310-312, 1101 CT Amsterdam, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 20 546 9377",
+    "type": "Bank",
+    "address": "3rd Floor, Diana Noord (Diana and Vesta) Herikerbergweg 310-312, 1101 CT Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "JTEKT Europe Bearings B.V.",
+    "referentNumber": "23035139",
+    "nameSection": "Jtekt Europe Bearings 4.5  (30) \r\nWarehouse in Almere, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Markerkant 1301, 1314 AL Almere, NetherlandsHours: Closed ⋅ Opens 7:30 AM MonPhone: +31 36 538 3333",
+    "type": "Warehouse",
+    "address": "Markerkant 1301, 1314 AL Almere",
+    "city": "Almere"
+  },
+  {
+    "name": "JD Sports Fashion B.V.",
+    "referentNumber": "57824193",
+    "nameSection": "Jd Sports Fashion B.v. 5.0  (1) \r\nSports accessories wholesaler in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Osdorpplein 663, 1068 TC Amsterdam, Netherlands",
+    "type": "Sports accessories wholesaler",
+    "address": "Osdorpplein 663, 1068 TC Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "JCEX International Netherlands B.V.",
+    "referentNumber": "73601306",
+    "nameSection": "Gronsveld 1.0  (3) \r\nWarehouse in Gronsveld, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Building 3, Schutteboendersweg 1, 6247 EM Gronsveld, Netherlands",
+    "type": "Warehouse",
+    "address": "Building 3, Schutteboendersweg 1, 6247 EM Gronsveld",
+    "city": "Gronsveld"
+  },
+  {
+    "name": "Jardin Netherlands B.V.",
+    "referentNumber": "18039430",
+    "nameSection": "Jardin Netherlands B.V. 3.2  (17) \r\nPlastic fabrication company in Rijen, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Ericssonstraat 17, 5121 MK Rijen, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 161 228 300",
+    "type": "Plastic fabrication company",
+    "address": "Ericssonstraat 17, 5121 MK Rijen",
+    "city": "Rijen"
+  },
+  {
+    "name": "Iv-Consult B.V.",
+    "referentNumber": "23031122",
+    "nameSection": "Iv-Consult b.v. 5.0  (1) \r\nEngineering consultant in Papendrecht, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Noordhoek 37, 3351 LD Papendrecht, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 88 943 3100",
+    "type": "Eng",
+    "address": "Noordhoek 37, 3351 LD Papendrecht",
+    "city": "Papendrecht"
+  },
+  {
+    "name": "ITX Nederland B.V.",
+    "referentNumber": "20081830",
+    "nameSection": "Itx Merken B.V. 2.0  (1) \r\nHolding company in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Nieuwezijds Voorburgwal 307, 1012 RM Amsterdam, NetherlandsPhone: +31 20 530 9650",
+    "type": "Hold",
+    "address": "Nieuwezijds Voorburgwal 307, 1012 RM Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "ITX Merken B.V.",
+    "referentNumber": "64755843",
+    "nameSection": "Itx Merken B.V. 2.0  (1) \r\nHolding company in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Nieuwezijds Voorburgwal 307, 1012 RM Amsterdam, NetherlandsPhone: +31 20 530 9650",
+    "type": "Hold",
+    "address": "Nieuwezijds Voorburgwal 307, 1012 RM Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "ITX Merken B.V.",
+    "referentNumber": "64755843",
+    "nameSection": "Itx Merken B.V. 2.0  (1) \r\nHolding company in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Nieuwezijds Voorburgwal 307, 1012 RM Amsterdam, NetherlandsPhone: +31 20 530 9650",
+    "type": "Hold",
+    "address": "Nieuwezijds Voorburgwal 307, 1012 RM Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "ITank B.V.",
+    "referentNumber": "54679753",
+    "nameSection": "Itank B.V. 5.0  (1) \r\nComputer consultant in Rotterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: K.P. van der Mandelelaan 130, 3062 MB Rotterdam, NetherlandsPhone: +31 10 498 7351",
+    "type": "Computer consultant",
+    "address": "K.P. van der Mandelelaan 130, 3062 MB Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "IPsoft EU Holding B.V.",
+    "referentNumber": "34259806",
+    "nameSection": "IPsoft EU Holding B.V. 4.6  (15) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: Weesperplein 4B, 1018 XA Amsterdam, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 20 562 5200",
+    "type": "Corporate office",
+    "address": "Weesperplein 4B, 1018 XA Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "iProspect Nederland B.V.",
+    "referentNumber": "34281510",
+    "nameSection": "iProspect 4.5  (15) \r\nMarketing agency in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Moermanskkade 91, 1013 BC Amsterdam, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 88 118 9300",
+    "type": "Market",
+    "address": "Moermanskkade 91, 1013 BC Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "International Brands Group B.V.",
+    "referentNumber": "70093539",
+    "nameSection": "INT Brands Group B.V 2.4  (7) \r\nFood and beverage exporter in Nieuw-Vennep, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Lireweg 9, 2153 PH Nieuw-Vennep, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 30 890 6587",
+    "type": "Food and beverage exporter",
+    "address": "Lireweg 9, 2153 PH Nieuw-Vennep",
+    "city": "Nieuw-Vennep"
+  },
+  {
+    "name": "Intel International B.V.",
+    "referentNumber": "34098535",
+    "nameSection": "Intel International b.v 4.4  (22) \r\nBusiness to business service in Schiphol-Rijk, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Capronilaan 37, 1119 NG Schiphol-Rijk, NetherlandsPhone: +31 88 887 8200",
+    "type": "Bus",
+    "address": "Capronilaan 37, 1119 NG Schiphol-Rijk",
+    "city": "Schiphol-Rijk"
+  },
+  {
+    "name": "Innomet Specials B.V.",
+    "referentNumber": "37105279",
+    "nameSection": "Innomet Specials B.V. 5.0  (1) \r\nContractor in Alkmaar, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Berenkoog 90, 1822 BZ Alkmaar, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 72 564 7114",
+    "type": "Contractor",
+    "address": "Berenkoog 90, 1822 BZ Alkmaar",
+    "city": "Alkmaar"
+  },
+  {
+    "name": "Ilumy Innovation B.V.",
+    "referentNumber": "54601738",
+    "nameSection": "ILUMY prototyping 5.0  (6) \r\nDesign agency in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: 81-83, Rokin, 1012 KL Amsterdam, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 20 774 0033",
+    "type": "Design agency",
+    "address": "81-83, Rokin, 1012 KL Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "HKE Installatietechniek B.V.",
+    "referentNumber": "28079665",
+    "nameSection": "HKE Installatietechniek B.V. 5.0  (2) \r\nElectrician in Uithoorn, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Ondernemingsweg 25, 1422 DZ Uithoorn, NetherlandsPhone: +31 297 547 650",
+    "type": "Electrician",
+    "address": "Ondernemingsweg 25, 1422 DZ Uithoorn",
+    "city": "Uithoorn"
+  },
+  {
+    "name": "Hearthside Europe",
+    "referentNumber": "23080831",
+    "nameSection": "VSI (BV Vurense Snack Industry) 4.7  (3) \r\nManufacturer in Leerdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Energieweg 22, 4143 HK Leerdam, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 88 633 0433",
+    "type": "Manufacturer",
+    "address": "Energieweg 22, 4143 HK Leerdam",
+    "city": "Leerdam"
+  },
+  {
+    "name": "Havenbedrijf Rotterdam N.V.",
+    "referentNumber": "24354561",
+    "nameSection": "Port of Rotterdam 4.6  (81) \r\nSeaport in the Europoort, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "",
+    "type": "Seaport",
+    "address": "",
+    "city": ""
+  },
+  {
+    "name": "Havas Lemz B.V.",
+    "referentNumber": "34106135",
+    "nameSection": "Havas Lemz 4.9  (9) \r\nAdvertising agency in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Koivistokade 3, 1013 AC Amsterdam, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 20 456 5000",
+    "type": "Advertis",
+    "address": "Koivistokade 3, 1013 AC Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Hankyu Hanshin Express (Netherlands) B.V.",
+    "referentNumber": "34071957",
+    "nameSection": "Hankyu Hanshin Express (Netherlands) BV 4.4  (14) \r\nFreight forwarding service in Schiphol, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Prestwickweg 2, 1118 LB Schiphol, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 20 500 5300",
+    "type": "Freight forward",
+    "address": "Prestwickweg 2, 1118 LB Schiphol",
+    "city": "Schiphol"
+  },
+  {
+    "name": "Han Dataport Sales B.V.",
+    "referentNumber": "34227046",
+    "nameSection": "Han Dataport Sales B.V. 4.0  (3) \r\nComputer hardware manufacturer in Zoetermeer, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Zilverstraat 91, 2718 RP Zoetermeer, NetherlandsPhone: +31 348 437 000",
+    "type": "Computer hardware manufacturer",
+    "address": "Zilverstraat 91, 2718 RP Zoetermeer",
+    "city": "Zoetermeer"
+  },
+  {
+    "name": "Gilead Sciences Netherlands B.V.",
+    "referentNumber": "34249498",
+    "nameSection": "Gilead Sciences Netherlands BV 2.7  (3) \r\nPharmaceutical company in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Claude Debussylaan 22, 1082 MD Amsterdam, NetherlandsPhone: +31 20 718 3650",
+    "type": "Pharmaceutical company",
+    "address": "Claude Debussylaan 22, 1082 MD Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Giarte Media Group B.V.",
+    "referentNumber": "33205930",
+    "nameSection": "Giarte 4.2  (9) \r\nMarket researcher in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Moermanskkade 620, 5e verdieping, 1013 BC Amsterdam, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 20 622 3444",
+    "type": "Market researcher",
+    "address": "Moermanskkade 620, 5e verdieping, 1013 BC Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Getir Netherlands B.V.",
+    "referentNumber": "82163057",
+    "nameSection": "Getir Netherlands B.V. 2.3  (3) \r\nGrocery delivery service",
+    "webpageUrl": "",
+    "adressSection": "Address: Keizersgracht 572, 1017 EM Amsterdam, NetherlandsHours: Closed ⋅ Opens 9 AM Mon",
+    "type": "Grocery delivery service",
+    "address": "Keizersgracht 572, 1017 EM Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Getir B.V.",
+    "referentNumber": "75897903",
+    "nameSection": "Getir Netherlands B.V. 2.3  (3) \r\nGrocery delivery service",
+    "webpageUrl": "",
+    "adressSection": "Address: Keizersgracht 572, 1017 EM Amsterdam, NetherlandsHours: Closed ⋅ Opens 9 AM Mon",
+    "type": "Grocery delivery service",
+    "address": "Keizersgracht 572, 1017 EM Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Gebr. Van Vliet B.V.",
+    "referentNumber": "27235542",
+    "nameSection": "A.W. van Vliet Beheer B.V. 5.0  (3) \r\nEarth works company in Gouda, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Nieuwe Gouwe O.Z 11f, 2801 SB Gouda, NetherlandsPhone: +31 182 515 014",
+    "type": "Earth works company",
+    "address": "Nieuwe Gouwe O.Z 11f, 2801 SB Gouda",
+    "city": "Gouda"
+  },
+  {
+    "name": "Gazprom EP International B.V.",
+    "referentNumber": "34272827",
+    "nameSection": "Gazprom Ep International B.v. 1.0  (1) \r\nTraining centre in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Prins Hendriklaan 28, 1075 BD Amsterdam, Netherlands",
+    "type": "Tra",
+    "address": "Prins Hendriklaan 28, 1075 BD Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Fyffes",
+    "referentNumber": "24079630",
+    "nameSection": "Fyffes BV 4.5  (2) \r\nFruit wholesaler in Rotterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Marconistraat 19, 3029 AE Rotterdam, NetherlandsPhone: +31 10 244 5300",
+    "type": "Fruit wholesaler",
+    "address": "Marconistraat 19, 3029 AE Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "Fuji Logistics Europe B.V.",
+    "referentNumber": "34089689",
+    "nameSection": "Fuji Logistics Europe BV 4.1  (56) \r\nLogistics service in Sassenheim, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Warmonderweg 12, B, 2171 AH Sassenheim, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 252 240 160",
+    "type": "Logistics service",
+    "address": "Warmonderweg 12, B, 2171 AH Sassenheim",
+    "city": "Sassenheim"
+  },
+  {
+    "name": "Founda Health B.V.",
+    "referentNumber": "76708829",
+    "nameSection": "Founda Health 4.8  (5) \r\nSoftware company in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Herengracht 444, 1017 BR Amsterdam, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 20 244 4828",
+    "type": "Software company",
+    "address": "Herengracht 444, 1017 BR Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Formax, Inc.",
+    "referentNumber": "34069454",
+    "nameSection": "Formax Inc 5.0  (2) \r\nMachine construction in Badhoevedorp, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Schipholweg 315, 1171 PL Badhoevedorp, NetherlandsPhone: +31 20 659 0800",
+    "type": "Mach",
+    "address": "Schipholweg 315, 1171 PL Badhoevedorp",
+    "city": "Badhoevedorp"
+  },
+  {
+    "name": "Forever Direct E.U. B.V.",
+    "referentNumber": "24434826",
+    "nameSection": "Forever Direct 4.6  (89) \r\nDistribution service in Oud Gastel, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Het Appeltje 2, 4751 XJ Oud Gastel, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 165 700 200",
+    "type": "Distribution service",
+    "address": "Het Appeltje 2, 4751 XJ Oud Gastel",
+    "city": "Gastel"
+  },
+  {
+    "name": "Focus Orange Technology B.V.",
+    "referentNumber": "61307068",
+    "nameSection": "Focus Orange BV 4.3  (3) \r\nConsultant in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: James Wattstraat 77, 1097 DL Amsterdam, NetherlandsPhone: +31 20 240 2510",
+    "type": "Consultant",
+    "address": "James Wattstraat 77, 1097 DL Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "FMC Separation Systems B.V.",
+    "referentNumber": "9090976",
+    "nameSection": "TechnipFMC - FMC Separation Systems BV 4.5  (2) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: Delta 103, 6825 MN Arnhem, Netherlands",
+    "type": "Corporate office",
+    "address": "Delta 103, 6825 MN Arnhem",
+    "city": "Arnhem"
+  },
+  {
+    "name": "FFM Online B.V.",
+    "referentNumber": "61296805",
+    "nameSection": "FFM Online 5.0  (1) \r\nInternet marketing service in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Nieuwe Waalse Kerk, Keizersgracht 676, 1017 ET Amsterdam, Netherlands",
+    "type": "Internet market",
+    "address": "Nieuwe Waalse Kerk, Keizersgracht 676, 1017 ET Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Fenix Outdoor Logistics B.V.",
+    "referentNumber": "64755177",
+    "nameSection": "Fenix Outdoor Logistics B.V. 4.1  (29) \r\nLogistics service in Almere, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Koningsbeltweg 12, 1329 AG Almere, Netherlands",
+    "type": "Logistics service",
+    "address": "Koningsbeltweg 12, 1329 AG Almere",
+    "city": "Almere"
+  },
+  {
+    "name": "FEI Europe B.V.",
+    "referentNumber": "17097158",
+    "nameSection": "Fei Europe B.v. 4.7  (3) \r\nElectronics company in Eindhoven, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Achtseweg Noord 5, 5651 GG Eindhoven, Netherlands",
+    "type": "Electronics company",
+    "address": "Achtseweg Noord 5, 5651 GG Eindhoven",
+    "city": "Eindhoven"
+  },
+  {
+    "name": "Faurecia Emissions Control Technologies Netherlands B.V.",
+    "referentNumber": "12067345",
+    "nameSection": "Faurecia Emissions Control Technologies Netherlands B.V. 4.1  (171) \r\nAutomotive in Roermond, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Keulsebaan 507, 6045 GG Roermond, NetherlandsHours: Open ⋅ Closes 5 PMPhone: +31 475 884 242",
+    "type": "Automotive",
+    "address": "Keulsebaan 507, 6045 GG Roermond",
+    "city": "Roermond"
+  },
+  {
+    "name": "Famed B.V.",
+    "referentNumber": "31043929",
+    "nameSection": "Famed 1.5  (293) \r\nMedical billing service in Almere, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: P.J. Oudweg 41, 1314 CJ Almere, NetherlandsPhone: +31 900 0885",
+    "type": "Medical bill",
+    "address": "P.J. Oudweg 41, 1314 CJ Almere",
+    "city": "Almere"
+  },
+  {
+    "name": "EZ Phone B.V.",
+    "referentNumber": "39084284",
+    "nameSection": "EZ Phone B.V. 5.0  (1) \r\nCell phone store in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Joan Muyskenweg 22, 1096 CJ Amsterdam, NetherlandsHours: Closed ⋅ Opens 10 AM MonPhone: +31 85 111 0167",
+    "type": "Cell phone store",
+    "address": "Joan Muyskenweg 22, 1096 CJ Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Europaconnection B.V.",
+    "referentNumber": "60940506",
+    "nameSection": "Europa Connection B.V. 4.0  (1) \r\nMobile phone repair shop in Aalsmeer, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Aalsmeerderweg 249 P, 1432 CM Aalsmeer, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 297 303 058",
+    "type": "Mobile phone repair shop",
+    "address": "Aalsmeerderweg 249 P, 1432 CM Aalsmeer",
+    "city": "Aalsmeer"
+  },
+  {
+    "name": "Euro-Kytex Engineering B.V.",
+    "referentNumber": "64714098",
+    "nameSection": "Euro-Kytex Engineering B.V. 5.0  (2) \r\nShipping equipment industry in Rotterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Corkstraat 39, 3047 AC Rotterdam, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 10 262 1222",
+    "type": "Shipp",
+    "address": "Corkstraat 39, 3047 AC Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "Euro Pool System International",
+    "referentNumber": "27168083",
+    "nameSection": "Euro Pool System International BV 4.4  (10) \r\nLogistics service in Rijswijk, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Laan van Vredenoord 8, 2289 DJ Rijswijk, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 70 301 4141",
+    "type": "Logistics service",
+    "address": "Laan van Vredenoord 8, 2289 DJ Rijswijk",
+    "city": "Rijswijk"
+  },
+  {
+    "name": "Etergo",
+    "referentNumber": "62037285",
+    "nameSection": "Etergo 2.3  (43) \r\nManufacturer in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Hodenpijlkade 3, 1058 LV Amsterdam, NetherlandsPhone: +31 15 202 3160",
+    "type": "Manufacturer",
+    "address": "Hodenpijlkade 3, 1058 LV Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Enel Insurance N.V.",
+    "referentNumber": "53298098",
+    "nameSection": "Enel Insurance N.V. 4.5  (2) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: Herengracht 471, 1017 BS Amsterdam, Netherlands",
+    "type": "Corporate office",
+    "address": "Herengracht 471, 1017 BS Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Elmar Reizen B.V.",
+    "referentNumber": "30213095",
+    "nameSection": "Elmar Reizen 2.4  (11) \r\nTravel agency in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Herengracht 258, 1016 BV Amsterdam, NetherlandsPhone: +31 85 000 3094",
+    "type": "Travel agency",
+    "address": "Herengracht 258, 1016 BV Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Electronic Arts Nederland B.V.",
+    "referentNumber": "24276634",
+    "nameSection": "Electronic Arts Nederland B.v. 1.0  (5) \r\nElectronics store in Schiphol-Rijk, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Beechavenue 180, 1119 PS Schiphol-Rijk, Netherlands",
+    "type": "Electronics store",
+    "address": "Beechavenue 180, 1119 PS Schiphol-Rijk",
+    "city": "Schiphol-Rijk"
+  },
+  {
+    "name": "EKK Sales Europe B.V.",
+    "referentNumber": "14047184",
+    "nameSection": "EKK Sales Europe B.V. 4.5  (2) \r\nAuto parts manufacturer in Kerkrade, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Hopelerweg 250, 6468 XX Kerkrade, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 45 546 9222",
+    "type": "Auto parts manufacturer",
+    "address": "Hopelerweg 250, 6468 XX Kerkrade",
+    "city": "Kerkrade"
+  },
+  {
+    "name": "Eisenmann Nederland B.V.",
+    "referentNumber": "34161558",
+    "nameSection": "Eisenmann Nederland B.V. 5.0  (2) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: Fraxinus 10, 1424 LG De Kwakel, NetherlandsPhone: +31 297 331 448",
+    "type": "Corporate office",
+    "address": "Fraxinus 10, 1424 LG De Kwakel",
+    "city": "Kwakel"
+  },
+  {
+    "name": "ECCO Tannery (Holland)",
+    "referentNumber": "18122635",
+    "nameSection": "Ecco Tannery Holland 4.5  (2) \r\nManufacturer in Dongen, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Vierbundersweg 11, 5107 NL Dongen, Netherlands",
+    "type": "Manufacturer",
+    "address": "Vierbundersweg 11, 5107 NL Dongen",
+    "city": "Dongen"
+  },
+  {
+    "name": "EasyStaff Payroll Select ZZP B.V.",
+    "referentNumber": "18087515",
+    "nameSection": "EasyStaff 2.3  (3) \r\nPayroll service in Deventer, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Hanzeweg 52001, nr 5B, 7418 AW Deventer, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 570 850 530",
+    "type": "Payroll service",
+    "address": "Hanzeweg 52001, nr 5B, 7418 AW Deventer",
+    "city": "Deventer"
+  },
+  {
+    "name": "EasyStaff Payroll Select Flex B.V.",
+    "referentNumber": "18087512",
+    "nameSection": "EasyStaff 2.3  (3) \r\nPayroll service in Deventer, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Hanzeweg 52001, nr 5B, 7418 AW Deventer, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 570 850 530",
+    "type": "Payroll service",
+    "address": "Hanzeweg 52001, nr 5B, 7418 AW Deventer",
+    "city": "Deventer"
+  },
+  {
+    "name": "Eagle Simrax B.V.",
+    "referentNumber": "14023536",
+    "nameSection": "EKK Eagle Simrax 4.8  (13) \r\nAuto parts manufacturer in Kerkrade, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Hopelerweg 250, 6468 XX Kerkrade, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 45 546 9222",
+    "type": "Auto parts manufacturer",
+    "address": "Hopelerweg 250, 6468 XX Kerkrade",
+    "city": "Kerkrade"
+  },
+  {
+    "name": "DZM Data Solution B.V.",
+    "referentNumber": "27280351",
+    "nameSection": "Dzm Data Solution BV 4.5  (38) \r\nCable company in the Hague, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Zilverstraat 22, 2544 ER Den Haag, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 70 214 2599",
+    "type": "Cable company",
+    "address": "Zilverstraat 22, 2544 ER Den Haag",
+    "city": "Haag"
+  },
+  {
+    "name": "Dufry Financial Services B.V",
+    "referentNumber": "60704993",
+    "nameSection": "Dufry Financial Services B.V. 4.0  (5) \r\nFinancial planner in Eindhoven, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "",
+    "type": "F",
+    "address": "",
+    "city": ""
+  },
+  {
+    "name": "Driving the Vortex B.V.",
+    "referentNumber": "27366561",
+    "nameSection": "Driving the Vortex B.V. 5.0  (1) \r\nSoftware company in Leiden, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Schipholweg 103, 2316 XC Leiden, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 85 877 7058",
+    "type": "Software company",
+    "address": "Schipholweg 103, 2316 XC Leiden",
+    "city": "Leiden"
+  },
+  {
+    "name": "DK-Schweizer Nederland B.V.",
+    "referentNumber": "18068763",
+    "nameSection": "DK-Schweizer Nederland B.V. 4.6  (17) \r\nAuto upholsterer in Rijen, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Europalaan 25, 5121 DH Rijen, NetherlandsPhone: +31 161 227 555",
+    "type": "Auto upholsterer",
+    "address": "Europalaan 25, 5121 DH Rijen",
+    "city": "Rijen"
+  },
+  {
+    "name": "DK-Schweizer Europe B.V.",
+    "referentNumber": "18080425",
+    "nameSection": "DK-Schweizer Nederland B.V. 4.6  (17) \r\nAuto upholsterer in Rijen, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Europalaan 25, 5121 DH Rijen, NetherlandsPhone: +31 161 227 555",
+    "type": "Auto upholsterer",
+    "address": "Europalaan 25, 5121 DH Rijen",
+    "city": "Rijen"
+  },
+  {
+    "name": "Darfon Europe B.V.",
+    "referentNumber": "61951064",
+    "nameSection": "DARFON Europe B.V. 4.1  (7) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: Habraken 2145A, 5507 TE Veldhoven, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 40 303 1600",
+    "type": "Corporate office",
+    "address": "Habraken 2145A, 5507 TE Veldhoven",
+    "city": "Veldhoven"
+  },
+  {
+    "name": "Danone Nederland B.V.",
+    "referentNumber": "11016670",
+    "nameSection": "Danone Netherlands B.V. 4.5  (11) \r\nDairy store",
+    "webpageUrl": "",
+    "adressSection": "Address: Zonnebaan 21, 3542 EB Utrecht, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 30 710 5000",
+    "type": "Dairy store",
+    "address": "Zonnebaan 21, 3542 EB Utrecht",
+    "city": "Utrecht"
+  },
+  {
+    "name": "CVmaker B.V.",
+    "referentNumber": "70894027",
+    "nameSection": "CVmaker B.V. 1.0  (5) \r\nSoftware company in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Piet Heinkade 221, 1019 HM Amsterdam, Netherlands",
+    "type": "Software company",
+    "address": "Piet Heinkade 221, 1019 HM Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "COSCO Shipping Specialized Carriers (Europe) B.V.",
+    "referentNumber": "24290729",
+    "nameSection": "Cosco Shipping Specialized Carriers (Europe) B.V. 4.0  (2) \r\nShipping company in Rotterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: K.P. van der Mandelelaan 100, 3062 MB Rotterdam, Netherlands",
+    "type": "Shipp",
+    "address": "K.P. van der Mandelelaan 100, 3062 MB Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "Cornelder Scheepvaart Maatschappij B.V.",
+    "referentNumber": "24281871",
+    "nameSection": "Cornelder Scheepvaart Maatschappij B.V. 5.0  (1) \r\nLogistics in poortugaal, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Hofhoek 20-48, 3176 PD Poortugaal, NetherlandsPhone: +31 10 506 3000",
+    "type": "Logistics",
+    "address": "Hofhoek 20-48, 3176 PD Poortugaal",
+    "city": "Poortugaal"
+  },
+  {
+    "name": "Core Supply Group B.V.",
+    "referentNumber": "53313461",
+    "nameSection": "Core Supply Group B.V. 5.0  (1) \r\nWarehouse store in Maasland, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Oud Camp 22, 3155 DL Maasland, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 88 697 2540",
+    "type": "Warehouse store",
+    "address": "Oud Camp 22, 3155 DL Maasland",
+    "city": "Maasland"
+  },
+  {
+    "name": "Continental Juice B.V.",
+    "referentNumber": "24315295",
+    "nameSection": "Continental Juice BV 3.9  (108) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: IJselstraat 25, 3029 BM Rotterdam, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 10 221 0010",
+    "type": "Corporate office",
+    "address": "IJselstraat 25, 3029 BM Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "ColorMatrix Europe B.V.",
+    "referentNumber": "17213716",
+    "nameSection": "ColorMatrix Europe B.V. 5.0  (1) \r\nWholesaler in Eindhoven, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Hastelweg 273, 5652 CV Eindhoven, NetherlandsPhone: +31 40 291 6510",
+    "type": "Wholesaler",
+    "address": "Hastelweg 273, 5652 CV Eindhoven",
+    "city": "Eindhoven"
+  },
+  {
+    "name": "Coca-Cola Europacific Partners Nederland B.V.",
+    "referentNumber": "24172526",
+    "nameSection": "Coca-Cola Europacific Partners Nederland B.V 4.0  (99) \r\nFood manufacturer",
+    "webpageUrl": "",
+    "adressSection": "Address: De Wildert, Eindsestraat 137-139, 5105 NA Dongen, NetherlandsHours: Open 24 hoursPhone: +31 13 579 3911",
+    "type": "Food manufacturer",
+    "address": "De Wildert, Eindsestraat 137-139, 5105 NA Dongen",
+    "city": "Dongen"
+  },
+  {
+    "name": "Clocktimizer B.V.",
+    "referentNumber": "61369373",
+    "nameSection": "Clocktimizer B.V. 5.0  (3) \r\nBusiness to business service in Utrecht, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Stadsplateau 5, 3512 AZ Utrecht, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 20 701 8222",
+    "type": "Bus",
+    "address": "Stadsplateau 5, 3512 AZ Utrecht",
+    "city": "Utrecht"
+  },
+  {
+    "name": "CIC NL B.V.",
+    "referentNumber": "62074962",
+    "nameSection": "CIC NL Operations B.V. 4.3  (4) \r\nBusiness management consultant in Rotterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Stationsplein 45, 3013 AK Rotterdam, NetherlandsPhone: +31 10 414 0004",
+    "type": "Bus",
+    "address": "Stationsplein 45, 3013 AK Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "CEA Systems B.V.",
+    "referentNumber": "24165324",
+    "nameSection": "CEA Systems BV 5.0  (2) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: Fascinatio Boulevard 1242, 2909 VA Capelle aan den IJssel, NetherlandsPhone: +31 10 273 0066",
+    "type": "Corporate office",
+    "address": "Fascinatio Boulevard 1242, 2909 VA Capelle aan den IJssel",
+    "city": "IJssel"
+  },
+  {
+    "name": "CarNext B.V.",
+    "referentNumber": "70040729",
+    "nameSection": "CarNext.com | HQ 4.4  (7) \r\nCar finance and loan company in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: John M Keynesplein 10A, 4th Floor, 1066 EP Amsterdam, NetherlandsPhone: +31 20 703 3450",
+    "type": "Car f",
+    "address": "John M Keynesplein 10A, 4th Floor, 1066 EP Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Cape Five NL B.V.",
+    "referentNumber": "11070278",
+    "nameSection": "Cape Five nl B.V. 4.3  (27) \r\nTrucking company in Ammerzoden, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Uilecotenweg 7, 5324 JT Ammerzoden, NetherlandsPhone: +31 345 656 090",
+    "type": "Truck",
+    "address": "Uilecotenweg 7, 5324 JT Ammerzoden",
+    "city": "Ammerzoden"
+  },
+  {
+    "name": "Camposol Fresh B.V",
+    "referentNumber": "24152493",
+    "nameSection": "Camposol Fresh B.V. 4.5  (6) \r\nProduce wholesaler",
+    "webpageUrl": "",
+    "adressSection": "Address: Honderdland 602, 2676 LV Maasdijk, NetherlandsPhone: +31 174 521 016",
+    "type": "Produce wholesaler",
+    "address": "Honderdland 602, 2676 LV Maasdijk",
+    "city": "Maasdijk"
+  },
+  {
+    "name": "CAE Aviation Training B.V.",
+    "referentNumber": "33294836",
+    "nameSection": "CAE Training Aircraft BV 4.6  (8) \r\nSchool in Hoofddorp, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Diamantlaan 27, 2132 WV Hoofddorp, NetherlandsPhone: +31 23 567 1671",
+    "type": "School",
+    "address": "Diamantlaan 27, 2132 WV Hoofddorp",
+    "city": "Hoofddorp"
+  },
+  {
+    "name": "CACEIS Bank, Netherlands Branch",
+    "referentNumber": "67323944",
+    "nameSection": "KAS BANK N.V. 4.3  (6) \r\nBank in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: De Entree 500, 1101 EE Amsterdam, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 20 557 5911",
+    "type": "Bank",
+    "address": "De Entree 500, 1101 EE Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Cabot B.V.",
+    "referentNumber": "24108495",
+    "nameSection": "Cabot Activated Carbon BV 4.1  (61) \r\nEnergy supplier in Botlek Rotterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Botlekstraat 2, 3197 KA Botlek Rotterdam, NetherlandsPhone: +31 181 291 888",
+    "type": "Energy supplier",
+    "address": "Botlekstraat 2, 3197 KA Botlek Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "Busan Port Authority B.V.",
+    "referentNumber": "80738923",
+    "nameSection": "Busan Port Authority B.V 4.0  (8) \r\nWarehouse in the Maasvlakte, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Maasvlakteboulevard 3199, 3011AA Maasvlakte Rotterdam, Netherlands",
+    "type": "Warehouse",
+    "address": "Maasvlakteboulevard 3199, 3011AA Maasvlakte Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "Burg Industries B.V.",
+    "referentNumber": "27229637",
+    "nameSection": "Burg Industries B.V. 5.0  (1) \r\nManufacturer in Pijnacker, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Katwijkerlaan 75, 2641 PD Pijnacker, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 15 369 4340",
+    "type": "Manufacturer",
+    "address": "Katwijkerlaan 75, 2641 PD Pijnacker",
+    "city": "Pijnacker"
+  },
+  {
+    "name": "Brainbox Consulting B.V.",
+    "referentNumber": "64713032",
+    "nameSection": "Brainbox Consulting 4.7  (6) \r\nSoftware company in Eindhoven, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Torenallee 20, 5617 BC Eindhoven, NetherlandsHours: Closed ⋅ Opens 9:30 AM MonPhone: +31 6 38660689",
+    "type": "Software company",
+    "address": "Torenallee 20, 5617 BC Eindhoven",
+    "city": "Eindhoven"
+  },
+  {
+    "name": "Bisdom Roermond",
+    "referentNumber": "74911929",
+    "nameSection": "Roman Catholic Diocese of Roermond 4.7  (29) \r\nReligious organization in Roermond, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "",
+    "type": "Religious organization",
+    "address": "",
+    "city": ""
+  },
+  {
+    "name": "Bioprocess Pilot Facility B.V.",
+    "referentNumber": "54848040",
+    "nameSection": "BPF 4.3  (22) \r\nResearch and product development in Delft, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Alexander Fleminglaan 1, 2613 AX Delft, NetherlandsPhone: +31 15 515 0200",
+    "type": "Research and product development",
+    "address": "Alexander Fleminglaan 1, 2613 AX Delft",
+    "city": "Delft"
+  },
+  {
+    "name": "Beyond Space B.V.",
+    "referentNumber": "80911595",
+    "nameSection": "Beyond Space 5.0  (1) \r\nArchitect in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Rigakade 10, 1013 BC Amsterdam, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 20 244 2906",
+    "type": "Architect",
+    "address": "Rigakade 10, 1013 BC Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Barla Food B.V.",
+    "referentNumber": "54842328",
+    "nameSection": "Barla Food B.V. 4.7  (19) \r\nFood manufacturing supply",
+    "webpageUrl": "",
+    "adressSection": "Address: Langendijk 11, 5652 AX Eindhoven, NetherlandsHours: Closed ⋅ Opens 7 AM MonPhone: +31 40 257 1100",
+    "type": "Food manufactur",
+    "address": "Langendijk 11, 5652 AX Eindhoven",
+    "city": "Eindhoven"
+  },
+  {
+    "name": "BAM International B.V.",
+    "referentNumber": "27068392",
+    "nameSection": "BAM International 3.3  (14) \r\nConstruction company in Gouda, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: H.J. Nederhorststraat 1, 2800 CE Gouda, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 88 712 3500",
+    "type": "Construction company",
+    "address": "H.J. Nederhorststraat 1, 2800 CE Gouda",
+    "city": "Gouda"
+  },
+  {
+    "name": "BAM Infraconsult B.V.",
+    "referentNumber": "9073590",
+    "nameSection": "BAM Infraconsult bv 4.4  (44) \r\nConstruction company in Gouda, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: H.J. Nederhorststraat 1, 2801 SC Gouda, NetherlandsHours: Closed ⋅ Opens 8 AM MonPhone: +31 182 590 510",
+    "type": "Construction company",
+    "address": "H.J. Nederhorststraat 1, 2801 SC Gouda",
+    "city": "Gouda"
+  },
+  {
+    "name": "Baker Hughes Reservoir Software B.V.",
+    "referentNumber": "27271490",
+    "nameSection": "Baker Hughes Reservoir Software B.V. 4.9  (9) \r\nSoftware company in Delft, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Delftechpark 26, 2628 XH Delft, NetherlandsPhone: +31 15 251 7901",
+    "type": "Software company",
+    "address": "Delftechpark 26, 2628 XH Delft",
+    "city": "Delft"
+  },
+  {
+    "name": "B.V. Arrow Electronics DLC",
+    "referentNumber": "33298008",
+    "nameSection": "Arrow Electronics DLC 3.3  (11) \r\nElectronics wholesaler in Venlo, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Dirk Hartogweg 8, 5928 LV Venlo, NetherlandsPhone: +31 77 465 8500",
+    "type": "Electronics wholesaler",
+    "address": "Dirk Hartogweg 8, 5928 LV Venlo",
+    "city": "Venlo"
+  },
+  {
+    "name": "B. Building Business B.V.",
+    "referentNumber": "60902159",
+    "nameSection": "B. Amsterdam B3 4.3  (109) \r\nCoworking space in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Johan Huizingalaan 400, 1066 JS Amsterdam, NetherlandsHours: Closed ⋅ Opens 8:30 AM MonPhone: +31 20 723 8423",
+    "type": "Cowork",
+    "address": "Johan Huizingalaan 400, 1066 JS Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Ask Community Systems B.V.",
+    "referentNumber": "24339751",
+    "nameSection": "ASK Community Systems 4.0  (4) \r\nComputer consultant in Rotterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Heemraadssingel 89, 3022 CA Rotterdam, NetherlandsPhone: +31 10 225 0130",
+    "type": "Computer consultant",
+    "address": "Heemraadssingel 89, 3022 CA Rotterdam",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "Artefact Benelux",
+    "referentNumber": "51364247",
+    "nameSection": "Artefact Benelux 4.8  (16) \r\nInternet marketing service in Utrecht, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Creative Valley, Stationsplein 32, 3511 ED Utrecht, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 30 737 0481",
+    "type": "Internet market",
+    "address": "Creative Valley, Stationsplein 32, 3511 ED Utrecht",
+    "city": "Utrecht"
+  },
+  {
+    "name": "Aroundtown Management NL B.V.",
+    "referentNumber": "66881307",
+    "nameSection": "Aroundtown Management NL B.V. 1.0  (1) \r\nBusiness management consultant in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: H.J.E. Wenckebachweg 123, 1096 AM Amsterdam, NetherlandsHours: Closed ⋅ Opens 9 AM Mon",
+    "type": "Bus",
+    "address": "H.J.E. Wenckebachweg 123, 1096 AM Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Apandam Europe B.V.",
+    "referentNumber": "66488567",
+    "nameSection": "Apandam Europe B.V. 5.0  (3) \r\nImport export company in Capelle aan den IJssel, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Venkelbaan 39, 2908 KE Capelle aan den IJssel, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 10 737 1864",
+    "type": "Import export company",
+    "address": "Venkelbaan 39, 2908 KE Capelle aan den IJssel",
+    "city": "IJssel"
+  },
+  {
+    "name": "AOC International (Europe) B.V.",
+    "referentNumber": "52168204",
+    "nameSection": "AOC International (Europe) B.V. 2.6  (5) \r\nWholesaler in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Prins Bernhardplein 200, 1097 JB Amsterdam, NetherlandsHours: Closed ⋅ Opens 9 AM MonPhone: +31 20 504 6932",
+    "type": "Wholesaler",
+    "address": "Prins Bernhardplein 200, 1097 JB Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Anthos Private Wealth Management B.V.",
+    "referentNumber": "34201104",
+    "nameSection": "Anthos Amsterdam 4.1  (8) \r\nServices in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Jachthavenweg 111, 1081 KM Amsterdam, NetherlandsPhone: +31 20 621 3948",
+    "type": "Services",
+    "address": "Jachthavenweg 111, 1081 KM Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Amsterdam Institute of Technology B.V.",
+    "referentNumber": "64758958",
+    "nameSection": "Amsterdam Institute of Technology 1.0  (1) \r\nUniversity in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Science Park 408, 1098 XH Amsterdam, NetherlandsPhone: +31 20 369 0835",
+    "type": "University",
+    "address": "Science Park 408, 1098 XH Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "American Eagle Outfitters Dutch Op Co B.V.",
+    "referentNumber": "59936797",
+    "nameSection": "American Eagle Outfitters Dutch Op Co B.v. 5.0  (1) \r\nClothing store in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Prins Bernhardplein 200, 1097 JB Amsterdam, Netherlands",
+    "type": "Cloth",
+    "address": "Prins Bernhardplein 200, 1097 JB Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Amdocs B.V.",
+    "referentNumber": "34109782",
+    "nameSection": "Amdocs BV 4.5  (28) \r\nSoftware company in Maastricht, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Il Fiore, Renier Nafzgerstraat 100, 6221 KL Maastricht, NetherlandsPhone: +31 43 325 7508",
+    "type": "Software company",
+    "address": "Il Fiore, Renier Nafzgerstraat 100, 6221 KL Maastricht",
+    "city": "Maastricht"
+  },
+  {
+    "name": "AMCA Hydraulic Fluid Power B.V.",
+    "referentNumber": "2056534",
+    "nameSection": "Amca Hydraulic Fluid Power BV 4.7  (3) \r\nManufacturer in the Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: B. Kuiperweg 33, 9792 PJ Ten Post, NetherlandsPhone: +31 50 302 3577",
+    "type": "Manufacturer",
+    "address": "B. Kuiperweg 33, 9792 PJ Ten Post",
+    "city": "Post"
+  },
+  {
+    "name": "Amazon Development Center (Netherlands) B.V.",
+    "referentNumber": "56869649",
+    "nameSection": "Amazon Development Center (Netherlands) B.V. 3.8  (26) \r\nCorporate office",
+    "webpageUrl": "",
+    "adressSection": "Address: Johanna Westerdijkplein 1, 2521 EN Den Haag, NetherlandsHours: Closed ⋅ Opens 8:30 AM Mon",
+    "type": "Corporate office",
+    "address": "Johanna Westerdijkplein 1, 2521 EN Den Haag",
+    "city": "Haag"
+  },
+  {
+    "name": "Align B.V.",
+    "referentNumber": "33168549",
+    "nameSection": "Align B.V. 4.8  (4) \r\nBusiness management consultant in Amsterdam, Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: De Cuserstraat 91, 1081 CN Amsterdam, NetherlandsPhone: +31 20 240 2511",
+    "type": "Bus",
+    "address": "De Cuserstraat 91, 1081 CN Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Alexander Mann Solutions B.V.",
+    "referentNumber": "34238256",
+    "nameSection": "Alexander Mann Solutions B.V. 4.0  (1) \r\nRecruiter in the Netherlands",
+    "webpageUrl": "",
+    "adressSection": "Address: Joop Geesinkweg 999, 1096 AZ Amsterdam, NetherlandsPhone: +44 20 7832 2700",
+    "type": "Recruiter",
+    "address": "Joop Geesinkweg 999, 1096 AZ Amsterdam",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "agile42 Consulting B.V.",
+    "referentNumber": "59402342",
+    "nameSection": "agile42 Consulting B.V. \r\nManagement-consultant in Alphen aan den Rijn",
+    "webpageUrl": "",
+    "adressSection": "Adres: Prins Hendrikstraat 168, 2405 AN Alphen aan den RijnTelefoonnummer: 020 244 2810",
+    "type": "Management-consultant",
+    "address": "",
+    "city": ""
+  },
+  {
+    "name": "Activision Blizzard International B.V.",
+    "referentNumber": "34324431",
+    "nameSection": "Activision B.V. Nederland 2,2  (25)  \r\nUitgever in Amstelveen",
+    "webpageUrl": "",
+    "adressSection": "Adres: Stroombaan 16, 1181 VX AmstelveenTelefoonnummer: 020 715 7700",
+    "type": "Uitgever",
+    "address": "",
+    "city": ""
+  },
+  {
+    "name": "ACT Financial Solutions B.V.",
+    "referentNumber": "68344864",
+    "nameSection": "ACT Financial Solutions \r\nFinanci�le instelling in Amsterdam",
+    "webpageUrl": "",
+    "adressSection": "Adres: Strawinskylaan 3127, 1077 ZX AmsterdamOpeningstijden: Gesloten ⋅ Gaat open op ma om 08:30Telefoonnummer: 020 236 2910",
+    "type": "F",
+    "address": "",
+    "city": ""
+  },
+  {
+    "name": "Accrès Tandartsenpraktijk Purmerend B.V.",
+    "referentNumber": "37161647",
+    "nameSection": "Accr�s Tandartsenpraktijk Purmerend B.V. \r\nTandarts in Purmerend",
+    "webpageUrl": "",
+    "adressSection": "Adres: Overlanderstraat 456, 1445 DX PurmerendTelefoonnummer: 0299 460 211",
+    "type": "Tandarts",
+    "address": "",
+    "city": ""
+  },
+  {
+    "name": "Account 4 B.V.",
+    "referentNumber": "32093604",
+    "nameSection": "Account 4 Holding B.V. \r\nAccountant in Naarden",
+    "webpageUrl": "",
+    "adressSection": "Adres: Gooimeer 5-30, 1411 DD NaardenTelefoonnummer: 035 678 3384",
+    "type": "Accountant",
+    "address": "",
+    "city": ""
+  },
+  {
+    "name": "Access Business Group International B.V.",
+    "referentNumber": "12049514",
+    "nameSection": "Amway Supply Chain Services 4,5  (40)  \r\nLogistieke dienstverlening in Venlo",
+    "webpageUrl": "",
+    "adressSection": "Adres: Celsiusweg 20, 5928 PR VenloOpeningstijden: Gesloten ⋅ Gaat open op ma om 08:30Telefoonnummer: 077 324 7400",
+    "type": "Logistieke dienstverlen",
+    "address": "",
+    "city": ""
+  },
+  {
+    "name": "ABN AMRO Asset Based Finance N.V.",
+    "referentNumber": "30099465",
+    "nameSection": "Abn Amro Asset Based Finance N.v. 4,7  (3)  \r\nFinancieel adviseur in Utrecht",
+    "webpageUrl": "",
+    "adressSection": "Adres: Avenue Buliding, Beneluxlaan 1010, 3526 KK UtrechtOpeningstijden: Gesloten ⋅ Gaat open op ma om 08:30",
+    "type": "F",
+    "address": "",
+    "city": ""
+  }
+]
