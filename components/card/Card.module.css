@@ -1,5 +1,6 @@
 .cardContainer {
   display: grid;
+  overflow: hidden;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2);
   grid-column-gap: 20px;
@@ -17,13 +18,13 @@
 .categoriesContainer {
   grid-area: 1 / 2 / 2 / 3;
   display: flex;
-  justify-content: center;
+  justify-content: end;
 }
 
 .lastVisitContainer {
   grid-area: 2 / 2 / 3 / 3;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .cardLocation {
@@ -44,10 +45,27 @@
 
 .websiteText {
   padding-left: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 130px;
+}
+
+@media (max-width: 375px) {
+    .cardContainer {
+        display: flex;
+        flex-direction: column; 
+    }
+    .lastVisitContainer {
+        justify-content: center;
+    }
+   
 }
 
 @media (min-width: 768px) {
   .cardContainer {
     padding: 24px 30px 30px 30px;
+  }
+  .websiteText {
+    max-width: 250px;
   }
 }

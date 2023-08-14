@@ -40,7 +40,7 @@ function parseCompanyActivity(nameSection) {
 
   if (parts.length > 1) {
     const firstResult = parts[1].split(" in ")[0].trim();
-    console.log("result:::", firstResult);
+    //console.log("result:::", firstResult);
 
     return firstResult;
   } else {
@@ -61,11 +61,11 @@ fs.createReadStream(filePath)
       (company) => company.webpageUrl !== ""
     );
 
-    console.log(
-      unfilteredCompanies.length,
-      "Total companies with informed website:",
-      websiteCompanies.length
-    );
+    // console.log(
+    //   unfilteredCompanies.length,
+    //   "Total companies with informed website:",
+    //   websiteCompanies.length
+    // );
 
     const companiesWithCorrectUrl = websiteCompanies.map((company) => {
       const url = company.webpageUrl;

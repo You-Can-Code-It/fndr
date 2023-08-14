@@ -35,7 +35,7 @@ async function main() {
       skipDuplicates: true, // skip duplicates
     });
 
-    console.log(seededData, "Seeded Data:");
+    //console.log(seededData, "Seeded Data:");
   } catch (error) {
     console.error("Error seeding data:", error);
   } finally {
