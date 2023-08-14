@@ -1,25 +1,30 @@
 import React from "react";
-import { useState } from "react";
 import Link from "next/link";
 import { DateTime } from "luxon";
 import CompanyButton from "@/components/CompanyButton/CompanyButton";
 
 export default function account() {
-  // const [userEventCreatedAt, setUserEventCreatedAt] = useState("")
-  // const [userEventUser, setUserEventUser] = useState("")
+  async function handleClick(
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) {
+    try {
+      const date = DateTime.utc().toISO();
 
-  async function handleClick(event) {
-    // setUserEventCreatedAt()
+      const companyId = event.currentTarget.getAttribute("data-company-id");
+      const response = await fetch("/api/history", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ createdAt: date, companyId: companyId }),
+      });
 
-    const date = DateTime.utc().toISO();
-
-    const companyId = event.target.value;
-
-    const response = await fetch("/api/history", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ createdAt: date, companyId: companyId }),
-    });
+      if (response.ok) {
+        console.log("Account Page. Succesful API request.");
+      } else {
+        console.log("API request failed:");
+      }
+    } catch (error) {
+      console.log("Account page error:", error);
+    }
   }
 
   return (
