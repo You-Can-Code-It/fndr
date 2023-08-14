@@ -1,9 +1,6 @@
 import React from "react";
-import { getSession, useSession } from "next-auth/react";
 import { useState } from "react";
-import { useRouter } from "next/router";
 import Link from "next/link";
-import { getServerSession } from "next-auth";
 import { DateTime } from "luxon";
 import CompanyButton from "@/components/CompanyButton/CompanyButton";
 
@@ -35,16 +32,3 @@ export default function account() {
     </div>
   );
 }
-
-// export async function getServerSideProps() {
-//   const session = await getServerSession();
-//   if (session === null) {
-//     return {
-//       redirect: {
-//         destination: "/",
-//         permanent: false,
-//       },
-//     };
-//   }
-//   return { props: {} };
-// }

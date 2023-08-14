@@ -1,7 +1,6 @@
 import { prisma } from "@/prisma/client";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSession } from "next-auth";
-import { getSession } from "next-auth/react";
 
 export default async function handler(
   req: NextApiRequest,
@@ -15,9 +14,6 @@ export default async function handler(
   if (!session.user?.email) {
     return res.status(401).json({ message: "Please log in!" });
   }
-
-  console.log("session user", session.user);
-  console.log("req body", req.body);
 
   switch (req.method) {
     case "POST":
