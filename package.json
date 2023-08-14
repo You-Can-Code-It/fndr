@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "seed": "ts-node prisma/seed.ts"
+    "seed": "ts-node prisma/seed.ts",
+    "prisma:generate": "prisma generate"
   },
   "dependencies": {
     "@next/font": "^13.4.13",
