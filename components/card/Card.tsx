@@ -5,6 +5,7 @@ import React from "react";
 import WebLink from "../typography/WebLink";
 
 type CardProps = {
+  id: string;
   name: string;
   city: string;
   website: string;
@@ -12,7 +13,14 @@ type CardProps = {
   category: string;
 };
 
-const Card: React.FC<CardProps> = ({ name, city, website, lastVisit, category }) => {
+const Card: React.FC<CardProps> = ({
+  id,
+  name,
+  city,
+  website,
+  lastVisit,
+  category,
+}) => {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.overviewContainer}>
@@ -32,6 +40,7 @@ const Card: React.FC<CardProps> = ({ name, city, website, lastVisit, category })
         </div>
       </div>
       <div className={styles.categoriesContainer}>{category}</div>
+      <button onClick={() => console.log(`company id: ${id}`)}>Delete</button>
       <div className={styles.lastVisitContainer}>
         <Heading2>{lastVisit}</Heading2>
       </div>

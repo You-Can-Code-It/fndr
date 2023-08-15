@@ -79,6 +79,7 @@ function Home({
               return (
                 <Card
                   key={company.id}
+                  id={company.id}
                   name={company.name}
                   city={company.city}
                   website={company.website}
