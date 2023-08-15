@@ -3,6 +3,7 @@ import Heading1 from "../typography/Heading1";
 import Heading2 from "../typography/Heading2";
 import React from "react";
 import WebLink from "../typography/WebLink";
+import axios from "axios";
 
 type CardProps = {
   id: string;
@@ -21,6 +22,15 @@ const Card: React.FC<CardProps> = ({
   lastVisit,
   category,
 }) => {
+  const handleDeleteClick = async (companyId: string) => {
+    try {
+      console.log("Right company Id?", companyId);
+      await axios.delete(`/api/companies/${companyId}`);
+      console.log("Success");
+    } catch (error) {
+      console.log("HandleDeleteClick error:", error);
+    }
+  };
   return (
     <div className={styles.cardContainer}>
       <div className={styles.overviewContainer}>
@@ -40,7 +50,9 @@ const Card: React.FC<CardProps> = ({
         </div>
       </div>
       <div className={styles.categoriesContainer}>{category}</div>
-      <button onClick={() => console.log(`company id: ${id}`)}>Delete</button>
+      <button onClick={() => handleDeleteClick("TESTstring-blabla-blah")}>
+        Delete
+      </button>
       <div className={styles.lastVisitContainer}>
         <Heading2>{lastVisit}</Heading2>
       </div>
