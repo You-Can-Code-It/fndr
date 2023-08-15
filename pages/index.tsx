@@ -7,6 +7,7 @@ import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { prisma } from "./db";
 import LoginControls from "@/components/LoginControls/LoginControls";
 import Link from "next/link";
+import AddCompanyForm from "@/components/AddCompanyForm/AddCompanyForm";
 
 function serialize(data: any) {
   return JSON.parse(JSON.stringify(data));
@@ -73,7 +74,7 @@ function Home({
           <div className={styles.mainDropdownContainer}>
             <Dropdown />
           </div>
-
+          <AddCompanyForm />
           <div className={styles.mainCardContainer}>
             {companies.slice(0, 84).map((company: Company, index) => {
               return (

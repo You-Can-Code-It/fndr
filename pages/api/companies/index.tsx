@@ -5,6 +5,7 @@ const prisma = new PrismaClient();
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
+    //console.log("/api/companies, req.body", req.body);
     try {
       const {
         id,
@@ -49,11 +50,13 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       });
 
       res.status(201).json(createdCompany);
-      console.log("Company successfully created");
+      console.log("Company successfully created", createdCompany);
     } catch (error) {
       res.status(500).json({ message: "An error occurred." });
     }
   } else {
-    res.status(405).json({ message: "Method not allowed." });
+    res
+      .status(405)
+      .json({ message: "Method not allowed. Company not created" });
   }
 };
