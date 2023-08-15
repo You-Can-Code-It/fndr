@@ -68,8 +68,8 @@ function Home({
           <Logo />
         </header>
         <main className={styles.mainContainer}>
-          <LoginControls />
-          <Link href="/account">To your account</Link>
+          {/* <LoginControls /> */}
+          {/* <Link href="/account">To your account</Link> */}
           <div className={styles.mainDropdownContainer}>
             <Dropdown />
           </div>
