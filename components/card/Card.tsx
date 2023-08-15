@@ -24,13 +24,24 @@ const Card: React.FC<CardProps> = ({
 }) => {
   const handleDeleteClick = async (companyId: string) => {
     try {
-      console.log("Right company Id?", companyId);
-      await axios.delete(`/api/companies/${companyId}`);
-      console.log("Success");
+      // Display a confirmation message
+      const confirmed = window.confirm(
+        "Are you sure you want to delete this company?"
+      );
+
+      if (confirmed) {
+        console.log("Deleting company with Id:", companyId);
+        await axios.delete(`/api/companies/${companyId}`);
+        console.log("Company deleted successfully");
+        // You can update your UI or perform any additional actions after deletion
+      } else {
+        console.log("Deletion canceled");
+      }
     } catch (error) {
-      console.log("HandleDeleteClick error:", error);
+      console.log("Error deleting company:", error);
     }
   };
+
   return (
     <div className={styles.cardContainer}>
       <div className={styles.overviewContainer}>
@@ -50,9 +61,7 @@ const Card: React.FC<CardProps> = ({
         </div>
       </div>
       <div className={styles.categoriesContainer}>{category}</div>
-      <button onClick={() => handleDeleteClick("TESTstring-blabla-blah")}>
-        Delete
-      </button>
+      <button onClick={() => handleDeleteClick(id)}>Delete</button>
       <div className={styles.lastVisitContainer}>
         <Heading2>{lastVisit}</Heading2>
       </div>

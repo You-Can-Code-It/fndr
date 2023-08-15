@@ -7,6 +7,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { companyId } = req.query;
 
   if (req.method === "DELETE") {
+    console.log("/api/companies/${id}, req.body", req.body);
     try {
       await prisma.company.delete({
         where: {
@@ -14,11 +15,15 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         },
       });
       res.status(204).end();
-      console.log("backend companyId?", companyId);
+      console.log("/api/companies/:id, backend companyId?", companyId);
     } catch (error) {
-      res.status(500).json({ message: "An error occurred.", error });
+      res
+        .status(500)
+        .json({ message: "/api/companies/:id An error occurred.", error });
     }
   } else {
-    res.status(405).json({ message: "Method not allowed." });
+    res
+      .status(405)
+      .json({ message: "/api/companies/:id, else, Method not allowed." });
   }
 };
