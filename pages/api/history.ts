@@ -46,14 +46,14 @@ export default async function handler(
           },
         });
         return res.status(200).json(UserEvent);
-      } catch (error) {
+      } catch (error: any) {
         return res.status(400).json({ message: error.message });
       }
     case "GET":
       try {
         const ViewedHistory = await prisma.userEvent.findMany();
         return res.status(200).json(ViewedHistory);
-      } catch (error) {
+      } catch (error: any) {
         return res.status(400).json({ message: error.message });
       }
     default:

@@ -1,12 +1,13 @@
-import NextAuth from "next-auth";
+import NextAuth, { NextAuthOptions } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { prisma } from "@/prisma/client";
 
-export const authOptions = {
+export const authOption: NextAuthOptions = {
   session: {
     strategy: "jwt",
   },
+  // @ts-ignore
   adapter: PrismaAdapter(prisma),
   // Configure one or more authentication providers
   providers: [
@@ -18,4 +19,5 @@ export const authOptions = {
   ],
 };
 
+// @ts-ignore
 export default NextAuth(authOptions);
