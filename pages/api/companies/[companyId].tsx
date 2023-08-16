@@ -7,7 +7,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { companyId } = req.query;
 
   if (req.method === "DELETE") {
-    console.log("/api/companies/${id}, req.body", req.body);
     try {
       await prisma.company.delete({
         where: {
@@ -15,11 +14,27 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         },
       });
       res.status(204).end();
-      console.log("/api/companies/:id, backend companyId?", companyId);
     } catch (error) {
       res
         .status(500)
         .json({ message: "/api/companies/:id An error occurred.", error });
+    }
+  }
+  if (req.method === "PUT") {
+    const { companyId } = req.query;
+    try {
+      await prisma.company.update({
+        where: { id: companyId as string },
+        data: { display: false },
+      });
+      console.log("/api/companies:id - Company `display` field updated");
+      res.status(204).end();
+    } catch (error) {
+      res.status(500).json({
+        message:
+          "/api/companies/:id An error occurred when updating `display` field.",
+        error,
+      });
     }
   } else {
     res

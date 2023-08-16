@@ -44,7 +44,7 @@ function Home({
         <header className={styles.headerContainer}>
           <Logo />
         </header>
-        <p>Total Companies: {companies.length}</p>
+        <p>Total Companies: {displayedCompaniesArray.length}</p>
         <main className={styles.mainContainer}>
           {/* <LoginControls /> */}
           {/* <Link href="/account">To your account</Link> */}
