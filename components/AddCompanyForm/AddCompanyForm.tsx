@@ -3,7 +3,6 @@ import axios from "axios";
 
 const AddCompanyForm: React.FC = () => {
   const [companyData, setCompanyData] = useState({
-    id: "",
     name: "",
     indReferentNumber: "",
     website: "",
@@ -25,7 +24,6 @@ const AddCompanyForm: React.FC = () => {
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     setCompanyData({
-      id: "",
       name: "",
       indReferentNumber: "",
       website: "",
@@ -46,13 +44,6 @@ const AddCompanyForm: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="id"
-        placeholder="Company ID"
-        value={companyData.id}
-        onChange={handleInputChange}
-      />
       <input
         type="text"
         name="name"

@@ -24,6 +24,7 @@ type Company = {
   street: string;
   houseNumber: string;
   postCode: string;
+  display: boolean;
 };
 
 const inter = Inter({
@@ -68,6 +69,7 @@ function Home({
         <header className={styles.headerContainer}>
           <Logo />
         </header>
+        <p>Total Companies: {companies.length}</p>
         <main className={styles.mainContainer}>
           {/* <LoginControls /> */}
           {/* <Link href="/account">To your account</Link> */}
@@ -86,6 +88,7 @@ function Home({
                   website={company.website}
                   category={company.category}
                   lastVisit="seen 2 days ago by"
+                  display={company.display}
                 />
               );
             })}

@@ -12,6 +12,7 @@ type CardProps = {
   website: string;
   lastVisit: string;
   category: string;
+  display: boolean;
 };
 
 const Card: React.FC<CardProps> = ({
@@ -21,6 +22,7 @@ const Card: React.FC<CardProps> = ({
   website,
   lastVisit,
   category,
+  display,
 }) => {
   const handleDeleteClick = async (companyId: string) => {
     try {
@@ -41,6 +43,7 @@ const Card: React.FC<CardProps> = ({
       console.log("Error deleting company:", error);
     }
   };
+  console.log("display?", display);
 
   return (
     <div className={styles.cardContainer}>

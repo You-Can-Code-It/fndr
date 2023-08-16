@@ -8,7 +8,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     //console.log("/api/companies, req.body", req.body);
     try {
       const {
-        id,
         name,
         indReferentNumber,
         website,
@@ -20,7 +19,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       } = req.body;
 
       if (
-        !id ||
         !name ||
         !indReferentNumber ||
         !website ||
@@ -37,7 +35,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
       const createdCompany = await prisma.company.create({
         data: {
-          id,
           name,
           indReferentNumber,
           website,
@@ -50,7 +47,12 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       });
 
       res.status(201).json(createdCompany);
-      console.log("Company successfully created", createdCompany);
+      console.log(
+        "Company successfully created",
+        createdCompany,
+        "response.body ?",
+        res.statusCode
+      );
     } catch (error) {
       res.status(500).json({ message: "An error occurred." });
     }
