@@ -35,6 +35,7 @@ const Card: React.FC<CardProps> = ({
         console.log("Deleting company with Id:", companyId);
         await axios.put(`/api/companies/${companyId}`);
         console.log("Company removed successfully");
+        window.location.reload();
       } else {
         console.log("Removal canceled");
       }
