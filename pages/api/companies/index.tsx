@@ -47,12 +47,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       });
 
       res.status(201).json(createdCompany);
-      console.log(
-        "Company successfully created",
-        createdCompany,
-        "response.body ?",
-        res.statusCode
-      );
     } catch (error) {
       res.status(500).json({ message: "An error occurred." });
     }

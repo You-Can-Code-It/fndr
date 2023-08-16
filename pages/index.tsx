@@ -32,6 +32,50 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+function Home({
+  companies,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  const displayedCompaniesArray = companies.filter(
+    (company) => company.display === true
+  );
+  return (
+    <div className={inter.className}>
+      <div className={styles.container}>
+        <header className={styles.headerContainer}>
+          <Logo />
+        </header>
+        <p>Total Companies: {companies.length}</p>
+        <main className={styles.mainContainer}>
+          {/* <LoginControls /> */}
+          {/* <Link href="/account">To your account</Link> */}
+          <div className={styles.mainDropdownContainer}>
+            <Dropdown />
+          </div>
+          <AddCompanyForm />
+          <div className={styles.mainCardContainer}>
+            {displayedCompaniesArray
+              .slice(0, 84)
+              .map((company: Company, index) => {
+                return (
+                  <Card
+                    key={company.id}
+                    id={company.id}
+                    name={company.name}
+                    city={company.city}
+                    website={company.website}
+                    category={company.category}
+                    lastVisit="seen 2 days ago by"
+                    display={company.display}
+                  />
+                );
+              })}
+          </div>
+        </main>
+      </div>
+    </div>
+  );
+}
+
 export const getServerSideProps: GetServerSideProps<{
   companies: Company[];
 }> = async () => {
@@ -59,44 +103,5 @@ export const getServerSideProps: GetServerSideProps<{
     };
   }
 };
-
-function Home({
-  companies,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  return (
-    <div className={inter.className}>
-      <div className={styles.container}>
-        <header className={styles.headerContainer}>
-          <Logo />
-        </header>
-        <p>Total Companies: {companies.length}</p>
-        <main className={styles.mainContainer}>
-          {/* <LoginControls /> */}
-          {/* <Link href="/account">To your account</Link> */}
-          <div className={styles.mainDropdownContainer}>
-            <Dropdown />
-          </div>
-          <AddCompanyForm />
-          <div className={styles.mainCardContainer}>
-            {companies.slice(0, 84).map((company: Company, index) => {
-              return (
-                <Card
-                  key={company.id}
-                  id={company.id}
-                  name={company.name}
-                  city={company.city}
-                  website={company.website}
-                  category={company.category}
-                  lastVisit="seen 2 days ago by"
-                  display={company.display}
-                />
-              );
-            })}
-          </div>
-        </main>
-      </div>
-    </div>
-  );
-}
 
 export default Home;
