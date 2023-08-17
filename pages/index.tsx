@@ -9,6 +9,7 @@ import LoginControls from "@/components/LoginControls/LoginControls";
 import Link from "next/link";
 import AddCompanyForm from "@/components/AddCompanyForm/AddCompanyForm";
 import { useState } from "react";
+import Modal from "@/components/Modal/Modal";
 
 function serialize(data: any) {
   return JSON.parse(JSON.stringify(data));
@@ -41,6 +42,8 @@ function Home({
   );
   const [displayForm, setDisplayForm] = useState(false);
 
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <div className={inter.className}>
       <div className={styles.container}>
@@ -54,7 +57,19 @@ function Home({
           <div className={styles.mainDropdownContainer}>
             <Dropdown />
           </div>
+          <p>Modal</p>
+          <button onClick={() => setOpenModal(!openModal)}>
+            {openModal ? "Close" : "Open Modal"}
+          </button>
+          <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
+            Modal?
+            <h1>Hello from the Modal</h1>
+            <button onClick={() => setOpenModal(!openModal)}>
+              Close Modal
+            </button>
+          </Modal>
           {displayForm && <AddCompanyForm />}
+
           <div className={styles.mainCardContainer}>
             <button onClick={() => setDisplayForm(!displayForm)}>
               {displayForm ? "Hide" : "Add"}

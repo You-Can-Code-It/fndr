@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import styles from "./AddCompanyForm.module.css";
 
 const AddCompanyForm: React.FC = () => {
   const [companyData, setCompanyData] = useState({
@@ -37,72 +38,85 @@ const AddCompanyForm: React.FC = () => {
     try {
       const response = await axios.post("/api/companies/", companyData);
       console.log("From AddCompanyForm. New company created:", response.data);
+      window.location.reload();
     } catch (error) {
       console.error("Error creating company:", error);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="name"
-        placeholder="Company Name"
-        value={companyData.name}
-        onChange={handleInputChange}
-      />
-      <input
-        type="text"
-        name="indReferentNumber"
-        placeholder="Company Number"
-        value={companyData.indReferentNumber}
-        onChange={handleInputChange}
-      />
-      <input
-        type="text"
-        name="website"
-        placeholder="Website"
-        value={companyData.website}
-        onChange={handleInputChange}
-      />
-      <input
-        type="text"
-        name="category"
-        placeholder="Category"
-        value={companyData.category}
-        onChange={handleInputChange}
-      />
-      <input
-        type="text"
-        name="city"
-        placeholder="City"
-        value={companyData.city}
-        onChange={handleInputChange}
-      />
-      <input
-        type="text"
-        name="street"
-        placeholder="Street"
-        value={companyData.street}
-        onChange={handleInputChange}
-      />
-      <input
-        type="text"
-        name="houseNumber"
-        placeholder="House number"
-        value={companyData.houseNumber}
-        onChange={handleInputChange}
-      />
-      <input
-        type="text"
-        name="postCode"
-        placeholder="Post code"
-        value={companyData.postCode}
-        onChange={handleInputChange}
-      />
-
-      <button type="submit">Add Company</button>
-    </form>
+    <div className={styles.addCompanyForm}>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Company Name"
+          value={companyData.name}
+          onChange={handleInputChange}
+          className={styles.addCompanyForm}
+        />
+        <input
+          type="text"
+          name="indReferentNumber"
+          placeholder="Company Number"
+          value={companyData.indReferentNumber}
+          onChange={handleInputChange}
+          className={styles.addCompanyForm}
+        />
+        <input
+          type="text"
+          name="website"
+          placeholder="Website"
+          value={companyData.website}
+          onChange={handleInputChange}
+          className={styles.addCompanyForm}
+        />
+        <input
+          type="text"
+          name="category"
+          placeholder="Category"
+          value={companyData.category}
+          onChange={handleInputChange}
+          className={styles.addCompanyForm}
+        />
+        <input
+          type="text"
+          name="city"
+          placeholder="City"
+          value={companyData.city}
+          onChange={handleInputChange}
+          className={styles.addCompanyForm}
+        />
+        <input
+          type="text"
+          name="street"
+          placeholder="Street"
+          value={companyData.street}
+          onChange={handleInputChange}
+          className={styles.addCompanyForm}
+        />
+        <input
+          type="text"
+          name="houseNumber"
+          placeholder="House number"
+          value={companyData.houseNumber}
+          onChange={handleInputChange}
+          className={styles.addCompanyForm}
+        />
+        <input
+          type="text"
+          name="postCode"
+          placeholder="Post code"
+          value={companyData.postCode}
+          onChange={handleInputChange}
+          className={styles.addCompanyForm}
+        />
+        <div className={styles.addCompanyForm}>
+          {" "}
+          <button type="submit">Add Company</button>
+        </div>
+      </form>
+    </div>
   );
 };
 

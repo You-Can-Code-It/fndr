@@ -5,7 +5,6 @@ const prisma = new PrismaClient();
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
-    //console.log("/api/companies, req.body", req.body);
     try {
       const {
         name,
