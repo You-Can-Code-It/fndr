@@ -4,6 +4,8 @@ import Heading2 from "../typography/Heading2";
 import React from "react";
 import WebLink from "../typography/WebLink";
 import axios from "axios";
+import Modal from "../Modal/Modal";
+import { useState } from "react";
 
 type CardProps = {
   id: string;
@@ -24,21 +26,13 @@ const Card: React.FC<CardProps> = ({
   category,
   display,
 }) => {
+  const [openModal, setOpenModal] = useState(false);
   const handleDeleteClick = async (companyId: string) => {
     try {
-      // Display a confirmation message
-      const confirmed = window.confirm(
-        "Are you sure you want to remove this company from the array of displyed ones?"
-      );
-
-      if (confirmed) {
-        console.log("Deleting company with Id:", companyId);
-        await axios.put(`/api/companies/${companyId}`);
-        console.log("Company removed successfully");
-        window.location.reload();
-      } else {
-        console.log("Removal canceled");
-      }
+      console.log("Deleting company with Id:", companyId);
+      await axios.put(`/api/companies/${companyId}`);
+      console.log("Company removed successfully");
+      window.location.reload();
     } catch (error) {
       console.log("Error deleting company:", error);
     }
@@ -63,7 +57,12 @@ const Card: React.FC<CardProps> = ({
         </div>
       </div>
       <div className={styles.categoriesContainer}>{category}</div>
-      <button onClick={() => handleDeleteClick(id)}>Remove</button>
+      <button onClick={() => setOpenModal(!openModal)}>Remove</button>
+      <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
+        <button onClick={() => setOpenModal(false)}>Cancel</button>
+        <button onClick={() => handleDeleteClick(id)}>Remove</button>
+      </Modal>
+
       <div className={styles.lastVisitContainer}>
         <Heading2>{lastVisit}</Heading2>
       </div>
