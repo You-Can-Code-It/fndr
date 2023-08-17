@@ -24,17 +24,22 @@ const Card: React.FC<CardProps> = ({
   website,
   lastVisit,
   category,
-  display,
 }) => {
   const [openModal, setOpenModal] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   const handleDeleteClick = async (companyId: string) => {
+    setLoading(true);
     try {
       console.log("Deleting company with Id:", companyId);
       await axios.put(`/api/companies/${companyId}`);
       console.log("Company removed successfully");
       window.location.reload();
+      setLoading(false);
     } catch (error) {
       console.log("Error deleting company:", error);
+      setError(true);
+      setLoading(false);
     }
   };
 
@@ -58,9 +63,34 @@ const Card: React.FC<CardProps> = ({
       </div>
       <div className={styles.categoriesContainer}>{category}</div>
       <button onClick={() => setOpenModal(!openModal)}>Remove</button>
-      <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
-        <button onClick={() => setOpenModal(false)}>Cancel</button>
-        <button onClick={() => handleDeleteClick(id)}>Remove</button>
+      <Modal isOpen={openModal || error} onClose={() => setOpenModal(false)}>
+        {!loading && !error && (
+          <>
+            <h3 style={{ color: "white" }}>
+              Are your sure you want to remove this company from the list?
+            </h3>
+            <button onClick={() => setOpenModal(false)}>Cancel</button>
+            <button onClick={() => handleDeleteClick(id)}>Remove</button>
+          </>
+        )}
+        {loading && <h3 style={{ color: "white" }}>Removing company...</h3>}
+        {error && (
+          <>
+            {" "}
+            <h5 style={{ color: "white" }}>
+              An error occured when removing the company. Please try later or
+              contact admin.
+            </h5>
+            <button
+              onClick={() => {
+                setOpenModal(false);
+                setError(false);
+              }}
+            >
+              Back
+            </button>
+          </>
+        )}
       </Modal>
 
       <div className={styles.lastVisitContainer}>
