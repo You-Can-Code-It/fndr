@@ -57,23 +57,13 @@ function Home({
           <div className={styles.mainDropdownContainer}>
             <Dropdown />
           </div>
-          <p>Modal</p>
-          <button onClick={() => setOpenModal(!openModal)}>
-            {openModal ? "Close" : "Open Modal"}
-          </button>
           <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
-            Modal?
-            <h1>Hello from the Modal</h1>
-            <button onClick={() => setOpenModal(!openModal)}>
-              Close Modal
-            </button>
+            <AddCompanyForm />
+            <button onClick={() => setOpenModal(!openModal)}>Cancel</button>
           </Modal>
           {displayForm && <AddCompanyForm />}
-
           <div className={styles.mainCardContainer}>
-            <button onClick={() => setDisplayForm(!displayForm)}>
-              {displayForm ? "Hide" : "Add"}
-            </button>
+            <button onClick={() => setOpenModal(true)}>Add</button>
             {displayedCompaniesArray
               .slice(0, 84)
               .map((company: Company, index) => {
