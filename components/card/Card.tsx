@@ -28,14 +28,17 @@ const Card: React.FC<CardProps> = ({
   const [openModal, setOpenModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [successRemoval, setSuccessRemoval] = useState(false);
+
   const handleDeleteClick = async (companyId: string) => {
     setLoading(true);
     try {
       console.log("Deleting company with Id:", companyId);
       await axios.put(`/api/companies/${companyId}`);
       console.log("Company removed successfully");
-      window.location.reload();
+      // window.location.reload();
       setLoading(false);
+      setSuccessRemoval(true);
     } catch (error) {
       console.log("Error deleting company:", error);
       setError(true);
@@ -64,7 +67,7 @@ const Card: React.FC<CardProps> = ({
       <div className={styles.categoriesContainer}>{category}</div>
       <button onClick={() => setOpenModal(!openModal)}>Remove</button>
       <Modal isOpen={openModal || error} onClose={() => setOpenModal(false)}>
-        {!loading && !error && (
+        {!loading && !error && !successRemoval && (
           <>
             <h3 style={{ color: "white" }}>
               Are your sure you want to remove this company from the list?
@@ -73,7 +76,23 @@ const Card: React.FC<CardProps> = ({
             <button onClick={() => handleDeleteClick(id)}>Remove</button>
           </>
         )}
-        {loading && <h3 style={{ color: "white" }}>Removing company...</h3>}
+        {loading && !successRemoval && (
+          <h3 style={{ color: "white" }}>Removing company...</h3>
+        )}
+        {successRemoval && (
+          <>
+            <h4 style={{ color: "white" }}>Company successfuly removed.</h4>
+            <button
+              onClick={() => {
+                setOpenModal(false);
+                setSuccessRemoval(false);
+                window.location.reload();
+              }}
+            >
+              Back
+            </button>
+          </>
+        )}
         {error && (
           <>
             {" "}
