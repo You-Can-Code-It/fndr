@@ -5,7 +5,7 @@ import Dropdown from "@/components/dropdown/Dropdown";
 import Card from "@/components/card/Card";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { prisma } from "./db";
-import LoginControls from "@/components/LoginControls/LoginControls";
+import LoginControls from "@/components/loginControls/LoginControls";
 import Link from "next/link";
 
 function serialize(data: any) {
@@ -23,6 +23,7 @@ type Company = {
   street: string;
   houseNumber: string;
   postCode: string;
+  userEvent: any;
 };
 
 const inter = Inter({
@@ -42,7 +43,19 @@ export const getServerSideProps: GetServerSideProps<{
           mode: "insensitive",
         },
       },
+      include: {
+        userEvent: {
+          orderBy: {
+            createdAt: "desc",
+          },
+          take: 1,
+          include: {
+            user: true,
+          },
+        },
+      },
     });
+
     return {
       props: {
         companies: serialize(companies),
@@ -68,8 +81,8 @@ function Home({
           <Logo />
         </header>
         <main className={styles.mainContainer}>
-          {/* <LoginControls /> */}
-          {/* <Link href="/account">To your account</Link> */}
+          <LoginControls />
+          <Link href="/account">To your account</Link>
           <div className={styles.mainDropdownContainer}>
             <Dropdown />
           </div>
@@ -79,11 +92,12 @@ function Home({
               return (
                 <Card
                   key={company.id}
+                  companyId={company.id}
                   name={company.name}
                   city={company.city}
                   website={company.website}
                   category={company.category}
-                  lastVisit="seen 2 days ago by"
+                  userEvent={company.userEvent[0] ?? null}
                 />
               );
             })}

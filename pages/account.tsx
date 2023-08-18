@@ -11,6 +11,7 @@ export default function account() {
       const date = DateTime.utc().toISO();
 
       const companyId = event.currentTarget.getAttribute("data-company-id");
+      console.log("Company: ", companyId);
       const response = await fetch("/api/history", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
