@@ -5,6 +5,7 @@ import React from "react";
 import WebLink from "../typography/WebLink";
 import { DateTime } from "luxon";
 import { useSession } from "next-auth/react";
+import Avatar from "../avatar/Avatar";
 
 type CardProps = {
   companyId: string;
@@ -27,13 +28,11 @@ const Card: React.FC<CardProps> = ({
   async function handleOpenCompanyCard(
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) {
-    console.log("User: ", session?.user?.email);
     try {
       const date = DateTime.utc().toISO();
       console.log("Date: ", date);
 
       const companyId = event.currentTarget.getAttribute("id");
-      console.log("Company: ", companyId);
 
       const response = await fetch("/api/history", {
         method: "POST",
@@ -53,6 +52,30 @@ const Card: React.FC<CardProps> = ({
     } catch (error) {
       console.log("Account page error:", error);
     }
+  }
+
+  function calculateDate(date: any) {
+    const previousDate = DateTime.fromISO(date);
+    const currentDate = DateTime.utc();
+
+    const diff = currentDate.diff(previousDate);
+    const displayedDays = diff.days;
+
+    if (displayedDays === 0) {
+      return "today";
+    } else {
+      return displayedDays;
+    }
+  }
+
+  let displayLastVisit;
+  if (userEvent) {
+    displayLastVisit = (
+      <div className={styles.lastVisitContainer}>
+        <Heading2>Seen {calculateDate(userEvent?.createdAt)} by </Heading2>
+        <Avatar imageSource={userEvent?.user.image} />
+      </div>
+    );
   }
 
   return (
@@ -78,10 +101,7 @@ const Card: React.FC<CardProps> = ({
         </div>
       </div>
       <div className={styles.categoriesContainer}>{category}</div>
-      <div className={styles.lastVisitContainer}>
-        <Heading2>Seen {userEvent?.createdAt}</Heading2>
-        <p>{userEvent?.user.name}</p>
-      </div>
+      {displayLastVisit}
     </div>
   );
 };
