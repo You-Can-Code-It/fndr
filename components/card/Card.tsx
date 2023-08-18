@@ -6,6 +6,7 @@ import WebLink from "../typography/WebLink";
 import axios from "axios";
 import Modal from "../Modal/Modal";
 import { useState } from "react";
+import LoaderSpinner from "../LoaderSpinner/LoaderSpinner";
 
 type CardProps = {
   id: string;
@@ -66,23 +67,44 @@ const Card: React.FC<CardProps> = ({
       </div>
       <div className={styles.categoriesContainer}>{category}</div>
       <button onClick={() => setOpenModal(!openModal)}>Remove</button>
+
       <Modal isOpen={openModal || error} onClose={() => setOpenModal(false)}>
         {!loading && !error && !successRemoval && (
-          <>
-            <h3 style={{ color: "white" }}>
-              Are your sure you want to remove this company from the list?
-            </h3>
-            <button onClick={() => setOpenModal(false)}>Cancel</button>
-            <button onClick={() => handleDeleteClick(id)}>Remove</button>
-          </>
+          <div className={styles.deleteCompanyMainContainer}>
+            <h4 className={styles.removeCompanyHeader}>Remove company?</h4>
+            <p className={styles.removeCompanySubtitle}>
+              Are you sure you want to remove this company from the list?
+            </p>
+
+            <div className={styles.removeCompanyButtons}>
+              <button
+                className={`${styles.removeButton} ${styles.confirm}`}
+                onClick={() => handleDeleteClick(id)}
+              >
+                Remove
+              </button>
+              <button
+                className={`${styles.removeButton} ${styles.danger}`}
+                onClick={() => setOpenModal(false)}
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
         )}
         {loading && !successRemoval && (
-          <h3 style={{ color: "white" }}>Removing company...</h3>
+          <h4 className={styles.removeLoading}>
+            Removing company... <LoaderSpinner />
+          </h4>
         )}
+
         {successRemoval && (
           <>
-            <h4 style={{ color: "white" }}>Company successfuly removed.</h4>
+            <h4 className={styles.removeCompanyConfirmation}>
+              Company successfuly removed.
+            </h4>
             <button
+              className={styles.removeButtonBack}
               onClick={() => {
                 setOpenModal(false);
                 setSuccessRemoval(false);

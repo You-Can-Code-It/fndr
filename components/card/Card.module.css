@@ -50,15 +50,91 @@
   max-width: 130px;
 }
 
+.removeCompanyHeader {
+  margin-bottom: 1rem;
+  font-weight: 400;
+  margin-top: 1.2rem;
+}
+
+.removeCompanySubtitle {
+  font-size: 12px;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  border-bottom: 1px solid lightgrey;
+}
+
+.removeButton {
+  font-size: 14px !important;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.confirm {
+  color: red;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 0.6rem;
+}
+
+.danger {
+  margin-top: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.modalMainContainer {
+  min-height: 187px;
+}
+
+.removeCompanyButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+.removeLoading {
+  font-size: 12px;
+  font-weight: 100;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.removeCompanyConfirmation {
+  margin-bottom: 1rem;
+  font-weight: 400;
+  margin-top: 1.2rem;
+
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  border-bottom: 1px solid lightgrey;
+}
+
+.removeButtonBack {
+  font-size: 14px !important;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  cursor: pointer;
+  min-height: 5rem;
+  margin-top: -2rem;
+}
+
 @media (max-width: 375px) {
-    .cardContainer {
-        display: flex;
-        flex-direction: column; 
-    }
-    .lastVisitContainer {
-        justify-content: center;
-    }
-   
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .lastVisitContainer {
+    justify-content: center;
+  }
 }
 
 @media (min-width: 768px) {
