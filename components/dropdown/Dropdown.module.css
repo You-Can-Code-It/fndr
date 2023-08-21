@@ -1,0 +1,67 @@
+.active {
+  height: 40px;
+  background-color: #e8eaed;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.dropdownContainer {
+  display: flex;
+  width: 327px;
+}
+
+.input {
+  color: #a6a0a6;
+  font-size: 12px;
+  font-weight: 500px;
+  width: 100%;
+  padding: 12px 20px 12px 48px;
+  background: #fff url("./../../public/search.svg") no-repeat scroll 20px;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0px 18px 32px 0px rgba(126, 129, 139, 0.05);
+  margin-bottom: 24px;
+}
+
+.cancelBtn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 108px;
+  right: 44px;
+  transform: translateY(-50%);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.citiesContainer {
+  /* display: none; */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 12px 24px 0px rgba(126, 129, 139, 0.3);
+  height: 300px;
+  width: 327px;
+  padding: 10px;
+  overflow: hidden;
+  z-index: 10;
+  margin-top: -18px;
+  position: absolute;
+}
+
+.listOfCitiesContainer {
+  height: 100%;
+  margin-right: -50px;
+  padding-right: 50px;
+  overflow-y: scroll;
+}
+
+.listOfCities {
+  height: 40px;
+  list-style: none;
+  color: #333;
+  /* padding-bottom: 20px; */
+  cursor: pointer;
+}

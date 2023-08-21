@@ -6,7 +6,9 @@ import Card from "@/components/card/Card";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { prisma } from "./db";
 import LoginControls from "@/components/LoginControls/LoginControls";
-import Link from "next/link";
+import { type } from "os";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 function serialize(data: any) {
   return JSON.parse(JSON.stringify(data));
@@ -25,15 +27,23 @@ type Company = {
   postCode: string;
 };
 
+type IndexResponse = {
+  companies: Company[];
+  removeCitiesDuplicates: string[];
+};
+
 const inter = Inter({
   weight: ["400", "500"],
   subsets: ["latin"],
 });
 
 export const getServerSideProps: GetServerSideProps<{
-  companies: Company[];
-}> = async () => {
+  // companies: Company[];
+  response: IndexResponse;
+}> = async (context) => {
   try {
+    // Fetch cityFilter query parameter which was sent from frontend. Context.query contains all parameters of request
+    const { cityFilter } = context.query;
     // Fetch companies whose activities field contains the word "software"
     const companies = await prisma.company.findMany({
       where: {
@@ -43,24 +53,67 @@ export const getServerSideProps: GetServerSideProps<{
         },
       },
     });
+    // Map the list of companies and return cities
+    const cities = companies.map((company) => {
+      return company.city;
+    });
+    // Remove the duplicates and sort them from A to Z
+    const removeCitiesDuplicates = cities
+      .filter((city, index) => cities.indexOf(city) === index)
+      .sort();
+    console.log("cityFilter", cityFilter);
+
+    // Filter companies by cityFilter.
+    const companiesFilteredByCity = () => {
+      // If cityFilter is empty or underfind then it's not apllied, otherwise return filtered value
+      if (cityFilter != undefined && cityFilter != "") {
+        return companies.filter((company) => {
+          return company.city === cityFilter;
+        });
+      }
+      return companies;
+    };
+
     return {
       props: {
-        companies: serialize(companies),
+        response: {
+          companies: serialize(companiesFilteredByCity()),
+          removeCitiesDuplicates: serialize(removeCitiesDuplicates),
+        },
+        // companies: serialize(companies),
       },
     };
   } catch (error) {
     console.error("Error fetching companies:", error);
     return {
       props: {
-        companies: [],
+        response: {
+          companies: [],
+          removeCitiesDuplicates: [],
+        },
+        // companies: [],
       },
     };
   }
 };
 
 function Home({
-  companies,
+  response,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  // this router is intended for adding and reading query parameters
+  const router = useRouter();
+  // retrieve query parametr with name cityFilter
+  const { cityFilter } = router.query;
+  // created state cityFilterQuery and initialized with query param cityFilter
+  const [cityFilterQuery, setCityFilterQuery] = useState<string>(cityFilter);
+
+  console.log("cityFilterQueryIndex", cityFilterQuery);
+  console.log("cityFcityFilter", cityFilter);
+  const clearAllFilters = () => {
+    router.replace("");
+    setCityFilterQuery("");
+  };
+
   return (
     <div className={inter.className}>
       <div className={styles.container}>
@@ -71,11 +124,29 @@ function Home({
           {/* <LoginControls /> */}
           {/* <Link href="/account">To your account</Link> */}
           <div className={styles.mainDropdownContainer}>
-            <Dropdown />
+            <Dropdown
+              dropdownData={response.removeCitiesDuplicates}
+              // function setDropdownValue recieve name of the city
+              setDropdownValue={(cityName: string) => {
+                // update cityFilter query param by new value cityName
+                setCityFilterQuery(cityName);
+                console.log("chosenCity", cityName);
+
+                if (cityName != "" && cityName != undefined) {
+                  //assign cityFilter to query parameter and perform redirect
+                  router.replace(`?cityFilter=` + cityName);
+                }
+              }}
+              // Passed state cityFilterQuery to dropdown component
+              dropdownValue={cityFilterQuery}
+              clearAllFilters={clearAllFilters}
+            />
+            {/* <button onClick={clearAllFilters}>Clear</button> */}
           </div>
 
           <div className={styles.mainCardContainer}>
-            {companies.slice(0, 84).map((company: Company, index) => {
+            {response.companies.slice(0, 84).map((company: Company, index) => {
+              const { id, city } = company;
               return (
                 <Card
                   key={company.id}
