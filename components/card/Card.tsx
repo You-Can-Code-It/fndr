@@ -7,6 +7,7 @@ import axios from "axios";
 import Modal from "../Modal/Modal";
 import { useState } from "react";
 import LoaderSpinner from "../LoaderSpinner/LoaderSpinner";
+import Link from "next/link";
 
 type CardProps = {
   id: string;
@@ -50,6 +51,7 @@ const Card: React.FC<CardProps> = ({
   return (
     <div className={styles.cardContainer}>
       <div className={styles.overviewContainer}>
+        <Link href={`companies/${id}`}>{name}</Link>
         <Heading1>{name}</Heading1>
         <div className={styles.cardLocation}>
           <img src="./map-pin.svg" />
