@@ -1,42 +1,68 @@
-import React, { useState } from "react";
+import React from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 import axios from "axios";
 import styles from "./AddCompanyForm.module.css";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+const formSchema = z.object({
+  name: z
+    .string()
+    .min(2, "Company name must be at least 2 characters long.")
+    .max(255, "The provided company name contains too much characters."),
+  indReferentNumber: z
+    .string()
+    .min(5, "Ind number must be at least 5 characters long.")
+    .max(255, "The provided description contains too much characters."),
+  website: z
+    .string()
+    .refine(
+      (value) =>
+        value === "" ||
+        /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi.test(
+          value
+        ),
+      {
+        message: "Please provide a valid website.",
+      }
+    ),
+  category: z
+    .string()
+    .min(2, "Category must contain at least 2 characters.")
+    .max(255, "The provided category name contains too much characters."),
+  city: z
+    .string()
+    .min(2, "City must contain at least 2 characters.")
+    .max(255, "The provided city name contains too much characters."),
+  street: z
+    .string()
+    .min(2, "Street must contain at least 2 characters.")
+    .max(255, "The provided street name contains too much characters."),
+  houseNumber: z
+    .string()
+    .min(1, "House number must contain at least 1 character.")
+    .max(255, "The provided house number contains too much characters."),
+  postCode: z
+    .string()
+    .refine(
+      (value) =>
+        value === "" || /^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/i.test(value),
+      {
+        message: "Post code must be four numbers followed by two letters.",
+      }
+    ),
+});
 
 const AddCompanyForm: React.FC = () => {
-  const [companyData, setCompanyData] = useState({
-    name: "",
-    indReferentNumber: "",
-    website: "",
-    category: "",
-    city: "",
-    street: "",
-    houseNumber: "",
-    postCode: "",
-  });
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm({ resolver: zodResolver(formSchema) });
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = event.target;
-    setCompanyData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
-    setCompanyData({
-      name: "",
-      indReferentNumber: "",
-      website: "",
-      category: "",
-      city: "",
-      street: "",
-      houseNumber: "",
-      postCode: "",
-    });
-
+  const formSubmit = async (data: any) => {
     try {
-      const response = await axios.post("/api/companies/", companyData);
+      const response = await axios.post("/api/companies/", data);
       console.log("From AddCompanyForm. New company created:", response.data);
       window.location.reload();
     } catch (error) {
@@ -46,71 +72,76 @@ const AddCompanyForm: React.FC = () => {
 
   return (
     <div className={styles.addCompanyForm}>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit(formSubmit)}>
         <input
           type="text"
-          name="name"
           placeholder="Company Name"
-          value={companyData.name}
-          onChange={handleInputChange}
+          {...register("name")}
           className={styles.addCompanyForm}
         />
+        {errors.name && <p className="error">{String(errors.name.message)}</p>}
         <input
           type="text"
-          name="indReferentNumber"
-          placeholder="Company Number"
-          value={companyData.indReferentNumber}
-          onChange={handleInputChange}
+          placeholder="Ind Number"
+          {...register("indReferentNumber")}
           className={styles.addCompanyForm}
         />
+        {errors.indReferentNumber && (
+          <p className="error">{String(errors.indReferentNumber.message)}</p>
+        )}
         <input
           type="text"
-          name="website"
           placeholder="Website"
-          value={companyData.website}
-          onChange={handleInputChange}
+          {...register("website")}
           className={styles.addCompanyForm}
         />
+        {errors.website && (
+          <p className="error">{String(errors.website.message)}</p>
+        )}
         <input
           type="text"
-          name="category"
           placeholder="Category"
-          value={companyData.category}
-          onChange={handleInputChange}
+          {...register("category")}
           className={styles.addCompanyForm}
         />
+        {errors.category && (
+          <p className="error">{String(errors.category.message)}</p>
+        )}
         <input
           type="text"
-          name="city"
           placeholder="City"
-          value={companyData.city}
-          onChange={handleInputChange}
+          {...register("city")}
           className={styles.addCompanyForm}
         />
+        {errors.city && <p className="error">{String(errors.city.message)}</p>}
         <input
           type="text"
-          name="street"
           placeholder="Street"
-          value={companyData.street}
-          onChange={handleInputChange}
+          {...register("street")}
           className={styles.addCompanyForm}
         />
+        {errors.street && (
+          <p className="error">{String(errors.street.message)}</p>
+        )}
         <input
           type="text"
-          name="houseNumber"
-          placeholder="House number"
-          value={companyData.houseNumber}
-          onChange={handleInputChange}
+          placeholder="Number"
+          {...register("houseNumber")}
           className={styles.addCompanyForm}
         />
+        {errors.houseNumber && (
+          <p className="error">{String(errors.houseNumber.message)}</p>
+        )}
         <input
           type="text"
-          name="postCode"
-          placeholder="Post code"
-          value={companyData.postCode}
-          onChange={handleInputChange}
+          placeholder="Postal code"
+          {...register("postCode")}
           className={styles.addCompanyForm}
         />
+        {errors.postCode && (
+          <p className="error">{String(errors.postCode.message)}</p>
+        )}
+
         <div className={styles.addCompanyForm}>
           {" "}
           <button type="submit">Add Company</button>
@@ -121,49 +152,3 @@ const AddCompanyForm: React.FC = () => {
 };
 
 export default AddCompanyForm;
-
-// import React, { useState } from "react";
-// import axios from "axios";
-
-// const CreateCompanyForm: React.FC = () => {
-//   const [id, setId] = useState("");
-//   const [name, setName] = useState("");
-//   const [indReferentNumber, setIndReferentNumber] = useState("");
-//   const [website, setWebsite] = useState("");
-//   const [category, setCategory] = useState("");
-//   const [city, setCity] = useState("");
-//   const [street, setStreet] = useState("");
-//   const [houseNumber, setHouseNumber] = useState("");
-//   const [postCode, setPostCode] = useState("");
-
-//   const handleSubmit = async (event: React.FormEvent) => {
-//     event.preventDefault();
-
-//     try {
-//       const response = await axios.post("/api/companies/create-company", {
-//         id,
-//         name,
-//         indReferentNumber,
-//         website,
-//         category,
-//         city,
-//         street,
-//         houseNumber,
-//         postCode,
-//       });
-
-//       console.log("New company created:", response.data);
-//     } catch (error) {
-//       console.error("Error creating company:", error);
-//     }
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit}>
-//       {/* Render form fields for name, city, website, lastVisit, and category */}
-//       <button type="submit">Add Company</button>
-//     </form>
-//   );
-// };
-
-// export default CreateCompanyForm;
