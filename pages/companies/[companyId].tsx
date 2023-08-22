@@ -27,7 +27,6 @@ type Company = {
 function CompanyDetailsPage({
   company,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  console.log("Is there something here? props?", company, "what is context?");
   return (
     <div>
       <CompanyDetailsCard company={company} />
@@ -38,16 +37,14 @@ function CompanyDetailsPage({
 export const getServerSideProps: GetServerSideProps<{
   company: Company;
 }> = async (context) => {
-  console.log("getServerSideProps running?");
   try {
     const companyId = context.params?.companyId as string;
-    console.log("companyId?", companyId);
+
     const company = await prisma.company.findUnique({
       where: {
         id: companyId,
       },
     });
-    console.log("company?", company);
 
     return {
       props: {
@@ -56,7 +53,7 @@ export const getServerSideProps: GetServerSideProps<{
     };
   } catch (error) {
     console.error("Error fetching company data:", error);
-    console.log("something in catch statement?");
+
     return {
       props: {
         company: null,

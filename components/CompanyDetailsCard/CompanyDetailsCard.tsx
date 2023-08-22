@@ -19,7 +19,6 @@ type CompanyDetailsCardProps = {
 };
 
 const CompanyDetailsCard: React.FC<CompanyDetailsCardProps> = ({ company }) => {
-  console.log("company details card company?", company);
   return (
     <div>
       <h2>{company?.name}</h2>
