@@ -52,7 +52,7 @@ const Card: React.FC<CardProps> = ({
     <div className={styles.cardContainer}>
       <div className={styles.overviewContainer}>
         <Link href={`companies/${id}`}>{name}</Link>
-        <Heading1>{name}</Heading1>
+        {/* <Heading1>{name}</Heading1> */}
         <div className={styles.cardLocation}>
           <img src="./map-pin.svg" />
           <Heading2 className={styles.locationText}>{city}</Heading2>
