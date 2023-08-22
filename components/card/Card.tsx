@@ -1,7 +1,7 @@
 import styles from "./Card.module.css";
 import Heading1 from "../typography/Heading1";
 import Heading2 from "../typography/Heading2";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import WebLink from "../typography/WebLink";
 import { DateTime } from "luxon";
 import { useSession } from "next-auth/react";
@@ -25,13 +25,13 @@ const Card: React.FC<CardProps> = ({
   category,
 }) => {
   const { data: session } = useSession();
+  const [latestUserEvent, setLatestUserEvent] = useState(userEvent);
+
   async function handleOpenCompanyCard(
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) {
     try {
       const date = DateTime.utc().toISO();
-      console.log("Date: ", date);
-
       const companyId = event.currentTarget.getAttribute("id");
 
       const response = await fetch("/api/history", {
@@ -45,7 +45,8 @@ const Card: React.FC<CardProps> = ({
       });
 
       if (response.ok) {
-        console.log("Account Page. Succesful API request.");
+        const newUserEvent = await response.json();
+        setLatestUserEvent(newUserEvent);
       } else {
         console.log("API request failed:");
       }
@@ -58,25 +59,31 @@ const Card: React.FC<CardProps> = ({
     const previousDate = DateTime.fromISO(date);
     const currentDate = DateTime.utc();
 
-    const diff = currentDate.diff(previousDate);
-    const displayedDays = diff.days;
-
-    if (displayedDays === 0) {
+    const diff = Math.floor(currentDate.diff(previousDate, ["days"]).days);
+    if (diff === 0) {
       return "today";
-    } else {
-      return displayedDays;
+    } else if (diff === 1) {
+      return diff + " day ago";
+    } else if (diff > 1) {
+      return diff + " days ago";
     }
   }
 
   let displayLastVisit;
-  if (userEvent) {
+  if (latestUserEvent) {
     displayLastVisit = (
       <div className={styles.lastVisitContainer}>
-        <Heading2>Seen {calculateDate(userEvent?.createdAt)} by </Heading2>
-        <Avatar imageSource={userEvent?.user.image} />
+        <Heading2>
+          Seen {calculateDate(latestUserEvent?.createdAt)} by{" "}
+        </Heading2>
+        <Avatar imageSource={latestUserEvent?.user?.image} />
       </div>
     );
   }
+
+  useEffect(() => {
+    setLatestUserEvent(userEvent);
+  }, [userEvent]);
 
   return (
     <div

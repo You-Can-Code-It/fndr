@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.buttonSignInOut {
+  border-radius: 8px;
+  background: #a54fa8;
+  border: none;
+  color: #fff;
+  padding: 0 16px;
+  height: 100%;
+}
+
+.userAvatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+}
