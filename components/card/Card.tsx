@@ -74,26 +74,28 @@ const Card: React.FC<CardProps> = ({
       <Modal isOpen={openModal || error} onClose={() => setOpenModal(false)}>
         {!loading && !error && !successRemoval && (
           <div className={styles.deleteCompanyMainContainer}>
-            {" "}
-            <Heading1>Remove company?</Heading1>
-            {/* <h4 className={styles.removeCompanyHeader}></h4> */}
-            <Heading2>
-              {" "}
-              Are you sure you want to remove this company from the list?
-            </Heading2>
-            {/* <p className={styles.removeCompanySubtitle}>  </p>*/}
-            <div className={styles.removeCompanyButtons}>
+            <div className={styles.modalHeading}>
+              <Heading1>Remove company?</Heading1>
+            </div>
+            <div className={styles.confirm}>
+              <Heading2>
+                Are you sure you want to remove this company from the list?
+              </Heading2>
+            </div>
+            <div className={`${styles.removeCompanyButtons}`}>
+              <div className={`${styles.remove} `}>
+                <Heading1>
+                  <button
+                    className={`${styles.removeButton} `}
+                    onClick={() => handleDeleteClick(id)}
+                  >
+                    Remove
+                  </button>
+                </Heading1>
+              </div>
               <Heading1>
                 <button
-                  className={`${styles.removeButton} ${styles.confirm}`}
-                  onClick={() => handleDeleteClick(id)}
-                >
-                  Remove
-                </button>
-              </Heading1>
-              <Heading1>
-                <button
-                  className={`${styles.removeButton} ${styles.danger}`}
+                  className={`${styles.cancelButton} ${styles.danger}`}
                   onClick={() => setOpenModal(false)}
                 >
                   Cancel
