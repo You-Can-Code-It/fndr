@@ -40,8 +40,8 @@ function Home({
   const displayedCompaniesArray = companies.filter(
     (company) => company.display === true
   );
-  const [displayForm, setDisplayForm] = useState(false);
 
+  const [displayForm, setDisplayForm] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
   return (
@@ -64,22 +64,21 @@ function Home({
           {displayForm && <AddCompanyForm />}
           <div className={styles.mainCardContainer}>
             <button onClick={() => setOpenModal(true)}>Add</button>
-            {displayedCompaniesArray
-              .slice(0, 84)
-              .map((company: Company, index) => {
-                return (
-                  <Card
-                    key={company.id}
-                    id={company.id}
-                    name={company.name}
-                    city={company.city}
-                    website={company.website}
-                    category={company.category}
-                    lastVisit="seen 2 days ago by"
-                    display={company.display}
-                  />
-                );
-              })}
+            {/* Needs fix: For design issues, displaying only the first 84 results. */}
+            {displayedCompaniesArray.slice(0, 84).map((company: Company) => {
+              return (
+                <Card
+                  key={company.id}
+                  id={company.id}
+                  name={company.name}
+                  city={company.city}
+                  website={company.website}
+                  category={company.category}
+                  lastVisit="seen 2 days ago by"
+                  display={company.display}
+                />
+              );
+            })}
           </div>
         </main>
       </div>
