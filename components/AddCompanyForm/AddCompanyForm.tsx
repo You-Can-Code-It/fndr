@@ -63,10 +63,10 @@ const AddCompanyForm: React.FC = () => {
   const formSubmit = async (data: any) => {
     try {
       const response = await axios.post("/api/companies/", data);
-      console.log("From AddCompanyForm. New company created:", response.data);
+      console.log("AddCompanyForm - New company added:", response.data);
       window.location.reload();
     } catch (error) {
-      console.error("Error creating company:", error);
+      console.error("AddCompanyForm - Error creating company:", error);
     }
   };
 
