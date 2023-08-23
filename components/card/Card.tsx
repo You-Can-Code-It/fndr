@@ -8,6 +8,7 @@ import Modal from "../Modal/Modal";
 import { useState } from "react";
 import LoaderSpinner from "../LoaderSpinner/LoaderSpinner";
 import Link from "next/link";
+import { Head } from "next/document";
 
 type CardProps = {
   id: string;
@@ -73,24 +74,31 @@ const Card: React.FC<CardProps> = ({
       <Modal isOpen={openModal || error} onClose={() => setOpenModal(false)}>
         {!loading && !error && !successRemoval && (
           <div className={styles.deleteCompanyMainContainer}>
-            <h4 className={styles.removeCompanyHeader}>Remove company?</h4>
-            <p className={styles.removeCompanySubtitle}>
+            {" "}
+            <Heading1>Remove company?</Heading1>
+            {/* <h4 className={styles.removeCompanyHeader}></h4> */}
+            <Heading2>
+              {" "}
               Are you sure you want to remove this company from the list?
-            </p>
-
+            </Heading2>
+            {/* <p className={styles.removeCompanySubtitle}>  </p>*/}
             <div className={styles.removeCompanyButtons}>
-              <button
-                className={`${styles.removeButton} ${styles.confirm}`}
-                onClick={() => handleDeleteClick(id)}
-              >
-                Remove
-              </button>
-              <button
-                className={`${styles.removeButton} ${styles.danger}`}
-                onClick={() => setOpenModal(false)}
-              >
-                Cancel
-              </button>
+              <Heading1>
+                <button
+                  className={`${styles.removeButton} ${styles.confirm}`}
+                  onClick={() => handleDeleteClick(id)}
+                >
+                  Remove
+                </button>
+              </Heading1>
+              <Heading1>
+                <button
+                  className={`${styles.removeButton} ${styles.danger}`}
+                  onClick={() => setOpenModal(false)}
+                >
+                  Cancel
+                </button>
+              </Heading1>
             </div>
           </div>
         )}

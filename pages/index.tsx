@@ -64,22 +64,20 @@ function Home({
           {displayForm && <AddCompanyForm />}
           <div className={styles.mainCardContainer}>
             <button onClick={() => setOpenModal(true)}>Add</button>
-            {displayedCompaniesArray
-              .slice(0, 84)
-              .map((company: Company, index) => {
-                return (
-                  <Card
-                    key={company.id}
-                    id={company.id}
-                    name={company.name}
-                    city={company.city}
-                    website={company.website}
-                    category={company.category}
-                    lastVisit="seen 2 days ago by"
-                    display={company.display}
-                  />
-                );
-              })}
+            {displayedCompaniesArray.slice(0, 84).map((company: Company) => {
+              return (
+                <Card
+                  key={company.id}
+                  id={company.id}
+                  name={company.name}
+                  city={company.city}
+                  website={company.website}
+                  category={company.category}
+                  lastVisit="seen 2 days ago by"
+                  display={company.display}
+                />
+              );
+            })}
           </div>
         </main>
       </div>
