@@ -18,13 +18,15 @@
 .categoriesContainer {
   grid-area: 1 / 2 / 2 / 3;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .lastVisitContainer {
   grid-area: 2 / 2 / 3 / 3;
+  gap: 8px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .cardLocation {
@@ -51,14 +53,13 @@
 }
 
 @media (max-width: 375px) {
-    .cardContainer {
-        display: flex;
-        flex-direction: column; 
-    }
-    .lastVisitContainer {
-        justify-content: center;
-    }
-   
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .lastVisitContainer {
+    justify-content: center;
+  }
 }
 
 @media (min-width: 768px) {
