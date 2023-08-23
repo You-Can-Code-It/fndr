@@ -23,7 +23,7 @@ const Dropdown: React.FC<DropdownProps> = ({
   const [isShow, setIsShow] = useState<boolean>(false);
   const [value, setValue] = useState<string>(dropdownValue);
   const [suggestionIndex, setSuggestionIndex] = useState(0);
-
+  const [showButton, setShowButton] = useState<boolean>(false);
   // add useEffect to avoid preserving state between rerenders
   useEffect(() => {
     setValue(dropdownValue);
@@ -35,14 +35,16 @@ const Dropdown: React.FC<DropdownProps> = ({
     const query = e.target.value.toLowerCase();
     setValue(query);
     console.log("query", query);
-    if (query.length > 1) {
+    if (query.length > 0) {
       const filterSuggestions = dropdownData.filter(
         (suggestion) => suggestion.toLowerCase().indexOf(query) > -1
       );
       setSuggestions(filterSuggestions);
       setIsShow(true);
+      setShowButton(true);
     } else {
       setIsShow(false);
+      // setShowButton(false);
     }
   };
   const handleClick = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -81,7 +83,7 @@ const Dropdown: React.FC<DropdownProps> = ({
   };
 
   return (
-    <form className="dropdownContainer">
+    <form className={styles.dropdownContainer}>
       <input
         {...props}
         onChange={handleChange}
@@ -92,13 +94,15 @@ const Dropdown: React.FC<DropdownProps> = ({
         className={styles.input}
         placeholder="Search for a city"
       />
-      <button
-        type="submit"
-        onClick={clearAllFilters}
-        className={styles.cancelBtn}
-      >
-        <img src="/cancel-btn.svg" />
-      </button>
+      {showButton && (
+        <button
+          type="submit"
+          onClick={clearAllFilters}
+          className={styles.cancelBtn}
+        >
+          <img src="/cancel-btn.svg" />
+        </button>
+      )}
 
       {isShow && (
         <div className={styles.citiesContainer}>
