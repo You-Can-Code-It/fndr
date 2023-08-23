@@ -52,7 +52,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     } catch (error) {
       res
         .status(500)
-        .json({ message: "POST /api/companies - An error occurred.", error });
+        .json({ message: "POST /api/companies - An error occurred:", error });
     }
   } else {
     res.status(405).json({
