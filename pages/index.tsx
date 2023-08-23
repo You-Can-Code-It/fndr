@@ -63,7 +63,8 @@ function Home({
           </Modal>
           {displayForm && <AddCompanyForm />}
           <div className={styles.mainCardContainer}>
-            <button onClick={() => setOpenModal(true)}>Add</button>
+            {/* <button onClick={() => setOpenModal(true)}>Add</button> */}
+            <Link href="/companies/newCompany">+ New Company</Link>
             {displayedCompaniesArray.slice(0, 84).map((company: Company) => {
               return (
                 <Card
