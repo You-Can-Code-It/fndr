@@ -93,6 +93,7 @@ const Dropdown: React.FC<DropdownProps> = ({
         type="text"
         className={styles.input}
         placeholder="Search for a city"
+        maxLength={30}
       />
       {showButton && (
         <button

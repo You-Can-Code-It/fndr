@@ -1,7 +1,7 @@
 .dropdownContainer {
   display: flex;
   width: 327px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .input {
@@ -27,8 +27,8 @@
   background-color: transparent;
   cursor: pointer;
   position: absolute;
-  top: 100px;
-  right: 44px;
+  top: 99px;
+  left: 313px;
 }
 
 .input:focus {
@@ -71,4 +71,18 @@
   padding: 10px 20px;
   line-height: 20px;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .cancelBtn {
+    top: 115px;
+    left: 369px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .cancelBtn {
+    top: 115px;
+    left: 389px;
+  }
 }
