@@ -28,7 +28,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         !houseNumber ||
         !postCode
       ) {
-        console.log("Create company error: all info must be presented.");
+        console.log(
+          "POST /api/companies - Create company error: all info must be presented."
+        );
         return;
       }
 
@@ -46,12 +48,15 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       });
 
       res.status(201).json(createdCompany);
+      console.log("POST /api/companies - Company successfully created.");
     } catch (error) {
-      res.status(500).json({ message: "An error occurred." });
+      res
+        .status(500)
+        .json({ message: "POST /api/companies - An error occurred.", error });
     }
   } else {
-    res
-      .status(405)
-      .json({ message: "Method not allowed. Company not created" });
+    res.status(405).json({
+      message: "/api/companies - Method not allowed",
+    });
   }
 };
