@@ -1,11 +1,6 @@
-import {
-  GetServerSideProps,
-  NextPage,
-  InferGetServerSidePropsType,
-} from "next";
-import { prisma } from "../db"; // Adjust the path accordingly
-import CompanyDetailsCard from "@/components/CompanyDetailsCard/CompanyDetailsCard"; // Adjust the path accordingly
-import { useEffect, useState } from "react";
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+import { prisma } from "../db";
+import CompanyDetailsCard from "@/components/CompanyDetailsCard/CompanyDetailsCard";
 
 function serialize(data: any) {
   return JSON.parse(JSON.stringify(data));
@@ -52,7 +47,7 @@ export const getServerSideProps: GetServerSideProps<{
       },
     };
   } catch (error) {
-    console.error("Error fetching company data:", error);
+    console.error("Pages /companies/:id - Error fetching company data:", error);
 
     return {
       props: {

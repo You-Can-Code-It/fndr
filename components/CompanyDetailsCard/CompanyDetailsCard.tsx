@@ -28,7 +28,7 @@ const CompanyDetailsCard: React.FC<CompanyDetailsCardProps> = ({ company }) => {
       <h5>IND number: {company?.indReferentNumber}</h5>
       <h5>
         Address:{" "}
-        {`${company?.street}, ${company?.houseNumber}. ${company?.city}. ${company?.postCode}`}
+        {`${company?.street}, ${company?.houseNumber}. ${company?.city}. ${company?.postCode}.`}
       </h5>
     </div>
   );
