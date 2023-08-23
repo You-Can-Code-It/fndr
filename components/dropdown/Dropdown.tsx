@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useState } from "react";
+import React, { ReactNode, useEffect, useState, ChangeEvent, KeyboardEvent } from "react";
 import styles from "./Dropdown.module.css";
 
 type DropdownProps = {
@@ -31,7 +31,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 
   console.log("dropdownValue", dropdownValue);
   console.log("value", value);
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value.toLowerCase();
     setValue(query);
     console.log("query", query);
@@ -44,43 +44,43 @@ const Dropdown: React.FC<DropdownProps> = ({
       setShowButton(true);
     } else {
       setIsShow(false);
-      // setShowButton(false);
+      setShowButton(false);
     }
   };
-  const handleClick = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleClick = (e: ChangeEvent<HTMLInputElement>) => {
     setSuggestions([]);
     setValue(e.target.innerText);
     // return selected value to parent component
     setDropdownValue(e.target.innerText);
     setIsShow(false);
-    // console.log("hey", e.target.innerText);
   };
 
-  // console.log("suggestions", suggestions);
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyDown = (e: KeyboardEvent&ChangeEvent<HTMLInputElement>) => {
     // UP ARROW
-    if (e.key === "ArrowUp") {
+    if (e.code === "ArrowUp") {
       if (suggestionIndex === 0) {
         return;
       }
       setSuggestionIndex(suggestionIndex - 1);
     }
     // DOWN ARROW
-    else if (e.key === "ArrowDown") {
+    else if (e.code === "ArrowDown") {
       if (suggestionIndex - 1 === suggestions.length) {
         return;
       }
       setSuggestionIndex(suggestionIndex + 1);
     }
     // ENTER
-    else if (e.key === "Enter") {
+    else if (e.code === "Enter") { 
+      e.preventDefault(); 
       setValue(suggestions[suggestionIndex]);
+      setDropdownValue(suggestions[suggestionIndex]);
       setSuggestionIndex(0);
       setIsShow(false);
-      setDropdownValue(suggestions[suggestionIndex]);
     }
   };
+
+  console.log("suggestionIndex", suggestionIndex)
 
   return (
     <form className={styles.dropdownContainer}>
