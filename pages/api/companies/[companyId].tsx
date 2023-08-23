@@ -13,7 +13,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         data: { display: false },
       });
       console.log(
-        "/api/companies:id - Company `display` field updated to false."
+        "PUT /api/companies:id - Company `display` field updated to false."
       );
       res.status(204).end();
     } catch (error) {
