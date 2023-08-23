@@ -163,7 +163,9 @@ const AddCompanyForm: React.FC = () => {
             {errors.postCode && (
               <p className="error">{String(errors.postCode.message)}</p>
             )}{" "}
-            <button type="submit">Add Company</button>
+            <button className={styles.submitButton} type="submit">
+              Add Company
+            </button>
           </form>
         </div>
       </div>

@@ -53,3 +53,8 @@
   /* display: flex;
   flex-wrap: wrap; */
 }
+
+.submitButton {
+  color: #fff;
+  background-color: #a54fa8;
+}
