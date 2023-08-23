@@ -114,7 +114,6 @@ const Card: React.FC<CardProps> = ({
         )}
         {error && (
           <>
-            {" "}
             <h5 style={{ color: "white" }}>
               An error occured when removing the company. Please try later or
               contact admin.
