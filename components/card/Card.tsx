@@ -34,10 +34,7 @@ const Card: React.FC<CardProps> = ({
   const handleDeleteClick = async (companyId: string) => {
     setLoading(true);
     try {
-      console.log("Deleting company with Id:", companyId);
       await axios.put(`/api/companies/${companyId}`);
-      console.log("Company removed successfully");
-      // window.location.reload();
       setLoading(false);
       setSuccessRemoval(true);
     } catch (error) {
