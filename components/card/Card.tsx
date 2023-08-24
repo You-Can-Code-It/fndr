@@ -5,7 +5,6 @@ import React, { useState, useEffect } from "react";
 import WebLink from "../typography/WebLink";
 import axios from "axios";
 import Modal from "../Modal/Modal";
-import { useState } from "react";
 import LoaderSpinner from "../LoaderSpinner/LoaderSpinner";
 import { DateTime } from "luxon";
 import { useSession } from "next-auth/react";
@@ -27,9 +26,8 @@ const Card: React.FC<CardProps> = ({
   city,
   website,
   userEvent,
-  category
+  category,
 }) => {
-        
   const [openModal, setOpenModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -49,7 +47,7 @@ const Card: React.FC<CardProps> = ({
       setLoading(false);
     }
   };
-        
+
   async function handleOpenCompanyCard(
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) {
@@ -198,10 +196,7 @@ const Card: React.FC<CardProps> = ({
         )}
       </Modal>
 
-      <div className={styles.lastVisitContainer}>
-        <Heading2>{lastVisit}</Heading2>
-      </div>
-      {displayLastVisit}
+      <div className={styles.lastVisitContainer}>{displayLastVisit}</div>
     </div>
   );
 };
