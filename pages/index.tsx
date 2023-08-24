@@ -10,6 +10,8 @@ import Link from "next/link";
 import AddCompanyForm from "@/components/AddCompanyForm/AddCompanyForm";
 import { useState } from "react";
 import Modal from "@/components/Modal/Modal";
+//Needs to be imported otherwise generates an error
+import { useForm } from "react-hook-form";
 
 function serialize(data: any) {
   return JSON.parse(JSON.stringify(data));
