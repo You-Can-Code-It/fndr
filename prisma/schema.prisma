@@ -22,6 +22,7 @@ model Company {
   street            String
   houseNumber       String
   postCode          String
+  display           Boolean  @default(true)
 
   userEvent         UserEvent[]             
 

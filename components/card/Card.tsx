@@ -3,30 +3,53 @@ import Heading1 from "../typography/Heading1";
 import Heading2 from "../typography/Heading2";
 import React, { useState, useEffect } from "react";
 import WebLink from "../typography/WebLink";
+import axios from "axios";
+import Modal from "../Modal/Modal";
+import { useState } from "react";
+import LoaderSpinner from "../LoaderSpinner/LoaderSpinner";
 import { DateTime } from "luxon";
 import { useSession } from "next-auth/react";
 import Avatar from "../avatar/Avatar";
 
 type CardProps = {
-  companyId: string;
+  id: string;
   name: string;
   city: string;
   website: string;
   userEvent: any;
   category: string;
+  display: boolean;
 };
 
 const Card: React.FC<CardProps> = ({
-  companyId,
+  id,
   name,
   city,
   website,
   userEvent,
-  category,
+  category
 }) => {
+        
+  const [openModal, setOpenModal] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const [successRemoval, setSuccessRemoval] = useState(false);
   const { data: session } = useSession();
   const [latestUserEvent, setLatestUserEvent] = useState(userEvent);
 
+  const handleDeleteClick = async (companyId: string) => {
+    setLoading(true);
+    try {
+      await axios.put(`/api/companies/${companyId}`);
+      setLoading(false);
+      setSuccessRemoval(true);
+    } catch (error) {
+      console.log("Error deleting company:", error);
+      setError(true);
+      setLoading(false);
+    }
+  };
+        
   async function handleOpenCompanyCard(
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) {
@@ -89,7 +112,7 @@ const Card: React.FC<CardProps> = ({
     <div
       className={styles.cardContainer}
       onClick={handleOpenCompanyCard}
-      id={companyId}
+      id={id}
     >
       <div className={styles.overviewContainer}>
         <Heading1>{name}</Heading1>
@@ -108,6 +131,76 @@ const Card: React.FC<CardProps> = ({
         </div>
       </div>
       <div className={styles.categoriesContainer}>{category}</div>
+      <button onClick={() => setOpenModal(!openModal)}>Remove</button>
+
+      <Modal isOpen={openModal || error} onClose={() => setOpenModal(false)}>
+        {!loading && !error && !successRemoval && (
+          <div className={styles.deleteCompanyMainContainer}>
+            <h4 className={styles.removeCompanyHeader}>Remove company?</h4>
+            <p className={styles.removeCompanySubtitle}>
+              Are you sure you want to remove this company from the list?
+            </p>
+
+            <div className={styles.removeCompanyButtons}>
+              <button
+                className={`${styles.removeButton} ${styles.confirm}`}
+                onClick={() => handleDeleteClick(id)}
+              >
+                Remove
+              </button>
+              <button
+                className={`${styles.removeButton} ${styles.danger}`}
+                onClick={() => setOpenModal(false)}
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        )}
+        {loading && !successRemoval && (
+          <h4 className={styles.removeLoading}>
+            Removing company... <LoaderSpinner />
+          </h4>
+        )}
+
+        {successRemoval && (
+          <>
+            <h4 className={styles.removeCompanyConfirmation}>
+              Company successfuly removed.
+            </h4>
+            <button
+              className={styles.removeButtonBack}
+              onClick={() => {
+                setOpenModal(false);
+                setSuccessRemoval(false);
+                window.location.reload();
+              }}
+            >
+              Back
+            </button>
+          </>
+        )}
+        {error && (
+          <>
+            <h5 style={{ color: "white" }}>
+              An error occured when removing the company. Please try later or
+              contact admin.
+            </h5>
+            <button
+              onClick={() => {
+                setOpenModal(false);
+                setError(false);
+              }}
+            >
+              Back
+            </button>
+          </>
+        )}
+      </Modal>
+
+      <div className={styles.lastVisitContainer}>
+        <Heading2>{lastVisit}</Heading2>
+      </div>
       {displayLastVisit}
     </div>
   );
