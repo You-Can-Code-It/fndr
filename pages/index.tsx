@@ -5,7 +5,6 @@ import Dropdown from "@/components/dropdown/Dropdown";
 import Card from "@/components/card/Card";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { prisma } from "./db";
-import Link from "next/link";
 import AddCompanyForm from "@/components/AddCompanyForm/AddCompanyForm";
 import { useState } from "react";
 import Modal from "@/components/Modal/Modal";
@@ -34,7 +33,6 @@ const inter = Inter({
   weight: ["400", "500"],
   subsets: ["latin"],
 });
-
 
 function Home({
   companies,
@@ -86,7 +84,7 @@ function Home({
     </div>
   );
 }
-       
+
 export const getServerSideProps: GetServerSideProps<{
   companies: Company[];
 }> = async () => {
