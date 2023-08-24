@@ -5,11 +5,11 @@ import Dropdown from "@/components/dropdown/Dropdown";
 import Card from "@/components/card/Card";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { prisma } from "./db";
-import LoginControls from "@/components/LoginControls/LoginControls";
 import Link from "next/link";
 import AddCompanyForm from "@/components/AddCompanyForm/AddCompanyForm";
 import { useState } from "react";
 import Modal from "@/components/Modal/Modal";
+import LoginControls from "@/components/loginControls/LoginControls";
 
 function serialize(data: any) {
   return JSON.parse(JSON.stringify(data));
@@ -27,12 +27,14 @@ type Company = {
   houseNumber: string;
   postCode: string;
   display: boolean;
+  userEvent: any;
 };
 
 const inter = Inter({
   weight: ["400", "500"],
   subsets: ["latin"],
 });
+
 
 function Home({
   companies,
@@ -49,11 +51,10 @@ function Home({
       <div className={styles.container}>
         <header className={styles.headerContainer}>
           <Logo />
+          <LoginControls />
         </header>
         <p>Total Companies: {displayedCompaniesArray.length}</p>
         <main className={styles.mainContainer}>
-          {/* <LoginControls /> */}
-          {/* <Link href="/account">To your account</Link> */}
           <div className={styles.mainDropdownContainer}>
             <Dropdown />
           </div>
@@ -74,8 +75,8 @@ function Home({
                   city={company.city}
                   website={company.website}
                   category={company.category}
-                  lastVisit="seen 2 days ago by"
                   display={company.display}
+                  userEvent={company.userEvent[0] ?? null}
                 />
               );
             })}
@@ -85,7 +86,7 @@ function Home({
     </div>
   );
 }
-
+       
 export const getServerSideProps: GetServerSideProps<{
   companies: Company[];
 }> = async () => {
@@ -98,7 +99,19 @@ export const getServerSideProps: GetServerSideProps<{
           mode: "insensitive",
         },
       },
+      include: {
+        userEvent: {
+          orderBy: {
+            createdAt: "desc",
+          },
+          take: 1,
+          include: {
+            user: true,
+          },
+        },
+      },
     });
+
     return {
       props: {
         companies: serialize(companies),

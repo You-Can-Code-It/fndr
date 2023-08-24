@@ -45,7 +45,11 @@ export default async function handler(
             },
           },
         });
-        return res.status(200).json(UserEvent);
+        // When we creating userEvent for a company without any user events, we need data about the user (avatar)
+        let response: any = {};
+        response = Object.assign(UserEvent, response);
+        response.user = user;
+        return res.status(200).json(response);
       } catch (error: any) {
         return res.status(400).json({ message: error.message });
       }
