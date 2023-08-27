@@ -18,7 +18,6 @@ const Dropdown: React.FC<DropdownProps> = ({
   clearAllFilters,
   ...props
 }) => {
-  // console.log("dropdownData", dropdownData);
   const [suggestions, setSuggestions] = useState<string[]>(dropdownData);
   const [isShow, setIsShow] = useState<boolean>(false);
   const [value, setValue] = useState<string>(dropdownValue);
@@ -27,14 +26,14 @@ const Dropdown: React.FC<DropdownProps> = ({
   // add useEffect to avoid preserving state between rerenders
   useEffect(() => {
     setValue(dropdownValue);
-  }, [dropdownValue]);
+    if (value) {
+      setShowButton(true)
+    }   
+  }, [dropdownValue, showButton]);
 
-  console.log("dropdownValue", dropdownValue);
-  console.log("value", value);
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value.toLowerCase();
     setValue(query);
-    console.log("query", query);
     if (query.length > 0) {
       const filterSuggestions = dropdownData.filter(
         (suggestion) => suggestion.toLowerCase().indexOf(query) > -1
@@ -47,7 +46,9 @@ const Dropdown: React.FC<DropdownProps> = ({
       setShowButton(false);
     }
   };
+
   const handleClick = (e: ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
     setSuggestions([]);
     setValue(e.target.innerText);
     // return selected value to parent component
@@ -79,8 +80,6 @@ const Dropdown: React.FC<DropdownProps> = ({
       setIsShow(false);
     }
   };
-
-  console.log("suggestionIndex", suggestionIndex)
 
   return (
     <form className={styles.dropdownContainer}>

@@ -42,7 +42,7 @@ export const getServerSideProps: GetServerSideProps<{
   response: IndexResponse;
 }> = async (context) => {
   try {
-    // Fetch cityFilter query parameter which was sent from frontend. Context.query contains all parameters of request
+    // Recieve cityFilter query parameter which was sent from frontend. Context.query contains all parameters of request
     const { cityFilter } = context.query;
     // Fetch companies whose activities field contains the word "software"
     const companies = await prisma.company.findMany({
@@ -61,7 +61,6 @@ export const getServerSideProps: GetServerSideProps<{
     const removeCitiesDuplicates = cities
       .filter((city, index) => cities.indexOf(city) === index)
       .sort();
-    console.log("cityFilter", cityFilter);
 
     // Filter companies by cityFilter.
     const companiesFilteredByCity = () => {
@@ -102,13 +101,11 @@ function Home({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   // this router is intended for adding and reading query parameters
   const router = useRouter();
-  // retrieve query parametr with name cityFilter
+  // retrieve query parameter with name cityFilter to set input value
   const { cityFilter } = router.query;
   // created state cityFilterQuery and initialized with query param cityFilter
   const [cityFilterQuery, setCityFilterQuery] = useState<string>(cityFilter);
 
-  console.log("cityFilterQueryIndex", cityFilterQuery);
-  console.log("cityFcityFilter", cityFilter);
   const clearAllFilters = () => {
     router.replace("");
     setCityFilterQuery("");
@@ -130,10 +127,9 @@ function Home({
               setDropdownValue={(cityName: string) => {
                 // update cityFilter query param by new value cityName
                 setCityFilterQuery(cityName);
-                console.log("chosenCity", cityName);
 
                 if (cityName != "" && cityName != undefined) {
-                  //assign cityFilter to query parameter and perform redirect
+                  //assign cityFilter to query parameter and perform redirect to send chosen city to the backend
                   router.replace(`?cityFilter=` + cityName);
                 }
               }}
