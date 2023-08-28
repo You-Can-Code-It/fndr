@@ -4,11 +4,11 @@ import Image from "next/image";
 
 export default function LoginControls() {
   const { data: session } = useSession();
-  if (session?.user) {
+  if (session?.user && session?.user?.image) {
     return (
       <div className={styles.container}>
         <img
-          src={session.user.image}
+          src={session?.user?.image}
           alt="User avatar"
           className={styles.userAvatar}
         />
