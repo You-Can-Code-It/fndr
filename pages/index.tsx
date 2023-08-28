@@ -4,7 +4,7 @@ import Logo from "@/components/logo/Logo";
 import Dropdown from "@/components/dropdown/Dropdown";
 import Card from "@/components/card/Card";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import { prisma } from "./db";
+import { prisma } from "@/prisma/client";
 import AddCompanyForm from "@/components/AddCompanyForm/AddCompanyForm";
 import { useState } from "react";
 import Modal from "@/components/Modal/Modal";
