@@ -8,7 +8,7 @@ import { prisma } from "./db";
 import AddCompanyForm from "@/components/AddCompanyForm/AddCompanyForm";
 import { useState } from "react";
 import Modal from "@/components/Modal/Modal";
-import LoginControls from "@/components/loginControls/LoginControls";
+import LoginControls from "@/components/LoginControls/LoginControls";
 
 function serialize(data: any) {
   return JSON.parse(JSON.stringify(data));
