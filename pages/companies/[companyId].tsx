@@ -1,5 +1,4 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import { prisma } from "../db";
 import CompanyDetailsCard from "@/components/CompanyDetailsCard/CompanyDetailsCard";
 
 function serialize(data: any) {
