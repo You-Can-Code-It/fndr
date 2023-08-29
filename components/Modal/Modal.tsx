@@ -1,4 +1,4 @@
-import React, { useState, ReactNode, MouseEvent } from "react";
+import React, { ReactNode, MouseEvent } from "react";
 import styles from "./Modal.module.css";
 
 interface ModalProps {

@@ -2,6 +2,11 @@
   padding: 24px 24px 30px 24px;
 }
 
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .mainContainer {
   margin-top: 30px;
 }
