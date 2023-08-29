@@ -1,4 +1,10 @@
-import React, { ReactNode, useEffect, useState, ChangeEvent, KeyboardEvent } from "react";
+import React, {
+  ReactNode,
+  useEffect,
+  useState,
+  ChangeEvent,
+  KeyboardEvent,
+} from "react";
 import styles from "./Dropdown.module.css";
 
 type DropdownProps = {
@@ -7,7 +13,7 @@ type DropdownProps = {
   dropdownData: string[];
   setDropdownValue: Function;
   dropdownValue: string;
-  clearAllFilters: Function;
+  clearAllFilters: () => void;
 };
 
 const Dropdown: React.FC<DropdownProps> = ({
@@ -26,10 +32,8 @@ const Dropdown: React.FC<DropdownProps> = ({
   // add useEffect to avoid preserving state between rerenders
   useEffect(() => {
     setValue(dropdownValue);
-    if (value) {
-      setShowButton(true)
-    }   
-  }, [dropdownValue, showButton]);
+    setShowButton(true);
+  }, [dropdownValue]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value.toLowerCase();
@@ -47,16 +51,15 @@ const Dropdown: React.FC<DropdownProps> = ({
     }
   };
 
-  const handleClick = (e: ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault();
+  const chooseSuggestion = (suggestion: string) => {
     setSuggestions([]);
-    setValue(e.target.innerText);
+    setValue(suggestion);
     // return selected value to parent component
-    setDropdownValue(e.target.innerText);
+    setDropdownValue(suggestion);
     setIsShow(false);
   };
 
-  const handleKeyDown = (e: KeyboardEvent&ChangeEvent<HTMLInputElement>) => {
+  const handleKeyDown = (e: KeyboardEvent & ChangeEvent<HTMLInputElement>) => {
     // UP ARROW
     if (e.code === "ArrowUp") {
       if (suggestionIndex === 0) {
@@ -72,8 +75,8 @@ const Dropdown: React.FC<DropdownProps> = ({
       setSuggestionIndex(suggestionIndex + 1);
     }
     // ENTER
-    else if (e.code === "Enter") { 
-      e.preventDefault(); 
+    else if (e.code === "Enter") {
+      e.preventDefault();
       setValue(suggestions[suggestionIndex]);
       setDropdownValue(suggestions[suggestionIndex]);
       setSuggestionIndex(0);
@@ -97,10 +100,13 @@ const Dropdown: React.FC<DropdownProps> = ({
       {showButton && (
         <button
           type="submit"
-          onClick={clearAllFilters}
+          onClick={(e) => {
+            e.preventDefault();
+            clearAllFilters();
+          }}
           className={styles.cancelBtn}
         >
-          <img src="/cancel-btn.svg" />
+          <img src="/cancel-btn.svg" alt="cancel-icon" />
         </button>
       )}
 
@@ -115,7 +121,10 @@ const Dropdown: React.FC<DropdownProps> = ({
                     ? styles.active
                     : styles.listOfCities
                 }
-                onClick={handleClick}
+                onClick={(e) => {
+                  e.preventDefault();
+                  chooseSuggestion(suggestion);
+                }}
               >
                 {suggestion}
               </li>

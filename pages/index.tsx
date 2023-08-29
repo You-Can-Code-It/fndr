@@ -5,9 +5,7 @@ import Dropdown from "@/components/dropdown/Dropdown";
 import Card from "@/components/card/Card";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { prisma } from "./db";
-import LoginControls from "@/components/LoginControls/LoginControls";
-import { type } from "os";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 
 function serialize(data: any) {
@@ -104,11 +102,17 @@ function Home({
   // retrieve query parameter with name cityFilter to set input value
   const { cityFilter } = router.query;
   // created state cityFilterQuery and initialized with query param cityFilter
-  const [cityFilterQuery, setCityFilterQuery] = useState<string>(cityFilter);
+  const [cityFilterQuery, setCityFilterQuery] = useState<string>(() => {
+    if (cityFilter === typeof "string") {
+      return cityFilter;
+    } else {
+      return "";
+    }
+  });
 
   const clearAllFilters = () => {
-    router.replace("");
     setCityFilterQuery("");
+    router.replace("");
   };
 
   return (
@@ -137,7 +141,6 @@ function Home({
               dropdownValue={cityFilterQuery}
               clearAllFilters={clearAllFilters}
             />
-            {/* <button onClick={clearAllFilters}>Clear</button> */}
           </div>
 
           <div className={styles.mainCardContainer}>
