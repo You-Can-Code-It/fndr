@@ -20,13 +20,15 @@
 .categoriesContainer {
   grid-area: 1 / 2 / 2 / 3;
   /* display: flex;
-  justify-content: flex-end; */
+  justify-content: flex-flex-end; */
 }
 
 .lastVisitContainer {
   grid-area: 2 / 2 / 3 / 3;
+  gap: 8px;
   /* display: flex;
   justify-content: flex-end; */
+  align-items: center;
 }
 
 .cardLocation {
@@ -56,15 +58,111 @@
   max-width: 230px;
 }
 
+.removeCompanyHeader {
+  margin-bottom: 1rem;
+  font-weight: 400;
+  margin-top: 1.2rem;
+}
+
+.deleteCompanyMainContainer {
+  padding-top: 24px;
+}
+
+.modalHeading {
+  padding-bottom: 16px;
+}
+
+.removeCompanySubtitle {
+  font-size: 12px;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  border-bottom: 1px solid lightgrey;
+}
+
+.removeButton {
+  background-color: transparent;
+  border: none;
+  padding: 14px 0;
+  cursor: pointer;
+  color: #ec7065;
+}
+
+.cancelButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333333;
+}
+
+.confirm {
+  border-bottom: 1px solid lightgrey;
+  padding: 0 23px 16px;
+}
+
+.remove {
+  border-bottom: 1px solid lightgrey;
+}
+
+.danger {
+  padding: 14px 0;
+}
+
+.redButton {
+  color: #ec7065;
+}
+
+.modalMainContainer {
+  min-height: 187px;
+}
+
+.removeCompanyButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+.removeLoading {
+  font-size: 12px;
+  font-weight: 100;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.removeCompanyConfirmation {
+  margin-bottom: 1rem;
+  font-weight: 400;
+  margin-top: 1.2rem;
+
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  border-bottom: 1px solid lightgrey;
+}
+
+.removeButtonBack {
+  font-size: 14px !important;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  cursor: pointer;
+  min-height: 5rem;
+  margin-top: -2rem;
+}
+
 @media (max-width: 375px) {
-    .cardContainer {
-        display: flex;
-        flex-direction: column; 
-    }
-    .lastVisitContainer {
-        justify-content: center;
-    }
-   
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .lastVisitContainer {
+    justify-content: center;
+  }
 }
 
 @media (min-width: 768px) {

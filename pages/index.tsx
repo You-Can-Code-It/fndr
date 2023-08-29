@@ -4,9 +4,13 @@ import Logo from "@/components/logo/Logo";
 import Dropdown from "@/components/dropdown/Dropdown";
 import Card from "@/components/card/Card";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import { prisma } from "./db";
+import { prisma } from "@/prisma/client";
+import AddCompanyForm from "@/components/AddCompanyForm/AddCompanyForm";
+import Modal from "@/components/Modal/Modal";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import LoginControls from "@/components/LoginControls/LoginControls";
+import Link from "next/link";
 
 function serialize(data: any) {
   return JSON.parse(JSON.stringify(data));
@@ -23,6 +27,8 @@ type Company = {
   street: string;
   houseNumber: string;
   postCode: string;
+  display: boolean;
+  userEvent: any;
 };
 
 type IndexResponse = {
@@ -34,6 +40,57 @@ const inter = Inter({
   weight: ["400", "500"],
   subsets: ["latin"],
 });
+
+// function Home({
+//   companies,
+// }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+//   const displayedCompaniesArray = companies.filter(
+//     (company) => company.display === true
+//   );
+
+//   const [displayForm, setDisplayForm] = useState(false);
+//   const [openModal, setOpenModal] = useState(false);
+
+//   return (
+//     <div className={inter.className}>
+//       <div className={styles.container}>
+//         <header className={styles.headerContainer}>
+//           <Logo />
+//           <LoginControls />
+//         </header>
+//         <p>Total Companies: {displayedCompaniesArray.length}</p>
+//         <main className={styles.mainContainer}>
+//           <div className={styles.mainDropdownContainer}>
+//             <Dropdown />
+//           </div>
+//           <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
+//             <AddCompanyForm />
+//             <button onClick={() => setOpenModal(!openModal)}>Cancel</button>
+//           </Modal>
+//           {displayForm && <AddCompanyForm />}
+//           <div className={styles.mainCardContainer}>
+//             <Link href="/companies/newCompany">+ New Company</Link>
+//             {/* Needs fix: For design issues, displaying only the first 84 results. */}
+//             {displayedCompaniesArray.slice(0, 84).map((company: Company) => {
+//               return (
+//                 <Card
+//                   key={company.id}
+//                   id={company.id}
+//                   name={company.name}
+//                   city={company.city}
+//                   website={company.website}
+//                   category={company.category}
+//                   display={company.display}
+//                   userEvent={company.userEvent[0] ?? null}
+//                 />
+//               );
+//             })}
+//           </div>
+//         </main>
+//       </div>
+//     </div>
+//   );
+// }
 
 export const getServerSideProps: GetServerSideProps<{
   // companies: Company[];
@@ -48,6 +105,18 @@ export const getServerSideProps: GetServerSideProps<{
         category: {
           contains: "software",
           mode: "insensitive",
+        },
+        display: true,
+      },
+      include: {
+        userEvent: {
+          orderBy: {
+            createdAt: "desc",
+          },
+          take: 1,
+          include: {
+            user: true,
+          },
         },
       },
     });
@@ -99,6 +168,7 @@ function Home({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   // this router is intended for adding and reading query parameters
   const router = useRouter();
+  const [openModal, setOpenModal] = useState(false);
   // retrieve query parameter with name cityFilter to set input value
   const { cityFilter } = router.query;
   // created state cityFilterQuery and initialized with query param cityFilter
@@ -120,7 +190,9 @@ function Home({
       <div className={styles.container}>
         <header className={styles.headerContainer}>
           <Logo />
+          <LoginControls />
         </header>
+        <p>Total Companies: {response.companies.length}</p>
         <main className={styles.mainContainer}>
           {/* <LoginControls /> */}
           {/* <Link href="/account">To your account</Link> */}
@@ -141,19 +213,31 @@ function Home({
               dropdownValue={cityFilterQuery}
               clearAllFilters={clearAllFilters}
             />
+            <Link
+              href="/companies/newCompany"
+              className={styles.newCompanyLink}
+            >
+              + New Company
+            </Link>
           </div>
+          <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
+            <AddCompanyForm />
+            <button onClick={() => setOpenModal(!openModal)}>Cancel</button>
+          </Modal>
 
           <div className={styles.mainCardContainer}>
+            {/* Needs fix: For design issues, displaying only the first 84 results. */}
             {response.companies.slice(0, 84).map((company: Company, index) => {
-              const { id, city } = company;
               return (
                 <Card
                   key={company.id}
+                  id={company.id}
                   name={company.name}
                   city={company.city}
                   website={company.website}
+                  display={company.display}
                   category={company.category}
-                  lastVisit="seen 2 days ago by"
+                  userEvent={company.userEvent[0] ?? null}
                 />
               );
             })}

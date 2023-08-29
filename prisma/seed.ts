@@ -43,4 +43,9 @@ async function main() {
   }
 }
 
-main();
+const shouldSeed = process.env.SEED_DATABASE === "true";
+if (shouldSeed) {
+  main();
+} else {
+  console.log("database seeding skipped");
+}

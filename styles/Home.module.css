@@ -2,6 +2,11 @@
   padding: 24px 24px 30px 24px;
 }
 
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .mainContainer {
   margin-top: 30px;
 }
@@ -12,7 +17,30 @@
   grid-gap: 20px;
 }
 
+.mainDropdownContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.newCompanyLink {
+  order: 1;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 768px) {
+  .mainDropdownContainer {
+    gap: 24px;
+  }
+
+  .newCompanyLink {
+    order: 2;
+    width: calc(50% - 12px);
+  }
+
   .container {
     padding: 40px 80px;
   }

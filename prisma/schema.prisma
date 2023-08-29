@@ -1,5 +1,6 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
+// Obs. Local variable name altered in Vercel for "DATABASE_URL"
 
 generator client {
   provider = "prisma-client-js"
@@ -22,6 +23,7 @@ model Company {
   street            String
   houseNumber       String
   postCode          String
+  display           Boolean  @default(true)
 
   userEvent         UserEvent[]             
 

@@ -1,7 +1,9 @@
 .dropdownContainer {
   display: flex;
-  width: 327px;
+  order: 2;
+  width: 100%;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .input {
@@ -27,8 +29,8 @@
   background-color: transparent;
   cursor: pointer;
   position: absolute;
-  top: 99px;
-  left: 313px;
+  top: 11px;
+  right: 12px;
 }
 
 .input:focus {
@@ -49,7 +51,7 @@
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0px 12px 24px 0px rgba(126, 129, 139, 0.3);
-  width: 327px;
+  width: 100%;
   padding: 10px 10px 20px 10px;
   overflow: hidden;
   z-index: 10;
@@ -74,15 +76,18 @@
 }
 
 @media (min-width: 768px) {
-  .cancelBtn {
-    top: 115px;
-    left: 369px;
+  .dropdownContainer {
+    order: 1;
+    width: calc(50% - 12px);
   }
+  /* .citiesContainer {
+    width: calc(50% - 12px);
+  }
+
+  .dropdownContainer {
+    width: calc(50% - 12px);
+  } */
 }
 
 @media (min-width: 1100px) {
-  .cancelBtn {
-    top: 115px;
-    left: 389px;
-  }
 }
