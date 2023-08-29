@@ -58,6 +58,14 @@
   margin-top: 1.2rem;
 }
 
+.deleteCompanyMainContainer {
+  padding-top: 24px;
+}
+
+.modalHeading {
+  padding-bottom: 16px;
+}
+
 .removeCompanySubtitle {
   font-size: 12px;
   margin-bottom: 0.6rem;
@@ -68,23 +76,35 @@
 }
 
 .removeButton {
-  font-size: 14px !important;
   background-color: transparent;
   border: none;
-  padding: 0;
-  font-size: 16px;
+  padding: 14px 0;
   cursor: pointer;
+  color: #ec7065;
+}
+
+.cancelButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333333;
 }
 
 .confirm {
-  color: red;
   border-bottom: 1px solid lightgrey;
-  padding-bottom: 0.6rem;
+  padding: 0 23px 16px;
+}
+
+.remove {
+  border-bottom: 1px solid lightgrey;
 }
 
 .danger {
-  margin-top: 0.6rem;
-  margin-bottom: 0.8rem;
+  padding: 14px 0;
+}
+
+.redButton {
+  color: #ec7065;
 }
 
 .modalMainContainer {

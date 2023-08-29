@@ -9,6 +9,7 @@ import AddCompanyForm from "@/components/AddCompanyForm/AddCompanyForm";
 import { useState } from "react";
 import Modal from "@/components/Modal/Modal";
 import LoginControls from "@/components/LoginControls/LoginControls";
+import Link from "next/link";
 
 function serialize(data: any) {
   return JSON.parse(JSON.stringify(data));
@@ -62,7 +63,7 @@ function Home({
           </Modal>
           {displayForm && <AddCompanyForm />}
           <div className={styles.mainCardContainer}>
-            <button onClick={() => setOpenModal(true)}>Add</button>
+            <Link href="/companies/newCompany">+ New Company</Link>
             {/* Needs fix: For design issues, displaying only the first 84 results. */}
             {displayedCompaniesArray.slice(0, 84).map((company: Company) => {
               return (
