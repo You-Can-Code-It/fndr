@@ -80,14 +80,4 @@
     order: 1;
     width: calc(50% - 12px);
   }
-  /* .citiesContainer {
-    width: calc(50% - 12px);
-  }
-
-  .dropdownContainer {
-    width: calc(50% - 12px);
-  } */
-}
-
-@media (min-width: 1100px) {
 }
