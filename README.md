@@ -40,9 +40,20 @@
 - One student owns the Github repo, the Vercel project and database (Vercel Postgres)
 - At every sprint (14 days) a new student will be assigned the ownership from it
 - To transfer the ownership:
+
+(a) On Github
+
 - Go to the Github repo in `Settings -> Danger Zone -> Transfer`
 - Provide new owner's user name and confirm
 - Open the link sent via email to the new owner, accept the assignment and follow the instructions
+
+(b) On Vercel:
+
+- Go to Vercel dashboard and select the project, then to `Settings -> General -> Transfer`
+- Click on the `Transfer` button, and select a Vercel account
+- Click on `continue` and follow the instructions
+- To transfer the ownership also from the database, go to Vercel dashboard, click on the `Storage` tab on the top bar menu, select the database (`fndr-prod`) and go to `Settings -> Transfer Database`
+- Click on `Transfer Database`, and then `Select a Destination`
 
 ### Deployment vs. Local environments
 
