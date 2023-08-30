@@ -35,6 +35,10 @@
 - You can generate it running in the terminal the command: `openssl rand -base64 32` or (b) in your browser, accessing the URL: `https://generate-secret.vercel.app/32`
 - Add these variables (a) GITHUB_SECRET, (b) GITHUB_ID, and (c) NEXTAUTH_SECRET to the `.env` root file (you can use the `.env.example` file to guide you)
 
+Here is a video to illustrate how to do these steps:
+
+https://github.com/luizfiorentino/fndr/assets/20372832/1dd62171-d0cc-409b-8706-3ddf6f5ebf75
+
 ## Deployment Important Notes
 
 ### Rotating the Ownership
