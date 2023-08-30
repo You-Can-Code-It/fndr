@@ -81,8 +81,11 @@ const AddCompanyForm: React.FC = () => {
         <h3 className={styles.formBanner}>New Company</h3>
         <div className={styles.forInputsInner}>
           <form onSubmit={handleSubmit(formSubmit)}>
-            <label className={styles.formLabel}>Name</label>
+            <label className={styles.formLabel} htmlFor="name">
+              Name
+            </label>
             <input
+              id="name"
               type="text"
               placeholder="Company Name"
               {...register("name")}
@@ -91,8 +94,11 @@ const AddCompanyForm: React.FC = () => {
             {errors.name && (
               <p className="error">{String(errors.name.message)}</p>
             )}
-            <label className={styles.formLabel}>IND Number</label>
+            <label className={styles.formLabel} htmlFor="indReferentNumber">
+              IND Number
+            </label>
             <input
+              id="indReferentNumber"
               type="text"
               placeholder="Ind Number"
               {...register("indReferentNumber")}
@@ -103,8 +109,11 @@ const AddCompanyForm: React.FC = () => {
                 {String(errors.indReferentNumber.message)}
               </p>
             )}
-            <label className={styles.formLabel}>Website</label>
+            <label className={styles.formLabel} htmlFor="website">
+              Website
+            </label>
             <input
+              id="website"
               type="text"
               placeholder="Website"
               {...register("website")}
@@ -113,8 +122,11 @@ const AddCompanyForm: React.FC = () => {
             {errors.website && (
               <p className="error">{String(errors.website.message)}</p>
             )}
-            <label className={styles.formLabel}>Category</label>
+            <label className={styles.formLabel} htmlFor="category">
+              Category
+            </label>
             <input
+              id="category"
               type="text"
               placeholder="Category"
               {...register("category")}
@@ -123,8 +135,11 @@ const AddCompanyForm: React.FC = () => {
             {errors.category && (
               <p className="error">{String(errors.category.message)}</p>
             )}
-            <label className={styles.formLabel}>City</label>
+            <label className={styles.formLabel} htmlFor="city">
+              City
+            </label>
             <input
+              id="city"
               type="text"
               placeholder="City"
               {...register("city")}
@@ -133,8 +148,11 @@ const AddCompanyForm: React.FC = () => {
             {errors.city && (
               <p className="error">{String(errors.city.message)}</p>
             )}
-            <label className={styles.formLabel}>Street</label>
+            <label className={styles.formLabel} htmlFor="street">
+              Street
+            </label>
             <input
+              id="street"
               type="text"
               placeholder="Street"
               {...register("street")}
@@ -143,8 +161,11 @@ const AddCompanyForm: React.FC = () => {
             {errors.street && (
               <p className="error">{String(errors.street.message)}</p>
             )}
-            <label className={styles.formLabel}>Number</label>
+            <label className={styles.formLabel} htmlFor="houseNumber">
+              Number
+            </label>
             <input
+              id="houseNumber"
               type="text"
               placeholder="Number"
               {...register("houseNumber")}
@@ -153,8 +174,11 @@ const AddCompanyForm: React.FC = () => {
             {errors.houseNumber && (
               <p className="error">{String(errors.houseNumber.message)}</p>
             )}
-            <label className={styles.formLabel}>Zip Code</label>
+            <label className={styles.formLabel} htmlFor="postCode">
+              Zip Code
+            </label>
             <input
+              id="postCode"
               type="text"
               placeholder="Postal code"
               {...register("postCode")}
