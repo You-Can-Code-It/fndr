@@ -25,13 +25,34 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 //
-// declare global {
-//   namespace Cypress {
-//     interface Chainable {
-//       login(email: string, password: string): Chainable<void>
-//       drag(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
-//       dismiss(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
-//       visit(originalFn: CommandOriginalFn, url: string, options: Partial<VisitOptions>): Chainable<Element>
-//     }
-//   }
-// }
+
+declare global {
+  namespace Cypress {
+    interface Chainable {
+      // Add type for our custom command so we can call cy.login() without TS errors
+      login(): Chainable<void>;
+    }
+  }
+}
+
+import { encode } from "next-auth/jwt";
+
+// Add a custom command to login
+Cypress.Commands.add("login", () => {
+  // Intercept the request to the backend for a session, respond with s fake session
+  // It can be found in /fixtures/session.json
+  cy.intercept("/api/auth/session", { fixture: "session.json" }).as("session");
+  // Generate and set a valid cookie from the fixture that next-auth can decrypt
+  cy.fixture("session")
+    .then((session) => {
+      return encode({
+        token: session.user,
+        secret: Cypress.env("NEXTAUTH_SECRET"),
+      });
+    })
+    .then((encryptedToken) =>
+      cy.setCookie("next-auth.session-token", encryptedToken)
+    );
+});
+
+export {};
