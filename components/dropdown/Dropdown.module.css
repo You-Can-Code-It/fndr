@@ -1,0 +1,83 @@
+.dropdownContainer {
+  display: flex;
+  order: 2;
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input {
+  color: #a6a0a6;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500px;
+  width: 100%;
+  padding: 11px 20px 11px 50px;
+  background: #fff url("./../../public/search.svg") no-repeat scroll 20px;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0px 18px 32px 0px rgba(126, 129, 139, 0.05);
+}
+
+.input::placeholder {
+  color: #a6a0a6;
+  font-size: 14px;
+}
+
+.cancelBtn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 11px;
+  right: 12px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.active {
+  height: 40px;
+  background-color: #e8eaed;
+  border-radius: 20px;
+  padding: 10px 20px;
+  list-style: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.citiesContainer {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 12px 24px 0px rgba(126, 129, 139, 0.3);
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  overflow: hidden;
+  z-index: 10;
+  margin-top: 44px;
+  position: absolute;
+}
+
+.listOfCitiesContainer {
+  height: 100%;
+  margin-right: -50px;
+  padding-right: 50px;
+  overflow-y: scroll;
+}
+
+.listOfCities {
+  height: 40px;
+  list-style: none;
+  color: #333;
+  padding: 10px 20px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .dropdownContainer {
+    order: 1;
+    width: calc(50% - 12px);
+  }
+}

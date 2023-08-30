@@ -2,9 +2,11 @@
   display: grid;
   overflow: hidden;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(2);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
+  text-align: center;
   background-color: #fff;
   border-radius: 6px;
   padding: 24px;
@@ -17,15 +19,11 @@
 
 .categoriesContainer {
   grid-area: 1 / 2 / 2 / 3;
-  display: flex;
-  justify-content: flex-end;
 }
 
 .lastVisitContainer {
   grid-area: 2 / 2 / 3 / 3;
   gap: 8px;
-  display: flex;
-  justify-content: flex-end;
   align-items: center;
 }
 
@@ -33,23 +31,27 @@
   display: flex;
   margin-top: 16px;
   align-items: center;
+  justify-content: center;
 }
 
 .locationText {
   padding-left: 6px;
+  display: flex;
+  justify-content: center;
 }
 
 .cardWebsite {
   display: flex;
   margin-top: 12px;
   align-items: center;
+  justify-content: center;
 }
 
 .websiteText {
   padding-left: 6px;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 130px;
+  max-width: 230px;
 }
 
 .removeCompanyHeader {
