@@ -6,6 +6,8 @@ import WebLink from "../typography/WebLink";
 import axios from "axios";
 import Modal from "../Modal/Modal";
 import LoaderSpinner from "../LoaderSpinner/LoaderSpinner";
+import Link from "next/link";
+import { Head } from "next/document";
 import { DateTime } from "luxon";
 import { useSession } from "next-auth/react";
 import Avatar from "../avatar/Avatar";
@@ -113,7 +115,8 @@ const Card: React.FC<CardProps> = ({
       id={id}
     >
       <div className={styles.overviewContainer}>
-        <Heading1>{name}</Heading1>
+        <Link href={`companies/${id}`}>{name}</Link>
+        {/* <Heading1>{name}</Heading1> */}
         <div className={styles.cardLocation}>
           <img src="./map-pin.svg" />
           <Heading2 className={styles.locationText}>{city}</Heading2>
@@ -134,24 +137,33 @@ const Card: React.FC<CardProps> = ({
       <Modal isOpen={openModal || error} onClose={() => setOpenModal(false)}>
         {!loading && !error && !successRemoval && (
           <div className={styles.deleteCompanyMainContainer}>
-            <h4 className={styles.removeCompanyHeader}>Remove company?</h4>
-            <p className={styles.removeCompanySubtitle}>
-              Are you sure you want to remove this company from the list?
-            </p>
-
-            <div className={styles.removeCompanyButtons}>
-              <button
-                className={`${styles.removeButton} ${styles.confirm}`}
-                onClick={() => handleDeleteClick(id)}
-              >
-                Remove
-              </button>
-              <button
-                className={`${styles.removeButton} ${styles.danger}`}
-                onClick={() => setOpenModal(false)}
-              >
-                Cancel
-              </button>
+            <div className={styles.modalHeading}>
+              <Heading1>Remove company?</Heading1>
+            </div>
+            <div className={styles.confirm}>
+              <Heading2>
+                Are you sure you want to remove this company from the list?
+              </Heading2>
+            </div>
+            <div className={`${styles.removeCompanyButtons}`}>
+              <div className={`${styles.remove} `}>
+                <Heading1>
+                  <button
+                    className={`${styles.removeButton} `}
+                    onClick={() => handleDeleteClick(id)}
+                  >
+                    Remove
+                  </button>
+                </Heading1>
+              </div>
+              <Heading1>
+                <button
+                  className={`${styles.cancelButton} ${styles.danger}`}
+                  onClick={() => setOpenModal(false)}
+                >
+                  Cancel
+                </button>
+              </Heading1>
             </div>
           </div>
         )}

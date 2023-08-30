@@ -2,9 +2,11 @@
   display: grid;
   overflow: hidden;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(2);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
+  text-align: center;
   background-color: #fff;
   border-radius: 6px;
   padding: 24px;
@@ -17,15 +19,11 @@
 
 .categoriesContainer {
   grid-area: 1 / 2 / 2 / 3;
-  display: flex;
-  justify-content: flex-end;
 }
 
 .lastVisitContainer {
   grid-area: 2 / 2 / 3 / 3;
   gap: 8px;
-  display: flex;
-  justify-content: flex-end;
   align-items: center;
 }
 
@@ -33,29 +31,41 @@
   display: flex;
   margin-top: 16px;
   align-items: center;
+  justify-content: center;
 }
 
 .locationText {
   padding-left: 6px;
+  display: flex;
+  justify-content: center;
 }
 
 .cardWebsite {
   display: flex;
   margin-top: 12px;
   align-items: center;
+  justify-content: center;
 }
 
 .websiteText {
   padding-left: 6px;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 130px;
+  max-width: 230px;
 }
 
 .removeCompanyHeader {
   margin-bottom: 1rem;
   font-weight: 400;
   margin-top: 1.2rem;
+}
+
+.deleteCompanyMainContainer {
+  padding-top: 24px;
+}
+
+.modalHeading {
+  padding-bottom: 16px;
 }
 
 .removeCompanySubtitle {
@@ -68,23 +78,35 @@
 }
 
 .removeButton {
-  font-size: 14px !important;
   background-color: transparent;
   border: none;
-  padding: 0;
-  font-size: 16px;
+  padding: 14px 0;
   cursor: pointer;
+  color: #ec7065;
+}
+
+.cancelButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333333;
 }
 
 .confirm {
-  color: red;
   border-bottom: 1px solid lightgrey;
-  padding-bottom: 0.6rem;
+  padding: 0 23px 16px;
+}
+
+.remove {
+  border-bottom: 1px solid lightgrey;
 }
 
 .danger {
-  margin-top: 0.6rem;
-  margin-bottom: 0.8rem;
+  padding: 14px 0;
+}
+
+.redButton {
+  color: #ec7065;
 }
 
 .modalMainContainer {
