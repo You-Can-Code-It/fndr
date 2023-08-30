@@ -1,0 +1,16 @@
+[
+  {
+    "id": "cllxmbw7x0002p8di7ek4wspy",
+    "userId": "cllxmbvxa0000p8diuy7qyted",
+    "type": "oauth",
+    "provider": "github",
+    "providerAccountId": "20372832",
+    "refresh_token": null,
+    "access_token": "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",
+    "expires_at": null,
+    "token_type": "bearer",
+    "scope": "read:user,user:email",
+    "id_token": null,
+    "session_state": null
+  }
+]
