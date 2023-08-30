@@ -1,6 +1,8 @@
 import { prisma } from "@/prisma/client";
 import { NextApiRequest, NextApiResponse } from "next";
 
+const prisma = new PrismaClient();
+
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { companyId } = req.query;
   if (req.method === "PUT") {
@@ -18,6 +20,43 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       res.status(500).json({
         message:
           "PUT /api/companies/:id - An error occurred when updating `display` field.",
+        error,
+      });
+    }
+  }
+
+  if (req.method === "PATCH") {
+    const { companyId } = req.query;
+    const {
+      name,
+      indReferentNumber,
+      city,
+      street,
+      houseNumber,
+      postCode,
+      website,
+      category,
+    } = req.body;
+    try {
+      await prisma.company.update({
+        where: { id: companyId as string },
+        data: {
+          name: name as string,
+          indReferentNumber: indReferentNumber as string,
+          city: city as string,
+          street: street as string,
+          houseNumber: houseNumber as string,
+          postCode: postCode as string,
+          website: website as string,
+          category: category as string,
+        },
+      });
+      console.log("PATCH /api/companies:id - Company details were updated");
+      res.status(204).end();
+    } catch (error) {
+      res.status(500).json({
+        message:
+          "PATCH /api/companies/:id - An error occurred when updating company details",
         error,
       });
     }

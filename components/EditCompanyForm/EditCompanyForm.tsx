@@ -97,15 +97,13 @@ const EditCompanyForm: React.FC<FormProps> = ({
 
   const formSubmit = async (data: any) => {
     try {
-      const response = await axios.post("/api/companies/", data);
-      console.log("AddCompanyForm - New company added:", response.data);
+      const response = await axios.patch(`/api/companies/${id}`, data);
+      console.log("EditCompanyForm - Company edited:", response.data);
       window.location.reload();
     } catch (error) {
-      console.error("AddCompanyForm - Error creating company:", error);
+      console.error("EditCompanyForm - Error editing company:", error);
     }
   };
-
-  console.log("indReferentNumber?", indReferentNumber);
 
   return (
     <div className={styles.addCompanyForm}>
