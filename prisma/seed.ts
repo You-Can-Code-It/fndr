@@ -1,4 +1,5 @@
-import { prisma } from "@/prisma/client";
+const { PrismaClient } = require("@prisma/client");
+const prisma = new PrismaClient();
 const companiesWithCuid = require("../dataCleaning/companiesCuid.json");
 
 async function main() {
