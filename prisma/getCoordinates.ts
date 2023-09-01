@@ -31,39 +31,43 @@ async function getCoordinatesFromPostcode(
 }
 
 export async function getCoordinates() {
-  const company = await prisma.company.findFirst({
+  const companies = await prisma.company.findMany({
+    take: 10,
     where: {
       latitude: null,
       longitude: null,
     },
   });
-  if (!company) {
+  if (companies.length === 0) {
     console.log("All companies already have coordinates");
     return;
   }
-  const [error, data] = await getCoordinatesFromPostcode(
-    company?.postCode,
-    company?.houseNumber
-  );
-  if (error || !data) {
-    console.log("error", error);
-    return;
-  }
-  console.log("data", data);
+  for (let i = 0; i < companies.length; i++) {
+    let company = companies[i];
+    const [error, data] = await getCoordinatesFromPostcode(
+      company?.postCode,
+      company?.houseNumber
+    );
+    if (error || !data) {
+      console.log("error", error);
+      return;
+    }
+    console.log("data", data);
 
-  console.log("response", data);
-  console.log("company.id", company?.id);
-  const updatedCompany = await prisma.company.update({
-    where: {
-      id: company?.id,
-    },
-    data: {
-      latitude: data.postcode.latitude,
-      longitude: data.postcode.longitude,
-    },
-  });
-  console.log("updatedCompany", updatedCompany);
+    console.log("response", data);
+    console.log("company.id", company?.id);
+    const updatedCompany = await prisma.company.update({
+      where: {
+        id: company?.id,
+      },
+      data: {
+        latitude: data.postcode.latitude,
+        longitude: data.postcode.longitude,
+      },
+    });
+    console.log("updatedCompany", updatedCompany);
+  }
 }
 getCoordinates();
 
-
+//right for loop
