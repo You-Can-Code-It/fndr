@@ -23,6 +23,18 @@
   margin-bottom: 62px;
 }
 
+.detailsValueWebsite {
+  margin-bottom: 62px;
+}
+
+.detailsValueWebsite:hover {
+  cursor: pointer;
+}
+
+.detailsIframe {
+  margin-bottom: 15px;
+}
+
 @media (min-width: 768px) {
   .heading1 {
     font-size: 18px;

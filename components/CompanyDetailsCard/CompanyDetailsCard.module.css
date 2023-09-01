@@ -16,6 +16,28 @@
   padding: 38px 0 38px 100px;
 }
 
+.iframeOutline {
+  border: 1px solid #f6f6f6;
+}
+
+.iframeSection {
+  display: flex;
+  width: 100%;
+  min-height: 800px;
+  /* border-color: #f6f6f6; */
+  border: none;
+  margin-bottom: 62px;
+  padding: 15px;
+}
+
+.closeButton {
+  margin-bottom: 15px !important;
+}
+
+.hidden {
+  display: none;
+}
+
 .companyInfosSection {
   /* padding: 110px 100px 80px; */
 }

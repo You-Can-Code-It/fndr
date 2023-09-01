@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./CompanyDetailsCard.module.css";
 import Logo from "../logo/Logo";
 import Avatar from "../avatar/Avatar";
@@ -24,9 +24,9 @@ type CompanyDetailsCardProps = {
   company: Company;
 };
 
-function extractDomain(url) {
-  const parts = url.split("www.");
-  if (parts.length >= 2) {
+function extractDomain(url: string) {
+  const parts = url?.split("www.");
+  if (parts?.length >= 2) {
     const domain = parts[1];
     return domain.replace(/\/$/, ""); // Remove trailing "/"
   } else {
@@ -35,6 +35,7 @@ function extractDomain(url) {
 }
 
 const CompanyDetailsCard: React.FC<CompanyDetailsCardProps> = ({ company }) => {
+  const [displayWebsite, setDisplayWebsite] = useState(false);
   return (
     <div className={styles.detailsCardMainContainer}>
       <div className={styles.topBar}>
@@ -46,7 +47,6 @@ const CompanyDetailsCard: React.FC<CompanyDetailsCardProps> = ({ company }) => {
 
       <div className={styles.companyName}>
         <Link href="/">
-          {" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="28"
@@ -71,15 +71,28 @@ const CompanyDetailsCard: React.FC<CompanyDetailsCardProps> = ({ company }) => {
       <div className={styles.infos}>
         <Heading1 variant="detailsLabel">Location</Heading1>
         <Heading1 variant="detailsValue">{company?.city}</Heading1>
-        <Heading1 variant="detailsLabel">Activity</Heading1>
+        <Heading1 variant="detailsLabel">Area</Heading1>
         <Heading1 variant="detailsValue"> {company?.category}</Heading1>
-        <Heading1 variant="detailsLabel">
-          <Link href={company?.website}>Website</Link>
+        <Heading1 variant="detailsLabel">Website</Heading1>
+        <Heading1
+          variant={displayWebsite ? "detailsIframe" : "detailsValueWebsite"}
+          onClick={() => setDisplayWebsite(true)}
+        >
+          {extractDomain(company?.website)}
         </Heading1>
-        <Heading1 variant="detailsValue">
-          {" "}
-          <Link href={company?.website}>{extractDomain(company?.website)}</Link>
-        </Heading1>
+        {displayWebsite === true && (
+          <button
+            className={`${styles.button} ${styles.closeButton}`}
+            onClick={() => setDisplayWebsite(false)}
+          >
+            Close
+          </button>
+        )}
+        <div className={displayWebsite ? styles.iframeOutline : styles.hidden}>
+          {company?.website && displayWebsite && (
+            <iframe className={styles.iframeSection} src={company.website} />
+          )}
+        </div>
 
         <Heading1 variant="detailsLabel">Address</Heading1>
         <Heading1 variant="detailsValue">
