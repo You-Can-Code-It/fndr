@@ -5,6 +5,11 @@
   line-height: 19px;
 }
 
+.detailsPage {
+  font-size: 28px !important;
+  font-weight: 600 !important;
+}
+
 @media (min-width: 768px) {
   .heading1 {
     font-size: 18px;

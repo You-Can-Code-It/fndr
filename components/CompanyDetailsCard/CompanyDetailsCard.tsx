@@ -3,6 +3,7 @@ import styles from "./CompanyDetailsCard.module.css";
 import Logo from "../logo/Logo";
 import Avatar from "../avatar/Avatar";
 import userImage from "../../public/assets/User.png";
+import Heading1 from "../typography/Heading1";
 
 type Company = {
   id: string;
@@ -31,7 +32,9 @@ const CompanyDetailsCard: React.FC<CompanyDetailsCardProps> = ({ company }) => {
           <Avatar imageSource={userImage} className="detailsPage" />
         </div>
       </div>
-      <h2>{company?.name}</h2>
+      <div className={styles.companyName}>
+        <Heading1 variant="detailsPage">{company?.name}</Heading1>
+      </div>
       <h4>City: {company?.city}</h4> <h4>Activity: {company?.category}</h4>
       <h4> {company?.website}</h4>
       <h5>IND number: {company?.indReferentNumber}</h5>
