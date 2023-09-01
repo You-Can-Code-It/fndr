@@ -1,5 +1,8 @@
 import React from "react";
 import styles from "./CompanyDetailsCard.module.css";
+import Logo from "../logo/Logo";
+import Avatar from "../avatar/Avatar";
+import userImage from "../../public/assets/User.png";
 
 type Company = {
   id: string;
@@ -22,6 +25,12 @@ type CompanyDetailsCardProps = {
 const CompanyDetailsCard: React.FC<CompanyDetailsCardProps> = ({ company }) => {
   return (
     <div className={styles.detailsCardMainContainer}>
+      <div className={styles.topBar}>
+        <Logo />
+        <div className={styles.avatar}>
+          <Avatar imageSource={userImage} className="detailsPage" />
+        </div>
+      </div>
       <h2>{company?.name}</h2>
       <h4>City: {company?.city}</h4> <h4>Activity: {company?.category}</h4>
       <h4> {company?.website}</h4>
