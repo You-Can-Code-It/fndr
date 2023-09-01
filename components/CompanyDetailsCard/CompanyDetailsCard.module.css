@@ -10,5 +10,38 @@
 }
 
 .companyName {
-  padding: 38px 0 38px 152px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 38px 0 38px 100px;
+}
+
+.companyInfosSection {
+  /* padding: 110px 100px 80px; */
+}
+
+.button {
+  border: none;
+  margin-right: 20px;
+  padding: 16px 32px;
+  border-radius: 10px;
+  background-color: #d0d3d9;
+  color: white;
+  margin-bottom: 102px;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.saveButton {
+  background-color: #a54fa8;
+}
+
+.infos {
+  margin: 0 100px 80px;
+  padding: 30px 30px 0;
+  background-color: white;
+  border-radius: 16px;
 }

@@ -4,6 +4,7 @@ import Logo from "../logo/Logo";
 import Avatar from "../avatar/Avatar";
 import userImage from "../../public/assets/User.png";
 import Heading1 from "../typography/Heading1";
+import Link from "next/link";
 
 type Company = {
   id: string;
@@ -23,6 +24,16 @@ type CompanyDetailsCardProps = {
   company: Company;
 };
 
+function extractDomain(url) {
+  const parts = url.split("www.");
+  if (parts.length >= 2) {
+    const domain = parts[1];
+    return domain.replace(/\/$/, ""); // Remove trailing "/"
+  } else {
+    return null; // "www." not found in the URL
+  }
+}
+
 const CompanyDetailsCard: React.FC<CompanyDetailsCardProps> = ({ company }) => {
   return (
     <div className={styles.detailsCardMainContainer}>
@@ -32,16 +43,57 @@ const CompanyDetailsCard: React.FC<CompanyDetailsCardProps> = ({ company }) => {
           <Avatar imageSource={userImage} className="detailsPage" />
         </div>
       </div>
+
       <div className={styles.companyName}>
+        <Link href="/">
+          {" "}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+          >
+            <g opacity="0.5">
+              <path
+                d="M17.5 21L10.5 14L17.5 7"
+                stroke="#1E213F"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+          </svg>
+        </Link>
+
         <Heading1 variant="detailsPage">{company?.name}</Heading1>
       </div>
-      <h4>City: {company?.city}</h4> <h4>Activity: {company?.category}</h4>
-      <h4> {company?.website}</h4>
-      <h5>IND number: {company?.indReferentNumber}</h5>
-      <h5>
-        Address:{" "}
-        {`${company?.street}, ${company?.houseNumber}. ${company?.city}. ${company?.postCode}.`}
-      </h5>
+      <div className={styles.infos}>
+        <Heading1 variant="detailsLabel">Location</Heading1>
+        <Heading1 variant="detailsValue">{company?.city}</Heading1>
+        <Heading1 variant="detailsLabel">Activity</Heading1>
+        <Heading1 variant="detailsValue"> {company?.category}</Heading1>
+        <Heading1 variant="detailsLabel">
+          <Link href={company?.website}>Website</Link>
+        </Heading1>
+        <Heading1 variant="detailsValue">
+          {" "}
+          <Link href={company?.website}>{extractDomain(company?.website)}</Link>
+        </Heading1>
+
+        <Heading1 variant="detailsLabel">Address</Heading1>
+        <Heading1 variant="detailsValue">
+          {`${company?.street}, ${company?.houseNumber}. ${company?.city}. ${company?.postCode}.`}
+        </Heading1>
+        <Heading1 variant="detailsLabel">IND number </Heading1>
+        <Heading1 variant="detailsValue">{company?.indReferentNumber}</Heading1>
+        <Link href="/">
+          <button className={styles.button}>Back</button>
+        </Link>
+        <button className={`${styles.button} ${styles.saveButton}`}>
+          Save
+        </button>
+      </div>
     </div>
   );
 };
