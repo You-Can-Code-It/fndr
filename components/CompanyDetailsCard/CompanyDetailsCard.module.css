@@ -1,12 +1,19 @@
 .detailsCardMainContainer {
 }
 
+.loginButton {
+}
+
 .topBar {
   display: flex;
-  align-items: center;
+
   justify-content: space-between;
-  padding: 20px 80px;
+  padding: 20px 100px;
   background-color: white;
+}
+
+.loginControls {
+  display: flex;
 }
 
 .companyName {
@@ -99,6 +106,20 @@
   .iframeSection {
     padding: 0;
     margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 764px) {
+  .topBar {
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .topBar {
+    flex-direction: column;
+    gap: 21px;
+    align-items: center;
   }
 }
 
