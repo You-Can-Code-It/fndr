@@ -108,12 +108,7 @@ const EditCompanyForm: React.FC<FormProps> = ({
   return (
     <div className={styles.addCompanyForm}>
       <form onSubmit={handleSubmit(formSubmit)}>
-        <input
-          type="text"
-          placeholder="Company Name"
-          {...register("name")}
-          className={styles.addCompanyForm}
-        />
+        <input type="text" placeholder="Company Name" {...register("name")} />
         {errors.name && <p className="error">{String(errors.name.message)}</p>}
         <input
           type="text"
