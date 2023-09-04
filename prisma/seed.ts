@@ -1,4 +1,6 @@
+
 const companiesWithCuid = require("../dataCleaning/companiesCuid.json");
+//add json file companies with coordinates later
 const dummyUsers = require("./seeds/users.json");
 const dummyEvents = require("./seeds/userEvents.json");
 const dummyAccounts = require("./seeds/accounts.json");

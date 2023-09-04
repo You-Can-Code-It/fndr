@@ -23,6 +23,8 @@ model Company {
   street            String
   houseNumber       String
   postCode          String
+  latitude          Float?
+  longitude         Float?
   display           Boolean  @default(true)
 
   userEvent         UserEvent[]             
