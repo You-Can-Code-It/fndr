@@ -32,8 +32,11 @@ async function getCoordinatesFromPostcode(
 
 export async function getCoordinates() {
   const companies = await prisma.company.findMany({
-    take: 10,
     where: {
+      category: {
+        contains: "software",
+        mode: "insensitive",
+      },
       latitude: null,
       longitude: null,
     },
@@ -42,6 +45,7 @@ export async function getCoordinates() {
     console.log("All companies already have coordinates");
     return;
   }
+  const updatedCompanies = [];
   for (let i = 0; i < companies.length; i++) {
     let company = companies[i];
     const [error, data] = await getCoordinatesFromPostcode(
@@ -50,12 +54,10 @@ export async function getCoordinates() {
     );
     if (error || !data) {
       console.log("error", error);
-      return;
+      updatedCompanies.push({ ...company, postCodeInValid: true });
+      continue;
     }
-    console.log("data", data);
 
-    console.log("response", data);
-    console.log("company.id", company?.id);
     const updatedCompany = await prisma.company.update({
       where: {
         id: company?.id,
@@ -65,9 +67,20 @@ export async function getCoordinates() {
         longitude: data.postcode.longitude,
       },
     });
-    console.log("updatedCompany", updatedCompany);
+
+    updatedCompanies.push(updatedCompany);
   }
+  const fs = require("fs");
+  fs.writeFile(
+    __dirname + "/../dataCleaning/companiesWithCoordinates.json",
+    JSON.stringify(updatedCompanies, null, 2),
+    (err: any) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log("Success");
+      }
+    }
+  );
 }
 getCoordinates();
-
-//right for loop

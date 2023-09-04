@@ -1,6 +1,7 @@
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 const companiesWithCuid = require("../dataCleaning/companiesCuid.json");
+//add json file companies with coordinates later
 
 async function main() {
   try {
