@@ -7,6 +7,7 @@ import LoginControls from "../LoginControls/LoginControls";
 import Label from "../typography/Label";
 import HeaderInfo from "../typography/HeaderInfo";
 import Button from "../Button/Button";
+import NavBar from "../NavBar/NavBar";
 
 type Company = {
   id: string;
@@ -40,12 +41,7 @@ const CompanyDetailsCard: React.FC<CompanyDetailsCardProps> = ({ company }) => {
   const [displayWebsite, setDisplayWebsite] = useState(false);
   return (
     <div className={styles.detailsCardMainContainer}>
-      <header className={styles.topBar}>
-        <Logo />
-        <div className={styles.loginControls}>
-          <LoginControls />
-        </div>
-      </header>
+      <NavBar />
       <main>
         <div className={styles.companyName}>
           <Link href="/">
