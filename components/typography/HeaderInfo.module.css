@@ -21,3 +21,15 @@
 .detailsValueWebsite:hover {
   cursor: pointer;
 }
+
+@media screen and (min-width: 376px) {
+  .mainHeader {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .mainHeader {
+    margin-bottom: 21px;
+  }
+}

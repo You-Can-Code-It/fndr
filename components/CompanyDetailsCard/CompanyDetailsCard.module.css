@@ -27,7 +27,6 @@
   .companyName {
     display: flex;
     justify-content: center;
-
     padding: 30px 0;
     gap: 5px;
   }
@@ -95,5 +94,11 @@
 @media screen and (max-width: 276px) {
   .buttonsBar {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .iframeSection {
+    min-height: 300px;
   }
 }
