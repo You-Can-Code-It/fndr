@@ -14,8 +14,6 @@ const HeaderInfo: React.FC<Heading1Props> = ({
   ...props
 }) => {
   return (
-    // for a "label" tag we need this <div> to apply margin-bottom
-
     <h4
       className={`${styles.mainHeader} ${variant && styles[variant]} ${
         fontInter.className

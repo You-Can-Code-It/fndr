@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import styles from "./CompanyDetailsCard.module.css";
-import Logo from "../logo/Logo";
 import Heading1 from "../typography/Heading1";
 import Link from "next/link";
-import LoginControls from "../LoginControls/LoginControls";
 import Label from "../typography/Label";
 import HeaderInfo from "../typography/HeaderInfo";
 import Button from "../Button/Button";
