@@ -100,12 +100,14 @@ const CompanyDetailsCard: React.FC<CompanyDetailsCardProps> = ({ company }) => {
         </Heading1>
         <Heading1 variant="detailsLabel">IND number </Heading1>
         <Heading1 variant="detailsValue">{company?.indReferentNumber}</Heading1>
-        <Link href="/">
-          <button className={styles.button}>Back</button>
-        </Link>
-        <button className={`${styles.button} ${styles.saveButton}`}>
-          Save
-        </button>
+        <div className={styles.buttonsBar}>
+          <Link href="/">
+            <button className={styles.button}>Back</button>
+          </Link>
+          <button className={`${styles.button} ${styles.saveButton}`}>
+            Save
+          </button>
+        </div>
       </div>
     </div>
   );

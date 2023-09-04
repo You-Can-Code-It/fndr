@@ -23,7 +23,7 @@
 .iframeSection {
   display: flex;
   width: 100%;
-  min-height: 800px;
+  min-height: 600px;
   /* border-color: #f6f6f6; */
   border: none;
   margin-bottom: 62px;
@@ -36,10 +36,6 @@
 
 .hidden {
   display: none;
-}
-
-.companyInfosSection {
-  /* padding: 110px 100px 80px; */
 }
 
 .button {
@@ -61,9 +57,81 @@
   background-color: #a54fa8;
 }
 
-.infos {
-  margin: 0 100px 80px;
-  padding: 30px 30px 0;
-  background-color: white;
-  border-radius: 16px;
+@media screen and (max-width: 375px) {
+  .companyName {
+    display: flex;
+    justify-content: center;
+
+    padding: 30px 0;
+    gap: 5px;
+  }
+  .infos {
+    margin: 0;
+    padding: 10px;
+    background-color: white;
+  }
+  .iframeOutline {
+    border: none;
+  }
+
+  .iframeSection {
+    padding: 0;
+    min-height: 400px;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 376px) {
+  .companyName {
+    padding-left: 21px;
+    gap: 15px;
+  }
+  .infos {
+    margin: 0px 27px 73px 21px;
+    padding: 20px 22px;
+    background-color: white;
+    border-radius: 16px;
+  }
+  .iframeOutline {
+    border: none;
+  }
+  .iframeSection {
+    padding: 0;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 764px) {
+  .companyName {
+    padding-left: 100px;
+  }
+  .infos {
+    margin: 0 100px 80px;
+    padding: 30px 30px 0;
+    /* background-color: white;
+    border-radius: 16px; */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .buttonsBar {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+
+    justify-content: space-around;
+    margin-bottom: 42px;
+  }
+  .button {
+    margin-bottom: 21px;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 276px) {
+  .buttonsBar {
+    flex-direction: column;
+  }
 }
