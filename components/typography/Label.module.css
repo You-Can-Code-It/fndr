@@ -1,8 +1,12 @@
-.standardLabel {
-  color: #333 !important;
-  opacity: 0.5;
-  font-size: 14px !important;
-  font-weight: 400;
-  line-height: normal !important;
+.labelContainer {
   margin-bottom: 6px;
+}
+
+.standardLabel {
+  color: #333;
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  line-height: 19px;
 }

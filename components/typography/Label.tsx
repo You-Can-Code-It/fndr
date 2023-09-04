@@ -8,20 +8,19 @@ type Heading1Props = {
   onClick?: () => void;
 };
 
-const Label: React.FC<Heading1Props> = ({
-  children,
-  variant = "standardLabel",
-  ...props
-}) => {
+const Label: React.FC<Heading1Props> = ({ children, variant, ...props }) => {
   return (
-    <p
-      className={`${styles.heading1} ${variant && styles[variant]} ${
-        fontInter.className
-      }`}
-      {...props}
-    >
-      {children}
-    </p>
+    // for a "label" tag we need this <div> to apply margin-bottom
+    <div className={styles.labelContainer}>
+      <label
+        className={`${styles.standardLabel} ${variant && styles[variant]} ${
+          fontInter.className
+        }`}
+        {...props}
+      >
+        {children}
+      </label>
+    </div>
   );
 };
 

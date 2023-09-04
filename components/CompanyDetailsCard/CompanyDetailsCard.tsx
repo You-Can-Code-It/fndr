@@ -7,6 +7,7 @@ import Heading1 from "../typography/Heading1";
 import Link from "next/link";
 import LoginControls from "../LoginControls/LoginControls";
 import Label from "../typography/Label";
+import HeaderInfo from "../typography/HeaderInfo";
 
 type Company = {
   id: string;
@@ -72,16 +73,16 @@ const CompanyDetailsCard: React.FC<CompanyDetailsCardProps> = ({ company }) => {
         </div>
         <div className={styles.infos}>
           <Label>Location</Label>
-          <Heading1 variant="detailsValue">{company?.city}</Heading1>
+          <HeaderInfo>{company?.city}</HeaderInfo>
           <Label>Area</Label>
-          <Heading1 variant="detailsValue"> {company?.category}</Heading1>
+          <HeaderInfo> {company?.category}</HeaderInfo>
           <Label>Website</Label>
-          <Heading1
+          <HeaderInfo
             variant={displayWebsite ? "detailsIframe" : "detailsValueWebsite"}
             onClick={() => setDisplayWebsite(true)}
           >
             {extractDomain(company?.website)}
-          </Heading1>
+          </HeaderInfo>
           {displayWebsite === true && (
             <button
               className={`${styles.button} ${styles.closeButton}`}
@@ -98,13 +99,13 @@ const CompanyDetailsCard: React.FC<CompanyDetailsCardProps> = ({ company }) => {
             )}
           </div>
           <Label>Address</Label>
-          <Heading1 variant="detailsValue">
+          <HeaderInfo variant="detailsValue">
             {`${company?.street}, ${company?.houseNumber}. ${company?.city}. ${company?.postCode}.`}
-          </Heading1>
+          </HeaderInfo>
           <Label>IND number </Label>
-          <Heading1 variant="detailsValue">
+          <HeaderInfo variant="detailsValue">
             {company?.indReferentNumber}
-          </Heading1>
+          </HeaderInfo>
           <div className={styles.buttonsBar}>
             <Link href="/">
               <button className={styles.button}>Back</button>
