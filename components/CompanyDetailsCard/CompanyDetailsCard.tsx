@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import styles from "./CompanyDetailsCard.module.css";
 import Logo from "../logo/Logo";
-import Avatar from "../avatar/Avatar";
-import userImage from "../../public/assets/User.png";
 import Heading1 from "../typography/Heading1";
 import Link from "next/link";
 import LoginControls from "../LoginControls/LoginControls";
 import Label from "../typography/Label";
 import HeaderInfo from "../typography/HeaderInfo";
+import Button from "../Button/Button";
 
 type Company = {
   id: string;
@@ -84,12 +83,12 @@ const CompanyDetailsCard: React.FC<CompanyDetailsCardProps> = ({ company }) => {
             {extractDomain(company?.website)}
           </HeaderInfo>
           {displayWebsite === true && (
-            <button
-              className={`${styles.button} ${styles.closeButton}`}
+            <Button
+              variant="closeButton"
               onClick={() => setDisplayWebsite(false)}
             >
               Close
-            </button>
+            </Button>
           )}
           <div
             className={displayWebsite ? styles.iframeOutline : styles.hidden}
@@ -107,12 +106,8 @@ const CompanyDetailsCard: React.FC<CompanyDetailsCardProps> = ({ company }) => {
             {company?.indReferentNumber}
           </HeaderInfo>
           <div className={styles.buttonsBar}>
-            <Link href="/">
-              <button className={styles.button}>Back</button>
-            </Link>
-            <button className={`${styles.button} ${styles.saveButton}`}>
-              Save
-            </button>
+            <Button href="/">Back</Button>
+            <Button variant="saveButton">Save</Button>
           </div>
         </div>
       </main>

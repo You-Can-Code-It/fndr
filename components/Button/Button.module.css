@@ -1,0 +1,29 @@
+.mainContainer {
+  border: none;
+  margin-right: 20px;
+  padding: 16px 32px;
+  border-radius: 10px;
+  background-color: #d0d3d9;
+  color: white;
+  margin-bottom: 102px;
+}
+
+.mainContainer:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.saveButton {
+  background-color: #a54fa8;
+}
+
+.closeButton {
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 500px) {
+  .button {
+    margin-bottom: 21px;
+    display: flex;
+  }
+}
