@@ -6,6 +6,7 @@ import userImage from "../../public/assets/User.png";
 import Heading1 from "../typography/Heading1";
 import Link from "next/link";
 import LoginControls from "../LoginControls/LoginControls";
+import Label from "../typography/Label";
 
 type Company = {
   id: string;
@@ -70,11 +71,11 @@ const CompanyDetailsCard: React.FC<CompanyDetailsCardProps> = ({ company }) => {
           <Heading1 variant="detailsPage">{company?.name}</Heading1>
         </div>
         <div className={styles.infos}>
-          <Heading1 variant="detailsLabel">Location</Heading1>
+          <Label>Location</Label>
           <Heading1 variant="detailsValue">{company?.city}</Heading1>
-          <Heading1 variant="detailsLabel">Area</Heading1>
+          <Label>Area</Label>
           <Heading1 variant="detailsValue"> {company?.category}</Heading1>
-          <Heading1 variant="detailsLabel">Website</Heading1>
+          <Label>Website</Label>
           <Heading1
             variant={displayWebsite ? "detailsIframe" : "detailsValueWebsite"}
             onClick={() => setDisplayWebsite(true)}
@@ -96,11 +97,11 @@ const CompanyDetailsCard: React.FC<CompanyDetailsCardProps> = ({ company }) => {
               <iframe className={styles.iframeSection} src={company.website} />
             )}
           </div>
-          <Heading1 variant="detailsLabel">Address</Heading1>
+          <Label>Address</Label>
           <Heading1 variant="detailsValue">
             {`${company?.street}, ${company?.houseNumber}. ${company?.city}. ${company?.postCode}.`}
           </Heading1>
-          <Heading1 variant="detailsLabel">IND number </Heading1>
+          <Label>IND number </Label>
           <Heading1 variant="detailsValue">
             {company?.indReferentNumber}
           </Heading1>

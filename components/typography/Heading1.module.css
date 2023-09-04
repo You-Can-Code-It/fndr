@@ -10,15 +10,6 @@
   font-weight: 600 !important;
 }
 
-.detailsLabel {
-  color: #333 !important;
-  opacity: 0.5;
-  font-size: 14px !important;
-  font-weight: 400;
-  line-height: normal !important;
-  margin-bottom: 6px;
-}
-
 .detailsValue {
   margin-bottom: 62px;
 }
