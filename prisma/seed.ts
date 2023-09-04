@@ -1,12 +1,17 @@
-const { PrismaClient } = require("@prisma/client");
-const prisma = new PrismaClient();
+
 const companiesWithCuid = require("../dataCleaning/companiesCuid.json");
 //add json file companies with coordinates later
+const dummyUsers = require("./seeds/users.json");
+const dummyEvents = require("./seeds/userEvents.json");
+const dummyAccounts = require("./seeds/accounts.json");
+const { PrismaClient } = require("@prisma/client");
+
+const prisma = new PrismaClient();
 
 async function main() {
   try {
     // Seed data using createMany
-    const seededData = await prisma.company.createMany({
+    const companies = await prisma.company.createMany({
       data: companiesWithCuid.map((company: any) => {
         const {
           id,
@@ -35,11 +40,59 @@ async function main() {
       skipDuplicates: true, // skip duplicates
     });
 
-    //console.log(seededData, "Seeded Data:");
+    const users = await prisma.user.createMany({
+      data: dummyUsers,
+      skipDuplicates: true,
+    });
+
+    const accounts = await prisma.account.createMany({
+      data: dummyAccounts,
+      skipDuplicates: true,
+    });
+
+    const userEvents = await prisma.userEvent.createMany({
+      data: dummyEvents,
+      skipDuplicates: true,
+    });
+
+    console.log(
+      `
+  SEEDED: 
+
+  Companies: ${companies.count}
+  Users: ${users.count}
+  Accounts: ${accounts.count}
+  UserEvents: ${userEvents.count}
+  `
+    );
+
+    if (process.env.NODE_ENV === "test") {
+      // if resetting the database for a test - remove any companies and events that were added during a test
+      // this means any company or event that is not in the json with seed data
+      const companyIds = companiesWithCuid.map((company: any) => company.id);
+      const deletedCompanies = await prisma.company.deleteMany({
+        where: { id: { notIn: companyIds } },
+      });
+
+      const eventIds = dummyEvents.map((event: any) => event.id);
+      const deletedEvents = await prisma.userEvent.deleteMany({
+        where: { id: { notIn: eventIds } },
+      });
+
+      console.log(
+        `
+  DELETED: 
+
+  Companies: ${deletedCompanies.count}
+  UserEvents: ${deletedEvents.count}
+  `
+      );
+    }
   } catch (error) {
     console.error("Error seeding data:", error);
   } finally {
     await prisma.$disconnect();
   }
 }
+
 main();
