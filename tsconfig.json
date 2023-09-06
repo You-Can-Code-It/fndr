@@ -24,7 +24,9 @@
   "exclude": ["node_modules"],
   "ts-node": {
     "compilerOptions": {
-      "module": "es2015",
+      // "module": "es2015",
+      "module": "commonjs",
+      "target": "esnext",
       "moduleResolution": "node"
     }
   }
