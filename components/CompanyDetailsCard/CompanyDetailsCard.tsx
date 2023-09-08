@@ -49,6 +49,7 @@ const CompanyDetailsCard: React.FC<CompanyDetailsCardProps> = ({ company }) => {
               height="28"
               viewBox="0 0 28 28"
               fill="none"
+              className={styles.chevron}
             >
               <g opacity="0.5">
                 <path
@@ -76,14 +77,17 @@ const CompanyDetailsCard: React.FC<CompanyDetailsCardProps> = ({ company }) => {
           >
             {extractDomain(company?.website)}
           </HeaderInfo>
-          {displayWebsite === true && (
-            <Button
-              variant="closeButton"
-              onClick={() => setDisplayWebsite(false)}
-            >
-              Close
-            </Button>
-          )}
+          <div className={styles.closeIframeButton}>
+            {displayWebsite === true && (
+              <Button
+                variant="closeButton"
+                onClick={() => setDisplayWebsite(false)}
+              >
+                Close
+              </Button>
+            )}
+          </div>
+
           <div
             className={displayWebsite ? styles.iframeOutline : styles.hidden}
           >
