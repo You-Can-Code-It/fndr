@@ -14,14 +14,14 @@ const HeaderInfo: React.FC<Heading1Props> = ({
   ...props
 }) => {
   return (
-    <h4
+    <p
       className={`${styles.mainHeader} ${variant && styles[variant]} ${
         fontInter.className
       }`}
       {...props}
     >
       {children}
-    </h4>
+    </p>
   );
 };
 
