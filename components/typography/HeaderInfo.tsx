@@ -1,4 +1,4 @@
-import styles from "./Heading1.module.css";
+import styles from "./HeaderInfo.module.css";
 import { ReactNode } from "react";
 import { fontInter } from "../../styles/fonts/index";
 
@@ -8,17 +8,21 @@ type Heading1Props = {
   onClick?: () => void;
 };
 
-const Heading1: React.FC<Heading1Props> = ({ children, variant, ...props }) => {
+const HeaderInfo: React.FC<Heading1Props> = ({
+  children,
+  variant,
+  ...props
+}) => {
   return (
-    <h1
-      className={`${styles.heading1} ${variant && styles[variant]} ${
+    <h4
+      className={`${styles.mainHeader} ${variant && styles[variant]} ${
         fontInter.className
       }`}
       {...props}
     >
       {children}
-    </h1>
+    </h4>
   );
 };
 
-export default Heading1;
+export default HeaderInfo;

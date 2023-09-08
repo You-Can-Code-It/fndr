@@ -1,0 +1,213 @@
+.infos {
+  padding: 5px;
+  background-color: white;
+}
+
+.companyName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.chevron {
+  margin-left: -7px;
+  margin-bottom: -3px;
+}
+
+.iframeSection {
+  width: 100%;
+  min-height: 15rem;
+  margin-bottom: 21px;
+  border-style: none;
+}
+
+.closeIframeButton {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonsBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 375px) {
+  .companyName {
+    padding: 21px 0;
+  }
+
+  .infos {
+    padding: 10px;
+  }
+
+  .iframeSection {
+    min-height: 22rem;
+  }
+
+  .buttonsBar {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .companyName {
+    margin-left: 2rem;
+    padding: 42px 0;
+    justify-content: left;
+  }
+  .infos {
+    border-radius: 8px;
+    padding: 21px;
+    margin: 0 2rem;
+  }
+
+  .iframeSection {
+    min-height: 28rem;
+  }
+
+  .closeIframeButton {
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .buttonsBar {
+    flex-direction: column;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 764px) {
+  .companyName {
+    margin-left: 4rem;
+    padding: 50px 0;
+  }
+  .infos {
+    margin: 0 4rem 6rem;
+    padding: 42px;
+  }
+
+  .iframeSection {
+    min-height: 33rem;
+  }
+
+  .buttonsBar {
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  .companyName {
+    margin-left: 6rem;
+  }
+  .infos {
+    margin: 0 6rem 8rem;
+    padding: 60px;
+  }
+}
+
+/* .companyName {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 38px 0 38px 100px;
+}
+
+.iframeOutline {
+  border: 1px solid #f6f6f6;
+}
+
+.iframeSection {
+  display: flex;
+  width: 100%;
+  min-height: 600px;
+
+  border: none;
+  margin-bottom: 62px;
+  padding: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 375px) {
+  .companyName {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    gap: 5px;
+  }
+  .infos {
+    margin: 0;
+    padding: 10px;
+    background-color: white;
+  }
+  .iframeOutline {
+    border: none;
+  }
+
+  .iframeSection {
+    padding: 0;
+    min-height: 400px;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 376px) {
+  .companyName {
+    padding-left: 21px;
+    gap: 15px;
+  }
+  .infos {
+    margin: 0px 27px 73px 21px;
+    padding: 20px 22px;
+    background-color: white;
+    border-radius: 16px;
+  }
+  .iframeOutline {
+    border: none;
+  }
+  .iframeSection {
+    padding: 0;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 764px) {
+  .companyName {
+    padding-left: 100px;
+  }
+  .infos {
+    margin: 0 100px 80px;
+    padding: 30px 30px 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .buttonsBar {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+
+    justify-content: space-around;
+    margin-bottom: 42px;
+  }
+}
+
+@media screen and (max-width: 276px) {
+  .buttonsBar {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .iframeSection {
+    min-height: 300px;
+  }
+} */
