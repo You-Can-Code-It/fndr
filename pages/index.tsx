@@ -11,6 +11,13 @@ import AddCompanyForm from "@/components/AddCompanyForm/AddCompanyForm";
 import Modal from "@/components/Modal/Modal";
 import LoginControls from "@/components/LoginControls/LoginControls";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+import Toggle from "@/components/toggle/Toggle";
+
+// reason using dynamic is because map will be rendered in client side
+const DynamicMap = dynamic( () => import("../components/map/Map"), {
+  ssr: false
+});
 
 function serialize(data: any) {
   return JSON.parse(JSON.stringify(data));
@@ -18,6 +25,8 @@ function serialize(data: any) {
 
 type Company = {
   id: string;
+  createdAt: Date;
+  updatedAt: Date;
   name: string;
   activity: string;
   indReferentNumber: string;
@@ -27,6 +36,8 @@ type Company = {
   street: string;
   houseNumber: string;
   postCode: string;
+  latitude: number | null;
+  longitude: number | null;
   display: boolean;
   userEvent: any;
 };
@@ -170,6 +181,12 @@ function Home({
             <AddCompanyForm />
             <button onClick={() => setOpenModal(!openModal)}>Cancel</button>
           </Modal>
+
+          <Toggle />
+
+          <DynamicMap 
+          companies={response.companies}
+          />
 
           <div className={styles.mainCardContainer}>
             {/* Needs fix: For design issues, displaying only the first 84 results. */}

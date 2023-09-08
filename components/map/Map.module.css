@@ -1,0 +1,15 @@
+.companyName {
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.companyLocation {
+    display: flex;
+    margin-top: 12px;
+    align-items: center;
+}
+
+.iconLocation {
+    padding-right: 6px;
+}

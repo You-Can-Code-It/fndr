@@ -33,7 +33,7 @@ async function getCoordinatesFromPostcode(
 
 export async function getCoordinates() {
   const companies = await prisma.company.findMany({
-    take: 100,
+    take: 800,
     where: {
       latitude: null,
       longitude: null,

@@ -1,0 +1,31 @@
+.toggleContainer {
+  width: 186px;
+  height: 44px;
+  background-color: #fff;
+  box-shadow: 0px 18px 32px 0px rgba(126, 129, 139, 0.05);
+  border-radius: 30px;
+  padding: 7px;
+  margin-bottom: 20px;
+}
+
+.toggleLabel {
+  display: flex;
+  cursor: pointer;
+  
+}
+
+.toggleInput {
+    border: none;
+    border-radius: 30px;
+    background-color: #A54FA8;
+    width: 86px;
+    height: 30px;
+}
+
+.toggleInput:focus {
+    outline: none;
+}
+
+.toggleText {
+
+}
