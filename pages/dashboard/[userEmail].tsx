@@ -23,7 +23,10 @@ type Company = {
   display: boolean;
 };
 
+type UserEventsByCompanyId = Record<string, UserEvent[]>;
+
 function UserDashBoard({
+  // Keep it by now
   userEvents,
   companiesData,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
@@ -31,7 +34,7 @@ function UserDashBoard({
     <div>
       <NavBar />
       <div className={styles.mainCardContainer}>
-        {companiesData.map((company: Company) => {
+        {companiesData?.map((company: Company) => {
           return (
             <Card
               key={company.id}
@@ -50,7 +53,6 @@ function UserDashBoard({
     </div>
   );
 }
-
 export const getServerSideProps: GetServerSideProps<{
   userEvents: UserEvent[];
   companiesData: Company[];
@@ -63,13 +65,17 @@ export const getServerSideProps: GetServerSideProps<{
         email: userEmail,
       },
     });
+
     const userEvents = await prisma.userEvent.findMany({
       where: {
         userId: user.id,
       },
     });
 
-    const companyIds = userEvents.map((userEvent: any) => userEvent.companyId);
+    // Fetch companiesData
+    const companyIds = userEvents.map(
+      (userEvent: UserEvent) => userEvent.companyId
+    );
 
     const companiesData = await prisma.company.findMany({
       where: {
@@ -79,10 +85,51 @@ export const getServerSideProps: GetServerSideProps<{
       },
     });
 
+    // Group userEvents by companyId
+    const userEventsByCompanyId: UserEventsByCompanyId = userEvents.reduce(
+      (acc: any, userEvent: UserEvent) => {
+        if (!acc[userEvent.companyId]) {
+          acc[userEvent.companyId] = [];
+        }
+        acc[userEvent.companyId].push(userEvent);
+        return acc;
+      },
+      {}
+    );
+
+    // Find the most recent userEvent for each company
+    const mostRecentUserEvents = Object.values(userEventsByCompanyId).map(
+      (events: UserEvent[] | unknown) =>
+        (events as UserEvent[]).reduce(
+          (mostRecent: UserEvent | null, event: UserEvent) => {
+            if (!mostRecent || event.createdAt > mostRecent.createdAt) {
+              return event;
+            }
+            return mostRecent;
+          },
+          null as UserEvent | null
+        )
+    );
+
+    // Sort companiesData based on mostRecentUserEvents in descending order
+    const sortedCompaniesData = companiesData.slice().sort((a: any, b: any) => {
+      const eventA = mostRecentUserEvents.find(
+        (event) => event?.companyId === a.id
+      );
+      const eventB = mostRecentUserEvents.find(
+        (event) => event?.companyId === b.id
+      );
+
+      const dateA = eventA?.createdAt || new Date(0);
+      const dateB = eventB?.createdAt || new Date(0);
+
+      return dateB.getTime() - dateA.getTime(); // Compare dates as timestamps
+    });
+
     return {
       props: {
         userEvents: serialize(userEvents),
-        companiesData: serialize(companiesData),
+        companiesData: serialize(sortedCompaniesData),
       },
     };
   } catch (error) {
@@ -101,3 +148,59 @@ export const getServerSideProps: GetServerSideProps<{
 };
 
 export default UserDashBoard;
+
+// Old version of the page, not sorting the most recents
+// export const getServerSideProps: GetServerSideProps<{
+//   userEvents: UserEvent[];
+//   companiesData: Company[];
+// }> = async (context) => {
+//   try {
+//     const userEmail = context.params?.userEmail as string;
+
+//     const user = await prisma.user.findUnique({
+//       where: {
+//         email: userEmail,
+//       },
+//     });
+//     const userEvents = await prisma.userEvent.findMany({
+//       where: {
+//         userId: user.id,
+//       },
+//     });
+
+//     const companyIds = userEvents.map((userEvent: any) => userEvent.companyId);
+
+//     const companiesData = await prisma.company.findMany({
+//       where: {
+//         id: {
+//           in: companyIds,
+//         },
+//         // orderBy: {
+//         //   userEvent: {
+//         //     createdAt: "desc",
+//         //   },
+//         // },
+//       },
+//     });
+
+//     return {
+//       props: {
+//         userEvents: serialize(userEvents),
+//         companiesData: serialize(companiesData),
+//       },
+//     };
+//   } catch (error) {
+//     console.error(
+//       "Pages /dashboard/:userId - Error fetching company data:",
+//       error
+//     );
+
+//     return {
+//       props: {
+//         userEvents: null,
+//         companiesData: null,
+//       },
+//     };
+//   }
+// };
+// export default UserDashBoard;
