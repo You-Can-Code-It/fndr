@@ -4,14 +4,13 @@ import { useRouter } from "next/router";
 import { prisma } from "@/prisma/client";
 import { useState } from "react";
 import styles from "@/styles/Home.module.css";
-import Logo from "@/components/logo/Logo";
 import Dropdown from "@/components/dropdown/Dropdown";
 import Card from "@/components/card/Card";
 import AddCompanyForm from "@/components/AddCompanyForm/AddCompanyForm";
 import Modal from "@/components/Modal/Modal";
-import LoginControls from "@/components/LoginControls/LoginControls";
 import Link from "next/link";
 import NavBar from "@/components/NavBar/NavBar";
+import { useSession } from "next-auth/react";
 
 function serialize(data: any) {
   return JSON.parse(JSON.stringify(data));
@@ -115,6 +114,8 @@ function Home({
   response,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   // this router is intended for adding and reading query parameters
+  const { data: session } = useSession();
+  console.log("index page, session.user.email", session?.user?.email);
   const router = useRouter();
   const [openModal, setOpenModal] = useState(false);
   // retrieve query parameter with name cityFilter to set input value

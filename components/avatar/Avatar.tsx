@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./Avatar.module.css";
 import Image from "next/image";
+import Link from "next/link";
+import { useSession } from "next-auth/react";
 
 type AvatarProps = {
   imageSource: string;
@@ -8,15 +10,20 @@ type AvatarProps = {
 };
 
 const Avatar: React.FC<AvatarProps> = ({ imageSource, className }) => {
+  const { data: session } = useSession();
+  const userEmail = session?.user?.email;
+
   return (
     <div className={`${styles.avatarContainer} ${styles[className]}`}>
-      <Image
-        src={imageSource}
-        alt="User Avatar"
-        className={`${styles.avatarImage} ${styles[className]}`}
-        fill
-        sizes="(min-width: 768px) 100vw"
-      />
+      <Link href={`/dashboard/${userEmail}`}>
+        <Image
+          src={imageSource}
+          alt="User Avatar"
+          className={`${styles.avatarImage} ${styles[className]}`}
+          fill
+          sizes="(min-width: 768px) 100vw"
+        />
+      </Link>
     </div>
   );
 };

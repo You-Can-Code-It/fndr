@@ -1,9 +1,9 @@
 import { useSession, signIn, signOut } from "next-auth/react";
 import styles from "./LoginControls.module.css";
-import Image from "next/image";
 
 export default function LoginControls() {
   const { data: session } = useSession();
+  console.log("LoginControls: session", session);
   if (session?.user && session?.user?.image) {
     return (
       <div className={styles.container}>
