@@ -21,6 +21,7 @@ type Company = {
   houseNumber: string;
   postCode: string;
   display: boolean;
+  userEvent?: any;
 };
 
 type UserEventsByCompanyId = Record<string, UserEvent[]>;
@@ -33,22 +34,24 @@ function UserDashBoard({
   return (
     <div>
       <NavBar />
-      <div className={styles.mainCardContainer}>
-        {companiesData?.map((company: Company) => {
-          return (
-            <Card
-              key={company.id}
-              id={company.id}
-              name={company.name}
-              city={company.city}
-              website={company.website}
-              display={company.display}
-              category={company.category}
-              userEvent={company.userEvent[0] ?? null}
-              //   userEvent={null}
-            />
-          );
-        })}
+      <div className={styles.container}>
+        <div className={styles.mainCardContainer}>
+          {companiesData?.map((company: Company) => {
+            return (
+              <Card
+                key={company.id}
+                id={company.id}
+                name={company.name}
+                city={company.city}
+                website={company.website}
+                display={company.display}
+                category={company.category}
+                userEvent={company.userEvent[0] ?? null}
+                //   userEvent={null}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

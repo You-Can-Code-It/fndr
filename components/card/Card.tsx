@@ -10,7 +10,8 @@ import Link from "next/link";
 import { DateTime } from "luxon";
 import { useSession } from "next-auth/react";
 import Avatar from "../avatar/Avatar";
-
+import imagePin from "../../public/map-pin.svg";
+import imageLink from "../../public/external-link.svg";
 type CardProps = {
   id: string;
   name: string;
@@ -117,11 +118,11 @@ const Card: React.FC<CardProps> = ({
         <Link href={`companies/${id}`}>{name}</Link>
         {/* <Heading1>{name}</Heading1> */}
         <div className={styles.cardLocation}>
-          <img src="./map-pin.svg" />
+          <img src={imagePin.src} alt="pin icon" />
           <Heading2 className={styles.locationText}>{city}</Heading2>
         </div>
         <div className={styles.cardWebsite}>
-          <img src="./external-link.svg" />
+          <img src={imageLink.src} />
           <WebLink website={website} className={styles.websiteText}>
             {website
               .replace("http://", "")
