@@ -1,5 +1,6 @@
 import { useSession, signIn, signOut } from "next-auth/react";
 import styles from "./LoginControls.module.css";
+import Avatar from "../avatar/Avatar";
 
 export default function LoginControls() {
   const { data: session } = useSession();
@@ -7,10 +8,11 @@ export default function LoginControls() {
   if (session?.user && session?.user?.image) {
     return (
       <div className={styles.container}>
-        <img
-          src={session?.user?.image}
+        <Avatar
+          imageSource={session?.user?.image}
           alt="User avatar"
-          className={styles.userAvatar}
+          // className={styles.userAvatar}
+          className="detailsPage"
         />
         <button className={styles.buttonSignInOut} onClick={() => signOut()}>
           Sign out

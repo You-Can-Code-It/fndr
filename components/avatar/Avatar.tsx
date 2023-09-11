@@ -6,7 +6,8 @@ import { useSession } from "next-auth/react";
 
 type AvatarProps = {
   imageSource: string;
-  className: string;
+  className?: string;
+  alt?: string;
 };
 
 const Avatar: React.FC<AvatarProps> = ({ imageSource, className }) => {
