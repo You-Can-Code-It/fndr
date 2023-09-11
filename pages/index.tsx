@@ -172,7 +172,7 @@ function Home({
 
           <div className={styles.mainCardContainer}>
             {/* Needs fix: For design issues, displaying only the first 84 results. */}
-            {response.companies.slice(0, 84).map((company: Company, index) => {
+            {response.companies.slice(0, 84).map((company: Company) => {
               return (
                 <Card
                   key={company.id}

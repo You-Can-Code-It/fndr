@@ -7,7 +7,6 @@ import axios from "axios";
 import Modal from "../Modal/Modal";
 import LoaderSpinner from "../LoaderSpinner/LoaderSpinner";
 import Link from "next/link";
-import { Head } from "next/document";
 import { DateTime } from "luxon";
 import { useSession } from "next-auth/react";
 import Avatar from "../avatar/Avatar";
