@@ -8,7 +8,6 @@ type AvatarProps = {
 };
 
 const Avatar: React.FC<AvatarProps> = ({ imageSource, className }) => {
-  console.log("Avatar className?", className);
   return (
     <div className={`${styles.avatarContainer} ${styles[className]}`}>
       <Image

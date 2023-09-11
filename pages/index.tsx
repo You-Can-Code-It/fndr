@@ -11,6 +11,7 @@ import AddCompanyForm from "@/components/AddCompanyForm/AddCompanyForm";
 import Modal from "@/components/Modal/Modal";
 import LoginControls from "@/components/LoginControls/LoginControls";
 import Link from "next/link";
+import NavBar from "@/components/NavBar/NavBar";
 
 function serialize(data: any) {
   return JSON.parse(JSON.stringify(data));
@@ -134,11 +135,8 @@ function Home({
 
   return (
     <div className={inter.className}>
+      <NavBar />
       <div className={styles.container}>
-        <header className={styles.headerContainer}>
-          <Logo />
-          <LoginControls />
-        </header>
         <p>Total Companies: {response.companies.length}</p>
         <main className={styles.mainContainer}>
           {/* <Link href="/account">To your account</Link> */}
