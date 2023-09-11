@@ -44,8 +44,8 @@ function UserDashBoard({
               website={company.website}
               display={company.display}
               category={company.category}
-              // userEvent={company.userEvent[0] ?? null}
-              userEvent={null}
+              userEvent={company.userEvent[0] ?? null}
+              //   userEvent={null}
             />
           );
         })}
@@ -81,6 +81,17 @@ export const getServerSideProps: GetServerSideProps<{
       where: {
         id: {
           in: companyIds,
+        },
+      },
+      include: {
+        userEvent: {
+          orderBy: {
+            createdAt: "desc",
+          },
+          take: 1,
+          include: {
+            user: true,
+          },
         },
       },
     });
