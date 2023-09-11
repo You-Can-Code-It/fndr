@@ -8,6 +8,7 @@ import HeaderInfo from "@/components/typography/HeaderInfo";
 import Button from "@/components/Button/Button";
 
 import styles from "./DetailsPage.module.css";
+import { UserEvent } from "@prisma/client";
 function extractDomain(url: string) {
   const parts = url?.split("www.");
   if (parts?.length >= 2) {
@@ -34,13 +35,29 @@ type Company = {
   display: boolean;
 };
 
-function CompanyDetailsPage({
-  company,
+function UserDashBoard({
+  userEvents,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const [displayWebsite, setDisplayWebsite] = useState(false);
+  console.log("dashboard, userEvents?", userEvents);
+  const uniqueCompanyIds = new Set<number>();
+  const uniqueUserEvents = userEvents.reduce((acc: any, userEvent: any) => {
+    if (!uniqueCompanyIds.has(userEvent.companyId)) {
+      uniqueCompanyIds.add(userEvent.companyId);
+      acc.push(userEvent);
+    }
+    return acc;
+  }, []);
+
+  console.log("unique events?", uniqueUserEvents);
+
   return (
     <div>
       <h1>Test</h1>
+      {uniqueUserEvents.map((event) => (
+        <li>{event.companyId}</li>
+      ))}
+
       {/* <div className={styles.detailsCardMainContainer}>
         <NavBar />
         <main>
@@ -121,31 +138,42 @@ function CompanyDetailsPage({
 }
 
 export const getServerSideProps: GetServerSideProps<{
-  company: Company;
+  userEvents: UserEvent;
 }> = async (context) => {
+  console.log("dashboard getSSprops called?", context?.params?.userEmail);
   try {
-    const companyId = context.params?.companyId as string;
+    const userEmail = context.params?.userEmail as string;
 
-    const company = await prisma.company.findUnique({
+    const user = await prisma.user.findUnique({
       where: {
-        id: companyId,
+        email: userEmail,
       },
     });
+    console.log("dashboard user??", user.id);
+    const userEvents = await prisma.userEvent.findMany({
+      where: {
+        userId: user.id,
+      },
+    });
+    console.log("dashboard userEvents?", userEvents);
 
     return {
       props: {
-        company: serialize(company),
+        userEvents: serialize(userEvents),
       },
     };
   } catch (error) {
-    console.error("Pages /companies/:id - Error fetching company data:", error);
+    console.error(
+      "Pages /dashboard/:userId - Error fetching company data:",
+      error
+    );
 
     return {
       props: {
-        company: null,
+        userEvents: null,
       },
     };
   }
 };
 
-export default CompanyDetailsPage;
+export default UserDashBoard;
