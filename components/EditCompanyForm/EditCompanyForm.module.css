@@ -1,6 +1,41 @@
-.addCompanyForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 5px;
+.editCompanyFormContainer {
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 18px 32px 0px rgba(126, 129, 139, 0.05);
+  padding: 22px 20px 50px 20px;
+}
+
+.editCompanyForm {
+  display: grid;
+  gap: 20px;
+}
+
+.cancelButton {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+  border-radius: 10px;
+  background: #d0d3d9;
+  padding: 16px 32px;
+}
+
+.submitButton {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+  border-radius: 10px;
+  background: #a54fa8;
+  padding: 16px 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .editCompanyFormContainer {
+    padding: 30px 30px 102px 30px;
+  }
 }

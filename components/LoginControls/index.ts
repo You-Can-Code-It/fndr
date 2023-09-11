@@ -1,1 +1,1 @@
-export { default } from './LoginControls'
+export { default } from "./LoginControls";

@@ -4,6 +4,9 @@ import { z } from "zod";
 import axios from "axios";
 import styles from "./EditCompanyForm.module.css";
 import { zodResolver } from "@hookform/resolvers/zod";
+import Input from "../Atoms/Input/Input";
+import Label from "../Atoms/Label/Label";
+import FormContainer from "../Atoms/FormContainer/FormContainer";
 
 type FormProps = {
   id: string;
@@ -106,76 +109,106 @@ const EditCompanyForm: React.FC<FormProps> = ({
   };
 
   return (
-    <div className={styles.addCompanyForm}>
-      <form onSubmit={handleSubmit(formSubmit)}>
-        <input type="text" placeholder="Company Name" {...register("name")} />
-        {errors.name && <p className="error">{String(errors.name.message)}</p>}
-        <input
-          type="text"
-          placeholder="Ind Number"
-          {...register("indReferentNumber")}
-          className={styles.addCompanyForm}
-        />
-        {errors.indReferentNumber && (
-          <p className="error">{String(errors.indReferentNumber.message)}</p>
-        )}
-        <input
-          type="text"
-          placeholder="Website"
-          {...register("website")}
-          className={styles.addCompanyForm}
-        />
-        {errors.website && (
-          <p className="error">{String(errors.website.message)}</p>
-        )}
-        <input
-          type="text"
-          placeholder="Category"
-          {...register("category")}
-          className={styles.addCompanyForm}
-        />
-        {errors.category && (
-          <p className="error">{String(errors.category.message)}</p>
-        )}
-        <input
-          type="text"
-          placeholder="City"
-          {...register("city")}
-          className={styles.addCompanyForm}
-        />
-        {errors.city && <p className="error">{String(errors.city.message)}</p>}
-        <input
-          type="text"
-          placeholder="Street"
-          {...register("street")}
-          className={styles.addCompanyForm}
-        />
-        {errors.street && (
-          <p className="error">{String(errors.street.message)}</p>
-        )}
-        <input
-          type="text"
-          placeholder="Number"
-          {...register("houseNumber")}
-          className={styles.addCompanyForm}
-        />
-        {errors.houseNumber && (
-          <p className="error">{String(errors.houseNumber.message)}</p>
-        )}
-        <input
-          type="text"
-          placeholder="Postal code"
-          {...register("postCode")}
-          className={styles.addCompanyForm}
-        />
-        {errors.postCode && (
-          <p className="error">{String(errors.postCode.message)}</p>
-        )}
+    <div className={styles.editCompanyFormContainer}>
+      <form
+        className={styles.editCompanyForm}
+        onSubmit={handleSubmit(formSubmit)}
+      >
+        <FormContainer>
+          <Label htmlFor="name">Name</Label>
+          <Input
+            id="name"
+            type="text"
+            placeholder="Company Name"
+            {...register("name")}
+          />
+          {errors.name && (
+            <p className="error">{String(errors.name.message)}</p>
+          )}
+        </FormContainer>
 
-        <div className={styles.addCompanyForm}>
-          {" "}
-          <button type="submit">Edit Company</button>
-        </div>
+        <FormContainer>
+          <Label htmlFor="indReferentNumber">Ind Number</Label>
+          <Input
+            id="indReferentNumber"
+            type="text"
+            placeholder="Ind Number"
+            {...register("indReferentNumber")}
+          />
+          {errors.indReferentNumber && (
+            <p className="error">{String(errors.indReferentNumber.message)}</p>
+          )}
+        </FormContainer>
+
+        <FormContainer>
+          <Label htmlFor="website">Website</Label>
+          <Input type="text" placeholder="Website" {...register("website")} />
+          {errors.website && (
+            <p className="error">{String(errors.website.message)}</p>
+          )}
+        </FormContainer>
+
+        <FormContainer>
+          <Label htmlFor="category">Category</Label>
+          <Input
+            type="text"
+            placeholder="Category"
+            {...register("category")}
+            className={styles.addCompanyForm}
+          />
+          {errors.category && (
+            <p className="error">{String(errors.category.message)}</p>
+          )}
+        </FormContainer>
+
+        <FormContainer>
+          <Label htmlFor="city">City</Label>
+          <Input type="text" placeholder="City" {...register("city")} />
+          {errors.city && (
+            <p className="error">{String(errors.city.message)}</p>
+          )}
+        </FormContainer>
+
+        <FormContainer>
+          <Label htmlFor="street">Street name</Label>
+          <Input type="text" placeholder="Street" {...register("street")} />
+          {errors.street && (
+            <p className="error">{String(errors.street.message)}</p>
+          )}
+        </FormContainer>
+
+        <FormContainer>
+          <Label htmlFor="houseNumber">House number</Label>
+          <Input
+            type="text"
+            placeholder="Number"
+            {...register("houseNumber")}
+          />
+          {errors.houseNumber && (
+            <p className="error">{String(errors.houseNumber.message)}</p>
+          )}
+        </FormContainer>
+
+        <FormContainer>
+          <Label htmlFor="postCode">Postal code</Label>
+          <Input
+            type="text"
+            placeholder="Postal code"
+            {...register("postCode")}
+          />
+          {errors.postCode && (
+            <p className="error">{String(errors.postCode.message)}</p>
+          )}
+        </FormContainer>
+
+        <FormContainer>
+          <button className={styles.cancelButton} type="submit">
+            Cancel
+          </button>
+          <button className={styles.submitButton} type="submit">
+            Edit Company
+          </button>
+        </FormContainer>
       </form>
     </div>
   );

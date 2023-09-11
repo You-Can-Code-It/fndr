@@ -230,7 +230,11 @@ function Home({
                 id={company.id}
                 name={company.name}
                 city={company.city}
+                street={company.street}
                 website={company.website}
+                indReferentNumber={company.indReferentNumber}
+                houseNumber={company.houseNumber}
+                postCode={company.postCode}
                 display={company.display}
                 category={company.category}
                 userEvent={company.userEvent[0] ?? null}
