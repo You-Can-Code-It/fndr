@@ -7,10 +7,10 @@ import axios from "axios";
 import Modal from "../Modal/Modal";
 import LoaderSpinner from "../LoaderSpinner/LoaderSpinner";
 import Link from "next/link";
-import { Head } from "next/document";
 import { DateTime } from "luxon";
 import { useSession } from "next-auth/react";
 import Avatar from "../avatar/Avatar";
+import { BsThreeDots } from "react-icons/bs";
 
 type CardProps = {
   id: string;
@@ -114,25 +114,28 @@ const Card: React.FC<CardProps> = ({
       onClick={handleOpenCompanyCard}
       id={id}
     >
-      <div className={styles.overviewContainer}>
-        <Link href={`companies/${id}`}>{name}</Link>
-        {/* <Heading1>{name}</Heading1> */}
-        <div className={styles.cardLocation}>
-          <img src="./map-pin.svg" />
-          <Heading2 className={styles.locationText}>{city}</Heading2>
-        </div>
-        <div className={styles.cardWebsite}>
-          <img src="./external-link.svg" />
-          <WebLink website={website} className={styles.websiteText}>
-            {website
-              .replace("http://", "")
-              .replace("https://", "")
-              .replace("www.", "")}
-          </WebLink>
-        </div>
+      <div className={styles.threeDotsIcon}>
+        <BsThreeDots onClick={() => setOpenModal(!openModal)} />
       </div>
+      <div className={styles.companyName}>
+        <Link href={`companies/${id}`}>{name}</Link>
+      </div>
+
+      <div className={styles.cardLocation}>
+        <img src="./map-pin.svg" />
+        <Heading2 className={styles.locationText}>{city}</Heading2>
+      </div>
+      <div className={styles.cardWebsite}>
+        <img src="./external-link.svg" />
+        <WebLink website={website} className={styles.websiteText}>
+          {website
+            .replace("http://", "")
+            .replace("https://", "")
+            .replace("www.", "")}
+        </WebLink>
+      </div>
+
       <div className={styles.categoriesContainer}>{category}</div>
-      <button onClick={() => setOpenModal(!openModal)}>Remove</button>
 
       <Modal isOpen={openModal || error} onClose={() => setOpenModal(false)}>
         {!loading && !error && !successRemoval && (

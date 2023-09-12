@@ -11,6 +11,7 @@ import AddCompanyForm from "@/components/AddCompanyForm/AddCompanyForm";
 import Modal from "@/components/Modal/Modal";
 import LoginControls from "@/components/LoginControls/LoginControls";
 import Link from "next/link";
+import NavBar from "@/components/NavBar/NavBar";
 
 function serialize(data: any) {
   return JSON.parse(JSON.stringify(data));
@@ -134,61 +135,54 @@ function Home({
 
   return (
     <div className={inter.className}>
-      <div className={styles.container}>
-        <header className={styles.headerContainer}>
-          <Logo />
-          <LoginControls />
-        </header>
-        <p>Total Companies: {response.companies.length}</p>
-        <main className={styles.mainContainer}>
-          {/* <Link href="/account">To your account</Link> */}
-          <div className={styles.mainDropdownContainer}>
-            <Dropdown
-              dropdownData={response.removeCitiesDuplicates}
-              // function setDropdownValue recieve name of the city
-              setDropdownValue={(cityName: string) => {
-                // update cityFilter query param by new value cityName
-                setCityFilterQuery(cityName);
+      <NavBar />
+      <p>Total Companies: {response.companies.length}</p>
 
-                if (cityName != "" && cityName != undefined) {
-                  //assign cityFilter to query parameter and perform redirect to send chosen city to the backend
-                  router.replace(`?cityFilter=` + cityName);
-                }
-              }}
-              // Passed state cityFilterQuery to dropdown component
-              dropdownValue={cityFilterQuery}
-              clearAllFilters={clearAllFilters}
-            />
-            <Link
-              href="/companies/newCompany"
-              className={styles.newCompanyLink}
-            >
-              + New Company
-            </Link>
-          </div>
-          <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
-            <AddCompanyForm />
-            <button onClick={() => setOpenModal(!openModal)}>Cancel</button>
-          </Modal>
+      {/* <Link href="/account">To your account</Link> */}
+      <div className={styles.mainPageContainer}>
+        <div className={styles.mainDropdownContainer}>
+          <Dropdown
+            dropdownData={response.removeCitiesDuplicates}
+            // function setDropdownValue recieve name of the city
+            setDropdownValue={(cityName: string) => {
+              // update cityFilter query param by new value cityName
+              setCityFilterQuery(cityName);
 
-          <div className={styles.mainCardContainer}>
-            {/* Needs fix: For design issues, displaying only the first 84 results. */}
-            {response.companies.slice(0, 84).map((company: Company, index) => {
-              return (
-                <Card
-                  key={company.id}
-                  id={company.id}
-                  name={company.name}
-                  city={company.city}
-                  website={company.website}
-                  display={company.display}
-                  category={company.category}
-                  userEvent={company.userEvent[0] ?? null}
-                />
-              );
-            })}
-          </div>
-        </main>
+              if (cityName != "" && cityName != undefined) {
+                //assign cityFilter to query parameter and perform redirect to send chosen city to the backend
+                router.replace(`?cityFilter=` + cityName);
+              }
+            }}
+            // Passed state cityFilterQuery to dropdown component
+            dropdownValue={cityFilterQuery}
+            clearAllFilters={clearAllFilters}
+          />
+          <Link href="/companies/newCompany" className={styles.newCompanyLink}>
+            + New Company
+          </Link>
+        </div>
+        <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
+          <AddCompanyForm />
+          <button onClick={() => setOpenModal(!openModal)}>Cancel</button>
+        </Modal>
+
+        <div className={styles.companiesCards}>
+          {/* Needs fix: For design issues, displaying only the first 84 results. */}
+          {response.companies.slice(0, 84).map((company: Company, index) => {
+            return (
+              <Card
+                key={company.id}
+                id={company.id}
+                name={company.name}
+                city={company.city}
+                website={company.website}
+                display={company.display}
+                category={company.category}
+                userEvent={company.userEvent[0] ?? null}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

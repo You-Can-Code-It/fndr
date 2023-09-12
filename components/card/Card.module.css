@@ -1,4 +1,121 @@
 .cardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.threeDotsIcon {
+  margin-left: auto;
+}
+
+.threeDotsIcon:hover {
+  cursor: pointer;
+}
+
+.companyName {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+.cardLocation {
+  display: flex;
+  margin-bottom: 22px;
+}
+
+.cardWebsite {
+  margin-bottom: 26px;
+}
+
+.categoriesContainer {
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: #faf2ff;
+  border-radius: 6px;
+  margin-bottom: 23px;
+}
+
+.lastVisitContainer {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.deleteCompanyMainContainer {
+  padding-top: 24px;
+}
+
+.modalHeading {
+  padding-bottom: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.confirm {
+  border-bottom: 1px solid lightgrey;
+  padding: 0 23px 16px;
+}
+
+.removeCompanyButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.removeButton {
+  background-color: transparent;
+  border: none;
+  padding: 14px 0;
+  cursor: pointer;
+  color: #ec7065;
+}
+
+.cancelButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333333;
+}
+
+.removeLoading {
+  font-size: 12px;
+  font-weight: 100;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.removeCompanyConfirmation {
+  margin-bottom: 1rem;
+  font-weight: 400;
+  margin-top: 1.2rem;
+
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  border-bottom: 1px solid lightgrey;
+}
+
+.removeButtonBack {
+  font-size: 14px !important;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  cursor: pointer;
+  min-height: 5rem;
+  margin-top: -2rem;
+}
+/* .cardContainer {
   display: grid;
   overflow: hidden;
   grid-template-columns: repeat(2, 1fr);
@@ -168,4 +285,4 @@
   .websiteText {
     max-width: 250px;
   }
-}
+} */

@@ -1,5 +1,11 @@
-.container {
+.mainPageContainer {
   padding: 24px 24px 30px 24px;
+}
+
+.companiesCards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .headerContainer {
