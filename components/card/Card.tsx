@@ -10,7 +10,7 @@ import Link from "next/link";
 import { DateTime } from "luxon";
 import { useSession } from "next-auth/react";
 import Avatar from "../avatar/Avatar";
-import { BsThreeDots } from "react-icons/bs";
+import { PiDotsThreeOutlineFill } from "react-icons/pi";
 
 type CardProps = {
   id: string;
@@ -114,28 +114,35 @@ const Card: React.FC<CardProps> = ({
       onClick={handleOpenCompanyCard}
       id={id}
     >
-      <div className={styles.threeDotsIcon}>
-        <BsThreeDots onClick={() => setOpenModal(!openModal)} />
-      </div>
-      <div className={styles.companyName}>
-        <Link href={`companies/${id}`}>{name}</Link>
-      </div>
+      <div className={styles.leftBlock}>
+        <div className={styles.companyName}>
+          <Link href={`companies/${id}`}>{name}</Link>
+        </div>
 
-      <div className={styles.cardLocation}>
-        <img src="./map-pin.svg" />
-        <Heading2 className={styles.locationText}>{city}</Heading2>
+        <div className={styles.cardLocation}>
+          <img src="./map-pin.svg" />
+          <Heading2 className={styles.locationText}>{city}</Heading2>
+        </div>
+        <div className={styles.cardWebsite}>
+          <img src="./external-link.svg" />
+          <WebLink website={website} className={styles.websiteText}>
+            {website
+              .replace("http://", "")
+              .replace("https://", "")
+              .replace("www.", "")}
+          </WebLink>
+        </div>
       </div>
-      <div className={styles.cardWebsite}>
-        <img src="./external-link.svg" />
-        <WebLink website={website} className={styles.websiteText}>
-          {website
-            .replace("http://", "")
-            .replace("https://", "")
-            .replace("www.", "")}
-        </WebLink>
-      </div>
+      <div className={styles.rightBlock}>
+        <div className={styles.threeDotsIcon}>
+          <PiDotsThreeOutlineFill onClick={() => setOpenModal(!openModal)} />
+        </div>
+        <div className={styles.categoryContainer}>
+          <div className={styles.categoriesContainer}>{category}</div>
+        </div>
 
-      <div className={styles.categoriesContainer}>{category}</div>
+        <div className={styles.lastVisitContainer}>{displayLastVisit}</div>
+      </div>
 
       <Modal isOpen={openModal || error} onClose={() => setOpenModal(false)}>
         {!loading && !error && !successRemoval && (
@@ -210,8 +217,6 @@ const Card: React.FC<CardProps> = ({
           </>
         )}
       </Modal>
-
-      <div className={styles.lastVisitContainer}>{displayLastVisit}</div>
     </div>
   );
 };
