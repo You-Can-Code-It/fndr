@@ -4,12 +4,10 @@ import { useRouter } from "next/router";
 import { prisma } from "@/prisma/client";
 import { useState } from "react";
 import styles from "@/styles/Home.module.css";
-import Logo from "@/components/logo/Logo";
 import Dropdown from "@/components/dropdown/Dropdown";
 import Card from "@/components/card/Card";
 import AddCompanyForm from "@/components/AddCompanyForm/AddCompanyForm";
 import Modal from "@/components/Modal/Modal";
-import LoginControls from "@/components/LoginControls/LoginControls";
 import Link from "next/link";
 import NavBar from "@/components/NavBar/NavBar";
 
@@ -137,8 +135,6 @@ function Home({
     <div className={inter.className}>
       <NavBar />
       <p>Total Companies: {response.companies.length}</p>
-
-      {/* <Link href="/account">To your account</Link> */}
       <div className={styles.mainPageContainer}>
         <div className={styles.mainDropdownContainer}>
           <Dropdown
@@ -167,7 +163,6 @@ function Home({
         </Modal>
 
         <div className={styles.companiesCards}>
-          {/* Needs fix: For design issues, displaying only the first 84 results. */}
           {response.companies.map((company: Company) => {
             return (
               <Card

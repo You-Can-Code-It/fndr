@@ -1,5 +1,4 @@
 import styles from "./Card.module.css";
-import Heading1 from "../typography/Heading1";
 import Heading2 from "../typography/Heading2";
 import React, { useState, useEffect } from "react";
 import WebLink from "../typography/WebLink";
@@ -19,7 +18,6 @@ import {
   AiOutlineDelete,
 } from "react-icons/ai";
 import { FiEdit3 } from "react-icons/fi";
-import { use } from "chai";
 
 type CardProps = {
   id: string;
@@ -197,35 +195,6 @@ const Card: React.FC<CardProps> = ({
               <AiOutlineDelete />
               <p onClick={() => setSelectRemove(true)}>Remove</p>
             </div>
-
-            {/* <div className={styles.modalHeading}>
-              <Heading1>Remove company?</Heading1>
-            </div>
-            <div className={styles.confirm}>
-              <Heading2>
-                Are you sure you want to remove this company from the list?
-              </Heading2>
-            </div>
-            <div className={`${styles.removeCompanyButtons}`}>
-              <div className={`${styles.remove} `}>
-                <Heading1>
-                  <button
-                    className={`${styles.removeButton} `}
-                    onClick={() => handleDeleteClick(id)}
-                  >
-                    Remove
-                  </button>
-                </Heading1>
-              </div>
-              <Heading1>
-                <button
-                  className={`${styles.cancelButton} ${styles.danger}`}
-                  onClick={() => setOpenModal(false)}
-                >
-                  Cancel
-                </button>
-              </Heading1>
-            </div> */}
           </div>
         )}
         {!loading && !error && !successRemoval && selectRemove && (
