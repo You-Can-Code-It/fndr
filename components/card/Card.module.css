@@ -8,19 +8,12 @@
   position: relative;
 }
 
-.threeDotsIcon {
-  /* margin-left: auto; */
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-.threeDotsIcon:hover {
-  cursor: pointer;
+.leftBlock {
+  text-align: center;
 }
 
 .companyName {
-  margin-top: 21px;
+  margin-top: 28px;
   margin-bottom: 15px;
   font-size: 18px;
   font-weight: 500;
@@ -34,31 +27,34 @@
 }
 
 .cardWebsite {
+  display: flex;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
-.categoryContainer {
+.categoryWrapperContainer {
   margin-bottom: 23px;
-}
-
-.lastVisitContainer {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 22px;
-}
-.leftBlock {
-  text-align: center;
 }
 
 .rightBlock {
   text-align: center;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.categoriesContainer {
+.threeDotsIcon {
+  /* margin-left: auto; */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.threeDotsIcon:hover {
+  cursor: pointer;
+}
+
+.categoryInnerContainer {
   font-size: 12px;
   font-weight: 400;
   margin-bottom: 10px;
@@ -68,22 +64,39 @@
   display: inline-block;
 }
 
+.lastVisitContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
 @media (min-width: 600px) {
   .cardContainer {
-    padding: 30px;
+    padding: 18px 30px 19px 24px;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-  }
-
-  .cardLocation {
-    justify-content: left;
   }
 
   .leftBlock {
     flex-basis: 50%;
     text-align: left;
     margin-bottom: 0;
+  }
+
+  .companyName {
+    margin-top: 30px;
+  }
+
+  .cardLocation {
+    justify-content: left;
+    margin-bottom: 20px;
+  }
+
+  .cardWebsite {
+    justify-content: left;
   }
 
   .rightBlock {
@@ -101,12 +114,15 @@
     display: inline-block;
   }
 
-  .categoriesContainer {
+  .categoryInnerContainer {
     margin-bottom: 47px;
   }
+
   .lastVisitContainer {
     display: flex;
     justify-content: right;
+
+    height: 100%;
     gap: 8px;
     margin-bottom: 0;
   }

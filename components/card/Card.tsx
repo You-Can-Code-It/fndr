@@ -137,8 +137,8 @@ const Card: React.FC<CardProps> = ({
         <div className={styles.threeDotsIcon}>
           <PiDotsThreeOutlineFill onClick={() => setOpenModal(!openModal)} />
         </div>
-        <div className={styles.categoryContainer}>
-          <div className={styles.categoriesContainer}>{category}</div>
+        <div className={styles.categoryWrapperContainer}>
+          <div className={styles.categoryInnerContainer}>{category}</div>
         </div>
 
         <div className={styles.lastVisitContainer}>{displayLastVisit}</div>
