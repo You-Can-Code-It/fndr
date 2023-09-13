@@ -83,6 +83,83 @@
   margin-bottom: 10px;
 }
 
+.deleteCompanyMainContainer {
+  padding: 24px 20px;
+  width: 205px;
+  height: 138px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+.editButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.greyLine {
+  margin: 20px 0;
+  width: 100%;
+  border: 1px solid #e8eaed;
+}
+
+.removeButton {
+  color: #ec7065;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.removeButton:hover {
+  cursor: pointer;
+}
+
+.removeModal {
+  margin-top: 24px;
+}
+
+.removeMessage {
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 16px;
+}
+
+.confirmationMessage {
+  font-size: 14px;
+}
+
+.removalConfirmation {
+  display: flex;
+  flex-direction: column;
+  padding: 0 23px;
+}
+
+.greyLineConfirmation {
+  margin: 10px 0px;
+  width: 100%;
+  border: 1px solid #e8eaed;
+}
+
+.confirmRemoval {
+  color: #ec7065;
+}
+
+.confirmRemoval:hover {
+  cursor: pointer;
+}
+
+.cancelButton {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cancelButton:hover {
+  cursor: pointer;
+}
+
 @media (min-width: 600px) {
   .cardContainer {
     padding: 18px 30px 19px 24px;

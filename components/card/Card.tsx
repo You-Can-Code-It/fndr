@@ -16,7 +16,10 @@ import {
   AiOutlineDislike,
   AiTwotoneLike,
   AiTwotoneDislike,
+  AiOutlineDelete,
 } from "react-icons/ai";
+import { FiEdit3 } from "react-icons/fi";
+import { use } from "chai";
 
 type CardProps = {
   id: string;
@@ -36,11 +39,12 @@ const Card: React.FC<CardProps> = ({
   userEvent,
   category,
 }) => {
+  const { data: session } = useSession();
   const [openModal, setOpenModal] = useState(false);
+  const [selectRemove, setSelectRemove] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [successRemoval, setSuccessRemoval] = useState(false);
-  const { data: session } = useSession();
   const [latestUserEvent, setLatestUserEvent] = useState(userEvent);
   const [like, setLike] = useState(false);
   const [dislike, setDislike] = useState(false);
@@ -182,9 +186,19 @@ const Card: React.FC<CardProps> = ({
       </div>
 
       <Modal isOpen={openModal || error} onClose={() => setOpenModal(false)}>
-        {!loading && !error && !successRemoval && (
+        {!loading && !error && !successRemoval && !selectRemove && (
           <div className={styles.deleteCompanyMainContainer}>
-            <div className={styles.modalHeading}>
+            <div className={styles.editButton}>
+              <FiEdit3 />
+              <p>Edit</p>
+            </div>
+            <div className={styles.greyLine}></div>
+            <div className={styles.removeButton}>
+              <AiOutlineDelete />
+              <p onClick={() => setSelectRemove(true)}>Remove</p>
+            </div>
+
+            {/* <div className={styles.modalHeading}>
               <Heading1>Remove company?</Heading1>
             </div>
             <div className={styles.confirm}>
@@ -211,6 +225,37 @@ const Card: React.FC<CardProps> = ({
                   Cancel
                 </button>
               </Heading1>
+            </div> */}
+          </div>
+        )}
+        {!loading && !error && !successRemoval && selectRemove && (
+          <div className={styles.removalConfirmation}>
+            <div className={styles.removeModal}>
+              <p className={styles.removeMessage}>Remove company?</p>
+              <p className={styles.confirmationMessage}>
+                Are you sure you want to remove this company?
+              </p>
+            </div>
+            <div className={styles.greyLineConfirmation}></div>
+            <div className={styles.confirmRemoval}>
+              <p
+                onClick={() => {
+                  setSelectRemove(true);
+                  handleDeleteClick(id);
+                }}
+              >
+                Remove
+              </p>
+            </div>
+            <div className={styles.greyLineConfirmation}></div>
+            <div
+              className={styles.cancelButton}
+              onClick={() => {
+                setOpenModal(false);
+                setSelectRemove(false);
+              }}
+            >
+              Cancel
             </div>
           </div>
         )}
