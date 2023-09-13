@@ -6,6 +6,7 @@
   background-color: white;
   border-radius: 6px;
   position: relative;
+  max-width: 608px;
 }
 
 .leftBlock {
@@ -125,5 +126,11 @@
     height: 100%;
     gap: 8px;
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1300px) {
+  .cardContainer {
+    width: 608px;
   }
 }
