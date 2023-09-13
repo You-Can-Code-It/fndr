@@ -261,17 +261,15 @@ const Card: React.FC<CardProps> = ({
         )}
         {loading && !successRemoval && (
           <h4 className={styles.removeLoading}>
-            Removing company... <LoaderSpinner />
+            Removing ... <LoaderSpinner />
           </h4>
         )}
 
         {successRemoval && (
-          <>
-            <h4 className={styles.removeCompanyConfirmation}>
-              Company successfuly removed.
-            </h4>
-            <button
-              className={styles.removeButtonBack}
+          <div className={styles.removalMessage}>
+            <h4 className={styles.messageText}>Company successfuly removed.</h4>
+            <p
+              className={styles.backButton}
               onClick={() => {
                 setOpenModal(false);
                 setSuccessRemoval(false);
@@ -279,8 +277,8 @@ const Card: React.FC<CardProps> = ({
               }}
             >
               Back
-            </button>
-          </>
+            </p>
+          </div>
         )}
         {error && (
           <>

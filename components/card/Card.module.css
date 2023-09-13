@@ -160,6 +160,37 @@
   cursor: pointer;
 }
 
+.removeLoading {
+  padding: 24px 20px;
+  width: 205px;
+  height: 138px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #a54fab;
+}
+
+.removalMessage {
+  padding: 24px 20px;
+  width: 205px;
+  height: 138px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+
+  color: #a54fab;
+}
+
+.messageText {
+  color: black;
+}
+
+.backButton:hover {
+  cursor: pointer;
+}
 @media (min-width: 600px) {
   .cardContainer {
     padding: 18px 30px 19px 24px;
