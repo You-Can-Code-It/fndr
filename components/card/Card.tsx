@@ -11,6 +11,12 @@ import { DateTime } from "luxon";
 import { useSession } from "next-auth/react";
 import Avatar from "../avatar/Avatar";
 import { PiDotsThreeOutlineFill } from "react-icons/pi";
+import {
+  AiOutlineLike,
+  AiOutlineDislike,
+  AiTwotoneLike,
+  AiTwotoneDislike,
+} from "react-icons/ai";
 
 type CardProps = {
   id: string;
@@ -36,6 +42,8 @@ const Card: React.FC<CardProps> = ({
   const [successRemoval, setSuccessRemoval] = useState(false);
   const { data: session } = useSession();
   const [latestUserEvent, setLatestUserEvent] = useState(userEvent);
+  const [like, setLike] = useState(false);
+  const [dislike, setDislike] = useState(false);
 
   const handleDeleteClick = async (companyId: string) => {
     setLoading(true);
@@ -136,6 +144,35 @@ const Card: React.FC<CardProps> = ({
       <div className={styles.rightBlock}>
         <div className={styles.threeDotsIcon}>
           <PiDotsThreeOutlineFill onClick={() => setOpenModal(!openModal)} />
+        </div>
+        <div className={styles.likeDislikeIcons}>
+          {like === false && (
+            <AiOutlineLike
+              onClick={() => {
+                setLike(!like);
+                setDislike(false);
+              }}
+            />
+          )}
+          {like === true && (
+            <AiTwotoneLike
+              onClick={() => {
+                setLike(!like);
+                setDislike(false);
+              }}
+            />
+          )}
+          {dislike === false && (
+            <AiOutlineDislike
+              onClick={() => {
+                setDislike(!dislike);
+                setLike(false);
+              }}
+            />
+          )}
+          {dislike === true && (
+            <AiTwotoneDislike onClick={() => setDislike(!dislike)} />
+          )}
         </div>
         <div className={styles.categoryWrapperContainer}>
           <div className={styles.categoryInnerContainer}>{category}</div>
