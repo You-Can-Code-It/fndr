@@ -1,31 +1,56 @@
 .toggleContainer {
-  width: 186px;
-  height: 44px;
+  /* width: 186px;
+  height: 44px; */
+  display: inline-block;
+  align-items: center;
+  padding: 7px;
   background-color: #fff;
   box-shadow: 0px 18px 32px 0px rgba(126, 129, 139, 0.05);
   border-radius: 30px;
-  padding: 7px;
   margin-bottom: 20px;
 }
 
 .toggleLabel {
-  display: flex;
+  width: 86px;
+  display: inline-block;
   cursor: pointer;
-  
 }
 
 .toggleInput {
-    border: none;
-    border-radius: 30px;
-    background-color: #A54FA8;
-    width: 86px;
-    height: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  position: absolute;
+}
+
+.toggleInput:checked ~ span:first-of-type {
+  /* text-align: center; */
+  border-radius: 26px;
+  border: none;
+  background-color: #a54fa8;
+  transition: left 0.25s ease-in-out;
+  color: #fff;
 }
 
 .toggleInput:focus {
-    outline: none;
+  outline: none;
+}
+
+.toggleInput:hover {
+  outline: none;
 }
 
 .toggleText {
+  display: block;
+  border-radius: 26px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600px;
+  line-height: 17px;
+  transition:left 0.25s ease-in-out;
+  padding: 8px 29px;
+}
 
+.toggleText::before {
+  transition:left 0.25s ease-in-out;
 }

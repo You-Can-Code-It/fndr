@@ -15,8 +15,8 @@ import dynamic from "next/dynamic";
 import Toggle from "@/components/toggle/Toggle";
 
 // reason using dynamic is because map will be rendered in client side
-const DynamicMap = dynamic( () => import("../components/map/Map"), {
-  ssr: false
+const DynamicMap = dynamic(() => import("../components/map/Map"), {
+  ssr: false,
 });
 
 function serialize(data: any) {
@@ -48,7 +48,7 @@ type IndexResponse = {
 };
 
 const inter = Inter({
-  weight: ["400", "500"],
+  weight: ["400", "500", "600"],
   subsets: ["latin"],
 });
 
@@ -127,6 +127,7 @@ function Home({
   // this router is intended for adding and reading query parameters
   const router = useRouter();
   const [openModal, setOpenModal] = useState(false);
+  const [showMap, setShowMap] = useState<boolean>(false);
   // retrieve query parameter with name cityFilter to set input value
   const { cityFilter } = router.query;
   // created state cityFilterQuery and initialized with query param cityFilter
@@ -181,30 +182,33 @@ function Home({
             <AddCompanyForm />
             <button onClick={() => setOpenModal(!openModal)}>Cancel</button>
           </Modal>
-
-          <Toggle />
-
-          <DynamicMap 
-          companies={response.companies}
-          />
-
-          <div className={styles.mainCardContainer}>
-            {/* Needs fix: For design issues, displaying only the first 84 results. */}
-            {response.companies.slice(0, 84).map((company: Company, index) => {
-              return (
-                <Card
-                  key={company.id}
-                  id={company.id}
-                  name={company.name}
-                  city={company.city}
-                  website={company.website}
-                  display={company.display}
-                  category={company.category}
-                  userEvent={company.userEvent[0] ?? null}
-                />
-              );
-            })}
+          <div className={styles
+          .mainToggleContainer}>
+          <Toggle showMap={showMap} setShowMap={setShowMap} />
           </div>
+          {showMap ? (
+            <DynamicMap companies={response.companies} />
+          ) : (
+            <div className={styles.mainCardContainer}>
+              {/* Needs fix: For design issues, displaying only the first 84 results. */}
+              {response.companies
+                .slice(0, 84)
+                .map((company: Company, index) => {
+                  return (
+                    <Card
+                      key={company.id}
+                      id={company.id}
+                      name={company.name}
+                      city={company.city}
+                      website={company.website}
+                      display={company.display}
+                      category={company.category}
+                      userEvent={company.userEvent[0] ?? null}
+                    />
+                  );
+                })}
+            </div>
+          )}
         </main>
       </div>
     </div>

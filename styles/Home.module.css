@@ -22,6 +22,11 @@
   flex-wrap: wrap;
 }
 
+.mainToggleContainer {
+  display: flex;
+  justify-content: center;
+}
+
 .newCompanyLink {
   order: 1;
   width: 100%;
