@@ -1,5 +1,4 @@
 import styles from "./Card.module.css";
-import Heading1 from "../typography/Heading1";
 import Heading2 from "../typography/Heading2";
 import React, { useState, useEffect } from "react";
 import WebLink from "../typography/WebLink";
@@ -7,10 +6,18 @@ import axios from "axios";
 import Modal from "../Modal/Modal";
 import LoaderSpinner from "../LoaderSpinner/LoaderSpinner";
 import Link from "next/link";
-import { Head } from "next/document";
 import { DateTime } from "luxon";
 import { useSession } from "next-auth/react";
 import Avatar from "../avatar/Avatar";
+import { PiDotsThreeOutlineFill } from "react-icons/pi";
+import {
+  AiOutlineLike,
+  AiOutlineDislike,
+  AiTwotoneLike,
+  AiTwotoneDislike,
+  AiOutlineDelete,
+} from "react-icons/ai";
+import { FiEdit3 } from "react-icons/fi";
 
 type CardProps = {
   id: string;
@@ -30,12 +37,15 @@ const Card: React.FC<CardProps> = ({
   userEvent,
   category,
 }) => {
+  const { data: session } = useSession();
   const [openModal, setOpenModal] = useState(false);
+  const [selectRemove, setSelectRemove] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [successRemoval, setSuccessRemoval] = useState(false);
-  const { data: session } = useSession();
   const [latestUserEvent, setLatestUserEvent] = useState(userEvent);
+  const [like, setLike] = useState(false);
+  const [dislike, setDislike] = useState(false);
 
   const handleDeleteClick = async (companyId: string) => {
     setLoading(true);
@@ -114,9 +124,11 @@ const Card: React.FC<CardProps> = ({
       onClick={handleOpenCompanyCard}
       id={id}
     >
-      <div className={styles.overviewContainer}>
-        <Link href={`companies/${id}`}>{name}</Link>
-        {/* <Heading1>{name}</Heading1> */}
+      <div className={styles.leftBlock}>
+        <div className={styles.companyName}>
+          <Link href={`companies/${id}`}>{name}</Link>
+        </div>
+
         <div className={styles.cardLocation}>
           <img src="./map-pin.svg" />
           <Heading2 className={styles.locationText}>{city}</Heading2>
@@ -131,55 +143,102 @@ const Card: React.FC<CardProps> = ({
           </WebLink>
         </div>
       </div>
-      <div className={styles.categoriesContainer}>{category}</div>
-      <button onClick={() => setOpenModal(!openModal)}>Remove</button>
+      <div className={styles.rightBlock}>
+        <div className={styles.threeDotsIcon}>
+          <PiDotsThreeOutlineFill onClick={() => setOpenModal(!openModal)} />
+        </div>
+        <div className={styles.likeDislikeIcons}>
+          {like === false && (
+            <AiOutlineLike
+              onClick={() => {
+                setLike(!like);
+                setDislike(false);
+              }}
+            />
+          )}
+          {like === true && (
+            <AiTwotoneLike
+              onClick={() => {
+                setLike(!like);
+                setDislike(false);
+              }}
+            />
+          )}
+          {dislike === false && (
+            <AiOutlineDislike
+              onClick={() => {
+                setDislike(!dislike);
+                setLike(false);
+              }}
+            />
+          )}
+          {dislike === true && (
+            <AiTwotoneDislike onClick={() => setDislike(!dislike)} />
+          )}
+        </div>
+        <div className={styles.categoryWrapperContainer}>
+          <div className={styles.categoryInnerContainer}>{category}</div>
+        </div>
+
+        <div className={styles.lastVisitContainer}>{displayLastVisit}</div>
+      </div>
 
       <Modal isOpen={openModal || error} onClose={() => setOpenModal(false)}>
-        {!loading && !error && !successRemoval && (
+        {!loading && !error && !successRemoval && !selectRemove && (
           <div className={styles.deleteCompanyMainContainer}>
-            <div className={styles.modalHeading}>
-              <Heading1>Remove company?</Heading1>
+            <div className={styles.editButton}>
+              <FiEdit3 />
+              <p>Edit</p>
             </div>
-            <div className={styles.confirm}>
-              <Heading2>
-                Are you sure you want to remove this company from the list?
-              </Heading2>
+            <div className={styles.greyLine}></div>
+            <div className={styles.removeButton}>
+              <AiOutlineDelete />
+              <p onClick={() => setSelectRemove(true)}>Remove</p>
             </div>
-            <div className={`${styles.removeCompanyButtons}`}>
-              <div className={`${styles.remove} `}>
-                <Heading1>
-                  <button
-                    className={`${styles.removeButton} `}
-                    onClick={() => handleDeleteClick(id)}
-                  >
-                    Remove
-                  </button>
-                </Heading1>
-              </div>
-              <Heading1>
-                <button
-                  className={`${styles.cancelButton} ${styles.danger}`}
-                  onClick={() => setOpenModal(false)}
-                >
-                  Cancel
-                </button>
-              </Heading1>
+          </div>
+        )}
+        {!loading && !error && !successRemoval && selectRemove && (
+          <div className={styles.removalConfirmation}>
+            <div className={styles.removeModal}>
+              <p className={styles.removeMessage}>Remove company?</p>
+              <p className={styles.confirmationMessage}>
+                Are you sure you want to remove this company?
+              </p>
+            </div>
+            <div className={styles.greyLineConfirmation}></div>
+            <div className={styles.confirmRemoval}>
+              <p
+                onClick={() => {
+                  setSelectRemove(true);
+                  handleDeleteClick(id);
+                }}
+              >
+                Remove
+              </p>
+            </div>
+            <div className={styles.greyLineConfirmation}></div>
+            <div
+              className={styles.cancelButton}
+              onClick={() => {
+                setOpenModal(false);
+                setSelectRemove(false);
+              }}
+            >
+              Cancel
             </div>
           </div>
         )}
         {loading && !successRemoval && (
           <h4 className={styles.removeLoading}>
-            Removing company... <LoaderSpinner />
+            Removing ... <LoaderSpinner />
           </h4>
         )}
 
         {successRemoval && (
-          <>
-            <h4 className={styles.removeCompanyConfirmation}>
-              Company successfuly removed.
-            </h4>
-            <button
-              className={styles.removeButtonBack}
+          <div className={styles.removalMessage}>
+            <h4 className={styles.messageText}>Company successfuly removed.</h4>
+            <p
+              className={styles.backButton}
               onClick={() => {
                 setOpenModal(false);
                 setSuccessRemoval(false);
@@ -187,8 +246,8 @@ const Card: React.FC<CardProps> = ({
               }}
             >
               Back
-            </button>
-          </>
+            </p>
+          </div>
         )}
         {error && (
           <>
@@ -207,8 +266,6 @@ const Card: React.FC<CardProps> = ({
           </>
         )}
       </Modal>
-
-      <div className={styles.lastVisitContainer}>{displayLastVisit}</div>
     </div>
   );
 };

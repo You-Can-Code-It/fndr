@@ -1,171 +1,257 @@
 .cardContainer {
-  display: grid;
-  overflow: hidden;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(2);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  text-align: center;
-  background-color: #fff;
-  border-radius: 6px;
-  padding: 24px;
-  box-shadow: 0px 18px 32px 0px rgba(126, 129, 139, 0.05);
-}
-
-.overviewContainer {
-  grid-area: 1 / 1 / 2 / 2;
-}
-
-.categoriesContainer {
-  grid-area: 1 / 2 / 2 / 3;
-}
-
-.lastVisitContainer {
-  grid-area: 2 / 2 / 3 / 3;
-  gap: 8px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
+  max-width: 608px;
+}
+
+.leftBlock {
+  text-align: center;
+}
+
+.companyName {
+  margin-top: 28px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
 }
 
 .cardLocation {
   display: flex;
-  margin-top: 16px;
-  align-items: center;
   justify-content: center;
-}
-
-.locationText {
-  padding-left: 6px;
-  display: flex;
-  justify-content: center;
+  margin-bottom: 22px;
 }
 
 .cardWebsite {
   display: flex;
-  margin-top: 12px;
-  align-items: center;
   justify-content: center;
+  margin-bottom: 15px;
 }
 
-.websiteText {
-  padding-left: 6px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 230px;
+.categoryWrapperContainer {
+  margin-bottom: 10px;
 }
 
-.removeCompanyHeader {
-  margin-bottom: 1rem;
+.likeDislikeIcons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.rightBlock {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+}
+
+.threeDotsIcon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.threeDotsIcon:hover {
+  cursor: pointer;
+}
+
+.categoryInnerContainer {
+  font-size: 12px;
   font-weight: 400;
-  margin-top: 1.2rem;
+  margin-bottom: 10px;
+  padding: 4px 12px;
+  background-color: #faf2ff;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.lastVisitContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 8px;
+  margin-bottom: 10px;
 }
 
 .deleteCompanyMainContainer {
-  padding-top: 24px;
+  padding: 24px 20px;
+  width: 205px;
+  height: 138px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
 }
 
-.modalHeading {
-  padding-bottom: 16px;
+.editButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.removeCompanySubtitle {
-  font-size: 12px;
-  margin-bottom: 0.6rem;
-  padding-bottom: 0.6rem;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
-  border-bottom: 1px solid lightgrey;
+.greyLine {
+  margin: 20px 0;
+  width: 100%;
+  border: 1px solid #e8eaed;
 }
 
 .removeButton {
-  background-color: transparent;
-  border: none;
-  padding: 14px 0;
-  cursor: pointer;
   color: #ec7065;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.removeButton:hover {
+  cursor: pointer;
+}
+
+.removeModal {
+  margin-top: 24px;
+}
+
+.removeMessage {
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 16px;
+}
+
+.confirmationMessage {
+  font-size: 14px;
+}
+
+.removalConfirmation {
+  display: flex;
+  flex-direction: column;
+  padding: 0 23px;
+}
+
+.greyLineConfirmation {
+  margin: 10px 0px;
+  width: 100%;
+  border: 1px solid #e8eaed;
+}
+
+.confirmRemoval {
+  color: #ec7065;
+}
+
+.confirmRemoval:hover {
+  cursor: pointer;
 }
 
 .cancelButton {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: #333333;
-}
-
-.confirm {
-  border-bottom: 1px solid lightgrey;
-  padding: 0 23px 16px;
-}
-
-.remove {
-  border-bottom: 1px solid lightgrey;
-}
-
-.danger {
-  padding: 14px 0;
-}
-
-.redButton {
-  color: #ec7065;
-}
-
-.modalMainContainer {
-  min-height: 187px;
-}
-
-.removeCompanyButtons {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cancelButton:hover {
+  cursor: pointer;
 }
 
 .removeLoading {
-  font-size: 12px;
-  font-weight: 100;
-  padding: 2rem;
+  padding: 24px 20px;
+  width: 205px;
+  height: 138px;
   display: flex;
   align-items: center;
-  gap: 5px;
+  justify-content: center;
+
+  color: #a54fab;
 }
 
-.removeCompanyConfirmation {
-  margin-bottom: 1rem;
-  font-weight: 400;
-  margin-top: 1.2rem;
+.removalMessage {
+  padding: 24px 20px;
+  width: 205px;
+  height: 138px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
 
-  margin-top: 2rem;
-  margin-bottom: 0.6rem;
-  padding-bottom: 0.6rem;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
-  border-bottom: 1px solid lightgrey;
+  color: #a54fab;
 }
 
-.removeButtonBack {
-  font-size: 14px !important;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  font-size: 16px;
+.messageText {
+  color: black;
+}
+
+.backButton:hover {
   cursor: pointer;
-  min-height: 5rem;
-  margin-top: -2rem;
 }
-
-@media (max-width: 375px) {
+@media (min-width: 600px) {
   .cardContainer {
-    display: flex;
-    flex-direction: column;
+    padding: 18px 30px 19px 24px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
   }
+
+  .leftBlock {
+    flex-basis: 50%;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .companyName {
+    margin-top: 30px;
+  }
+
+  .cardLocation {
+    justify-content: left;
+    margin-bottom: 20px;
+  }
+
+  .cardWebsite {
+    justify-content: left;
+  }
+
+  .rightBlock {
+    flex-basis: 50%;
+    text-align: right;
+    margin-top: 0;
+    margin-left: auto;
+  }
+
+  .threeDotsIcon {
+    position: static;
+    top: auto;
+    right: auto;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+
+  .categoryInnerContainer {
+    margin-bottom: 10px;
+  }
+
+  .likeDislikeIcons {
+    justify-content: right;
+  }
+
   .lastVisitContainer {
-    justify-content: center;
+    display: flex;
+    justify-content: right;
+
+    height: 100%;
+    gap: 8px;
+    margin-bottom: 0;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1300px) {
   .cardContainer {
-    padding: 24px 30px 30px 30px;
-  }
-  .websiteText {
-    max-width: 250px;
+    width: 608px;
   }
 }

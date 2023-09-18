@@ -1,5 +1,14 @@
-.container {
+.mainPageContainer {
+  display: flex;
+  flex-direction: column;
   padding: 24px 24px 30px 24px;
+}
+
+.companiesCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
 }
 
 .headerContainer {
@@ -9,12 +18,6 @@
 
 .mainContainer {
   margin-top: 30px;
-}
-
-.mainCardContainer {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 20px;
 }
 
 .mainDropdownContainer {
@@ -31,6 +34,11 @@
   align-items: center;
 }
 
+@media (min-width: 673px) {
+  .companiesCards {
+    margin: auto;
+  }
+}
 @media (min-width: 768px) {
   .mainDropdownContainer {
     gap: 24px;
@@ -50,9 +58,27 @@
   .container {
     padding: 40px 100px;
   }
-  .mainCardContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 24px;
+}
+
+@media (min-width: 1300px) {
+  .companiesCards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1400px) {
+  .companiesCards {
+    column-gap: 80px;
+    row-gap: 30px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .companiesCards {
+    column-gap: 100px;
+    row-gap: 40px;
   }
 }

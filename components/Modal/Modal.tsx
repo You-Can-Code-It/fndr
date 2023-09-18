@@ -1,5 +1,6 @@
 import React, { ReactNode, MouseEvent } from "react";
 import styles from "./Modal.module.css";
+import { fontInter } from "../../styles/fonts/index";
 
 interface ModalProps {
   isOpen: boolean;
@@ -17,7 +18,11 @@ export default function Modal({ isOpen, children, onClose }: ModalProps) {
   if (!isOpen) return null;
 
   return (
-    <div id="overlay" className={styles.overlay} onClick={close}>
+    <div
+      id="overlay"
+      className={`${styles.overlay} ${fontInter.className}`}
+      onClick={close}
+    >
       <div className={styles.modalContainer}>{children}</div>
     </div>
   );

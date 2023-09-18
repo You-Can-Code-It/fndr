@@ -4,7 +4,7 @@ import Image from "next/image";
 
 type AvatarProps = {
   imageSource: string;
-  className: string;
+  className?: string;
 };
 
 const Avatar: React.FC<AvatarProps> = ({ imageSource, className }) => {
