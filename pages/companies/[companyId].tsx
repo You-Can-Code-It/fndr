@@ -6,7 +6,7 @@ import Link from "next/link";
 import Heading1 from "@/components/typography/Heading1";
 import HeaderInfo from "@/components/typography/HeaderInfo";
 import Button from "@/components/Button/Button";
-
+import { prisma } from "@/prisma/client";
 import styles from "./DetailsPage.module.css";
 function extractDomain(url: string) {
   const parts = url?.split("www.");
@@ -130,6 +130,7 @@ export const getServerSideProps: GetServerSideProps<{
         id: companyId,
       },
     });
+    console.log("first block");
 
     return {
       props: {
@@ -137,7 +138,7 @@ export const getServerSideProps: GetServerSideProps<{
       },
     };
   } catch (error) {
-    console.error("Pages /companies/:id - Error fetching company data:", error);
+    console.log("Pages /companies/:id - Error fetching company data:", error);
 
     return {
       props: {
