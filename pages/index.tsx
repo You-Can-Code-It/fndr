@@ -134,7 +134,9 @@ function Home({
   return (
     <div className={inter.className}>
       <NavBar />
-      <p>Total Companies: {response.companies.length}</p>
+      <p className={styles.companyCounter}>
+        Total Companies: {response.companies.length}
+      </p>
       <div className={styles.mainPageContainer}>
         <div className={styles.mainDropdownContainer}>
           <Dropdown
