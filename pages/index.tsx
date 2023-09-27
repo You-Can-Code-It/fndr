@@ -134,9 +134,15 @@ function Home({
   return (
     <div className={inter.className}>
       <NavBar />
-      <p className={styles.companyCounter}>
-        Total Companies: {response.companies.length}
-      </p>
+      <div className={styles.counterAndAddButton}>
+        <p className={styles.companyCounter}>
+          Total Companies: {response.companies.length}
+        </p>
+        <Link href="/companies/newCompany" className={styles.newCompanyLink}>
+          + New Company
+        </Link>
+      </div>
+
       <div className={styles.mainPageContainer}>
         <div className={styles.mainDropdownContainer}>
           <Dropdown
@@ -155,9 +161,6 @@ function Home({
             dropdownValue={cityFilterQuery}
             clearAllFilters={clearAllFilters}
           />
-          <Link href="/companies/newCompany" className={styles.newCompanyLink}>
-            + New Company
-          </Link>
         </div>
         <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
           <AddCompanyForm />

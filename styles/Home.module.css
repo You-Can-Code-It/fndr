@@ -4,9 +4,20 @@
   padding: 24px 24px 30px 24px;
 }
 
+.counterAndAddButton {
+  margin: 1rem 21px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
 .companyCounter {
-  margin-left: 21px;
-  margin-top: 1rem;
+  width: 100%;
+}
+
+.newCompanyLink {
+  width: 100%;
 }
 
 .companiesCards {
@@ -26,33 +37,48 @@
 }
 
 .mainDropdownContainer {
+  max-width: 606px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
-.newCompanyLink {
-  order: 1;
-  width: 100%;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media (min-width: 400px) {
+  .counterAndAddButton {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .newCompanyLink {
+    order: 1;
+    width: 100%;
+    /* margin-bottom: 20px; */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
 }
 
 @media (min-width: 673px) {
+  .mainDropdownContainer {
+    margin: auto;
+    min-width: 606px;
+  }
   .companiesCards {
     margin: auto;
   }
 }
 
 @media (min-width: 765px) {
+  .counterAndAddButton {
+    margin: 1rem 100px 1rem;
+  }
   .companyCounter {
-    margin-left: 100px;
+    /* margin-left: 100px; */
   }
 }
 @media (min-width: 768px) {
   .mainDropdownContainer {
-    gap: 24px;
+    /* gap: 24px; */
   }
 
   .newCompanyLink {
@@ -77,6 +103,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
+  }
+  .mainDropdownContainer {
   }
 }
 
