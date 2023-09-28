@@ -4,8 +4,9 @@ import { z } from "zod";
 import axios from "axios";
 import styles from "./AddCompanyForm.module.css";
 import { zodResolver } from "@hookform/resolvers/zod";
-import Logo from "../logo/Logo";
-import Heading1 from "../typography/Heading1";
+import NavBar from "../NavBar/NavBar";
+import { fontInter } from "../../styles/fonts/";
+import Button from "../Button/Button";
 const formSchema = z.object({
   name: z
     .string()
@@ -72,125 +73,137 @@ const AddCompanyForm: React.FC = () => {
   };
 
   return (
-    <div className={styles.addCompanyForm}>
-      <div className={styles.logo}>
-        <Logo />
-      </div>
-
-      <div className={styles.formInputs}>
-        <h3 className={styles.formBanner}>New Company</h3>
-        <div className={styles.forInputsInner}>
-          <form onSubmit={handleSubmit(formSubmit)}>
-            <label className={styles.formLabel} htmlFor="name">
-              Name
-            </label>
-            <input
-              id="name"
-              type="text"
-              placeholder="Company Name"
-              {...register("name")}
-              className={styles.addCompanyFormInput}
-            />
-            {errors.name && (
-              <p className="error">{String(errors.name.message)}</p>
-            )}
-            <label className={styles.formLabel} htmlFor="indReferentNumber">
-              IND Number
-            </label>
-            <input
-              id="indReferentNumber"
-              type="text"
-              placeholder="Ind Number"
-              {...register("indReferentNumber")}
-              className={styles.addCompanyFormInput}
-            />
-            {errors.indReferentNumber && (
-              <p className="error">
-                {String(errors.indReferentNumber.message)}
-              </p>
-            )}
-            <label className={styles.formLabel} htmlFor="website">
-              Website
-            </label>
-            <input
-              id="website"
-              type="text"
-              placeholder="Website"
-              {...register("website")}
-              className={styles.addCompanyFormInput}
-            />
-            {errors.website && (
-              <p className="error">{String(errors.website.message)}</p>
-            )}
-            <label className={styles.formLabel} htmlFor="category">
-              Category
-            </label>
-            <input
-              id="category"
-              type="text"
-              placeholder="Category"
-              {...register("category")}
-              className={styles.addCompanyFormInput}
-            />
-            {errors.category && (
-              <p className="error">{String(errors.category.message)}</p>
-            )}
-            <label className={styles.formLabel} htmlFor="city">
-              City
-            </label>
-            <input
-              id="city"
-              type="text"
-              placeholder="City"
-              {...register("city")}
-              className={styles.addCompanyFormInput}
-            />
-            {errors.city && (
-              <p className="error">{String(errors.city.message)}</p>
-            )}
-            <label className={styles.formLabel} htmlFor="street">
-              Street
-            </label>
-            <input
-              id="street"
-              type="text"
-              placeholder="Street"
-              {...register("street")}
-              className={styles.addCompanyFormInput}
-            />
-            {errors.street && (
-              <p className="error">{String(errors.street.message)}</p>
-            )}
-            <label className={styles.formLabel} htmlFor="houseNumber">
-              Number
-            </label>
-            <input
-              id="houseNumber"
-              type="text"
-              placeholder="Number"
-              {...register("houseNumber")}
-              className={styles.addCompanyFormInput}
-            />
-            {errors.houseNumber && (
-              <p className="error">{String(errors.houseNumber.message)}</p>
-            )}
-            <label className={styles.formLabel} htmlFor="postCode">
-              Zip Code
-            </label>
-            <input
-              id="postCode"
-              type="text"
-              placeholder="Postal code"
-              {...register("postCode")}
-              className={styles.addCompanyFormInput}
-            />
-            {errors.postCode && (
-              <p className="error">{String(errors.postCode.message)}</p>
-            )}{" "}
-            <button className={styles.submitButton} type="submit">
-              Add Company
-            </button>
-          </form>
+    <div className={fontInter.className}>
+      <NavBar />
+      <div className={styles.addCompanyForm}>
+        <div className={styles.formInputs}>
+          <h3 className={styles.formBanner}>New Company</h3>
+          <div className={styles.forInputsInner}>
+            <form onSubmit={handleSubmit(formSubmit)} className={styles.form}>
+              <div className={styles.formBlock}>
+                <div className={styles.firstBlock}>
+                  <label className={styles.formLabel} htmlFor="name">
+                    Name
+                  </label>
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="Company Name"
+                    {...register("name")}
+                    className={styles.addCompanyFormInput}
+                  />
+                  {errors.name && (
+                    <p className="error">{String(errors.name.message)}</p>
+                  )}
+                  <label
+                    className={styles.formLabel}
+                    htmlFor="indReferentNumber"
+                  >
+                    IND Number
+                  </label>
+                  <input
+                    id="indReferentNumber"
+                    type="text"
+                    placeholder="Ind Number"
+                    {...register("indReferentNumber")}
+                    className={styles.addCompanyFormInput}
+                  />
+                  {errors.indReferentNumber && (
+                    <p className="error">
+                      {String(errors.indReferentNumber.message)}
+                    </p>
+                  )}
+                  <label className={styles.formLabel} htmlFor="website">
+                    Website
+                  </label>
+                  <input
+                    id="website"
+                    type="text"
+                    placeholder="Website"
+                    {...register("website")}
+                    className={styles.addCompanyFormInput}
+                  />
+                  {errors.website && (
+                    <p className="error">{String(errors.website.message)}</p>
+                  )}
+                  <label className={styles.formLabel} htmlFor="category">
+                    Category
+                  </label>
+                  <input
+                    id="category"
+                    type="text"
+                    placeholder="Category"
+                    {...register("category")}
+                    className={styles.addCompanyFormInput}
+                  />
+                  {errors.category && (
+                    <p className="error">{String(errors.category.message)}</p>
+                  )}
+                </div>
+                <div className={styles.secondBlock}>
+                  <label className={styles.formLabel} htmlFor="city">
+                    City
+                  </label>
+                  <input
+                    id="city"
+                    type="text"
+                    placeholder="City"
+                    {...register("city")}
+                    className={styles.addCompanyFormInput}
+                  />
+                  {errors.city && (
+                    <p className="error">{String(errors.city.message)}</p>
+                  )}
+                  <label className={styles.formLabel} htmlFor="street">
+                    Street
+                  </label>
+                  <input
+                    id="street"
+                    type="text"
+                    placeholder="Street"
+                    {...register("street")}
+                    className={styles.addCompanyFormInput}
+                  />
+                  {errors.street && (
+                    <p className="error">{String(errors.street.message)}</p>
+                  )}
+                  <label className={styles.formLabel} htmlFor="houseNumber">
+                    Number
+                  </label>
+                  <input
+                    id="houseNumber"
+                    type="text"
+                    placeholder="Number"
+                    {...register("houseNumber")}
+                    className={styles.addCompanyFormInput}
+                  />
+                  {errors.houseNumber && (
+                    <p className="error">
+                      {String(errors.houseNumber.message)}
+                    </p>
+                  )}
+                  <label className={styles.formLabel} htmlFor="postCode">
+                    Zip Code
+                  </label>
+                  <input
+                    id="postCode"
+                    type="text"
+                    placeholder="Postal code"
+                    {...register("postCode")}
+                    className={styles.addCompanyFormInput}
+                  />
+                  {errors.postCode && (
+                    <p className="error">{String(errors.postCode.message)}</p>
+                  )}
+                </div>
+              </div>
+              <div>
+                <div className={styles.submitButton}>
+                  <Button variant="saveButton">Add Company</Button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
