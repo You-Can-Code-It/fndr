@@ -39,7 +39,6 @@
 .mainDropdownContainer {
   max-width: 606px;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -51,7 +50,6 @@
   .newCompanyLink {
     order: 1;
     width: 100%;
-    /* margin-bottom: 20px; */
     display: flex;
     justify-content: right;
     align-items: center;
@@ -72,15 +70,8 @@
   .counterAndAddButton {
     margin: 1rem 100px 1rem;
   }
-  .companyCounter {
-    /* margin-left: 100px; */
-  }
 }
 @media (min-width: 768px) {
-  .mainDropdownContainer {
-    /* gap: 24px; */
-  }
-
   .newCompanyLink {
     order: 2;
     width: calc(50% - 12px);
@@ -103,8 +94,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-  }
-  .mainDropdownContainer {
   }
 }
 
