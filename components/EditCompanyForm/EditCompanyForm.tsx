@@ -8,7 +8,7 @@ import Input from "../Atoms/Input/Input";
 import Label from "../Atoms/Label/Label";
 import FormContainer from "../Atoms/FormContainer/FormContainer";
 
-type FormProps = {
+type Company = {
   id: string;
   name: string;
   indReferentNumber: string;
@@ -18,6 +18,10 @@ type FormProps = {
   postCode: string;
   website: string;
   category: string;
+};
+
+type EditCompanyProps = {
+  company: Company;
 };
 
 const formSchema = z.object({
@@ -68,41 +72,31 @@ const formSchema = z.object({
     ),
 });
 
-const EditCompanyForm: React.FC<FormProps> = ({
-  id,
-  name,
-  indReferentNumber,
-  city,
-  street,
-  houseNumber,
-  postCode,
-  website,
-  category,
-}) => {
+const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
   const {
     handleSubmit,
     register,
     formState: { errors },
   } = useForm({
     defaultValues: {
-      id,
-      name,
-      indReferentNumber,
-      city,
-      street,
-      houseNumber,
-      postCode,
-      website,
-      category,
+      id: company.id,
+      name: company.name,
+      indReferentNumber: company.indReferentNumber,
+      city: company.city,
+      street: company.street,
+      houseNumber: company.houseNumber,
+      postCode: company.postCode,
+      website: company.website,
+      category: company.category,
     },
     resolver: zodResolver(formSchema),
   });
 
   const formSubmit = async (data: any) => {
     try {
-      const response = await axios.patch(`/api/companies/${id}`, data);
+      const response = await axios.patch(`/api/companies/${company.id}`, data);
       console.log("EditCompanyForm - Company edited:", response.data);
-      window.location.reload();
+      // window.location.reload();
     } catch (error) {
       console.error("EditCompanyForm - Error editing company:", error);
     }
