@@ -1,5 +1,7 @@
 .infos {
-  padding: 5px;
+  margin: 0 15px;
+  padding: 10px;
+  border-radius: 8px;
   background-color: white;
 }
 
@@ -7,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px 0;
+  padding: 15px;
 }
 
 .chevron {
@@ -32,11 +34,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 375px) {
   .companyName {
-    padding: 21px 0;
+    padding: 21px 15px;
   }
 
   .infos {

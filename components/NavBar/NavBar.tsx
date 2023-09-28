@@ -13,7 +13,10 @@ type Heading1Props = {
 const NavBar: React.FC<Heading1Props> = ({ children, variant, ...props }) => {
   return (
     <div {...props} className={styles.navBarContainer}>
-      <Logo />
+      <div className={styles.logo}>
+        <Logo />
+      </div>
+
       <div className={styles.loginControls}>
         <LoginControls />
       </div>

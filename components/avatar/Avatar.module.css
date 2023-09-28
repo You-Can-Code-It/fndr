@@ -5,6 +5,12 @@
   border-radius: 12px;
 }
 
+.userAvatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 999px !important;
+}
+
 .avatarImage {
   border-radius: 12px;
 }
@@ -12,4 +18,11 @@
 .detailsPage {
   width: 30px;
   height: 30px;
+}
+
+@media screen and (min-width: 764px) {
+  .userAvatar {
+    height: 35px;
+    width: 35px;
+  }
 }

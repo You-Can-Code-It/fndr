@@ -1,10 +1,15 @@
 .mainContainer {
   border: none;
-  margin-bottom: 21px;
-  padding: 16px 32px;
+  /* margin-bottom: 21px; */
+  /* padding: 16px 32px; */
+  padding: 8px 16px;
   border-radius: 10px;
   background-color: #d0d3d9;
   color: white;
+}
+
+.mainContainer:hover {
+  cursor: pointer;
 }
 
 .mainContainer:hover {
@@ -14,6 +19,12 @@
 
 .saveButton {
   background-color: #a54fa8;
+}
+
+@media screen and (min-width: 764px) {
+  .mainContainer {
+    padding: 12px 24px;
+  }
 }
 
 /* @media screen and (max-width: 500px) {

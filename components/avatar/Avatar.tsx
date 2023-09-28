@@ -5,6 +5,7 @@ import Image from "next/image";
 type AvatarProps = {
   imageSource: string;
   variant?: string;
+  alt?: string;
 };
 
 const Avatar: React.FC<AvatarProps> = ({ imageSource, variant }) => {

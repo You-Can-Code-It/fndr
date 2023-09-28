@@ -1,11 +1,14 @@
 .navBarContainer {
   display: flex;
-
   justify-content: space-between;
+  align-items: center;
   padding: 20px 100px;
   background-color: white;
 }
 
+.logo {
+  margin-top: 5px;
+}
 .loginControls {
   display: flex;
 }
