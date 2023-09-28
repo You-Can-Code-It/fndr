@@ -1,4 +1,3 @@
-import { type } from "os";
 import styles from "./Toggle.module.css";
 
 type ToggleProps = {
@@ -7,7 +6,7 @@ type ToggleProps = {
 };
 
 const Toggle: React.FC<ToggleProps> = ({ showMap, setShowMap }) => {
-  console.log("showMap", showMap);
+
   return (
     <div className={styles.toggleContainer}>
       <label className={styles.toggleLabel}>
@@ -16,12 +15,7 @@ const Toggle: React.FC<ToggleProps> = ({ showMap, setShowMap }) => {
           name="mode"
           type="radio"
           className={styles.toggleInput}
-          checked
-          // onChange={() => {
-          //   setShowMap(false);
-          // }}
-
-          // disabled={showMap!== null}
+          checked = {!showMap}
         />
         <span
           className={styles.toggleText}
@@ -39,11 +33,7 @@ const Toggle: React.FC<ToggleProps> = ({ showMap, setShowMap }) => {
           name="mode"
           type="radio"
           className={styles.toggleInput}
-          // onChange={() => {
-          //   setShowMap(true);
-          // }}
-          // checked
-          // disabled={showMap!== null}
+          checked = {showMap}
         />
         <span
           className={styles.toggleText}
