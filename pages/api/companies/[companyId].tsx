@@ -1,8 +1,6 @@
 import { prisma } from "@/prisma/client";
 import { NextApiRequest, NextApiResponse } from "next";
 
-const prisma = new PrismaClient();
-
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { companyId } = req.query;
   if (req.method === "PUT") {

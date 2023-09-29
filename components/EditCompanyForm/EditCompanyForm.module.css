@@ -1,41 +1,52 @@
 .editCompanyFormContainer {
   border-radius: 6px;
-  background: #fff;
+  background: #f6f6f6;
   box-shadow: 0px 18px 32px 0px rgba(126, 129, 139, 0.05);
-  padding: 22px 20px 50px 20px;
+  padding-left: 21px;
+  padding-right: 21px;
+}
+
+.editCompanyNavContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 66px;
+  padding: 30px 10px;
 }
 
 .editCompanyForm {
+  background: #fff;
+  border-radius: 6px;
   display: grid;
   gap: 20px;
+  padding: 20px 21px 50px 21px;
 }
 
-.cancelButton {
-  color: #fff;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  border: none;
-  border-radius: 10px;
-  background: #d0d3d9;
-  padding: 16px 32px;
-}
-
-.submitButton {
-  color: #fff;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  border: none;
-  border-radius: 10px;
-  background: #a54fa8;
-  padding: 16px 32px;
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 @media screen and (min-width: 768px) {
   .editCompanyFormContainer {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .editCompanyNavContainer {
+    padding: 30px 10px;
+    gap: 24px;
+  }
+
+  .editCompanyForm {
+    border-radius: 16px;
+    gap: 50px;
     padding: 30px 30px 102px 30px;
+  }
+
+  .buttonContainer {
+    justify-content: flex-start;
   }
 }

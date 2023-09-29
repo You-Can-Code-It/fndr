@@ -5,8 +5,14 @@ import axios from "axios";
 import styles from "./EditCompanyForm.module.css";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Input from "../Atoms/Input/Input";
-import Label from "../Atoms/Label/Label";
+import Label from "../typography/Label";
 import FormContainer from "../Atoms/FormContainer/FormContainer";
+import { useRouter } from "next/router";
+import NavBar from "../NavBar/NavBar";
+import BackIcon from "../Atoms/BackIcon/BackIcon";
+import Heading1 from "../typography/Heading1";
+import Button from "../Button/Button";
+import Link from "next/link";
 
 type Company = {
   id: string;
@@ -92,11 +98,12 @@ const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
     resolver: zodResolver(formSchema),
   });
 
+  const router = useRouter();
+
   const formSubmit = async (data: any) => {
     try {
       const response = await axios.patch(`/api/companies/${company.id}`, data);
-      console.log("EditCompanyForm - Company edited:", response.data);
-      // window.location.reload();
+      router.push(`/companies/${company.id}`);
     } catch (error) {
       console.error("EditCompanyForm - Error editing company:", error);
     }
@@ -104,6 +111,14 @@ const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
 
   return (
     <div className={styles.editCompanyFormContainer}>
+      <NavBar />
+      <div className={styles.editCompanyNavContainer}>
+        <Link href={"/"}>
+          <BackIcon />
+        </Link>
+
+        <Heading1 variant="detailsPage">Edit Company</Heading1>
+      </div>
       <form
         className={styles.editCompanyForm}
         onSubmit={handleSubmit(formSubmit)}
@@ -195,14 +210,17 @@ const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
           )}
         </FormContainer>
 
-        <FormContainer>
-          <button className={styles.cancelButton} type="submit">
+        <div className={styles.buttonContainer}>
+          <Button
+            variant="cancelButton"
+            onClick={() => {
+              router.push(`/companies/${company.id}`);
+            }}
+          >
             Cancel
-          </button>
-          <button className={styles.submitButton} type="submit">
-            Edit Company
-          </button>
-        </FormContainer>
+          </Button>
+          <Button variant="saveButton">Save</Button>
+        </div>
       </form>
     </div>
   );

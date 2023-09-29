@@ -11,7 +11,6 @@ import Modal from "@/components/Modal/Modal";
 import Link from "next/link";
 import NavBar from "@/components/NavBar/NavBar";
 import LoginControls from "@/components/LoginControls/LoginControls";
-import EditCompanyForm from "@/components/EditCompanyForm/EditCompanyForm";
 
 function serialize(data: any) {
   return JSON.parse(JSON.stringify(data));
@@ -41,64 +40,6 @@ const inter = Inter({
   weight: ["400", "500"],
   subsets: ["latin"],
 });
-
-function Home({
-  companies,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  const displayedCompaniesArray = companies.filter(
-    (company) => company.display === true
-  );
-
-  const [displayForm, setDisplayForm] = useState(false);
-  const [openModal, setOpenModal] = useState(false);
-
-  return (
-    <div className={inter.className}>
-      <div className={styles.container}>
-        <header className={styles.headerContainer}>
-          <Logo />
-          <LoginControls />
-        </header>
-        <p>Total Companies: {displayedCompaniesArray.length}</p>
-        <main className={styles.mainContainer}>
-          <div className={styles.mainDropdownContainer}>
-            <Dropdown />
-          </div>
-          <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
-            <AddCompanyForm />
-            <button onClick={() => setOpenModal(!openModal)}>Cancel</button>
-          </Modal>
-          {displayForm && <AddCompanyForm />}
-          <div className={styles.mainCardContainer}>
-            <button onClick={() => setOpenModal(true)}>Add</button>
-
-            {/* <EditCompanyForm name={"Booking.com"} /> */}
-
-            {/* Needs fix: For design issues, displaying only the first 84 results. */}
-            {displayedCompaniesArray.slice(0, 84).map((company: Company) => {
-              return (
-                <Card
-                  key={company.id}
-                  id={company.id}
-                  name={company.name}
-                  city={company.city}
-                  street={company.street}
-                  website={company.website}
-                  category={company.category}
-                  display={company.display}
-                  userEvent={company.userEvent[0] ?? null}
-                  indReferentNumber={company.indReferentNumber}
-                  houseNumber={company.houseNumber}
-                  postCode={company.postCode}
-                />
-              );
-            })}
-          </div>
-        </main>
-      </div>
-    </div>
-  );
-}
 
 export const getServerSideProps: GetServerSideProps<{
   // companies: Company[];
@@ -232,12 +173,12 @@ function Home({
                 city={company.city}
                 street={company.street}
                 website={company.website}
+                category={company.category}
+                display={company.display}
+                userEvent={company.userEvent[0] ?? null}
                 indReferentNumber={company.indReferentNumber}
                 houseNumber={company.houseNumber}
                 postCode={company.postCode}
-                display={company.display}
-                category={company.category}
-                userEvent={company.userEvent[0] ?? null}
               />
             );
           })}

@@ -1,5 +1,6 @@
 .mainContainer {
   border: none;
+  min-width: 117px;
   margin-bottom: 21px;
   padding: 16px 32px;
   border-radius: 10px;
@@ -12,8 +13,27 @@
   opacity: 0.5;
 }
 
+/* Variant */
 .saveButton {
-  background-color: #a54fa8;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+  border-radius: 10px;
+  background: #a54fa8;
+}
+
+.cancelButton {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+  border-radius: 10px;
+  background: #d0d3d9;
 }
 
 /* @media screen and (max-width: 500px) {

@@ -6,8 +6,9 @@
   line-height: 19px;
 }
 
+/* Variants */
 .detailsPage {
-  font-size: 28px !important;
+  font-size: 22px !important;
   font-weight: 600 !important;
 }
 
@@ -15,6 +16,10 @@
   .heading1 {
     font-size: 18px;
     line-height: 22px;
+  }
+
+  .detailsPage {
+    font-size: 28px !important;
   }
 }
 
