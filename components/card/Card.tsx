@@ -18,12 +18,17 @@ import {
   AiOutlineDelete,
 } from "react-icons/ai";
 import { FiEdit3 } from "react-icons/fi";
+import { useRouter } from "next/router";
 
 type CardProps = {
   id: string;
   name: string;
   city: string;
+  street: string;
   website: string;
+  indReferentNumber: string;
+  houseNumber: string;
+  postCode: string;
   userEvent: any;
   category: string;
   display: boolean;
@@ -33,6 +38,10 @@ const Card: React.FC<CardProps> = ({
   id,
   name,
   city,
+  street,
+  indReferentNumber,
+  houseNumber,
+  postCode,
   website,
   userEvent,
   category,
@@ -46,6 +55,8 @@ const Card: React.FC<CardProps> = ({
   const [latestUserEvent, setLatestUserEvent] = useState(userEvent);
   const [like, setLike] = useState(false);
   const [dislike, setDislike] = useState(false);
+
+  const router = useRouter();
 
   const handleDeleteClick = async (companyId: string) => {
     setLoading(true);
@@ -112,6 +123,10 @@ const Card: React.FC<CardProps> = ({
         <Avatar imageSource={latestUserEvent?.user?.image} />
       </div>
     );
+  }
+
+  function editCompanyHandler() {
+    router.push(`/companies/edit/${id}`);
   }
 
   useEffect(() => {
@@ -182,39 +197,30 @@ const Card: React.FC<CardProps> = ({
 
         <div className={styles.lastVisitContainer}>{displayLastVisit}</div>
       </div>
+      <div className={styles.categoriesContainer}>{category}</div>
+      <button
+        onClick={() => {
+          editCompanyHandler();
+        }}
+      >
+        Edit
+      </button>
+      <button onClick={() => setOpenModal(!openModal)}>Remove</button>
 
       <Modal isOpen={openModal || error} onClose={() => setOpenModal(false)}>
         {!loading && !error && !successRemoval && !selectRemove && (
           <div className={styles.deleteCompanyMainContainer}>
-            <div className={styles.editButton}>
-              <FiEdit3 />
-              <p>Edit</p>
-            </div>
-            <div className={styles.greyLine}></div>
-            <div className={styles.removeButton}>
-              <AiOutlineDelete />
-              <p onClick={() => setSelectRemove(true)}>Remove</p>
-            </div>
-          </div>
-        )}
-        {!loading && !error && !successRemoval && selectRemove && (
-          <div className={styles.removalConfirmation}>
-            <div className={styles.removeModal}>
-              <p className={styles.removeMessage}>Remove company?</p>
-              <p className={styles.confirmationMessage}>
-                Are you sure you want to remove this company?
-              </p>
-            </div>
-            <div className={styles.greyLineConfirmation}></div>
-            <div className={styles.confirmRemoval}>
-              <p
-                onClick={() => {
-                  setSelectRemove(true);
-                  handleDeleteClick(id);
-                }}
+            <h4 className={styles.removeCompanyHeader}>Remove company?</h4>
+            <p className={styles.removeCompanySubtitle}>
+              Are you sure you want to remove this company from the list?
+            </p>
+            <div className={styles.removeCompanyButtons}>
+              <button
+                className={`${styles.removeButton} ${styles.confirm}`}
+                onClick={() => handleDeleteClick(id)}
               >
                 Remove
-              </p>
+              </button>
             </div>
             <div className={styles.greyLineConfirmation}></div>
             <div

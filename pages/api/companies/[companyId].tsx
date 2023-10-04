@@ -23,6 +23,43 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     }
   }
 
+  if (req.method === "PATCH") {
+    const { companyId } = req.query;
+    const {
+      name,
+      indReferentNumber,
+      city,
+      street,
+      houseNumber,
+      postCode,
+      website,
+      category,
+    } = req.body;
+    try {
+      await prisma.company.update({
+        where: { id: companyId as string },
+        data: {
+          name: name as string,
+          indReferentNumber: indReferentNumber as string,
+          city: city as string,
+          street: street as string,
+          houseNumber: houseNumber as string,
+          postCode: postCode as string,
+          website: website as string,
+          category: category as string,
+        },
+      });
+      console.log("PATCH /api/companies:id - Company details were updated");
+      res.status(204).end();
+    } catch (error) {
+      res.status(500).json({
+        message:
+          "PATCH /api/companies/:id - An error occurred when updating company details",
+        error,
+      });
+    }
+  }
+
   //Keeping the original "DELETE" method so it can eventually be used in a new feature
   if (req.method === "DELETE") {
     try {

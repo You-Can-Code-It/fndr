@@ -10,6 +10,7 @@ import AddCompanyForm from "@/components/AddCompanyForm/AddCompanyForm";
 import Modal from "@/components/Modal/Modal";
 import Link from "next/link";
 import NavBar from "@/components/NavBar/NavBar";
+import LoginControls from "@/components/LoginControls/LoginControls";
 
 function serialize(data: any) {
   return JSON.parse(JSON.stringify(data));
@@ -175,10 +176,14 @@ function Home({
                 id={company.id}
                 name={company.name}
                 city={company.city}
+                street={company.street}
                 website={company.website}
-                display={company.display}
                 category={company.category}
+                display={company.display}
                 userEvent={company.userEvent[0] ?? null}
+                indReferentNumber={company.indReferentNumber}
+                houseNumber={company.houseNumber}
+                postCode={company.postCode}
               />
             );
           })}
