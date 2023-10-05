@@ -11,6 +11,7 @@
     "start": "next start",
     "lint": "next lint",
     "seed": "npx prisma db seed",
+    "db:reset": "npx prisma migrate reset --force",
     "prisma:generate": "npx prisma generate",
     "postinstall": "prisma generate",
     "testdb:setup": "dotenv -e .env.test -- npx prisma migrate reset --force",

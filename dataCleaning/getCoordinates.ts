@@ -1,6 +1,6 @@
-import { prisma } from "./client";
+import { prisma } from "../prisma/client";
 import axios from "axios";
-import companiesWithCoordinates from "../dataCleaning/companiesWithCoordinates.json";
+import companiesWithCoordinates from "./companiesWithCoordinates.json";
 
 type PostcodeResponse = {
   valid: true;

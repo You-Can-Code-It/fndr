@@ -1,5 +1,4 @@
-const companiesWithCuid = require("../dataCleaning/companiesWithCoordinates.json");
-//add json file companies with coordinates later
+const dummyCompanies = require("./seeds/companies.json");
 const dummyUsers = require("./seeds/users.json");
 const dummyEvents = require("./seeds/userEvents.json");
 const dummyAccounts = require("./seeds/accounts.json");
@@ -10,69 +9,38 @@ const prisma = new PrismaClient();
 async function main() {
   try {
     // Seed data using createMany
-    for (const company of companiesWithCuid) {
-      await prisma.company.upsert({
-        where: {
-          id: company.id,
-        },
-        update: {
-          name: company.name,
-          indReferentNumber: company.indReferentNumber,
-          website: company.website,
-          category: company.category,
-          city: company.city,
-          street: company.street,
-          houseNumber: company.houseNumber,
-          postCode: company.postCode,
-          latitude: company.latitude,
-          longitude: company.longitude,
-        },
-        create: {
-          name: company.name,
-          indReferentNumber: company.indReferentNumber,
-          website: company.website,
-          category: company.category,
-          city: company.city,
-          street: company.street,
-          houseNumber: company.houseNumber,
-          postCode: company.postCode,
-          latitude: company.latitude,
-          longitude: company.longitude,
-        },
-      });
-    }
-    // const companies = await prisma.company.createMany({
-    //   data: companiesWithCuid.map((company: any) => {
-    //     const {
-    //       id,
-    //       name,
-    //       indReferentNumber,
-    //       website,
-    //       category,
-    //       city,
-    //       street,
-    //       houseNumber,
-    //       postCode,
-    //       latitude,
-    //       longitude,
-    //     } = company;
+    const companies = await prisma.company.createMany({
+      data: dummyCompanies.map((company: any) => {
+        const {
+          id,
+          name,
+          indReferentNumber,
+          website,
+          category,
+          city,
+          street,
+          houseNumber,
+          postCode,
+          latitude,
+          longitude,
+        } = company;
 
-    //     return {
-    //       id,
-    //       name,
-    //       indReferentNumber,
-    //       website,
-    //       category,
-    //       city,
-    //       street,
-    //       houseNumber,
-    //       postCode,
-    //       latitude,
-    //       longitude,
-    //     };
-    //   }),
-    //   skipDuplicates: true, // skip duplicates
-    // });
+        return {
+          id,
+          name,
+          indReferentNumber,
+          website,
+          category,
+          city,
+          street,
+          houseNumber,
+          postCode,
+          latitude,
+          longitude,
+        };
+      }),
+      skipDuplicates: true, // skip duplicates
+    });
 
     const users = await prisma.user.createMany({
       data: dummyUsers,
@@ -89,21 +57,21 @@ async function main() {
       skipDuplicates: true,
     });
 
-  //   console.log(
-  //     `
-  // SEEDED: 
+    console.log(
+      `
+    SEEDED:
 
-  // Companies: ${companies.count}
-  // Users: ${users.count}
-  // Accounts: ${accounts.count}
-  // UserEvents: ${userEvents.count}
-  // `
-  //   );
+    Companies: ${companies.count}
+    Users: ${users.count}
+    Accounts: ${accounts.count}
+    UserEvents: ${userEvents.count}
+    `
+    );
 
     if (process.env.NODE_ENV === "test") {
       // if resetting the database for a test - remove any companies and events that were added during a test
       // this means any company or event that is not in the json with seed data
-      const companyIds = companiesWithCuid.map((company: any) => company.id);
+      const companyIds = companies.map((company: any) => company.id);
       const deletedCompanies = await prisma.company.deleteMany({
         where: { id: { notIn: companyIds } },
       });
