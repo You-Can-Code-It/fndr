@@ -3,28 +3,34 @@ import { ReactNode } from "react";
 import { fontInter } from "../../styles/fonts/index";
 import Link from "next/link";
 
-type Heading1Props = {
-  children: ReactNode;
-  variant?: string;
-  onClick?: () => void;
+export interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
+  variant?: string | "optionButton";
+  colorScheme?: "danger";
+  size?: "large";
+  fullWidth?: boolean;
   href?: string;
-};
+}
 
-const Button: React.FC<Heading1Props> = ({
+const Button = ({
   children,
   variant,
   href,
+  size,
+  fullWidth = false,
+  colorScheme,
+  className,
   ...props
-}) => {
+}: ButtonProps) => {
   return (
     <>
-      {" "}
       {href && (
         <Link href={href}>
           <button
             className={`${styles.mainContainer} ${variant && styles[variant]} ${
+              colorScheme && styles[colorScheme]
+            } ${fullWidth && styles.fullWidth} ${size && styles[size]} ${
               fontInter.className
-            }`}
+            } ${className}`}
             {...props}
           >
             {children}
@@ -34,8 +40,10 @@ const Button: React.FC<Heading1Props> = ({
       {!href && (
         <button
           className={`${styles.mainContainer} ${variant && styles[variant]} ${
+            colorScheme && styles[colorScheme]
+          } ${fullWidth && styles.fullWidth} ${size && styles[size]} ${
             fontInter.className
-          }`}
+          } ${className}`}
           {...props}
         >
           {children}
