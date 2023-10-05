@@ -10,15 +10,13 @@ import { DateTime } from "luxon";
 import { useSession } from "next-auth/react";
 import Avatar from "../avatar/Avatar";
 import { PiDotsThreeOutlineFill } from "react-icons/pi";
-import {
-  AiOutlineLike,
-  AiOutlineDislike,
-  AiTwotoneLike,
-  AiTwotoneDislike,
-  AiOutlineDelete,
-} from "react-icons/ai";
 import { FiEdit3 } from "react-icons/fi";
 import { useRouter } from "next/router";
+import PopOver from "../PopOver";
+import Button from "../Button/Button";
+import BackIcon from "../Atoms/BackIcon/BackIcon";
+import Image from "next/image";
+import { usePopOver } from "../PopOver/PopOver";
 
 type CardProps = {
   id: string;
@@ -53,8 +51,7 @@ const Card: React.FC<CardProps> = ({
   const [error, setError] = useState(false);
   const [successRemoval, setSuccessRemoval] = useState(false);
   const [latestUserEvent, setLatestUserEvent] = useState(userEvent);
-  const [like, setLike] = useState(false);
-  const [dislike, setDislike] = useState(false);
+  const [show, open, close] = usePopOver();
 
   const router = useRouter();
 
@@ -159,37 +156,36 @@ const Card: React.FC<CardProps> = ({
         </div>
       </div>
       <div className={styles.rightBlock}>
-        <div className={styles.threeDotsIcon}>
-          <PiDotsThreeOutlineFill onClick={() => setOpenModal(!openModal)} />
-        </div>
-        <div className={styles.likeDislikeIcons}>
-          {like === false && (
-            <AiOutlineLike
-              onClick={() => {
-                setLike(!like);
-                setDislike(false);
-              }}
-            />
-          )}
-          {like === true && (
-            <AiTwotoneLike
-              onClick={() => {
-                setLike(!like);
-                setDislike(false);
-              }}
-            />
-          )}
-          {dislike === false && (
-            <AiOutlineDislike
-              onClick={() => {
-                setDislike(!dislike);
-                setLike(false);
-              }}
-            />
-          )}
-          {dislike === true && (
-            <AiTwotoneDislike onClick={() => setDislike(!dislike)} />
-          )}
+        <div className={styles.threeDotsIcon} onClick={(e) => open(e)}>
+          <PiDotsThreeOutlineFill />
+          {
+            <PopOver show={show} close={close}>
+              <button className={styles.closePopOverMobile} onClick={close}>
+                <Image
+                  src="assets/close.svg"
+                  height={20}
+                  width={20}
+                  alt="close"
+                />
+              </button>
+              <Button
+                variant="optionButton"
+                onClick={editCompanyHandler}
+                className={styles.popOverOption}
+              >
+                Edit
+              </Button>
+              <div className={styles.greyLineConfirmation}></div>
+              <Button
+                variant="optionButton"
+                colorScheme="danger"
+                onClick={() => setOpenModal(true)}
+                className={styles.popOverOption}
+              >
+                Delete
+              </Button>
+            </PopOver>
+          }
         </div>
         <div className={styles.categoryWrapperContainer}>
           <div className={styles.categoryInnerContainer}>{category}</div>
@@ -197,15 +193,6 @@ const Card: React.FC<CardProps> = ({
 
         <div className={styles.lastVisitContainer}>{displayLastVisit}</div>
       </div>
-      <div className={styles.categoriesContainer}>{category}</div>
-      <button
-        onClick={() => {
-          editCompanyHandler();
-        }}
-      >
-        Edit
-      </button>
-      <button onClick={() => setOpenModal(!openModal)}>Remove</button>
 
       <Modal isOpen={openModal || error} onClose={() => setOpenModal(false)}>
         {!loading && !error && !successRemoval && !selectRemove && (
@@ -214,24 +201,26 @@ const Card: React.FC<CardProps> = ({
             <p className={styles.removeCompanySubtitle}>
               Are you sure you want to remove this company from the list?
             </p>
-            <div className={styles.removeCompanyButtons}>
-              <button
-                className={`${styles.removeButton} ${styles.confirm}`}
-                onClick={() => handleDeleteClick(id)}
-              >
-                Remove
-              </button>
-            </div>
             <div className={styles.greyLineConfirmation}></div>
-            <div
-              className={styles.cancelButton}
+            <Button
+              size="large"
+              variant="optionButton"
+              colorScheme="danger"
+              onClick={() => handleDeleteClick(id)}
+            >
+              Remove
+            </Button>
+            <div className={styles.greyLineConfirmation}></div>
+            <Button
+              size="large"
+              variant="optionButton"
               onClick={() => {
                 setOpenModal(false);
                 setSelectRemove(false);
               }}
             >
               Cancel
-            </div>
+            </Button>
           </div>
         )}
         {loading && !successRemoval && (
