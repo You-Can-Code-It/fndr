@@ -4,12 +4,10 @@ import { useRouter } from "next/router";
 import { prisma } from "@/prisma/client";
 import { useState } from "react";
 import styles from "@/styles/Home.module.css";
-import Logo from "@/components/logo/Logo";
 import Dropdown from "@/components/dropdown/Dropdown";
 import Card from "@/components/card/Card";
 import AddCompanyForm from "@/components/AddCompanyForm/AddCompanyForm";
 import Modal from "@/components/Modal/Modal";
-import LoginControls from "@/components/LoginControls/LoginControls";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import Toggle from "@/components/toggle/Toggle";
@@ -18,6 +16,8 @@ import Toggle from "@/components/toggle/Toggle";
 const DynamicMap = dynamic(() => import("../components/map/Map"), {
   ssr: false,
 });
+import NavBar from "@/components/NavBar/NavBar";
+import LoginControls from "@/components/LoginControls/LoginControls";
 
 function serialize(data: any) {
   return JSON.parse(JSON.stringify(data));
@@ -146,70 +146,67 @@ function Home({
 
   return (
     <div className={inter.className}>
-      <div className={styles.container}>
-        <header className={styles.headerContainer}>
-          <Logo />
-          <LoginControls />
-        </header>
-        <p>Total Companies: {response.companies.length}</p>
-        <main className={styles.mainContainer}>
-          {/* <Link href="/account">To your account</Link> */}
-          <div className={styles.mainDropdownContainer}>
-            <Dropdown
-              dropdownData={response.removeCitiesDuplicates}
-              // function setDropdownValue recieve name of the city
-              setDropdownValue={(cityName: string) => {
-                // update cityFilter query param by new value cityName
-                setCityFilterQuery(cityName);
+      <NavBar />
+      <div className={styles.counterAndAddButton}>
+        <p className={styles.companyCounter}>
+          Total Companies: {response.companies.length}
+        </p>
+        <Link href="/companies/newCompany" className={styles.newCompanyLink}>
+          + New Company
+        </Link>
+      </div>
 
-                if (cityName != "" && cityName != undefined) {
-                  //assign cityFilter to query parameter and perform redirect to send chosen city to the backend
-                  router.replace(`?cityFilter=` + cityName);
-                }
-              }}
-              // Passed state cityFilterQuery to dropdown component
-              dropdownValue={cityFilterQuery}
-              clearAllFilters={clearAllFilters}
-            />
-            <Link
-              href="/companies/newCompany"
-              className={styles.newCompanyLink}
-            >
-              + New Company
-            </Link>
-          </div>
-          <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
-            <AddCompanyForm />
-            <button onClick={() => setOpenModal(!openModal)}>Cancel</button>
-          </Modal>
-          <div className={styles
-          .mainToggleContainer}>
+      <div className={styles.mainPageContainer}>
+        <div className={styles.mainDropdownContainer}>
+          <Dropdown
+            dropdownData={response.removeCitiesDuplicates}
+            // function setDropdownValue recieve name of the city
+            setDropdownValue={(cityName: string) => {
+              // update cityFilter query param by new value cityName
+              setCityFilterQuery(cityName);
+
+              if (cityName != "" && cityName != undefined) {
+                //assign cityFilter to query parameter and perform redirect to send chosen city to the backend
+                router.replace(`?cityFilter=` + cityName);
+              }
+            }}
+            // Passed state cityFilterQuery to dropdown component
+            dropdownValue={cityFilterQuery}
+            clearAllFilters={clearAllFilters}
+          />
+        </div>
+        <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
+          <AddCompanyForm />
+          <button onClick={() => setOpenModal(!openModal)}>Cancel</button>
+        </Modal>
+        <div className={styles.mainToggleContainer}>
           <Toggle showMap={showMap} setShowMap={setShowMap} />
+        </div>
+
+        {showMap ? (
+          <DynamicMap companies={response.companies} />
+        ) : (
+          <div className={styles.companiesCards}>
+            {response.companies.map((company: Company) => {
+              return (
+                <Card
+                  key={company.id}
+                  id={company.id}
+                  name={company.name}
+                  city={company.city}
+                  street={company.street}
+                  website={company.website}
+                  category={company.category}
+                  display={company.display}
+                  userEvent={company.userEvent[0] ?? null}
+                  indReferentNumber={company.indReferentNumber}
+                  houseNumber={company.houseNumber}
+                  postCode={company.postCode}
+                />
+              );
+            })}
           </div>
-          {showMap ? (
-            <DynamicMap companies={response.companies} />
-          ) : (
-            <div className={styles.mainCardContainer}>
-              {/* Needs fix: For design issues, displaying only the first 84 results. */}
-              {response.companies
-                .slice(0, 84)
-                .map((company: Company, index) => {
-                  return (
-                    <Card
-                      key={company.id}
-                      id={company.id}
-                      name={company.name}
-                      city={company.city}
-                      website={company.website}
-                      display={company.display}
-                      category={company.category}
-                      userEvent={company.userEvent[0] ?? null}
-                    />
-                  );
-                })}
-            </div>
-          )}
-        </main>
+        )}
       </div>
     </div>
   );

@@ -1,0 +1,50 @@
+.popoverContainer {
+  position: fixed;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+}
+
+.popover {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  width: 100vw;
+  background-color: white;
+  left: 0;
+  padding: 50px 24px 50px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  animation-duration: 0.5s;
+  animation-name: slide;
+}
+
+@media screen and (min-width: 768px) {
+  .popoverContainer {
+    background-color: transparent;
+    position: absolute;
+    inset: initial;
+    right: 0px;
+    box-shadow: 0px 12px 24px 0px rgba(126, 129, 139, 0.3);
+    border-radius: 10px;
+  }
+
+  .popover {
+    border-radius: 10px;
+    position: static;
+    min-width: 200px;
+    padding: 24px 20px 34px;
+    width: initial;
+  }
+}
+
+@keyframes slide {
+  from {
+    bottom: -200px;
+  }
+  to {
+    bottom: 0;
+  }
+}

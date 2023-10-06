@@ -1,0 +1,71 @@
+.mainContainer {
+  border: none;
+  min-width: 117px;
+  padding: 16px 32px;
+  border-radius: 10px;
+  background-color: #d0d3d9;
+  color: white;
+}
+
+.mainContainer:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+/* Variant */
+.saveButton {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+  border-radius: 10px;
+  background: #a54fa8;
+}
+
+.cancelButton {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+  border-radius: 10px;
+  background: #d0d3d9;
+}
+
+.optionButton {
+  font-weight: 500;
+  line-height: 18px;
+  font-size: 16px;
+  color: #333333;
+  background-color: transparent;
+  border: none;
+  min-width: 0px;
+  padding: 0;
+  border-radius: 0px;
+}
+
+.danger {
+  color: #ec7065;
+}
+
+.large {
+  line-height: 22px;
+  font-size: 18px;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/* @media screen and (max-width: 500px) {
+  .mainContainer {
+    margin-bottom: 21px;
+  }
+  .button {
+    margin-bottom: 21px;
+    display: flex;
+  }
+} */

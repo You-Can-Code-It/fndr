@@ -1,0 +1,35 @@
+.mainHeader {
+  color: #333333;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2rem;
+  margin-bottom: 62px;
+}
+
+.detailsValue {
+  margin-bottom: 62px;
+}
+
+.detailsIframe {
+  margin-bottom: 15px;
+}
+
+.detailsValueWebsite {
+  margin-bottom: 62px;
+}
+
+.detailsValueWebsite:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 376px) {
+  .mainHeader {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .mainHeader {
+    margin-bottom: 21px;
+  }
+}

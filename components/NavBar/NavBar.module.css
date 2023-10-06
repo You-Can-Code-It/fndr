@@ -1,0 +1,26 @@
+.navBarContainer {
+  display: flex;
+
+  justify-content: space-between;
+  padding: 20px 100px;
+  background-color: white;
+}
+
+.loginControls {
+  display: flex;
+}
+
+@media screen and (max-width: 764px) {
+  .navBarContainer {
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .navBarContainer {
+    flex-direction: column;
+    gap: 21px;
+    align-items: center;
+  }
+}
