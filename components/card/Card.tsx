@@ -148,10 +148,13 @@ const Card: React.FC<CardProps> = ({
         <div className={styles.cardWebsite}>
           <img src="./external-link.svg" />
           <WebLink website={website} className={styles.websiteText}>
-            {website
-              .replace("http://", "")
-              .replace("https://", "")
-              .replace("www.", "")}
+            {
+              website
+                .replace("http://", "")
+                .replace("https://", "")
+                .replace("www.", "")
+                .split("/")[0]
+            }
           </WebLink>
         </div>
       </div>

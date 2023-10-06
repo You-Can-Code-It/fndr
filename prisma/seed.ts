@@ -1,6 +1,4 @@
-
-const companiesWithCuid = require("../dataCleaning/companiesCuid.json");
-//add json file companies with coordinates later
+const dummyCompanies = require("./seeds/companies.json");
 const dummyUsers = require("./seeds/users.json");
 const dummyEvents = require("./seeds/userEvents.json");
 const dummyAccounts = require("./seeds/accounts.json");
@@ -12,29 +10,33 @@ async function main() {
   try {
     // Seed data using createMany
     const companies = await prisma.company.createMany({
-      data: companiesWithCuid.map((company: any) => {
+      data: dummyCompanies.map((company: any) => {
         const {
           id,
           name,
-          referentNumber,
-          webpageUrl,
+          indReferentNumber,
+          website,
           category,
           city,
           street,
           houseNumber,
           postCode,
+          latitude,
+          longitude,
         } = company;
 
         return {
           id,
           name,
-          indReferentNumber: referentNumber,
-          website: webpageUrl,
+          indReferentNumber,
+          website,
           category,
           city,
           street,
           houseNumber,
           postCode,
+          latitude,
+          longitude,
         };
       }),
       skipDuplicates: true, // skip duplicates
@@ -57,19 +59,19 @@ async function main() {
 
     console.log(
       `
-  SEEDED: 
+    SEEDED:
 
-  Companies: ${companies.count}
-  Users: ${users.count}
-  Accounts: ${accounts.count}
-  UserEvents: ${userEvents.count}
-  `
+    Companies: ${companies.count}
+    Users: ${users.count}
+    Accounts: ${accounts.count}
+    UserEvents: ${userEvents.count}
+    `
     );
 
     if (process.env.NODE_ENV === "test") {
       // if resetting the database for a test - remove any companies and events that were added during a test
       // this means any company or event that is not in the json with seed data
-      const companyIds = companiesWithCuid.map((company: any) => company.id);
+      const companyIds = companies.map((company: any) => company.id);
       const deletedCompanies = await prisma.company.deleteMany({
         where: { id: { notIn: companyIds } },
       });

@@ -9,6 +9,13 @@ import Card from "@/components/card/Card";
 import AddCompanyForm from "@/components/AddCompanyForm/AddCompanyForm";
 import Modal from "@/components/Modal/Modal";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+import Toggle from "@/components/toggle/Toggle";
+
+// reason using dynamic is because map will be rendered in client side
+const DynamicMap = dynamic(() => import("../components/map/Map"), {
+  ssr: false,
+});
 import NavBar from "@/components/NavBar/NavBar";
 import LoginControls from "@/components/LoginControls/LoginControls";
 
@@ -18,6 +25,8 @@ function serialize(data: any) {
 
 type Company = {
   id: string;
+  createdAt: Date;
+  updatedAt: Date;
   name: string;
   activity: string;
   indReferentNumber: string;
@@ -27,6 +36,8 @@ type Company = {
   street: string;
   houseNumber: string;
   postCode: string;
+  latitude: number | null;
+  longitude: number | null;
   display: boolean;
   userEvent: any;
 };
@@ -37,7 +48,7 @@ type IndexResponse = {
 };
 
 const inter = Inter({
-  weight: ["400", "500"],
+  weight: ["400", "500", "600"],
   subsets: ["latin"],
 });
 
@@ -116,6 +127,7 @@ function Home({
   // this router is intended for adding and reading query parameters
   const router = useRouter();
   const [openModal, setOpenModal] = useState(false);
+  const [showMap, setShowMap] = useState<boolean>(false);
   // retrieve query parameter with name cityFilter to set input value
   const { cityFilter } = router.query;
   // created state cityFilterQuery and initialized with query param cityFilter
@@ -167,27 +179,34 @@ function Home({
           <AddCompanyForm />
           <button onClick={() => setOpenModal(!openModal)}>Cancel</button>
         </Modal>
-
-        <div className={styles.companiesCards}>
-          {response.companies.map((company: Company) => {
-            return (
-              <Card
-                key={company.id}
-                id={company.id}
-                name={company.name}
-                city={company.city}
-                street={company.street}
-                website={company.website}
-                category={company.category}
-                display={company.display}
-                userEvent={company.userEvent[0] ?? null}
-                indReferentNumber={company.indReferentNumber}
-                houseNumber={company.houseNumber}
-                postCode={company.postCode}
-              />
-            );
-          })}
+        <div className={styles.mainToggleContainer}>
+          <Toggle showMap={showMap} setShowMap={setShowMap} />
         </div>
+
+        {showMap ? (
+          <DynamicMap companies={response.companies} />
+        ) : (
+          <div className={styles.companiesCards}>
+            {response.companies.map((company: Company) => {
+              return (
+                <Card
+                  key={company.id}
+                  id={company.id}
+                  name={company.name}
+                  city={company.city}
+                  street={company.street}
+                  website={company.website}
+                  category={company.category}
+                  display={company.display}
+                  userEvent={company.userEvent[0] ?? null}
+                  indReferentNumber={company.indReferentNumber}
+                  houseNumber={company.houseNumber}
+                  postCode={company.postCode}
+                />
+              );
+            })}
+          </div>
+        )}
       </div>
     </div>
   );

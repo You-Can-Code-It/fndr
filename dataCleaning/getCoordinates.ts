@@ -1,8 +1,6 @@
-import { prisma } from "./client";
+import { prisma } from "../prisma/client";
 import axios from "axios";
-import companiesWithCoordinates from "../dataCleaning/companiesWithCoordinates.json"
-
-console.log("companiesWithCoordinates", companiesWithCoordinates)
+import companiesWithCoordinates from "./companiesWithCoordinates.json";
 
 type PostcodeResponse = {
   valid: true;
@@ -35,7 +33,7 @@ async function getCoordinatesFromPostcode(
 
 export async function getCoordinates() {
   const companies = await prisma.company.findMany({
-    take: 100,
+    take: 800,
     where: {
       latitude: null,
       longitude: null,
@@ -70,7 +68,7 @@ export async function getCoordinates() {
     });
     // @ts-ignore
     updatedCompanies.push(updatedCompany);
-    console.log("Coordinates found", updatedCompanies.length)
+    console.log("Coordinates found", updatedCompanies.length);
   }
   const fs = require("fs");
 
@@ -81,7 +79,7 @@ export async function getCoordinates() {
       if (err) {
         console.log(err);
       } else {
-        console.log("How many?", updatedCompanies.length)
+        console.log("How many?", updatedCompanies.length);
         console.log("Success");
       }
     }
