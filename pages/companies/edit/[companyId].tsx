@@ -17,6 +17,7 @@ type Company = {
   houseNumber: string;
   postCode: string;
   display: boolean;
+  tags: any;
 };
 
 function serialize(data: any) {
@@ -26,6 +27,7 @@ function serialize(data: any) {
 function EditCompany({
   company,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  console.log("details page, tags", company.tags);
   return (
     <div>
       <EditCompanyForm company={company} />
@@ -42,6 +44,9 @@ export const getServerSideProps: GetServerSideProps<{
     const company = await prisma.company.findUnique({
       where: {
         id: companyId,
+      },
+      include: {
+        tags: true,
       },
     });
 

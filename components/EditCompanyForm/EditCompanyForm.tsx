@@ -26,6 +26,7 @@ type Company = {
   category: string;
   tagTitle: string;
   tagCategory: string;
+  tags: any;
 };
 
 type Tag = {
@@ -174,6 +175,12 @@ const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
           {errors.website && (
             <p className="error">{String(errors.website.message)}</p>
           )}
+        </FormContainer>
+        <FormContainer>
+          <Label htmlFor="tags">Tags:</Label>
+          {company.tags.length !== 0 &&
+            company.tags.map((oneTag: any) => <li>{oneTag.title}</li>)}
+          {!company.tags.length && <Label>"No tags added yet."</Label>}
         </FormContainer>
 
         <FormContainer>
