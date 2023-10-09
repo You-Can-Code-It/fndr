@@ -24,6 +24,14 @@ type Company = {
   postCode: string;
   website: string;
   category: string;
+  tagTitle: string;
+  tagCategory: string;
+};
+
+type Tag = {
+  id: string;
+  title: string;
+  category: string;
 };
 
 type EditCompanyProps = {
@@ -55,6 +63,14 @@ const formSchema = z.object({
     .string()
     .min(2, "Category must contain at least 2 characters.")
     .max(255, "The provided category name contains too much characters."),
+  tagTitle: z
+    .string()
+    .min(2, "Tag title must contain at least 2 characters.")
+    .max(255, "The provided tag title contains too much characters."),
+  tagCategory: z
+    .string()
+    .min(2, "Tag category must contain at least 2 characters.")
+    .max(255, "The provided tag category contains too much characters."),
   city: z
     .string()
     .min(2, "City must contain at least 2 characters.")
@@ -94,6 +110,8 @@ const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
       postCode: company.postCode,
       website: company.website,
       category: company.category,
+      tagTitle: "",
+      tagCategory: "",
     },
     resolver: zodResolver(formSchema),
   });
@@ -102,6 +120,7 @@ const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
 
   const formSubmit = async (data: any) => {
     try {
+      console.log("EditCompanyForm, data", data);
       const response = await axios.patch(`/api/companies/${company.id}`, data);
       router.push(`/companies/${company.id}`);
     } catch (error) {
@@ -167,6 +186,30 @@ const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
           />
           {errors.category && (
             <p className="error">{String(errors.category.message)}</p>
+          )}
+        </FormContainer>
+        <FormContainer>
+          <Label htmlFor="tag">+ Tag title</Label>
+          <Input
+            type="text"
+            placeholder="add a tag title"
+            {...register("tagTitle")}
+            className={styles.addCompanyForm}
+          />
+          {errors.category && (
+            <p className="error">{String(errors.tagTitle?.message)}</p>
+          )}
+        </FormContainer>
+        <FormContainer>
+          <Label htmlFor="tag">+ Tag category</Label>
+          <Input
+            type="text"
+            placeholder="add a tag category"
+            {...register("tagCategory")}
+            className={styles.addCompanyForm}
+          />
+          {errors.category && (
+            <p className="error">{String(errors.tagCategory?.message)}</p>
           )}
         </FormContainer>
 

@@ -34,7 +34,10 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       postCode,
       website,
       category,
+      tagTitle,
+      tagCategory,
     } = req.body;
+    console.log("req.body", req.body);
     try {
       await prisma.company.update({
         where: { id: companyId as string },
@@ -49,6 +52,21 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
           category: category as string,
         },
       });
+      console.log(
+        "api/companyId, tagTitle and Category",
+        tagTitle,
+        tagCategory
+      );
+      await prisma.tag.create({
+        data: {
+          title: tagTitle as string,
+          category: tagCategory as string,
+          companies: {
+            connect: { id: companyId as string },
+          },
+        },
+      });
+
       console.log("PATCH /api/companies:id - Company details were updated");
       res.status(204).end();
     } catch (error) {
