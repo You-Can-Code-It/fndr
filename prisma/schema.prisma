@@ -27,10 +27,20 @@ model Company {
   longitude         Float?
   display           Boolean  @default(true)
 
+   tags Tag[] @relation("CompanyTag")
+
   userEvent         UserEvent[]             
 
   @@unique([name, postCode])
 }
+
+model Tag {
+  id      String   @id @default(cuid())
+  title    String   @unique
+  category String
+   companies Company[] @relation("CompanyTag")
+}
+
 
 model UserEvent {
   id                String  @id @default(cuid())
