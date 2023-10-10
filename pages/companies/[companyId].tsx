@@ -32,6 +32,7 @@ type Company = {
   houseNumber: string;
   postCode: string;
   display: boolean;
+  tags: any;
 };
 
 function CompanyDetailsPage({
@@ -72,6 +73,12 @@ function CompanyDetailsPage({
             <HeaderInfo>{company?.city}</HeaderInfo>
             <Label>Area</Label>
             <HeaderInfo> {company?.category}</HeaderInfo>
+            <Label>Tags</Label>
+            {company.tags.length === 0 && (
+              <HeaderInfo>{"No tags added yet."}</HeaderInfo>
+            )}
+            {company.tags.length !== 0 &&
+              company.tags.map((oneTag: any) => <li>{oneTag.title}</li>)}
             <Label>Website</Label>
             <HeaderInfo
               variant={displayWebsite ? "detailsIframe" : "detailsValueWebsite"}
@@ -128,6 +135,9 @@ export const getServerSideProps: GetServerSideProps<{
     const company = await prisma.company.findUnique({
       where: {
         id: companyId,
+      },
+      include: {
+        tags: true,
       },
     });
     console.log("first block");
