@@ -209,6 +209,7 @@ function Home({
                   indReferentNumber={company.indReferentNumber}
                   houseNumber={company.houseNumber}
                   postCode={company.postCode}
+                  tags={company.tags}
                 />
               );
             })}
