@@ -18,6 +18,8 @@ type Company = {
   postCode: string;
   display: boolean;
   tags: any;
+  tagTitle: string;
+  tagCategory: string;
 };
 
 function serialize(data: any) {
