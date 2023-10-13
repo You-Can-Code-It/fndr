@@ -135,7 +135,9 @@ const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
       .delete(`/api/companies/${company.id}/tags?tagId=${tagId}`)
       .then((response) => {
         console.log("Tag removed:", response.data);
+        window.location.reload();
       })
+
       .catch((error) => {
         console.error("EditCompanyForm: Failed to remove tag:", error);
       });
