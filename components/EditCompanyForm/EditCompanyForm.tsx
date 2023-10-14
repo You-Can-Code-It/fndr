@@ -118,7 +118,7 @@ const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
   });
 
   const router = useRouter();
-  const [remove, setRemove] = useState(false);
+  const [displayAddTag, setDisplayAddTag] = useState(false);
 
   const formSubmit = async (data: any) => {
     try {
@@ -141,8 +141,6 @@ const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
       .catch((error) => {
         console.error("EditCompanyForm: Failed to remove tag:", error);
       });
-
-    setRemove(!remove);
   };
 
   return (
@@ -171,7 +169,6 @@ const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
             <p className="error">{String(errors.name.message)}</p>
           )}
         </FormContainer>
-
         <FormContainer>
           <Label htmlFor="indReferentNumber">Ind Number</Label>
           <Input
@@ -184,7 +181,6 @@ const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
             <p className="error">{String(errors.indReferentNumber.message)}</p>
           )}
         </FormContainer>
-
         <FormContainer>
           <Label htmlFor="website">Website</Label>
           <Input type="text" placeholder="Website" {...register("website")} />
@@ -220,35 +216,40 @@ const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
             ))}
           {!company.tags.length && <Label>"No tags added yet."</Label>}
         </FormContainer>
-        <FormContainer>
-          <Label htmlFor="addNewTag">Add Tag</Label>
-        </FormContainer>
-
-        <FormContainer>
-          <Label htmlFor="tag">+ Tag title</Label>
-          <Input
-            type="text"
-            placeholder="add a tag title"
-            {...register("tagTitle")}
-            className={styles.addCompanyForm}
-          />
-          {errors.category && (
-            <p className="error">{String(errors.tagTitle?.message)}</p>
-          )}
-        </FormContainer>
-        <FormContainer>
-          <Label htmlFor="tag">+ Tag category</Label>
-          <Input
-            type="text"
-            placeholder="add a tag category"
-            {...register("tagCategory")}
-            className={styles.addCompanyForm}
-          />
-          {errors.category && (
-            <p className="error">{String(errors.tagCategory?.message)}</p>
-          )}
-        </FormContainer>
-
+        <div className={styles.addTagButton}>
+          <FormContainer onClick={() => setDisplayAddTag(!displayAddTag)}>
+            {" "}
+            <Label htmlFor="addNewTag">+ Add Tag</Label>
+          </FormContainer>
+        </div>{" "}
+        {displayAddTag && (
+          <>
+            <FormContainer>
+              <Label htmlFor="tag">Tag title</Label>
+              <Input
+                type="text"
+                placeholder="add a tag title"
+                {...register("tagTitle")}
+                className={styles.addCompanyForm}
+              />
+              {errors.category && (
+                <p className="error">{String(errors.tagTitle?.message)}</p>
+              )}
+            </FormContainer>
+            <FormContainer>
+              <Label htmlFor="tag">Tag category</Label>
+              <Input
+                type="text"
+                placeholder="add a tag category"
+                {...register("tagCategory")}
+                className={styles.addCompanyForm}
+              />
+              {errors.category && (
+                <p className="error">{String(errors.tagCategory?.message)}</p>
+              )}
+            </FormContainer>
+          </>
+        )}
         <FormContainer>
           <Label htmlFor="category">Category</Label>
           <Input
@@ -261,7 +262,6 @@ const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
             <p className="error">{String(errors.category.message)}</p>
           )}
         </FormContainer>
-
         <FormContainer>
           <Label htmlFor="city">City</Label>
           <Input type="text" placeholder="City" {...register("city")} />
@@ -269,7 +269,6 @@ const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
             <p className="error">{String(errors.city.message)}</p>
           )}
         </FormContainer>
-
         <FormContainer>
           <Label htmlFor="street">Street name</Label>
           <Input type="text" placeholder="Street" {...register("street")} />
@@ -277,7 +276,6 @@ const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
             <p className="error">{String(errors.street.message)}</p>
           )}
         </FormContainer>
-
         <FormContainer>
           <Label htmlFor="houseNumber">House number</Label>
           <Input
@@ -289,7 +287,6 @@ const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
             <p className="error">{String(errors.houseNumber.message)}</p>
           )}
         </FormContainer>
-
         <FormContainer>
           <Label htmlFor="postCode">Postal code</Label>
           <Input
@@ -301,7 +298,6 @@ const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
             <p className="error">{String(errors.postCode.message)}</p>
           )}
         </FormContainer>
-
         <div className={styles.buttonContainer}>
           <Button
             variant="cancelButton"
