@@ -140,7 +140,6 @@ export const getServerSideProps: GetServerSideProps<{
         tags: true,
       },
     });
-    console.log("first block");
 
     return {
       props: {

@@ -122,7 +122,6 @@ const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
 
   const formSubmit = async (data: any) => {
     try {
-      console.log("EditCompanyForm, data", data);
       const response = await axios.patch(`/api/companies/${company.id}`, data);
       router.push(`/companies/${company.id}`);
     } catch (error) {
@@ -134,7 +133,6 @@ const EditCompanyForm: React.FC<EditCompanyProps> = ({ company }) => {
     axios
       .delete(`/api/companies/${company.id}/tags?tagId=${tagId}`)
       .then((response) => {
-        console.log("Tag removed:", response.data);
         window.location.reload();
       })
 

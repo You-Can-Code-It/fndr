@@ -63,26 +63,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
           },
         },
       });
-      console.log(
-        "api/companyId, tagTitle and Category",
-        tagTitle,
-        tagCategory
-      );
-
-      // await prisma.tag.upsert({
-      //   where: { title: tagTitle as string },
-      //   create: {
-      //     title: tagTitle as string,
-      //     category: tagCategory as string,
-      //     companies: {
-      //       connect: { id: companyId as string },
-      //     },
-      //   },
-      //   update: {
-      //     title: tagTitle as string,
-      //     category: tagCategory as string,
-      //   },
-      // });
 
       console.log("PATCH /api/companies:id - Company details were updated");
       res.status(204).end();
