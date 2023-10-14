@@ -29,6 +29,10 @@
   gap: 20px;
 }
 
+.addTagButton:hover * {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
   .editCompanyFormContainer {
     padding-left: 100px;

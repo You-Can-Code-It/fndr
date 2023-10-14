@@ -40,6 +40,7 @@ type Company = {
   longitude: number | null;
   display: boolean;
   userEvent: any;
+  tags: any;
 };
 
 type IndexResponse = {
@@ -78,6 +79,7 @@ export const getServerSideProps: GetServerSideProps<{
             user: true,
           },
         },
+        tags: true,
       },
     });
     // Map the list of companies and return cities
@@ -144,6 +146,11 @@ function Home({
     router.replace("");
   };
 
+  const companiesTags = response.companies.filter((oneCompany: any) => {
+    return oneCompany.tags.length;
+  });
+  console.log("index page: companies", companiesTags);
+
   return (
     <div className={inter.className}>
       <NavBar />
@@ -202,6 +209,7 @@ function Home({
                   indReferentNumber={company.indReferentNumber}
                   houseNumber={company.houseNumber}
                   postCode={company.postCode}
+                  tags={company.tags}
                 />
               );
             })}
