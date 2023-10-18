@@ -10,16 +10,30 @@ export function Pagination({
   const pageButtonsToShow = 5;
   const middleButton = Math.ceil(pageButtonsToShow / 2);
 
-  const generatePageRange = () => {
-    let start = Math.max(1, currentPage - middleButton + 1);
-    let end = Math.min(totalPageCount, start + pageButtonsToShow - 1);
+  // const generatePageRange = () => {
+  //   let start = Math.max(1, currentPage - middleButton + 1);
+  //   let end = Math.min(totalPageCount, start + pageButtonsToShow - 1);
 
-    // Adjust start when reaching the end
-    if (end === totalPageCount) {
-      start = Math.max(1, end - pageButtonsToShow + 1);
+  //   // Adjust start when reaching the end
+  //   if (end === totalPageCount) {
+  //     start = Math.max(1, end - pageButtonsToShow + 1);
+  //   }
+
+  //   return Array.from({ length: end - start + 1 }, (_, i) => start + i);
+  // };
+  const generatePageRange = () => {
+    const pages = [];
+    const groupSize = 5;
+    const totalPages = Math.ceil(totalPageCount / groupSize);
+
+    let groupStart = Math.floor((currentPage - 1) / groupSize) * groupSize + 1;
+    let groupEnd = Math.min(groupStart + groupSize - 1, totalPageCount);
+
+    for (let page = groupStart; page <= groupEnd; page++) {
+      pages.push(page);
     }
 
-    return Array.from({ length: end - start + 1 }, (_, i) => start + i);
+    return pages;
   };
 
   const clicked = (page) => {
