@@ -132,7 +132,7 @@ function Home({
   const [openModal, setOpenModal] = useState(false);
   const [showMap, setShowMap] = useState<boolean>(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const cardsPerPage = 3;
+  const cardsPerPage = 8;
   const lastCardIndex = currentPage * cardsPerPage;
   const firstCardIndex = lastCardIndex - cardsPerPage;
   const currentCards = response.companies.slice(firstCardIndex, lastCardIndex);
@@ -203,6 +203,12 @@ function Home({
           <DynamicMap companies={response.companies} />
         ) : (
           <div className={styles.companiesCards}>
+            <Pagination
+              totalCards={totalCards}
+              currentPage={currentPage}
+              cardsPerPage={cardsPerPage}
+              setCurrentPage={setCurrentPage}
+            />
             <div>
               {currentCards.map((company: Company) => (
                 <Card
@@ -221,12 +227,6 @@ function Home({
                   tags={company.tags}
                 />
               ))}
-              <Pagination
-                totalCards={totalCards}
-                currentPage={currentPage}
-                cardsPerPage={cardsPerPage}
-                setCurrentPage={setCurrentPage}
-              />
             </div>
             {response.companies.map((company: Company) => {
               return (
