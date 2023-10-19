@@ -169,8 +169,6 @@ function Home({
           + New Company
         </Link>
       </div>
-      <button>Back</button>
-      <button>Next</button>
 
       <div className={styles.mainPageContainer}>
         <div className={styles.mainDropdownContainer}>
@@ -198,37 +196,38 @@ function Home({
         <div className={styles.mainToggleContainer}>
           <Toggle showMap={showMap} setShowMap={setShowMap} />
         </div>
+        <div className={styles.pagination}>
+          <Pagination
+            totalCards={totalCards}
+            currentPage={currentPage}
+            cardsPerPage={cardsPerPage}
+            setCurrentPage={setCurrentPage}
+          />
+        </div>
 
         {showMap ? (
           <DynamicMap companies={response.companies} />
         ) : (
           <div className={styles.companiesCards}>
-            <Pagination
-              totalCards={totalCards}
-              currentPage={currentPage}
-              cardsPerPage={cardsPerPage}
-              setCurrentPage={setCurrentPage}
-            />
-            <div>
-              {currentCards.map((company: Company) => (
-                <Card
-                  key={company.id}
-                  id={company.id}
-                  name={company.name}
-                  city={company.city}
-                  street={company.street}
-                  website={company.website}
-                  category={company.category}
-                  display={company.display}
-                  userEvent={company.userEvent[0] ?? null}
-                  indReferentNumber={company.indReferentNumber}
-                  houseNumber={company.houseNumber}
-                  postCode={company.postCode}
-                  tags={company.tags}
-                />
-              ))}
-            </div>
-            {response.companies.map((company: Company) => {
+            {currentCards.map((company: Company) => (
+              <Card
+                key={company.id}
+                id={company.id}
+                name={company.name}
+                city={company.city}
+                street={company.street}
+                website={company.website}
+                category={company.category}
+                display={company.display}
+                userEvent={company.userEvent[0] ?? null}
+                indReferentNumber={company.indReferentNumber}
+                houseNumber={company.houseNumber}
+                postCode={company.postCode}
+                tags={company.tags}
+              />
+            ))}
+
+            {/* {response.companies.map((company: Company) => {
               return (
                 <Card
                   key={company.id}
@@ -246,7 +245,7 @@ function Home({
                   tags={company.tags}
                 />
               );
-            })}
+            })} */}
           </div>
         )}
       </div>

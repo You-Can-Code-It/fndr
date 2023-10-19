@@ -20,6 +20,13 @@
   width: 100%;
 }
 
+.pagination {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .companiesCards {
   display: flex;
   flex-direction: column;

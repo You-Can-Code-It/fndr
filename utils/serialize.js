@@ -1,3 +1,4 @@
+import Button from "@/components/Button/Button";
 import React from "react";
 
 export function Pagination({
@@ -57,26 +58,27 @@ export function Pagination({
   return (
     <div className="pagination">
       {currentPage > 1 && (
-        <button className="pagination-button" onClick={previousGroup}>
-          &lt;
-        </button>
+        <Button variant="paginationArrow" onClick={previousGroup}>
+          Back
+        </Button>
       )}
 
       {pages.map((page) => (
-        <button
+        <Button
+          variant="pagination"
           key={page}
-          className={`pagination-button ${
+          className={`pagination-Button ${
             currentPage === page ? "active" : ""
           }`}
           onClick={() => clicked(page)}
         >
           {page}
-        </button>
+        </Button>
       ))}
       {currentPage < totalPageCount && (
-        <button className="pagination-button" onClick={nextGroup}>
-          &gt;
-        </button>
+        <Button variant="paginationArrow" onClick={nextGroup}>
+          Next
+        </Button>
       )}
     </div>
   );
