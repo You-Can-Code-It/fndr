@@ -156,7 +156,6 @@ function Home({
   const companiesTags = response.companies.filter((oneCompany: any) => {
     return oneCompany.tags.length;
   });
-  console.log("index page: companies", companiesTags);
 
   return (
     <div className={inter.className}>

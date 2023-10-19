@@ -11,19 +11,9 @@ export function Pagination({
   const pageButtonsToShow = 5;
   const middleButton = Math.ceil(pageButtonsToShow / 2);
 
-  // const generatePageRange = () => {
-  //   let start = Math.max(1, currentPage - middleButton + 1);
-  //   let end = Math.min(totalPageCount, start + pageButtonsToShow - 1);
-
-  //   // Adjust start when reaching the end
-  //   if (end === totalPageCount) {
-  //     start = Math.max(1, end - pageButtonsToShow + 1);
-  //   }
-
-  //   return Array.from({ length: end - start + 1 }, (_, i) => start + i);
-  // };
   const generatePageRange = () => {
     const pages = [];
+
     const groupSize = 5;
     const totalPages = Math.ceil(totalPageCount / groupSize);
 
@@ -65,12 +55,11 @@ export function Pagination({
 
       {pages.map((page) => (
         <Button
-          variant="pagination"
           key={page}
-          className={`pagination-Button ${
-            currentPage === page ? "active" : ""
-          }`}
           onClick={() => clicked(page)}
+          variant={
+            currentPage == page ? "selectedPaginationButton" : "pagination"
+          }
         >
           {page}
         </Button>
