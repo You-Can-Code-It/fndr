@@ -74,15 +74,13 @@
   background-color: #fff;
   padding: 5px;
   min-width: 10px;
-  margin-right: 3px;
 }
 
-/* @media screen and (max-width: 500px) {
-  .mainContainer {
-    margin-bottom: 21px;
+@media screen and (min-width: 500px) {
+  .pagination {
+    margin-right: 1rem;
   }
-  .button {
-    margin-bottom: 21px;
-    display: flex;
+  .paginationArrow {
+    margin: 0pc 1rem !important;
   }
-} */
+}
