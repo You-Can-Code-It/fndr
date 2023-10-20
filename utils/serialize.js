@@ -32,22 +32,30 @@ export function Pagination({
   };
 
   const previousGroup = () => {
-    if (currentPage > 1) {
+    if (currentPage > 5) {
       setCurrentPage(currentPage - pageButtonsToShow);
     }
   };
 
   const nextGroup = () => {
     if (currentPage < totalPageCount) {
-      setCurrentPage(currentPage + pageButtonsToShow);
+      const setPage = pages[4] + 1;
+      setCurrentPage(setPage);
     }
   };
 
   const pages = generatePageRange();
+  console.log(
+    "pagination: current page",
+    "current page:",
+    currentPage,
+    "pages:",
+    pages
+  );
 
   return (
     <div className="pagination">
-      {currentPage > 1 && (
+      {currentPage > 5 && (
         <Button variant="paginationArrow" onClick={previousGroup}>
           Back
         </Button>
