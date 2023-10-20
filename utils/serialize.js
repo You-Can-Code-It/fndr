@@ -46,13 +46,6 @@ export function Pagination({
   };
 
   const pages = generatePageRange();
-  console.log(
-    "pagination: current page",
-    "current page:",
-    currentPage,
-    "pages:",
-    pages
-  );
 
   return (
     <div className="pagination">
