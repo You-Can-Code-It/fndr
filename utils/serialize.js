@@ -33,7 +33,8 @@ export function Pagination({
 
   const previousGroup = () => {
     if (currentPage > 5) {
-      setCurrentPage(currentPage - pageButtonsToShow);
+      const setPage = pages[0] - 5;
+      setCurrentPage(setPage);
     }
   };
 
