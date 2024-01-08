@@ -30,6 +30,7 @@ type CardProps = {
   userEvent: any;
   category: string;
   display: boolean;
+  tags: any;
 };
 
 const Card: React.FC<CardProps> = ({
@@ -43,6 +44,7 @@ const Card: React.FC<CardProps> = ({
   website,
   userEvent,
   category,
+  tags,
 }) => {
   const { data: session } = useSession();
   const [openModal, setOpenModal] = useState(false);
@@ -193,6 +195,9 @@ const Card: React.FC<CardProps> = ({
         <div className={styles.categoryWrapperContainer}>
           <div className={styles.categoryInnerContainer}>{category}</div>
         </div>
+        {/* Maybe remove the "Tags" call, and just leave the listed tags */}
+        {tags.length !== 0 && <p>Tags:</p>}
+        {tags && tags.map((oneTag: any) => <li>{oneTag.title}</li>)}
 
         <div className={styles.lastVisitContainer}>{displayLastVisit}</div>
       </div>

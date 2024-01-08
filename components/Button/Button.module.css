@@ -60,12 +60,38 @@
   width: 100%;
 }
 
-/* @media screen and (max-width: 500px) {
-  .mainContainer {
-    margin-bottom: 21px;
+.pagination {
+  background: #a54fa8;
+  padding: 5px 10px;
+  min-width: 10px;
+  margin-right: 3px;
+}
+
+.selectedPaginationButton {
+  background: #a54fa8;
+  padding: 5px 10px;
+  min-width: 10px;
+  margin-right: 3px;
+  opacity: 0.5;
+}
+
+.paginationArrow {
+  margin: 0px 5px !important;
+  border-radius: 8px;
+  color: #333333;
+  background-color: #fff;
+  padding: 5px;
+  min-width: 10px;
+}
+
+@media screen and (min-width: 500px) {
+  .pagination {
+    margin-right: 1rem;
   }
-  .button {
-    margin-bottom: 21px;
-    display: flex;
+  .selectedPaginationButton {
+    margin-right: 1rem;
   }
-} */
+  .paginationArrow {
+    margin: 0pc 1rem !important;
+  }
+}

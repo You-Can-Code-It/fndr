@@ -11,6 +11,7 @@ import Modal from "@/components/Modal/Modal";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import Toggle from "@/components/toggle/Toggle";
+import { Pagination } from "@/utils/serialize";
 
 // reason using dynamic is because map will be rendered in client side
 const DynamicMap = dynamic(() => import("../components/map/Map"), {
@@ -40,6 +41,7 @@ type Company = {
   longitude: number | null;
   display: boolean;
   userEvent: any;
+  tags: any;
 };
 
 type IndexResponse = {
@@ -78,6 +80,7 @@ export const getServerSideProps: GetServerSideProps<{
             user: true,
           },
         },
+        tags: true,
       },
     });
     // Map the list of companies and return cities
@@ -128,6 +131,12 @@ function Home({
   const router = useRouter();
   const [openModal, setOpenModal] = useState(false);
   const [showMap, setShowMap] = useState<boolean>(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const cardsPerPage = 8;
+  const lastCardIndex = currentPage * cardsPerPage;
+  const firstCardIndex = lastCardIndex - cardsPerPage;
+  const currentCards = response.companies.slice(firstCardIndex, lastCardIndex);
+  const totalCards = response.companies.length;
   // retrieve query parameter with name cityFilter to set input value
   const { cityFilter } = router.query;
   // created state cityFilterQuery and initialized with query param cityFilter
@@ -143,6 +152,10 @@ function Home({
     setCityFilterQuery("");
     router.replace("");
   };
+
+  const companiesTags = response.companies.filter((oneCompany: any) => {
+    return oneCompany.tags.length;
+  });
 
   return (
     <div className={inter.className}>
@@ -182,12 +195,38 @@ function Home({
         <div className={styles.mainToggleContainer}>
           <Toggle showMap={showMap} setShowMap={setShowMap} />
         </div>
+        <div className={styles.pagination}>
+          <Pagination
+            totalCards={totalCards}
+            currentPage={currentPage}
+            cardsPerPage={cardsPerPage}
+            setCurrentPage={setCurrentPage}
+          />
+        </div>
 
         {showMap ? (
           <DynamicMap companies={response.companies} />
         ) : (
           <div className={styles.companiesCards}>
-            {response.companies.map((company: Company) => {
+            {currentCards.map((company: Company) => (
+              <Card
+                key={company.id}
+                id={company.id}
+                name={company.name}
+                city={company.city}
+                street={company.street}
+                website={company.website}
+                category={company.category}
+                display={company.display}
+                userEvent={company.userEvent[0] ?? null}
+                indReferentNumber={company.indReferentNumber}
+                houseNumber={company.houseNumber}
+                postCode={company.postCode}
+                tags={company.tags}
+              />
+            ))}
+
+            {/* {response.companies.map((company: Company) => {
               return (
                 <Card
                   key={company.id}
@@ -202,9 +241,10 @@ function Home({
                   indReferentNumber={company.indReferentNumber}
                   houseNumber={company.houseNumber}
                   postCode={company.postCode}
+                  tags={company.tags}
                 />
               );
-            })}
+            })} */}
           </div>
         )}
       </div>
